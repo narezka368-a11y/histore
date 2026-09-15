@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Викторина по истории</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Викторина: История России (6–7 класс)</h1>
+    
+    <!-- Экран приветствия -->
+    <div id="start-screen">
+        <p>Проверь свои знания о Древней Руси и Средневековье!</p>
+        <button id="start-btn">Начать игру</button>
+    </div>
+
+    <!-- Игровой экран (скрыт по умолчанию) -->
+    <div id="game-screen" class="hidden">
+        <div class="score">Счет: <span id="score-value">0</span></div>
+        
+        <div id="question-container">
+            <div id="question"></div>
+            <div id="options-container"></div>
+        </div>
+        
+        <div id="feedback" class="hidden"></div>
+        <button id="next-btn" class="hidden">Следующий вопрос</button>
+    </div>
+
+    <!-- Экран завершения -->
+    <div id="end-screen" class="hidden">
+        <h2>Игра окончена!</h2>
+        <p id="final-result"></p>
+        <button onclick="location.reload()">Играть снова</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
