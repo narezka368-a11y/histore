@@ -1,97 +1,146 @@
+/* Подключение шрифта с иконками */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #f4efe1;
-	color: #333;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	margin: 0;
+    font-family: 'Cinzel', serif; /* Стильный шрифт с засечками */
+    background-color: #f4efe1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
+/* Фон старой бумаги для всего контейнера */
 .container {
-	width: 90%;
-	max-width: 600px;
-	background-color: #fff;
-	padding: 30px;
-	border-radius: 15px;
-	box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-	text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background-image: url('https://img.freepik.com/free-vector/subtle-paper-texture-background_1048-1255.jpg'); /* Ссылка на бесплатный фон пергамента */
+    background-size: cover;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Эффект обгоревших краев */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: inherit;
+    filter: blur(20px);
+    z-index: -1;
 }
 
 h1 {
-	color: #2c3e50;
-	font-size: 1.5em;
-	margin-bottom: 20px;
+    color: #4a2c1d;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #d3c8b5;
 }
 
 #question {
-	font-size: 1.2em;
-	margin-bottom: 20px;
-	line-height: 1.5;
-	min-height: 60px;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    min-height: 70px;
+    color: #2c3e50;
 }
 
-#options-container button {
-	display: block;
-	width: 100%;
-	padding: 15px;
-	margin: 10px 0;
-	border: 2px solid #3498db;
-	background-color: #fff;
-	color: #3498db;
-	font-size: 1em;
-	cursor: pointer;
-	border-radius: 8px;
-	transition: all 0.3s ease;
-	text-align: left;
+/* Блок с интересным фактом */
+.fact-box {
+    background-color: #f0e6d2;
+    border-left: 5px solid #8b4513;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+    font-style: italic;
+    color: #5d4037;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
-
-#options-container button:hover {
-	background-color: #3498db;
-	color: #fff;
+.fact-box i {
+    margin-top: 2px;
+    color: #8b4513;
 }
 
 .score {
-	font-weight: bold;
-	margin-bottom: 20px;
-	font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #4a2c1d;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 #feedback {
-	font-size: 1.1em;
-	font-weight: bold;
-	height: 30px;
-	margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 30px;
+    margin-bottom: 15px;
 }
 
-/* ����� ��� �����������/������������� ������ */
-.correct {
-	color: #27ae60;
-}
-.wrong {
-	color: #c0392b;
+.correct { color: #27ae60; }
+.wrong { color: #c0392b; }
+
+/* Кнопки вариантов ответов со стилизацией под дерево/камень */
+#options-container button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #8b4513;
+    background: linear-gradient(to bottom, #deb887, #d2b48c);
+    color: #331a00;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
 }
 
+#options-container button .icon {
+    margin-right: 10px;
+    color: #5d4037;
+}
+
+#options-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+    background: #d2b48c;
+}
+
+/* Кнопки управления */
 button#start-btn, button#next-btn {
-	background-color: #27ae60;
-	color: white;
-	border: none;
-	padding: 15px 40px;
-	font-size: 1.1em;
-	border-radius: 50px;
-	cursor: pointer;
-	margin-top: 20px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+button#start-btn:hover, button#next-btn:hover {
+    background-color: #654321;
 }
 
-button#start-btn:hover, button#next-btn:hover {
-	background-color: #229954;
+/* Экран конца игры */
+#end-screen h2 {
+    color: #8b4513;
 }
