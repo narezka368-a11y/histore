@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f4efe1;
+	color: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 600px;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+	text-align: center;
+}
+
+h1 {
+	color: #2c3e50;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+#question {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	line-height: 1.5;
+	min-height: 60px;
+}
+
+#options-container button {
+	display: block;
+	width: 100%;
+	padding: 15px;
+	margin: 10px 0;
+	border: 2px solid #3498db;
+	background-color: #fff;
+	color: #3498db;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	text-align: left;
+}
+
+#options-container button:hover {
+	background-color: #3498db;
+	color: #fff;
+}
+
+.score {
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 1.1em;
+}
+
+.hidden {
+	display: none;
+}
+
+#feedback {
+	font-size: 1.1em;
+	font-weight: bold;
+	height: 30px;
+	margin-bottom: 15px;
+}
+
+/* ÷вета дл€ правильного/неправильного ответа */
+.correct {
+	color: #27ae60;
+}
+.wrong {
+	color: #c0392b;
+}
+
+button#start-btn, button#next-btn {
+	background-color: #27ae60;
+	color: white;
+	border: none;
+	padding: 15px 40px;
+	font-size: 1.1em;
+	border-radius: 50px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button#start-btn:hover, button#next-btn:hover {
+	background-color: #229954;
+}
