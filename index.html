@@ -56,7 +56,8 @@ body.light .cross .cell .num{color:#8b6f1f}
 body.light .cross .cell input{color:#2c1810}
 body.light .clues .col h3{color:#6b4f0f;background:rgba(139,111,31,.15)}
 body.light .clues li{color:#2c1810}
-body.light .topbar button{background:rgba(139,111,31,.15);color:#6b4f0f;border-color:#8b6f1f}.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
+body.light .topbar button{background:rgba(139,111,31,.15);color:#6b4f0f;border-color:#8b6f1f}
+.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
 h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.55)}
 h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.22),transparent);border-left:4px solid #c9a227;border-radius:8px}
 .sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px}
@@ -116,7 +117,8 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 .ex{background:rgba(201,162,39,.18);border-left:5px solid #c9a227;padding:14px;border-radius:10px;margin-top:14px;display:none;line-height:1.55}
 .df{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
 .df button{padding:11px 18px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.5);border-radius:25px;color:#f5e6d3;cursor:pointer;font-family:inherit}
-.df button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold}.art{line-height:1.8;font-size:1em;color:#e8d8bf}
+.df button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold}
+.art{line-height:1.8;font-size:1em;color:#e8d8bf}
 .art h2{color:#f4d03f;font-size:1.25em;margin:30px 0 14px;padding:0 0 10px;background:none;border:none;border-bottom:2px solid rgba(201,162,39,.4);border-radius:0}
 .art h3{color:#c9a227;font-size:1.08em;margin:20px 0 8px}
 .art p{margin-bottom:12px}
@@ -151,36 +153,6 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 .clues ol{margin:0 0 0 20px;padding:0;list-style:none;counter-reset:clue}
 .clues li{counter-increment:clue;margin:7px 0;font-size:.93em;line-height:1.45;color:#e8d8bf;padding-left:26px;position:relative}
 .clues li::before{content:counter(clue) ".";position:absolute;left:0;color:#c9a227;font-weight:bold;min-width:22px}
-
-/* ПАНЕЛЬ УЧИТЕЛЯ */
-.announce{background:linear-gradient(135deg,rgba(142,68,173,.25),rgba(192,57,43,.15));border:2px solid #8e44ad;border-radius:14px;padding:16px 20px;margin-bottom:15px;position:relative}
-.announce::before{content:'📢 ОБЪЯВЛЕНИЕ';display:block;color:#c39bd3;font-size:.8em;font-weight:bold;letter-spacing:1px;margin-bottom:6px}
-.announce .close{position:absolute;top:8px;right:12px;background:none;border:none;color:#c39bd3;font-size:1.3em;cursor:pointer}
-.announce .text{color:#f5e6d3;line-height:1.5}
-body.light .announce{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(192,57,43,.08))}
-body.light .announce .text{color:#2c1810}
-
-.statrow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
-.statrow .name{flex:1;color:#f5e6d3;font-size:.95em}
-.statrow .score{color:#c9a227;font-weight:bold;font-family:'Segoe UI',sans-serif}
-.statrow .medal{font-size:1.2em}
-body.light .statrow{background:rgba(139,111,31,.08)}
-body.light .statrow .name{color:#2c1810}
-
-.togglerow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
-.togglerow .name{flex:1;color:#f5e6d3;font-size:.95em}
-.togglerow button{background:rgba(231,76,60,.2);border:1px solid #e74c3c;color:#e74c3c;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.85em}
-.togglerow button.on{background:rgba(39,174,96,.2);border-color:#27ae60;color:#27ae60}
-body.light .togglerow{background:rgba(139,111,31,.08)}
-body.light .togglerow .name{color:#2c1810}
-
-.cq{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);border-radius:10px;padding:12px 15px;margin:8px 0}
-.cq b{color:#f4d03f;display:block;margin-bottom:5px}
-.cq small{color:#b8956a;display:block;line-height:1.5}
-body.light .cq{background:rgba(139,111,31,.08)}
-body.light .cq b{color:#6b4f0f}
-body.light .cq small{color:#8b6f1f}
-
 @media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}}
 @media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}}
 </style>
@@ -224,68 +196,9 @@ body.light .cq small{color:#8b6f1f}
 <button class="card" onclick="go('litHome')"><div class="ic">📖</div><div><b>Литература</b><small>Пушкин · статьи · игры</small></div></button>
 <h2>😄 Развлечение</h2>
 <button class="card" onclick="startFun()"><div class="ic">😂</div><div><b>Кто прав?</b><small>Шутливая игра</small></div></button>
-<div id="panelBtn"></div>
 </div>
 
-<div id="teacherPanel" class="scr">
-<button class="back" onclick="go('subjects')">← Назад в меню</button>
-<div class="hero">🎛️</div>
-<h1 id="panelTitle">Панель управления</h1>
-<p class="sub" id="panelSub">Команды для роли</p>
-
-<h2>📊 Статистика класса</h2>
-<div class="st">
-<div><div class="v" id="statPlayers">0</div><div class="l">👥 Игроков</div></div>
-<div><div class="v" id="statGames">0</div><div class="l">🎮 Игр</div></div>
-<div><div class="v" id="statAvg">0</div><div class="l">📊 Средний балл</div></div>
-</div>
-<div id="statList" style="max-height:300px;overflow-y:auto;margin-bottom:14px"></div>
-<button class="btn btn2" onclick="refreshStats()">🔄 Обновить</button>
-
-<h2>📢 Объявление класса</h2>
-<input type="text" id="announceInput" placeholder="Напиши объявление (например: завтра контрольная)" maxlength="150">
-<button class="btn" onclick="postAnnounce()">📢 Опубликовать</button>
-<button class="btn btn2" onclick="clearAnnounce()">🗑️ Удалить объявление</button>
-
-<h2>📝 Свои вопросы</h2>
-<p style="font-size:.9em;color:#b8956a;margin-bottom:8px">Добавь свои вопросы в любую викторину</p>
-<select id="qTarget">
-<option value="rus">Викторина: Древняя Русь</option>
-<option value="med">Викторина: Средние века</option>
-<option value="fr">Викторина: Франки</option>
-<option value="hl">Викторина: Хлодвиг</option>
-<option value="km">Викторина: Карл Мартелл</option>
-<option value="year">Угадай год</option>
-<option value="push_bio">Пушкин: Биография</option>
-<option value="push_works">Пушкин: Произведения</option>
-<option value="push_quotes">Пушкин: Цитаты</option>
-</select>
-<input type="text" id="qText" placeholder="Вопрос" maxlength="200">
-<input type="text" id="qOpt1" placeholder="Вариант А" maxlength="80">
-<input type="text" id="qOpt2" placeholder="Вариант Б" maxlength="80">
-<input type="text" id="qOpt3" placeholder="Вариант В" maxlength="80">
-<input type="text" id="qOpt4" placeholder="Вариант Г" maxlength="80">
-<input type="text" id="qCorrect" placeholder="Номер правильного (1-4)" maxlength="1">
-<input type="text" id="qExplain" placeholder="Пояснение" maxlength="200">
-<button class="btn" onclick="addCustomQuestion()">➕ Добавить вопрос</button>
-<button class="btn btn2" onclick="showCustomQuestions()">👀 Мои вопросы</button>
-
-<h2>🚫 Отключение игр</h2>
-<div id="toggleList"></div>
-
-<h2>⭐ Отметки</h2>
-<select id="starTarget"></select>
-<button class="btn" onclick="giveStar()">⭐ Дать значок «Молодец»</button>
-
-<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
-</div>
-
-<div id="customQScreen" class="scr">
-<button class="back" onclick="go('teacherPanel')">← Назад в панель</button>
-<h1>📝 Мои добавленные вопросы</h1>
-<div id="customQList" style="margin-top:14px"></div>
-<button class="btn btn2" onclick="go('teacherPanel')">🏠 К панели</button>
-</div><div id="litHome" class="scr">
+<div id="litHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <div class="hero">📖</div>
 <h1>Литература — 6-7 класс</h1>
@@ -470,7 +383,9 @@ body.light .cq small{color:#8b6f1f}
 <button class="card" onclick="goCross('hl')"><div class="ic">🧩</div><div><b>Кроссворд: Хлодвиг</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('km')"><div class="ic">🧩</div><div><b>Кроссворд: Карл Мартелл</b><small>8 слов</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
-</div><div id="rus" class="scr">
+</div>
+
+<div id="rus" class="scr">
 <button class="back" onclick="go('rusTopic')">← К разделу «Русь»</button>
 <h1>🛡️ Древняя Русь</h1>
 <p class="sub">IX–XVII века</p>
@@ -777,7 +692,9 @@ body.light .cq small{color:#8b6f1f}
 <button class="btn" onclick="pk('km')">🔨 Викторина</button>
 <button class="btn btn2" onclick="goCross('km')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
-</div><div id="setup" class="scr">
+</div>
+
+<div id="setup" class="scr">
 <button class="back" onclick="go('histHome')">← Назад</button>
 <h1 id="stT">Сложность</h1>
 <div class="df">
@@ -982,170 +899,20 @@ var currentCrossPush=null,pushCrossLives=5;
 function show(id){ var a=document.querySelectorAll('.scr'); for(var k=0;k<a.length;k++)a[k].classList.remove('on'); document.getElementById(id).classList.add('on'); window.scrollTo(0,0); }
 function go(id){ show(id); }
 function pickRole(btn){ var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); currentRole=btn.getAttribute('data-role'); var pb=document.getElementById('passBox'); if(PASSWORDS[currentRole]){ pb.classList.add('on'); document.getElementById('passInput').value=""; } else pb.classList.remove('on'); }
-function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); renderPanelBtn(); show('subjects'); }
+function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); show('subjects'); }
 function roleEmoji(r){ if(r==='Создатель')return'👑'; if(r==='Староста')return'⭐'; if(r==='Учитель')return'📖'; return'🎓'; }
 function logout(){ if(!confirm('Выйти?'))return; localStorage.removeItem('currentUser'); localStorage.removeItem('currentRole'); currentUser=""; document.getElementById('nameInput').value=""; document.getElementById('passInput').value=""; document.getElementById('passBox').classList.remove('on'); var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); show('loginScreen'); }
 
-/* ============ ПАНЕЛЬ ============ */
-function canOpenPanel(){ return currentRole==='Учитель' || currentRole==='Староста' || currentRole==='Создатель'; }
-function renderPanelBtn(){
-  var w=document.getElementById('panelBtn');
-  if(!w) return;
-  if(canOpenPanel()){
-    w.innerHTML='<h2>🎛️ Управление</h2><button class="card" onclick="openPanel()"><div class="ic">🎛️</div><div><b>Панель '+currentRole.toLowerCase()+'</b><small>Статистика · объявления · вопросы</small></div></button>';
-  } else { w.innerHTML=''; }
-}
-function openPanel(){
-  document.getElementById('panelTitle').textContent='🎛️ Панель '+currentRole.toLowerCase();
-  document.getElementById('panelSub').textContent='Доступные команды для роли «'+currentRole+'»';
-  refreshStats(); renderToggles(); renderStarList(); show('teacherPanel');
-}
-function refreshStats(){
-  var all=JSON.parse(localStorage.getItem('results')||'[]');
-  var players={}; var gamesCount=0; var total=0;
-  for(var k=0;k<all.length;k++){
-    var r=all[k];
-    if(!players[r.name]){ players[r.name]={name:r.name,role:r.role||'Ученик',best:0,games:0}; }
-    players[r.name].games++;
-    if(r.score>players[r.name].best) players[r.name].best=r.score;
-    gamesCount++; total+=r.score;
-  }
-  var names=Object.keys(players);
-  document.getElementById('statPlayers').textContent=names.length;
-  document.getElementById('statGames').textContent=gamesCount;
-  document.getElementById('statAvg').textContent=gamesCount?Math.round(total/gamesCount):0;
-  var list=document.getElementById('statList');
-  if(names.length===0){
-    list.innerHTML='<p style="padding:20px;text-align:center;color:#b8956a;font-style:italic">Пока никто не играл</p>';
-  } else {
-    var arr=names.map(function(n){return players[n];});
-    arr.sort(function(a,b){return b.best-a.best;});
-    var html='';
-    for(var k=0;k<arr.length;k++){
-      var medal=k===0?'🥇':k===1?'🥈':k===2?'🥉':'&nbsp;';
-      html+='<div class="statrow"><span class="medal">'+medal+'</span><span class="name">'+arr[k].name+' <small style="color:#b8956a">('+arr[k].role+')</small></span><span class="score">'+arr[k].best+' очк. · '+arr[k].games+' игр</span></div>';
-    }
-    list.innerHTML=html;
-  }
-}
-function postAnnounce(){ var t=document.getElementById('announceInput').value.trim(); if(!t){alert('Введи текст');return;} localStorage.setItem('classAnnounce',t); document.getElementById('announceInput').value=''; renderAnnouncement(); alert('📢 Опубликовано!'); }
-function clearAnnounce(){ if(!confirm('Удалить объявление?'))return; localStorage.removeItem('classAnnounce'); renderAnnouncement(); }
 function renderAnnouncement(){
   var box=document.getElementById('announcementBox');
   if(!box) return;
   var t=localStorage.getItem('classAnnounce');
-  if(t){ box.innerHTML='<div class="announce"><button class="close" onclick="closeAnnounce()">×</button><div class="text">'+t+'</div></div>'; }
+  if(t){ box.innerHTML='<div class="announce"><div class="text">'+t+'</div></div>'; }
   else { box.innerHTML=''; }
-}
-function closeAnnounce(){ var box=document.getElementById('announcementBox'); if(box) box.innerHTML=''; }
-function addCustomQuestion(){
-  var target=document.getElementById('qTarget').value;
-  var text=document.getElementById('qText').value.trim();
-  var o1=document.getElementById('qOpt1').value.trim();
-  var o2=document.getElementById('qOpt2').value.trim();
-  var o3=document.getElementById('qOpt3').value.trim();
-  var o4=document.getElementById('qOpt4').value.trim();
-  var corr=parseInt(document.getElementById('qCorrect').value.trim())-1;
-  var expl=document.getElementById('qExplain').value.trim()||'Верно!';
-  if(!text || !o1 || !o2 || !o3 || !o4){ alert('Заполни вопрос и все 4 варианта'); return; }
-  if(isNaN(corr) || corr<0 || corr>3){ alert('Правильный — число от 1 до 4'); return; }
-  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
-  if(!all[target]) all[target]=[];
-  all[target].push({q:text,options:[o1,o2,o3,o4],correct:corr,explanation:expl});
-  localStorage.setItem('customQuestions',JSON.stringify(all));
-  document.getElementById('qText').value='';
-  document.getElementById('qOpt1').value='';
-  document.getElementById('qOpt2').value='';
-  document.getElementById('qOpt3').value='';
-  document.getElementById('qOpt4').value='';
-  document.getElementById('qCorrect').value='';
-  document.getElementById('qExplain').value='';
-  alert('➕ Вопрос добавлен!');
-}
-function showCustomQuestions(){
-  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
-  var html='';
-  for(var key in all){
-    html+='<h2>📌 '+key+'</h2>';
-    for(var k=0;k<all[key].length;k++){
-      var q=all[key][k];
-      html+='<div class="cq"><b>'+(k+1)+'. '+q.q+'</b><small>А) '+q.options[0]+' | Б) '+q.options[1]+' | В) '+q.options[2]+' | Г) '+q.options[3]+'<br>✅ '+q.options[q.correct]+'<br>💡 '+q.explanation+'</small></div>';
-    }
-  }
-  if(!html) html='<p style="text-align:center;color:#b8956a;font-style:italic;padding:30px">Пока нет своих вопросов</p>';
-  document.getElementById('customQList').innerHTML=html;
-  show('customQScreen');
-}
-var GAME_KEYS=[
-  {k:'rus',n:'Викторина: Русь'},{k:'med',n:'Викторина: Средние века'},
-  {k:'fr',n:'Викторина: Франки'},{k:'hl',n:'Викторина: Хлодвиг'},
-  {k:'km',n:'Викторина: Карл Мартелл'},{k:'year',n:'Угадай год'},
-  {k:'cross_rus',n:'Кроссворд: Русь'},{k:'cross_med',n:'Кроссворд: Средние века'},
-  {k:'cross_fr',n:'Кроссворд: Франки'},
-  {k:'push_bio',n:'Пушкин: Биография'},{k:'push_works',n:'Пушкин: Произведения'},{k:'push_quotes',n:'Пушкин: Цитаты'}
-];
-function renderToggles(){
-  var list=document.getElementById('toggleList');
-  if(!list) return;
-  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
-  var html='';
-  for(var k=0;k<GAME_KEYS.length;k++){
-    var g=GAME_KEYS[k];
-    var off=disabled.indexOf(g.k)!==-1;
-    html+='<div class="togglerow"><span class="name">'+g.n+'</span><button class="'+(off?'on':'')+'" onclick="toggleGame(\''+g.k+'\')">'+(off?'✅ Включена':'🚫 Отключена')+'</button></div>';
-  }
-  list.innerHTML=html;
-}
-function toggleGame(key){
-  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
-  var i=disabled.indexOf(key);
-  if(i===-1) disabled.push(key); else disabled.splice(i,1);
-  localStorage.setItem('disabledGames',JSON.stringify(disabled));
-  renderToggles();
-}
-function isGameDisabled(key){
-  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
-  return disabled.indexOf(key)!==-1;
-}
-function renderStarList(){
-  var all=JSON.parse(localStorage.getItem('results')||'[]');
-  var names=[];
-  for(var k=0;k<all.length;k++){ if(names.indexOf(all[k].name)===-1) names.push(all[k].name); }
-  var sel=document.getElementById('starTarget');
-  if(!sel) return;
-  if(names.length===0){ sel.innerHTML='<option value="">Нет игроков</option>'; }
-  else {
-    var html='';
-    for(var k=0;k<names.length;k++) html+='<option value="'+names[k]+'">'+names[k]+'</option>';
-    sel.innerHTML=html;
-  }
-}
-function giveStar(){
-  var name=document.getElementById('starTarget').value;
-  if(!name){ alert('Нет игроков'); return; }
-  var stars=JSON.parse(localStorage.getItem('stars')||'{}');
-  stars[name]=new Date().toLocaleDateString('ru-RU');
-  localStorage.setItem('stars',JSON.stringify(stars));
-  alert('⭐ Ученик '+name+' получил значок «Молодец»!');
-}
-function checkDisabled(key){
-  if(isGameDisabled(key)){ alert('🚫 Эта игра временно отключена учителем'); return true; }
-  return false;
-}
-function mergeCustomQuestions(baseKey,basePool){
-  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
-  var custom=all[baseKey];
-  if(custom && custom.length){
-    for(var k=0;k<custom.length;k++){
-      basePool.push([1, custom[k].q, custom[k].options, custom[k].correct, custom[k].explanation]);
-    }
-  }
-  return basePool;
 }
 
 /* ============ ВИКТОРИНА (история) ============ */
 function pk(g){
-  if(checkDisabled(g)) return;
   sndStartGame(); cur=g;
   var t='Сложность';
   if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века';
@@ -1154,7 +921,7 @@ function pk(g){
   document.getElementById('stT').textContent=t; show('setup');
 }
 function pd(btn){ var b=document.querySelectorAll('#setup .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); df=parseInt(btn.getAttribute('data-d')); }
-function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]); pool=mergeCustomQuestions(cur,pool);
+function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]);
   for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
   qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
 function us(){ document.getElementById('sc').textContent=pts; document.getElementById('lv').textContent=hp>0?'❤️'.repeat(hp):'💀'; }
@@ -1165,14 +932,12 @@ function fin(){ var total=qs.length,correct=pts/10,pct=Math.round(correct/total*
 
 /* ============ КРОССВОРД (история) ============ */
 function updateCrossLives(){ var el=document.getElementById('crossLives'); if(el) el.textContent=crossLives>0?'❤️'.repeat(crossLives):'💀'; }
-function goCross(g){ if(checkDisabled('cross_'+g)) return; currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
+function goCross(g){ currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
 function checkCross(){ if(crossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ crossLives-=wrong; if(crossLives<0)crossLives=0; updateCrossLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(crossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибок: '+wrong+'. Жизни: '+crossLives); }
 function clearCross(){ var inputs=document.querySelectorAll('#crossGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} crossLives=5; updateCrossLives(); }
 
 /* ============ ВИКТОРИНА ПУШКИНА ============ */
 function pickPush(g){
-  var key = g==='bio'?'push_bio':(g==='works'?'push_works':'push_quotes');
-  if(checkDisabled(key)) return;
   sndStartGame(); pCur=g;
   var t='Сложность';
   if(g==='bio')t='🎯 Биография Пушкина'; else if(g==='works')t='🎯 Произведения Пушкина'; else if(g==='quotes')t='💬 Цитаты и герои';
@@ -1180,8 +945,6 @@ function pickPush(g){
 }
 function pdPush(btn){ var b=document.querySelectorAll('#setupPush .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); pDf=parseInt(btn.getAttribute('data-d')); }
 function stPush(){ var all=(pCur==='bio')?D_PUSH_BIO:(pCur==='works')?D_PUSH_WORKS:D_PUSH_QUOTES; var pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=pDf)pool.push(all[k]);
-  var key = pCur==='bio'?'push_bio':(pCur==='works'?'push_works':'push_quotes');
-  pool=mergeCustomQuestions(key,pool);
   for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
   pQs=pool;pI=0;pPts=0;pHp=3; usPush(); show('gamePush'); lqPush(); }
 function usPush(){ document.getElementById('pSc').textContent=pPts; document.getElementById('pLv').textContent=pHp>0?'❤️'.repeat(pHp):'💀'; }
@@ -1231,8 +994,6 @@ if(saved){
   document.getElementById('userName').textContent=saved;
   document.getElementById('userRole').textContent=savedRole;
   document.getElementById('userAvatar').textContent=roleEmoji(savedRole);
-  renderPanelBtn();
-  renderAnnouncement();
   show('subjects');
 } else {
   show('loginScreen');
