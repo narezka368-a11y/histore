@@ -104,6 +104,9 @@
         align-items: center;
         gap: 18px;
         text-align: left;
+        color: inherit;
+        font-family: inherit;
+        width: 100%;
     }
 
     .game-card:hover {
@@ -411,23 +414,23 @@
         </p>
 
         <div class="games-grid">
-            <div class="game-card" onclick="openGame('rus')">
+            <button class="game-card" onclick="openGame('rus')">
                 <div class="game-card-icon">🛡️</div>
                 <div class="game-card-info">
                     <h3>История Древней Руси</h3>
                     <p>От Рюрика до Ивана Грозного: князья, битвы, крещение и объединение земель.</p>
                     <span class="game-card-tag">15 вопросов</span>
                 </div>
-            </div>
+            </button>
 
-            <div class="game-card" onclick="openGame('medieval')">
+            <button class="game-card" onclick="openGame('medieval')">
                 <div class="game-card-icon">⚔️</div>
                 <div class="game-card-info">
                     <h3>История Средних веков</h3>
                     <p>Рыцари, замки, Крестовые походы, эпидемии и великие события Европы.</p>
                     <span class="game-card-tag">15 вопросов</span>
                 </div>
-            </div>
+            </button>
         </div>
     </div>
 
@@ -511,7 +514,6 @@
 //  БАЗА ВОПРОСОВ
 // =====================================================================
 
-// ===== ИГРА 1: Древняя Русь =====
 const rusQuestions = [
     { level: 1, q: "В каком году произошло Крещение Руси?",
       options: ["862 г.", "988 г.", "1147 г.", "1240 г."],
@@ -574,7 +576,6 @@ const rusQuestions = [
       correct: 1, explanation: "Смутное время началось в 1598 году после смерти царя Фёдора Иоанновича." }
 ];
 
-// ===== ИГРА 2: Средние века =====
 const medievalQuestions = [
     { level: 1, q: "Что такое феод?",
       options: ["Земельное владение, даваемое за службу", "Название замка", "Оружие рыцаря", "Церковный праздник"],
@@ -707,7 +708,6 @@ function openGame(gameKey) {
     const game = GAMES[gameKey];
     setupTitle.textContent = '🎯 ' + game.title;
     setupDesc.textContent = game.description;
-    // Сбросим сложность на лёгкую
     difficulty = 'easy';
     document.querySelectorAll('.diff-btn').forEach(b => {
         b.classList.toggle('active', b.dataset.diff === 'easy');
@@ -741,7 +741,6 @@ function startGame() {
 
     const all = GAMES[currentGameKey].questions;
 
-    // Фильтр по сложности
     let pool;
     if (difficulty === 'easy') {
         pool = all.filter(q => q.level === 1);
@@ -772,4 +771,6 @@ function loadQuestion() {
     progressFill.style.width = (currentIndex / currentQuestions.length * 100) + '%';
     questionNum.textContent = (currentIndex + 1) + '/' + currentQuestions.length;
 
-    questionText.textContent =
+    questionText.textContent = '📖 ' + q.q;
+    answersContainer.innerHTML = '';
+    explanation.style.display =
