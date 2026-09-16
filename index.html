@@ -16,25 +16,6 @@
         align-items: center;
         padding: 20px;
         color: #f5e6d3;
-        overflow-x: hidden;
-    }
-
-    body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background-image:
-            radial-gradient(2px 2px at 20% 30%, rgba(201,162,39,0.4), transparent),
-            radial-gradient(2px 2px at 60% 70%, rgba(201,162,39,0.3), transparent),
-            radial-gradient(1px 1px at 80% 20%, rgba(244,208,63,0.5), transparent),
-            radial-gradient(2px 2px at 40% 90%, rgba(201,162,39,0.3), transparent);
-        pointer-events: none;
-        animation: twinkle 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes twinkle {
-        from { opacity: 0.4; }
-        to { opacity: 1; }
     }
 
     .container {
@@ -44,16 +25,13 @@
         border: 3px solid #c9a227;
         border-radius: 20px;
         padding: 30px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.7), inset 0 0 60px rgba(201,162,39,0.1);
-        position: relative;
-        z-index: 1;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.7);
     }
 
     h1 {
         text-align: center;
         font-size: 2em;
         color: #c9a227;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         margin-bottom: 10px;
     }
 
@@ -64,13 +42,11 @@
         font-style: italic;
     }
 
-    /* ============ ГЛАВНОЕ МЕНЮ ============ */
     .hero-emblem {
         font-size: 4em;
         text-align: center;
         margin-bottom: 10px;
         animation: float 3s ease-in-out infinite;
-        filter: drop-shadow(0 0 20px rgba(201,162,39,0.6));
     }
 
     @keyframes float {
@@ -90,7 +66,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
-        margin-bottom: 15px;
     }
 
     .game-card {
@@ -107,6 +82,7 @@
         color: inherit;
         font-family: inherit;
         width: 100%;
+        font-size: 1em;
     }
 
     .game-card:hover {
@@ -116,12 +92,9 @@
         box-shadow: 0 12px 30px rgba(201,162,39,0.3);
     }
 
-    .game-card:active { transform: translateY(-1px); }
-
     .game-card-icon {
         font-size: 2.8em;
         flex-shrink: 0;
-        filter: drop-shadow(0 0 10px rgba(201,162,39,0.5));
     }
 
     .game-card-info h3 {
@@ -147,7 +120,6 @@
         border: 1px solid rgba(201,162,39,0.4);
     }
 
-    /* ============ ОБЩИЕ ЭЛЕМЕНТЫ ============ */
     .stats {
         display: flex;
         justify-content: space-around;
@@ -159,11 +131,7 @@
     }
 
     .stat { text-align: center; }
-    .stat-value {
-        font-size: 1.8em;
-        font-weight: bold;
-        color: #c9a227;
-    }
+    .stat-value { font-size: 1.8em; font-weight: bold; color: #c9a227; }
     .stat-label { font-size: 0.85em; color: #b8956a; }
 
     .progress-bar {
@@ -215,18 +183,11 @@
     .answer-btn.correct {
         background: rgba(39, 174, 96, 0.35);
         border-color: #27ae60;
-        animation: pulse 0.5s ease;
     }
 
     .answer-btn.wrong {
         background: rgba(231, 76, 60, 0.35);
         border-color: #e74c3c;
-    }
-
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.03); }
-        100% { transform: scale(1); }
     }
 
     .explanation {
@@ -236,13 +197,7 @@
         border-radius: 10px;
         border-left: 4px solid #c9a227;
         display: none;
-        animation: slideDown 0.4s ease;
         line-height: 1.5;
-    }
-
-    @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
     }
 
     .btn {
@@ -271,18 +226,8 @@
         border: 2px solid rgba(201,162,39,0.4);
     }
 
-    .btn-secondary:hover {
-        background: rgba(201,162,39,0.15);
-        box-shadow: none;
-    }
-
     .screen { display: none; }
-    .screen.active { display: block; animation: fadeIn 0.4s ease; }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+    .screen.active { display: block; }
 
     .final-title {
         font-size: 2.2em;
@@ -316,7 +261,6 @@
         cursor: pointer;
         font-size: 0.95em;
         padding: 8px 0;
-        transition: color 0.3s;
         margin-bottom: 10px;
     }
 
@@ -345,20 +289,15 @@
         color: #f5e6d3;
         cursor: pointer;
         font-size: 0.95em;
-        transition: all 0.3s ease;
     }
 
-    .diff-btn:hover {
-        background: rgba(201,162,39,0.2);
-        transform: translateY(-2px);
-    }
+    .diff-btn:hover { background: rgba(201,162,39,0.2); }
 
     .diff-btn.active {
         background: linear-gradient(135deg, #c9a227, #f4d03f);
         color: #2c1810;
         font-weight: bold;
         border-color: #f4d03f;
-        box-shadow: 0 0 20px rgba(201,162,39,0.5);
     }
 
     .difficulty-title {
@@ -377,48 +316,27 @@
     }
 
     .score-summary-item { text-align: center; }
-
-    .score-summary-item .value {
-        font-size: 1.6em;
-        font-weight: bold;
-        color: #f4d03f;
-    }
-
-    .score-summary-item .label {
-        font-size: 0.85em;
-        color: #b8956a;
-    }
-
-    @media (max-width: 500px) {
-        h1 { font-size: 1.5em; }
-        .container { padding: 20px; }
-        .stat-value { font-size: 1.4em; }
-        .hero-emblem { font-size: 3em; }
-        .game-card-icon { font-size: 2.2em; }
-    }
+    .score-summary-item .value { font-size: 1.6em; font-weight: bold; color: #f4d03f; }
+    .score-summary-item .label { font-size: 0.85em; color: #b8956a; }
 </style>
 </head>
 <body>
 
 <div class="container">
 
-    <!-- ================= ГЛАВНОЕ МЕНЮ ================= -->
+    <!-- ГЛАВНОЕ МЕНЮ -->
     <div id="menuScreen" class="screen active">
         <div class="hero-emblem">🏰</div>
         <h1>Исторические игры</h1>
         <p class="subtitle">Для 6-7 класса</p>
-
-        <p class="menu-intro">
-            Выбери игру и проверь свои знания по истории!<br>
-            Каждая игра — это викторина с вопросами и пояснениями.
-        </p>
+        <p class="menu-intro">Выбери игру и проверь свои знания по истории!</p>
 
         <div class="games-grid">
             <button class="game-card" onclick="openGame('rus')">
                 <div class="game-card-icon">🛡️</div>
                 <div class="game-card-info">
                     <h3>История Древней Руси</h3>
-                    <p>От Рюрика до Ивана Грозного: князья, битвы, крещение и объединение земель.</p>
+                    <p>От Рюрика до Ивана Грозного: князья, битвы, крещение.</p>
                     <span class="game-card-tag">15 вопросов</span>
                 </div>
             </button>
@@ -427,14 +345,14 @@
                 <div class="game-card-icon">⚔️</div>
                 <div class="game-card-info">
                     <h3>История Средних веков</h3>
-                    <p>Рыцари, замки, Крестовые походы, эпидемии и великие события Европы.</p>
+                    <p>Рыцари, замки, Крестовые походы и великие события Европы.</p>
                     <span class="game-card-tag">15 вопросов</span>
                 </div>
             </button>
         </div>
     </div>
 
-    <!-- ================= ЭКРАН ВЫБОРА СЛОЖНОСТИ ================= -->
+    <!-- ВЫБОР СЛОЖНОСТИ -->
     <div id="setupScreen" class="screen">
         <button class="back-btn" onclick="goToMenu()">← Назад в меню</button>
         <div class="game-title-header" id="setupTitle"></div>
@@ -450,7 +368,7 @@
         <button class="btn" onclick="startGame()">🚀 Начать игру</button>
     </div>
 
-    <!-- ================= ЭКРАН ИГРЫ ================= -->
+    <!-- ИГРА -->
     <div id="gameScreen" class="screen">
         <button class="back-btn" onclick="goToMenu()">← Выйти в меню</button>
 
@@ -477,12 +395,10 @@
         <div class="answers" id="answersContainer"></div>
 
         <div class="explanation" id="explanation"></div>
-        <button class="btn" id="nextBtn" style="display:none;" onclick="nextQuestion()">
-            ➡️ Следующий вопрос
-        </button>
+        <button class="btn" id="nextBtn" style="display:none;" onclick="nextQuestion()">➡️ Следующий вопрос</button>
     </div>
 
-    <!-- ================= ЭКРАН ФИНАЛА ================= -->
+    <!-- ФИНАЛ -->
     <div id="finalScreen" class="screen">
         <h2 class="final-title">🏆 Игра окончена!</h2>
 
@@ -510,137 +426,105 @@
 </div>
 
 <script>
-// =====================================================================
-//  БАЗА ВОПРОСОВ
-// =====================================================================
-
+// =============== ВОПРОСЫ: ДРЕВНЯЯ РУСЬ ===============
 const rusQuestions = [
     { level: 1, q: "В каком году произошло Крещение Руси?",
       options: ["862 г.", "988 г.", "1147 г.", "1240 г."],
       correct: 1, explanation: "Князь Владимир Святославич крестил Русь в 988 году." },
-
     { level: 1, q: "Кто был первым князем Древней Руси?",
       options: ["Игорь", "Олег", "Рюрик", "Святослав"],
-      correct: 2, explanation: "Рюрик стал первым князем в 862 году, основав династию Рюриковичей." },
-
+      correct: 2, explanation: "Рюрик стал первым князем в 862 году." },
     { level: 1, q: "В каком году произошла Невская битва?",
       options: ["1240 г.", "1242 г.", "1380 г.", "1147 г."],
-      correct: 0, explanation: "Александр Невский разбил шведов на реке Неве в 1240 году." },
-
+      correct: 0, explanation: "Александр Невский разбил шведов на Неве в 1240 году." },
     { level: 1, q: "Кто разбил Мамая на Куликовом поле?",
       options: ["Иван III", "Дмитрий Донской", "Иван Калита", "Александр Невский"],
-      correct: 1, explanation: "Дмитрий Донской одержал победу в Куликовской битве в 1380 году." },
-
+      correct: 1, explanation: "Дмитрий Донской одержал победу в 1380 году." },
     { level: 1, q: "Кто был первым русским царём?",
       options: ["Иван III", "Иван IV Грозный", "Пётр I", "Борис Годунов"],
-      correct: 1, explanation: "Иван IV Грозный в 1547 году впервые принял титул царя." },
-
+      correct: 1, explanation: "Иван IV Грозный в 1547 году принял титул царя." },
     { level: 2, q: "В каком году произошло Ледовое побоище?",
       options: ["1240 г.", "1242 г.", "1380 г.", "1480 г."],
-      correct: 1, explanation: "5 апреля 1242 года Александр Невский разбил рыцарей Ливонского ордена на Чудском озере." },
-
+      correct: 1, explanation: "5 апреля 1242 года на Чудском озере." },
     { level: 2, q: "В каком году произошла Куликовская битва?",
       options: ["1380 г.", "1240 г.", "1480 г.", "1147 г."],
-      correct: 0, explanation: "Куликовская битва состоялась 8 сентября 1380 года." },
-
+      correct: 0, explanation: "Куликовская битва — 8 сентября 1380 года." },
     { level: 2, q: "Кто освободил Русь от монголо-татарского ига?",
       options: ["Иван Калита", "Дмитрий Донской", "Иван III", "Иван Грозный"],
-      correct: 2, explanation: "Иван III в 1480 году после стояния на Угре покончил с игом." },
-
+      correct: 2, explanation: "Иван III в 1480 году после стояния на Угре." },
     { level: 2, q: "В каком году Москва впервые упоминается в летописи?",
       options: ["862 г.", "988 г.", "1147 г.", "1240 г."],
-      correct: 2, explanation: "Москва впервые упомянута в 1147 году в связи с Юрием Долгоруким." },
-
+      correct: 2, explanation: "Москва впервые упомянута в 1147 году." },
     { level: 2, q: "Кто возглавил Второе народное ополчение в 1612 году?",
       options: ["Минин и Пожарский", "Лжедмитрий I", "Борис Годунов", "Василий Шуйский"],
-      correct: 0, explanation: "Кузьма Минин и Дмитрий Пожарский освободили Москву от поляков в 1612 году." },
-
+      correct: 0, explanation: "Кузьма Минин и Дмитрий Пожарский освободили Москву в 1612 году." },
     { level: 3, q: "Что такое феодальная раздробленность?",
       options: ["Объединение земель вокруг Москвы", "Распад государства на отдельные княжества", "Война с монголами", "Крещение Руси"],
-      correct: 1, explanation: "Феодальная раздробленность — распад единого государства на независимые части (XII–XV вв.)." },
-
+      correct: 1, explanation: "Распад единого государства на независимые части (XII–XV вв.)." },
     { level: 3, q: "Кто написал «Повесть временных лет»?",
       options: ["Нестор", "Иларион", "Даниил Заточник", "Кирилл Туровский"],
-      correct: 0, explanation: "Монах Нестор создал «Повесть временных лет» в начале XII века." },
-
+      correct: 0, explanation: "Монах Нестор создал летопись в начале XII века." },
     { level: 3, q: "В каком году было взятие Казани Иваном Грозным?",
       options: ["1547 г.", "1552 г.", "1565 г.", "1584 г."],
-      correct: 1, explanation: "Казань была взята войсками Ивана Грозного в 1552 году." },
-
+      correct: 1, explanation: "Казань взята в 1552 году." },
     { level: 3, q: "Что такое опричнина?",
       options: ["Совет при царе", "Особое войско и политика террора Ивана Грозного", "Налог на землю", "Название города"],
-      correct: 1, explanation: "Опричнина (1565-1572) — политика террора Ивана Грозного против бояр." },
-
+      correct: 1, explanation: "Опричнина (1565-1572) — политика террора Ивана Грозного." },
     { level: 3, q: "В каком году началось Смутное время?",
       options: ["1584 г.", "1598 г.", "1605 г.", "1613 г."],
-      correct: 1, explanation: "Смутное время началось в 1598 году после смерти царя Фёдора Иоанновича." }
+      correct: 1, explanation: "Смутное время началось в 1598 году." }
 ];
 
+// =============== ВОПРОСЫ: СРЕДНИЕ ВЕКА ===============
 const medievalQuestions = [
     { level: 1, q: "Что такое феод?",
-      options: ["Земельное владение, даваемое за службу", "Название замка", "Оружие рыцаря", "Церковный праздник"],
-      correct: 0, explanation: "Феод — земельное владение, которое сеньор давал вассалу за службу." },
-
+      options: ["Земельное владение за службу", "Название замка", "Оружие рыцаря", "Церковный праздник"],
+      correct: 0, explanation: "Феод — земельное владение, даваемое вассалу за службу." },
     { level: 1, q: "Кто такой рыцарь?",
       options: ["Городской ремесленник", "Конный воин в тяжёлых доспехах", "Крестьянин", "Монах"],
       correct: 1, explanation: "Рыцарь — конный воин, принадлежавший к феодальной знати." },
-
     { level: 1, q: "Что такое замок?",
       options: ["Городской рынок", "Укреплённое жилище феодала", "Церковь", "Крестьянская хижина"],
-      correct: 1, explanation: "Замок — укреплённое жилище феодала, защищённое стенами и рвом." },
-
+      correct: 1, explanation: "Замок — укреплённое жилище феодала." },
     { level: 1, q: "Как называлась эпоха между Античностью и Новым временем?",
       options: ["Каменный век", "Средневековье", "Ренессанс", "Новейшее время"],
-      correct: 1, explanation: "Средневековье — период V–XV веков (примерно с 476 по 1492 год)." },
-
+      correct: 1, explanation: "Средневековье — V–XV века." },
     { level: 1, q: "Кто жил в замке и управлял землями?",
       options: ["Крестьяне", "Феодал (сеньор)", "Ремесленники", "Горожане"],
-      correct: 1, explanation: "Феодал (сеньор) владел землёй и управлял ей, живя в замке." },
-
+      correct: 1, explanation: "Феодал владел землёй и управлял ей." },
     { level: 2, q: "Что такое Крестовые походы?",
-      options: ["Восстания крестьян", "Военные походы европейцев на Восток за Святую землю", "Торговые путешествия", "Морские открытия"],
-      correct: 1, explanation: "Крестовые походы (XI–XIII вв.) — военные походы на Ближний Восток с религиозными целями." },
-
+      options: ["Восстания крестьян", "Военные походы европейцев на Восток", "Торговые путешествия", "Морские открытия"],
+      correct: 1, explanation: "Крестовые походы (XI–XIII вв.) — походы на Ближний Восток." },
     { level: 2, q: "Какая эпидемия в XIV веке унесла треть населения Европы?",
       options: ["Холера", "Чума («Чёрная смерть»)", "Оспа", "Грипп"],
-      correct: 1, explanation: "В 1347-1351 гг. эпидемия чумы («Чёрная смерть») унесла около трети населения Европы." },
-
+      correct: 1, explanation: "Чума 1347-1351 гг. унесла треть населения Европы." },
     { level: 2, q: "Что изобрёл Иоганн Гутенберг в XV веке?",
       options: ["Порох", "Книгопечатный станок", "Компас", "Телескоп"],
-      correct: 1, explanation: "Около 1450 года Гутенберг изобрёл книгопечатание с наборным шрифтом." },
-
+      correct: 1, explanation: "Около 1450 года Гутенберг изобрёл книгопечатание." },
     { level: 2, q: "Что такое вассалитет?",
-      options: ["Система отношений между сеньором и вассалом", "Городская торговля", "Церковный обряд", "Вид оружия"],
-      correct: 0, explanation: "Вассалитет — отношения, где вассал служит сеньору, а сеньор защищает вассала." },
-
+      options: ["Отношения между сеньором и вассалом", "Городская торговля", "Церковный обряд", "Вид оружия"],
+      correct: 0, explanation: "Вассал служит сеньору, сеньор защищает вассала." },
     { level: 2, q: "Кто такой Карл Великий?",
       options: ["Король Англии", "Император франков, коронован в 800 году", "Папа Римский", "Монгольский хан"],
-      correct: 1, explanation: "Карл Великий — король франков, в 800 году папа короновал его императором." },
-
+      correct: 1, explanation: "Карл Великий — король франков, император с 800 года." },
     { level: 3, q: "Что такое инквизиция?",
       options: ["Церковный суд для борьбы с ересью", "Рыцарский орден", "Городской совет", "Вид налога"],
-      correct: 0, explanation: "Инквизиция — церковный суд католической церкви для борьбы с еретиками." },
-
+      correct: 0, explanation: "Инквизиция — суд католической церкви против еретиков." },
     { level: 3, q: "Что такое Великая хартия вольностей?",
-      options: ["Договор о торговле", "Документ, ограничивший власть короля Англии в 1215 г.", "Церковный устав", "Военный союз"],
-      correct: 1, explanation: "Великая хартия вольностей (1215) в Англии ограничила королевскую власть и защитила права свободных людей." },
-
+      options: ["Договор о торговле", "Документ, ограничивший власть короля в 1215 г.", "Церковный устав", "Военный союз"],
+      correct: 1, explanation: "Хартия 1215 г. ограничила власть английского короля." },
     { level: 3, q: "В каком году пала Византия?",
       options: ["1204 г.", "1356 г.", "1453 г.", "1492 г."],
-      correct: 2, explanation: "В 1453 году турки-османы захватили Константинополь — Византия пала." },
-
+      correct: 2, explanation: "В 1453 году турки захватили Константинополь." },
     { level: 3, q: "Кто такой Жанна д’Арк?",
       options: ["Королева Франции", "Героиня Столетней войны", "Монахиня", "Испанская принцесса"],
-      correct: 1, explanation: "Жанна д’Арк — героиня Столетней войны, возглавила французские войска в 1429 году." },
-
+      correct: 1, explanation: "Жанна д’Арк возглавила французские войска в 1429 году." },
     { level: 3, q: "Что такое Реконкиста?",
-      options: ["Завоевание новых земель в Америке", "Отвоевание христианами Пиренейского полуострова у арабов", "Крестьянское восстание", "Церковная реформа"],
-      correct: 1, explanation: "Реконкиста (VIII–XV вв.) — отвоевание христианами Пиренейского полуострова у мусульман." }
+      options: ["Завоевание земель в Америке", "Отвоевание Пиренейского полуострова у арабов", "Крестьянское восстание", "Церковная реформа"],
+      correct: 1, explanation: "Реконкиста (VIII–XV вв.) — отвоевание Испании у мусульман." }
 ];
 
-// =====================================================================
-//  ИГРЫ
-// =====================================================================
+// =============== ИГРЫ ===============
 const GAMES = {
     rus: {
         title: "История Древней Руси",
@@ -654,9 +538,7 @@ const GAMES = {
     }
 };
 
-// =====================================================================
-//  СОСТОЯНИЕ
-// =====================================================================
+// =============== СОСТОЯНИЕ ===============
 let currentGameKey = null;
 let currentQuestions = [];
 let currentIndex = 0;
@@ -665,9 +547,7 @@ let lives = 3;
 let answered = false;
 let difficulty = 'easy';
 
-// =====================================================================
-//  ЭЛЕМЕНТЫ
-// =====================================================================
+// =============== ЭЛЕМЕНТЫ ===============
 const menuScreen   = document.getElementById('menuScreen');
 const setupScreen  = document.getElementById('setupScreen');
 const gameScreen   = document.getElementById('gameScreen');
@@ -690,9 +570,7 @@ const finalCorrect = document.getElementById('finalCorrect');
 const finalTotal   = document.getElementById('finalTotal');
 const finalMessage = document.getElementById('finalMessage');
 
-// =====================================================================
-//  НАВИГАЦИЯ
-// =====================================================================
+// =============== НАВИГАЦИЯ ===============
 function showScreen(screen) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
     screen.classList.add('active');
@@ -721,9 +599,7 @@ function selectDifficulty(btn) {
     difficulty = btn.dataset.diff;
 }
 
-// =====================================================================
-//  УТИЛИТЫ
-// =====================================================================
+// =============== УТИЛИТЫ ===============
 function shuffle(array) {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -733,9 +609,7 @@ function shuffle(array) {
     return arr;
 }
 
-// =====================================================================
-//  СТАРТ ИГРЫ
-// =====================================================================
+// =============== СТАРТ ИГРЫ ===============
 function startGame() {
     if (!currentGameKey) return;
 
@@ -761,9 +635,7 @@ function startGame() {
     loadQuestion();
 }
 
-// =====================================================================
-//  ЗАГРУЗКА ВОПРОСА
-// =====================================================================
+// =============== ЗАГРУЗКА ВОПРОСА ===============
 function loadQuestion() {
     answered = false;
     const q = currentQuestions[currentIndex];
@@ -773,4 +645,105 @@ function loadQuestion() {
 
     questionText.textContent = '📖 ' + q.q;
     answersContainer.innerHTML = '';
-    explanation.style.display =
+    explanation.style.display = 'none';
+    nextBtn.style.display = 'none';
+
+    const letters = ['А', 'Б', 'В', 'Г'];
+    q.options.forEach((option, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'answer-btn';
+        btn.innerHTML = '<b>' + letters[i] + ')</b> ' + option;
+        btn.onclick = () => checkAnswer(i, btn);
+        answersContainer.appendChild(btn);
+    });
+}
+
+// =============== ПРОВЕРКА ОТВЕТА ===============
+function checkAnswer(selected, btn) {
+    if (answered) return;
+    answered = true;
+
+    const q = currentQuestions[currentIndex];
+    const buttons = answersContainer.querySelectorAll('.answer-btn');
+    buttons.forEach(b => b.disabled = true);
+
+    if (selected === q.correct) {
+        btn.classList.add('correct');
+        score += 10;
+        explanation.innerHTML = '✅ <b>Правильно!</b><br>' + q.explanation;
+    } else {
+        btn.classList.add('wrong');
+        buttons[q.correct].classList.add('correct');
+        lives--;
+        explanation.innerHTML = '❌ <b>Неверно.</b> Правильный ответ: <b>'
+            + q.options[q.correct] + '</b><br>' + q.explanation;
+    }
+
+    explanation.style.display = 'block';
+    updateStats();
+
+    if (lives <= 0) {
+        nextBtn.textContent = '🏁 Завершить игру';
+    } else if (currentIndex === currentQuestions.length - 1) {
+        nextBtn.textContent = '🏆 Показать результат';
+    } else {
+        nextBtn.textContent = '➡️ Следующий вопрос';
+    }
+    nextBtn.style.display = 'block';
+}
+
+// =============== СЛЕДУЮЩИЙ ВОПРОС ===============
+function nextQuestion() {
+    if (lives <= 0 || currentIndex === currentQuestions.length - 1) {
+        finishGame();
+        return;
+    }
+    currentIndex++;
+    loadQuestion();
+}
+
+// =============== СТАТИСТИКА ===============
+function updateStats() {
+    scoreDisplay.textContent = score;
+    livesDisplay.textContent = lives > 0 ? '❤️'.repeat(lives) : '💀';
+}
+
+// =============== ФИНАЛ ===============
+function finishGame() {
+    progressFill.style.width = '100%';
+    finalScore.textContent = score;
+    finalCorrect.textContent = score / 10;
+    finalTotal.textContent = currentQuestions.length;
+    showScreen(finalScreen);
+
+    const total = currentQuestions.length;
+    const correctCount = score / 10;
+    const percent = Math.round(correctCount / total * 100);
+
+    let msg, grade;
+    if (percent >= 90) {
+        msg = "🌟 Превосходно! Вы настоящий знаток истории!";
+        grade = "Оценка: 5";
+    } else if (percent >= 70) {
+        msg = "👍 Отличный результат!";
+        grade = "Оценка: 4";
+    } else if (percent >= 50) {
+        msg = "📖 Неплохо, но стоит повторить материал.";
+        grade = "Оценка: 3";
+    } else {
+        msg = "📚 Попробуйте ещё раз!";
+        grade = "Оценка: 2";
+    }
+
+    finalMessage.innerHTML = 'Правильных ответов: <b>' + correctCount + ' из ' + total + '</b><br>'
+        + msg + '<span class="grade">' + grade + '</span>';
+}
+
+// =============== ИГРАТЬ СНОВА ===============
+function playAgain() {
+    showScreen(setupScreen);
+}
+</script>
+
+</body>
+</html>
