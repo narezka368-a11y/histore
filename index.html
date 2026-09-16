@@ -18,7 +18,7 @@ body.light .card small{color:#8b6f1f}
 body.light .theme-card{background:linear-gradient(135deg,rgba(139,111,31,.15),rgba(139,111,31,.03));border-color:rgba(139,111,31,.5);color:#2c1810}
 body.light .theme-card b{color:#6b4f0f}
 body.light .theme-card small{color:#8b6f1f}
-body.light input{background:rgba(255,255,255,.7);border-color:#8b6f1f;color:#2c1810}
+body.light input,body.light select{background:rgba(255,255,255,.7);border-color:#8b6f1f;color:#2c1810}
 body.light .userbox{background:rgba(139,111,31,.12);border-color:rgba(139,111,31,.5)}
 body.light .userbox .who b{color:#6b4f0f}
 body.light .userbox .who small{color:#8b6f1f}
@@ -56,13 +56,8 @@ body.light .cross .cell .num{color:#8b6f1f}
 body.light .cross .cell input{color:#2c1810}
 body.light .clues .col h3{color:#6b4f0f;background:rgba(139,111,31,.15)}
 body.light .clues li{color:#2c1810}
-body.light .topbar button{background:rgba(139,111,31,.15);color:#6b4f0f;border-color:#8b6f1f}
-body.light .puzzle{background:rgba(139,111,31,.1)}
-body.light .puzzle .pcell.empty{background:rgba(139,111,31,.2)}
-body.light .puzzle-info{color:#6b4f0f}
-
-.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
-h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.55);transition:color .4s}
+body.light .topbar button{background:rgba(139,111,31,.15);color:#6b4f0f;border-color:#8b6f1f}.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
+h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.55)}
 h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.22),transparent);border-left:4px solid #c9a227;border-radius:8px}
 .sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px}
 .hero{font-size:3.8em;text-align:center;margin-bottom:10px;animation:fl 3s ease-in-out infinite}
@@ -73,8 +68,10 @@ h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;backgroun
 .topbar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:10px}
 .topbar button{background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.5);color:#f4d03f;padding:8px 12px;border-radius:10px;cursor:pointer;font-size:.9em;font-family:inherit;transition:all .3s}
 .topbar button:hover{background:rgba(201,162,39,.35);transform:translateY(-2px)}
-input[type=text],input[type=password]{width:100%;padding:16px;font-size:1.1em;background:rgba(255,255,255,.06);border:2px solid rgba(201,162,39,.5);border-radius:12px;color:#f5e6d3;font-family:inherit;text-align:center;margin-top:14px}
-input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,63,.5)}
+input[type=text],input[type=password],select{width:100%;padding:16px;font-size:1.1em;background:rgba(255,255,255,.06);border:2px solid rgba(201,162,39,.5);border-radius:12px;color:#f5e6d3;font-family:inherit;text-align:center;margin-top:14px}
+select{text-align:left;cursor:pointer}
+select option{background:#2c1810;color:#f5e6d3}
+input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,63,.5)}
 .btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;border:none;border-radius:12px;font-size:1.05em;font-weight:bold;cursor:pointer;margin-top:14px;font-family:inherit;transition:all .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(244,208,63,.6)}
 .btn2{background:rgba(255,255,255,.08);color:#f5e6d3;border:2px solid rgba(201,162,39,.5);box-shadow:none}
@@ -119,8 +116,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .ex{background:rgba(201,162,39,.18);border-left:5px solid #c9a227;padding:14px;border-radius:10px;margin-top:14px;display:none;line-height:1.55}
 .df{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
 .df button{padding:11px 18px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.5);border-radius:25px;color:#f5e6d3;cursor:pointer;font-family:inherit}
-.df button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold}
-.art{line-height:1.8;font-size:1em;color:#e8d8bf}
+.df button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold}.art{line-height:1.8;font-size:1em;color:#e8d8bf}
 .art h2{color:#f4d03f;font-size:1.25em;margin:30px 0 14px;padding:0 0 10px;background:none;border:none;border-bottom:2px solid rgba(201,162,39,.4);border-radius:0}
 .art h3{color:#c9a227;font-size:1.08em;margin:20px 0 8px}
 .art p{margin-bottom:12px}
@@ -155,15 +151,112 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .clues ol{margin:0 0 0 20px;padding:0;list-style:none;counter-reset:clue}
 .clues li{counter-increment:clue;margin:7px 0;font-size:.93em;line-height:1.45;color:#e8d8bf;padding-left:26px;position:relative}
 .clues li::before{content:counter(clue) ".";position:absolute;left:0;color:#c9a227;font-weight:bold;min-width:22px}
-.puzzle{display:grid;gap:6px;justify-content:center;margin:20px auto;max-width:100%;padding:12px;background:rgba(0,0,0,.3);border-radius:14px;border:2px solid #c9a227}
-.puzzle .pcell{width:110px;height:110px;border-radius:10px;cursor:pointer;transition:all .25s;user-select:none;border:2px solid rgba(201,162,39,.4);background-repeat:no-repeat;background-color:#1a0f08;position:relative}
-.puzzle .pcell.empty{background:rgba(0,0,0,.4);border-color:rgba(201,162,39,.2);cursor:default;background-image:none!important}
-.puzzle .pcell:not(.empty):hover{transform:scale(1.05);box-shadow:0 6px 18px rgba(244,208,63,.6);z-index:2}
-.puzzle .pcell.correct{border-color:#2ecc71;box-shadow:0 0 12px rgba(46,204,113,.7)}
-.puzzle .pcell.correct::after{content:'✓';position:absolute;top:2px;right:4px;color:#2ecc71;font-weight:bold;font-size:1.2em;text-shadow:0 0 6px #000}
-.puzzle-info{text-align:center;color:#c9a227;font-style:italic;margin:14px 0}
-@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}.puzzle .pcell{width:80px;height:80px}}
-@media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}.puzzle .pcell{width:65px;height:65px}}
+
+/* ПАНЕЛЬ УЧИТЕЛЯ */
+.announce{background:linear-gradient(135deg,rgba(142,68,173,.25),rgba(192,57,43,.15));border:2px solid #8e44ad;border-radius:14px;padding:16px 20px;margin-bottom:15px;position:relative}
+.announce::before{content:'📢 ОБЪЯВЛЕНИЕ';display:block;color:#c39bd3;font-size:.8em;font-weight:bold;letter-spacing:1px;margin-bottom:6px}
+.announce .close{position:absolute;top:8px;right:12px;background:none;border:none;color:#c39bd3;font-size:1.3em;cursor:pointer}
+.announce .text{color:#f5e6d3;line-height:1.5}
+body.light .announce{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(192,57,43,.08))}
+body.light .announce .text{color:#2c1810}
+
+.statrow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
+.statrow .name{flex:1;color:#f5e6d3;font-size:.95em}
+.statrow .score{color:#c9a227;font-weight:bold;font-family:'Segoe UI',sans-serif}
+.statrow .medal{font-size:1.2em}
+body.light .statrow{background:rgba(139,111,31,.08)}
+body.light .statrow .name{color:#2c1810}
+
+.togglerow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
+.togglerow .name{flex:1;color:#f5e6d3;font-size:.95em}
+.togglerow button{background:rgba(231,76,60,.2);border:1px solid #e74c3c;color:#e74c3c;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.85em}
+.togglerow button.on{background:rgba(39,174,96,.2);border-color:#27ae60;color:#27ae60}
+body.light .togglerow{background:rgba(139,111,31,.08)}
+body.light .togglerow .name{color:#2c1810}
+
+.cq{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);border-radius:10px;padding:12px 15px;margin:8px 0}
+.cq b{color:#f4d03f;display:block;margin-bottom:5px}
+.cq small{color:#b8956a;display:block;line-height:1.5}
+body.light .cq{background:rgba(139,111,31,.08)}
+body.light .cq b{color:#6b4f0f}
+body.light .cq small{color:#8b6f1f}
+
+@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}}
+@media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}}
+</style>
+</head>
+<body>
+<div class="box">
+<div class="topbar">
+<button id="soundBtn" onclick="toggleSound()">🔊 Звук</button>
+<button id="themeBtn" onclick="toggleTheme()">🌙 Тема</button>
+</div>.art{line-height:1.8;font-size:1em;color:#e8d8bf}
+.art h2{color:#f4d03f;font-size:1.25em;margin:30px 0 14px;padding:0 0 10px;background:none;border:none;border-bottom:2px solid rgba(201,162,39,.4);border-radius:0}
+.art h3{color:#c9a227;font-size:1.08em;margin:20px 0 8px}
+.art p{margin-bottom:12px}
+.art b{color:#f4d03f}
+.art ul{margin:8px 0 14px 22px}
+.art li{margin:7px 0;line-height:1.7}
+.art i{color:#c9a227;font-style:italic}
+.quote{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(142,68,173,.05));border-left:5px solid #8e44ad;border-radius:10px;padding:14px 18px;margin:16px 0;font-style:italic;color:#c39bd3;line-height:1.7}
+.quote b{color:#d2b4de}
+.fact{background:linear-gradient(135deg,rgba(41,128,185,.15),rgba(41,128,185,.05));border-left:5px solid #2980b9;border-radius:10px;padding:14px 18px;margin:16px 0;color:#aed6f1}
+.fact b{color:#85c1e9}
+.d{background:rgba(201,162,39,.15);border-left:5px solid #c9a227;padding:14px;border-radius:10px;margin:16px 0}
+.d b{color:#f4d03f;display:block;margin-bottom:6px}
+.d ul{list-style:none;margin:0;padding:0}
+.d li{padding:6px 0;border-bottom:1px dashed rgba(201,162,39,.25);font-size:.95em}
+.d li:last-child{border-bottom:none}
+.d li b{color:#c9a227;display:inline-block;min-width:85px}
+.p{background:linear-gradient(135deg,rgba(201,162,39,.1),transparent);border:1px solid rgba(201,162,39,.35);border-radius:12px;padding:16px 18px;margin:16px 0}
+.p .nm{color:#f4d03f;font-weight:bold;font-size:1.1em;display:block;margin-bottom:8px;padding-bottom:6px;border-bottom:1px dashed rgba(201,162,39,.25)}
+.fin{text-align:center;background:rgba(201,162,39,.15);padding:20px;border-radius:12px;margin:16px 0;line-height:1.6}
+.fin .g{font-size:1.4em;color:#c9a227;font-weight:bold;margin-top:10px;display:block}
+.cross{display:grid;gap:2px;justify-content:center;margin:20px auto;background:#1a0f08;padding:10px;border-radius:12px;border:2px solid #c9a227;max-width:100%;overflow-x:auto}
+.cross .cell{width:42px;height:42px;background:#4a3020;border:1px solid rgba(201,162,39,.35);border-radius:4px;position:relative}
+.cross .cell.black{background:transparent;border:none}
+.cross .cell .num{position:absolute;top:2px;left:3px;font-size:.65em;color:#c9a227;font-family:'Segoe UI',sans-serif;font-weight:bold}
+.cross .cell input{width:100%;height:100%;background:transparent;border:none;color:#f5e6d3;font-size:1.3em;text-align:center;text-transform:uppercase;font-weight:bold;font-family:inherit;padding:0;margin:0;border-radius:4px}
+.cross .cell input:focus{outline:2px solid #f4d03f;background:rgba(244,208,63,.15)}
+.cross .cell input.ok{background:rgba(39,174,96,.6);color:#fff}
+.cross .cell input.no{background:rgba(231,76,60,.6);color:#fff}
+.clues{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.clues .col h3{color:#f4d03f;font-size:1em;margin-bottom:10px;padding:8px 10px;background:rgba(201,162,39,.15);border-left:3px solid #c9a227;border-radius:6px}
+.clues ol{margin:0 0 0 20px;padding:0;list-style:none;counter-reset:clue}
+.clues li{counter-increment:clue;margin:7px 0;font-size:.93em;line-height:1.45;color:#e8d8bf;padding-left:26px;position:relative}
+.clues li::before{content:counter(clue) ".";position:absolute;left:0;color:#c9a227;font-weight:bold;min-width:22px}
+
+/* ПАНЕЛЬ УЧИТЕЛЯ */
+.announce{background:linear-gradient(135deg,rgba(142,68,173,.25),rgba(192,57,43,.15));border:2px solid #8e44ad;border-radius:14px;padding:16px 20px;margin-bottom:15px;position:relative}
+.announce::before{content:'📢 ОБЪЯВЛЕНИЕ';display:block;color:#c39bd3;font-size:.8em;font-weight:bold;letter-spacing:1px;margin-bottom:6px}
+.announce .close{position:absolute;top:8px;right:12px;background:none;border:none;color:#c39bd3;font-size:1.3em;cursor:pointer}
+.announce .text{color:#f5e6d3;line-height:1.5}
+body.light .announce{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(192,57,43,.08))}
+body.light .announce .text{color:#2c1810}
+
+.statrow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
+.statrow .name{flex:1;color:#f5e6d3;font-size:.95em}
+.statrow .score{color:#c9a227;font-weight:bold;font-family:'Segoe UI',sans-serif}
+.statrow .medal{font-size:1.2em}
+body.light .statrow{background:rgba(139,111,31,.08)}
+body.light .statrow .name{color:#2c1810}
+
+.togglerow{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.3);border-radius:10px;margin:6px 0}
+.togglerow .name{flex:1;color:#f5e6d3;font-size:.95em}
+.togglerow button{background:rgba(231,76,60,.2);border:1px solid #e74c3c;color:#e74c3c;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:.85em}
+.togglerow button.on{background:rgba(39,174,96,.2);border-color:#27ae60;color:#27ae60}
+body.light .togglerow{background:rgba(139,111,31,.08)}
+body.light .togglerow .name{color:#2c1810}
+
+.cq{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);border-radius:10px;padding:12px 15px;margin:8px 0}
+.cq b{color:#f4d03f;display:block;margin-bottom:5px}
+.cq small{color:#b8956a;display:block;line-height:1.5}
+body.light .cq{background:rgba(139,111,31,.08)}
+body.light .cq b{color:#6b4f0f}
+body.light .cq small{color:#8b6f1f}
+
+@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}}
+@media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}}
 </style>
 </head>
 <body>
@@ -196,24 +289,84 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <div class="who"><b id="userName">—</b><small id="userRole">—</small></div>
 <button class="out" onclick="logout()">Выйти</button>
 </div>
+<div id="announcementBox"></div>
 <div class="hero">📚</div>
 <h1>Учись и играй</h1>
 <p class="sub">✦ Выбери предмет ✦</p>
 <h2>📖 Предметы</h2>
-<button class="card" onclick="go('histHome')"><div class="ic">🏰</div><div><b>История</b><small>Статьи · викторины · кроссворды · пазлы</small></div></button>
-<button class="card" onclick="go('litHome')"><div class="ic">📖</div><div><b>Литература</b><small>Пушкин · статьи · игры · пазлы</small></div></button>
+<button class="card" onclick="go('histHome')"><div class="ic">🏰</div><div><b>История</b><small>Статьи · викторины · кроссворды</small></div></button>
+<button class="card" onclick="go('litHome')"><div class="ic">📖</div><div><b>Литература</b><small>Пушкин · статьи · игры</small></div></button>
 <h2>😄 Развлечение</h2>
 <button class="card" onclick="startFun()"><div class="ic">😂</div><div><b>Кто прав?</b><small>Шутливая игра</small></div></button>
+<div id="panelBtn"></div>
 </div>
 
-<div id="litHome" class="scr">
+<div id="teacherPanel" class="scr">
+<button class="back" onclick="go('subjects')">← Назад в меню</button>
+<div class="hero">🎛️</div>
+<h1 id="panelTitle">Панель управления</h1>
+<p class="sub" id="panelSub">Команды для роли</p>
+
+<h2>📊 Статистика класса</h2>
+<div class="st">
+<div><div class="v" id="statPlayers">0</div><div class="l">👥 Игроков</div></div>
+<div><div class="v" id="statGames">0</div><div class="l">🎮 Игр</div></div>
+<div><div class="v" id="statAvg">0</div><div class="l">📊 Средний балл</div></div>
+</div>
+<div id="statList" style="max-height:300px;overflow-y:auto;margin-bottom:14px"></div>
+<button class="btn btn2" onclick="refreshStats()">🔄 Обновить</button>
+
+<h2>📢 Объявление класса</h2>
+<input type="text" id="announceInput" placeholder="Напиши объявление (например: завтра контрольная)" maxlength="150">
+<button class="btn" onclick="postAnnounce()">📢 Опубликовать</button>
+<button class="btn btn2" onclick="clearAnnounce()">🗑️ Удалить объявление</button>
+
+<h2>📝 Свои вопросы</h2>
+<p style="font-size:.9em;color:#b8956a;margin-bottom:8px">Добавь свои вопросы в любую викторину</p>
+<select id="qTarget">
+<option value="rus">Викторина: Древняя Русь</option>
+<option value="med">Викторина: Средние века</option>
+<option value="fr">Викторина: Франки</option>
+<option value="hl">Викторина: Хлодвиг</option>
+<option value="km">Викторина: Карл Мартелл</option>
+<option value="year">Угадай год</option>
+<option value="push_bio">Пушкин: Биография</option>
+<option value="push_works">Пушкин: Произведения</option>
+<option value="push_quotes">Пушкин: Цитаты</option>
+</select>
+<input type="text" id="qText" placeholder="Вопрос" maxlength="200">
+<input type="text" id="qOpt1" placeholder="Вариант А" maxlength="80">
+<input type="text" id="qOpt2" placeholder="Вариант Б" maxlength="80">
+<input type="text" id="qOpt3" placeholder="Вариант В" maxlength="80">
+<input type="text" id="qOpt4" placeholder="Вариант Г" maxlength="80">
+<input type="text" id="qCorrect" placeholder="Номер правильного (1-4)" maxlength="1">
+<input type="text" id="qExplain" placeholder="Пояснение" maxlength="200">
+<button class="btn" onclick="addCustomQuestion()">➕ Добавить вопрос</button>
+<button class="btn btn2" onclick="showCustomQuestions()">👀 Мои вопросы</button>
+
+<h2>🚫 Отключение игр</h2>
+<div id="toggleList"></div>
+
+<h2>⭐ Отметки</h2>
+<select id="starTarget"></select>
+<button class="btn" onclick="giveStar()">⭐ Дать значок «Молодец»</button>
+
+<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
+</div>
+
+<div id="customQScreen" class="scr">
+<button class="back" onclick="go('teacherPanel')">← Назад в панель</button>
+<h1>📝 Мои добавленные вопросы</h1>
+<div id="customQList" style="margin-top:14px"></div>
+<button class="btn btn2" onclick="go('teacherPanel')">🏠 К панели</button>
+</div><div id="litHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <div class="hero">📖</div>
 <h1>Литература — 6-7 класс</h1>
 <p class="sub">✦ Выбери тему ✦</p>
 <button class="theme-card" onclick="go('pushkinTopic')">
 <div class="ic">✍️</div>
-<div><b>Александр Сергеевич Пушкин</b><small>1799–1837 · великий русский поэт<br>📖 Большая статья · 🎯 3 викторины · 🧩 2 кроссворда · 🎨 2 пазла</small></div>
+<div><b>Александр Сергеевич Пушкин</b><small>1799–1837 · великий русский поэт<br>📖 Большая статья · 🎯 3 викторины · 🧩 2 кроссворда</small></div>
 <span class="arrow">›</span>
 </button>
 <button class="theme-card" onclick="alert('Скоро: Гоголь, Тургенев, Толстой, Чехов')">
@@ -237,10 +390,87 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h2>🧩 Кроссворды</h2>
 <button class="card" onclick="goCrossPush('bio')"><div class="ic">🧩</div><div><b>Кроссворд 1: Пушкин</b><small>8 слов о жизни</small></div></button>
 <button class="card" onclick="goCrossPush('works')"><div class="ic">🧩</div><div><b>Кроссворд 2: Произведения</b><small>8 слов о книгах</small></div></button>
-<h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('pushkin')"><div class="ic">🎨</div><div><b>Пазл: Портрет Пушкина</b><small>Собери картину Кипренского</small></div></button>
-<button class="card" onclick="startPuzzle('skazka')"><div class="ic">🎨</div><div><b>Пазл: Сказки Пушкина</b><small>Иллюстрация Билибина</small></div></button>
 <button class="btn btn2" onclick="go('litHome')">🏠 К темам</button>
+</div>
+
+<div id="pushkin" class="scr">
+<button class="back" onclick="go('pushkinTopic')">← К разделу «Пушкин»</button>
+<h1>✍️ Александр Сергеевич Пушкин</h1>
+<p class="sub">1799–1837 · великий русский поэт</p>
+<div class="art">
+
+<h2>Введение</h2>
+<p><b>Александр Сергеевич Пушкин</b> (1799–1837) — великий русский поэт, драматург и прозаик, реформатор русского литературного языка. Его называют <b>«солнцем русской поэзии»</b>.</p>
+<p>Пушкин прожил всего <b>37 лет</b>, но успел написать более 800 произведений: стихи, поэмы, сказки, романы, повести, драмы. Его произведения переведены на <b>более 200 языков</b>.</p>
+<div class="quote">«Пушкин — наше всё» — Аполлон Григорьев (1859).</div>
+<p><b>Почему Пушкин так важен?</b> До него русский литературный язык был тяжёлым и книжным. Пушкин соединил книжный и разговорный язык, сделал его живым, простым и красивым.</p>
+
+<h2>1. Детство (1799–1811)</h2>
+<p>Родился <b>6 июня 1799 года</b> в Москве. Отец — <b>Сергей Львович</b>, мать — <b>Надежда Осиповна</b>, внучка «арапа Петра Великого» Абрама Ганнибала.</p>
+<p>В доме Пушкиных бывали <b>Карамзин</b>, <b>Жуковский</b>, <b>Батюшков</b>. Особую роль сыграла няня — <b>Арина Родионовна</b>.</p>
+<div class="quote">«Мастерица ведь была и откуда что брала!»</div>
+<div class="fact"><b>💡 Интересно.</b> Дома говорили по-французски, а русский язык Саша выучил от няни и бабушки.</div>
+
+<h2>2. Царскосельский лицей (1811–1817)</h2>
+<p>В <b>1811 году</b> 12-летний Пушкин поступил в <b>Царскосельский лицей</b>. Здесь учился 6 лет.</p>
+<p><b>Друзья:</b> Иван Пущин, Антон Дельвиг, Вильгельм Кюхельбекер, Александр Горчаков.</p>
+<p>В <b>1814 году</b> — первое стихотворение <b>«Воспоминания в Царском Селе»</b>.</p>
+<div class="quote">«Я не умер! Вот кто заменит Державина!» — Державин о юном Пушкине.</div>
+
+<h2>3. Петербург (1817–1820)</h2>
+<p>Поступил в Коллегию иностранных дел. В <b>1820</b> закончил поэму <b>«Руслан и Людмила»</b>.</p>
+<p>Писал политические стихи: «Вольность», «К Чаадаеву». За них отправлен в <b>ссылку</b>.</p>
+<div class="quote">«Пока свободою горим...» — «К Чаадаеву» (1818)</div>
+
+<h2>4. Южная ссылка (1820–1824)</h2>
+<p>Сослан в <b>Кишинёв</b>, затем в <b>Одессу</b>. Написал: «Кавказский пленник», «Бахчисарайский фонтан», «Цыганы». Начал <b>«Евгения Онегина»</b>.</p>
+
+<h2>5. Михайловское (1824–1826)</h2>
+<p>Сослан в родовое имение. Написал: трагедию <b>«Борис Годунов»</b>, поэму «Граф Нулин», стихи.</p>
+<div class="fact"><b>💡 Интересно.</b> В Михайловском у Пушкина была только няня Арина Родионовна. Он писал: «Уединение — моя муза».</div>
+
+<h2>6. Возвращение (1826–1830)</h2>
+<p>Николай I вернул Пушкина, но с полицейским надзором. В <b>1828</b> встретил <b>Наталью Гончарову</b>. В <b>1830</b> — <b>Болдинская осень</b>.</p>
+<div class="fact"><b>💡 Болдинская осень.</b> За 3 месяца: «Повести Белкина», «Маленькие трагедии», 30 стихотворений, завершил «Евгения Онегина».</div>
+
+<h2>7. Женитьба (1831)</h2>
+<p>В феврале <b>1831</b> женился на <b>Наталье Гончаровой</b>. Четверо детей.</p>
+
+<h2>8. Последние годы (1831–1837)</h2>
+<p>Царь пожаловал звание <b>камер-юнкера</b> — оскорбительное для поэта. В <b>1836</b> основал журнал <b>«Современник»</b>.</p>
+
+<h2>9. Дуэль и смерть (1837)</h2>
+<p>Вызвал на дуэль француза <b>Жоржа Дантеса</b>. <b>27 января 1837</b> на Чёрной речке Дантес смертельно ранил Пушкина. Умер <b>29 января 1837</b>, в 37 лет.</p>
+<div class="quote">«Нет, весь я не умру — душа в заветной лире...»</div>
+
+<h2>10. Творчество</h2>
+<p><b>Сказки:</b> «О царе Салтане» (1831), «О рыбаке и рыбке» (1833), «О мёртвой царевне» (1833), «О золотом петушке» (1834), «О попе...» (1830).</p>
+<p><b>Поэмы:</b> «Руслан и Людмила», «Кавказский пленник», «Бахчисарайский фонтан», «Цыганы», «Медный всадник».</p>
+<p><b>Романы:</b> «Евгений Онегин», «Дубровский», «Пиковая дама», «Капитанская дочка».</p>
+<p><b>Драмы:</b> «Борис Годунов», «Маленькие трагедии».</p>
+
+<h2>11. Значение Пушкина</h2>
+<div class="p"><span class="nm">✍️ Вклад в литературу</span>
+<p>✔ Создал современный русский литературный язык</p>
+<p>✔ Показал красоту русской речи</p>
+<p>✔ Оказал влияние на всех русских писателей</p>
+</div>
+
+<div class="d"><b>📌 Важные даты</b>
+<ul>
+<li><b>1799</b> — родился</li>
+<li><b>1811–1817</b> — лицей</li>
+<li><b>1820</b> — «Руслан и Людмила»</li>
+<li><b>1830</b> — Болдинская осень</li>
+<li><b>1831</b> — женился</li>
+<li><b>1837</b> — дуэль и смерть</li>
+</ul>
+</div>
+
+</div>
+<button class="btn" onclick="pickPush('bio')">🎯 Викторина</button>
+<button class="btn btn2" onclick="goCrossPush('bio')">🧩 Кроссворд</button>
+<button class="btn btn2" onclick="go('pushkinTopic')">🏠 К разделу</button>
 </div><div id="histHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <div class="hero">🏰</div>
@@ -248,17 +478,17 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <p class="sub">✦ Выбери тему ✦</p>
 <button class="theme-card" onclick="go('rusTopic')">
 <div class="ic">🛡️</div>
-<div><b>Древняя Русь</b><small>IX–XVII века · от Рюрика до Романовых<br>📖 Большая статья · 🎯 Викторина · 🧩 Кроссворд · 🎨 Пазл</small></div>
+<div><b>Древняя Русь</b><small>IX–XVII века · от Рюрика до Романовых<br>📖 Большая статья · 🎯 Викторина · 🧩 Кроссворд</small></div>
 <span class="arrow">›</span>
 </button>
 <button class="theme-card" onclick="go('medTopic')">
 <div class="ic">⚔️</div>
-<div><b>Средневековая Европа</b><small>V–XV века · рыцари, замки, походы<br>📖 Большая статья · 🎯 Викторина · 🧩 Кроссворд · 🎨 Пазл</small></div>
+<div><b>Средневековая Европа</b><small>V–XV века · рыцари, замки, походы<br>📖 Большая статья · 🎯 Викторина · 🧩 Кроссворд</small></div>
 <span class="arrow">›</span>
 </button>
 <button class="theme-card" onclick="go('frTopic')">
 <div class="ic">👑</div>
-<div><b>Франкское государство</b><small>V–IX века · Хлодвиг, Карл Мартелл, Карл Великий<br>📖 3 статьи · 🎯 3 викторины · 🧩 3 кроссворда · 🎨 3 пазла</small></div>
+<div><b>Франкское государство</b><small>V–IX века · Хлодвиг, Карл Мартелл, Карл Великий<br>📖 3 статьи · 🎯 3 викторины · 🧩 3 кроссворда</small></div>
 <span class="arrow">›</span>
 </button>
 <button class="theme-card" onclick="pk('year')">
@@ -279,8 +509,6 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="card" onclick="pk('rus')"><div class="ic">🎯</div><div><b>Викторина: Древняя Русь</b><small>15 вопросов, 3 уровня</small></div></button>
 <h2>🧩 Кроссворды</h2>
 <button class="card" onclick="goCross('rus')"><div class="ic">🧩</div><div><b>Кроссворд: Древняя Русь</b><small>8 слов, 5 жизней</small></div></button>
-<h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('rus')"><div class="ic">🎨</div><div><b>Пазл: Богатыри Васнецова</b><small>Собери знаменитую картину</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
 </div>
 
@@ -295,8 +523,6 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="card" onclick="pk('med')"><div class="ic">🎯</div><div><b>Викторина: Средние века</b><small>15 вопросов</small></div></button>
 <h2>🧩 Кроссворды</h2>
 <button class="card" onclick="goCross('med')"><div class="ic">🧩</div><div><b>Кроссворд: Средние века</b><small>8 слов</small></div></button>
-<h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('med')"><div class="ic">🎨</div><div><b>Пазл: Замок Каркассон</b><small>Настоящий средневековый замок</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
 </div>
 
@@ -317,446 +543,206 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="card" onclick="goCross('fr')"><div class="ic">🧩</div><div><b>Кроссворд: Франки</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('hl')"><div class="ic">🧩</div><div><b>Кроссворд: Хлодвиг</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('km')"><div class="ic">🧩</div><div><b>Кроссворд: Карл Мартелл</b><small>8 слов</small></div></button>
-<h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('fr')"><div class="ic">🎨</div><div><b>Пазл: Монета Карла Великого</b><small>Средневековая монета</small></div></button>
-<button class="card" onclick="startPuzzle('hl')"><div class="ic">🎨</div><div><b>Пазл: Крещение Хлодвига</b><small>Историческая картина</small></div></button>
-<button class="card" onclick="startPuzzle('km')"><div class="ic">🎨</div><div><b>Пазл: Битва при Пуатье</b><small>Решающее сражение</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
-</div><div id="pushkin" class="scr">
-<button class="back" onclick="go('pushkinTopic')">← К разделу «Пушкин»</button>
-<h1>✍️ Александр Сергеевич Пушкин</h1>
-<p class="sub">1799–1837 · великий русский поэт</p>
-<div class="art">
-
-<h2>Введение</h2>
-<p><b>Александр Сергеевич Пушкин</b> (1799–1837) — великий русский поэт, драматург и прозаик, реформатор русского литературного языка. Его называют <b>«солнцем русской поэзии»</b> и создателем современного русского литературного языка.</p>
-<p>Пушкин прожил всего <b>37 лет</b>, но успел написать более 800 произведений: стихи, поэмы, сказки, романы, повести, драмы. Он считается одним из самых читаемых поэтов мира — его произведения переведены на <b>более 200 языков</b>.</p>
-<div class="quote">«Пушкин — наше всё» — так сказал поэт и критик Аполлон Григорьев в 1859 году.</div>
-<p><b>Почему Пушкин так важен?</b> До него русский литературный язык был тяжёлым и книжным. Пушкин соединил книжный и разговорный язык, сделал его живым, простым и красивым. Именно по его произведениям иностранцы учат русский язык до сих пор.</p>
-
-<h2>1. Детство (1799–1811)</h2>
-<p>Александр Сергеевич Пушкин родился <b>6 июня 1799 года</b> в Москве, в дворянской семье. Отец — <b>Сергей Львович Пушкин</b>, отставной военный, любитель литературы. Мать — <b>Надежда Осиповна</b>, внучка «арапа Петра Великого» Абрама Ганнибала.</p>
-<p><b>Кто такой Абрам Ганнибал?</b> Это был африканец, привезённый в Россию при Петре I. Царь дал ему образование, он стал военным инженером и генералом. От него Пушкин унаследовал тёмные кудри и «африканскую» внешность.</p>
-<p>Маленький Саша рос в атмосфере книг и поэзии. В доме Пушкиных часто бывали известные писатели — <b>Николай Карамзин</b>, <b>Василий Жуковский</b>, <b>Константин Батюшков</b>. Они читали стихи, спорили о литературе.</p>
-<p>Особую роль в жизни Пушкина сыграла няня — <b>Арина Родионовна</b>. Она рассказывала ему русские сказки, пела песни, знала много пословиц и поговорок. Именно от неё Пушкин полюбил русский фольклор. Позже он вспоминал:</p>
-<div class="quote">«Мастерица ведь была и откуда что брала! А куды разумны шутки, присказки, приговорки, сказки, былины — всего не перечтешь».</div>
-<div class="fact"><b>💡 Интересно.</b> У Пушкина были брат Лев и сестра Ольга. Дома говорили по-французски (это было принято в дворянских семьях), а русский язык Саша выучил в основном от няни и бабушки Марии Алексеевны.</div>
-
-<h2>2. Царскосельский лицей (1811–1817)</h2>
-<p>В <b>1811 году</b> 12-летний Пушкин поступил в <b>Царскосельский лицей</b> — новое учебное заведение для детей дворян. Лицей находился рядом с царским дворцом в Царском Селе под Петербургом.</p>
-<p>Лицей был открыт по указу императора <b>Александра I</b>. Программа была серьёзная: литература, история, языки, математика, физика, философия. Здесь Пушкин учился 6 лет.</p>
-<p><b>Друзья Пушкина по лицею:</b></p>
-<ul>
-<li><b>Иван Пущин</b> — самый близкий друг поэта</li>
-<li><b>Антон Дельвиг</b> — поэт, издатель</li>
-<li><b>Вильгельм Кюхельбекер</b> — поэт, будущий декабрист</li>
-<li><b>Александр Горчаков</b> — будущий министр иностранных дел</li>
-</ul>
-<p>В <b>1814 году</b> Пушкин написал первое стихотворение — <b>«Воспоминания в Царском Селе»</b>. Оно было напечатано, а сам Пушкин прочитал его на экзамене при старом поэте <b>Гавриле Державине</b>.</p>
-<div class="quote">«Я не умер! Вот кто заменит Державина!» — сказал потрясённый Державин, услышав стихи юного Пушкина.</div>
-<p>В лицее Пушкин написал более 130 стихотворений. Он стал известен как поэт ещё до окончания лицея.</p>
-<div class="fact"><b>💡 Интересно.</b> В лицее у Пушкина было прозвище «Француз» — за любовь к французскому языку. А ещё «Сверчок» — за то, что он был непоседой.</div>
-
-<h2>3. Петербург (1817–1820)</h2>
-<p>После лицея Пушкин поступил на службу в Коллегию иностранных дел. Он жил в Петербурге, много писал, вёл свободный образ жизни. Ходил в театры, на балы, участвовал в литературных салонах.</p>
-<p>В <b>1820 году</b> закончил поэму <b>«Руслан и Людмила»</b> — первое большое произведение. Поэма была необычной: сказочный сюжет, живой язык, ирония. Публика разделилась: одни восхищались, другие возмущались.</p>
-<p>Пушкин писал <b>политические стихи</b>: «Вольность», «К Чаадаеву», «Деревня». Эти стихи разошлись по всей России в рукописных копиях. За них Пушкина отправили в <b>ссылку</b>.</p>
-<div class="quote">«Пока свободою горим,<br>Пока сердца для чести живы,<br>Мой друг, отчизне посвятим<br>Души прекрасные порывы!»<br>— «К Чаадаеву» (1818)</div>
-
-<h2>4. Южная ссылка (1820–1824)</h2>
-<p>Пушкина сослали на юг России — сначала в <b>Кишинёв</b>, затем в <b>Одессу</b>. Здесь он написал:</p>
-<ul>
-<li>Поэму <b>«Кавказский пленник»</b> (1821)</li>
-<li>Поэму <b>«Бахчисарайский фонтан»</b> (1823)</li>
-<li>Поэму <b>«Цыганы»</b> (1824)</li>
-<li>Начал роман в стихах <b>«Евгений Онегин»</b> (1823)</li>
-</ul>
-<p>На юге Пушкин увлёкся романтизмом — его герои одиноки, свободны, ищут смысл жизни. Особенно он любил море и Кавказ.</p>
-<div class="quote">«Прощай, свободная стихия!<br>В последний раз передо мной<br>Ты катишь волны голубые<br>И блещешь гордою красой»<br>— «К морю» (1824)</div>
-
-<h2>5. Михайловское (1824–1826)</h2>
-<p>В <b>1824 году</b> Пушкина сослали в <b>Михайловское</b> — родовое имение в Псковской губернии. Здесь он провёл два года в одиночестве.</p>
-<p>Но эти годы стали очень плодотворными. Он написал:</p>
-<ul>
-<li>Трагедию <b>«Борис Годунов»</b> (1825)</li>
-<li>Поэму <b>«Граф Нулин»</b> (1825)</li>
-<li>Много стихотворений («Зимний вечер», «Зимнее утро», «Няне»)</li>
-</ul>
-<p>В Михайловском Пушкин изучал историю, читал летописи, собирал материал для будущих произведений. Он писал друзьям:</p>
-<div class="quote">«Уединение — моя муза».</div>
-<div class="fact"><b>💡 Интересно.</b> В Михайловском у Пушкина была только няня Арина Родионовна. Он очень скучал и в шутку называл её «моя единственная подруга». Ей он посвятил стихотворение «Няне»: «Подруга дней моих суровых, голубка дряхлая моя!»</div>
-
-<h2>6. Возвращение в Москву (1826–1830)</h2>
-<p>В <b>1826 году</b> новый император <b>Николай I</b> вернул Пушкина из ссылки. Царь сам принял поэта и сказал, что прощает его. Но на самом деле установил за Пушкиным <b>полицейский надзор</b> — следили, что он пишет и с кем общается.</p>
-<p>Пушкин жил в Москве и Петербурге. В <b>1828 году</b> на балу встретил <b>Наталью Гончарову</b> — первую красавицу Москвы. Долго ухаживал, сватался дважды, и в <b>1830 году</b> они обручились.</p>
-<p>Перед свадьбой Пушкин поехал в имение <b>Болдино</b> улаживать дела. Там он провёл три месяца — знаменитую <b>«Болдинскую осень»</b>.</p>
-<div class="fact"><b>💡 Болдинская осень (1830).</b> За 3 месяца Пушкин написал: «Повести Белкина», «Маленькие трагедии», «Сказку о попе и работнике его Балде», «Сказку о медведихе», 30 стихотворений, завершил «Евгения Онегина». Это был самый продуктивный период в жизни поэта. Он почти не выходил из дома, писал с утра до ночи.</div>
-
-<h2>7. Женитьба (1831)</h2>
-<p>В феврале <b>1831 года</b> Пушкин женился на <b>Наталье Николаевне Гончаровой</b>. Венчание прошло в Москве, в церкви Большого Вознесения на Никитской.</p>
-<p>Пушкин очень любил жену. У них родилось <b>четверо детей</b>:</p>
-<ul>
-<li><b>Мария</b> (1832)</li>
-<li><b>Александр</b> (1833)</li>
-<li><b>Григорий</b> (1835)</li>
-<li><b>Наталья</b> (1836)</li>
-</ul><h2>8. Последние годы (1831–1837)</h2>
-<p>Пушкин продолжал писать, но жизнь становилась тяжелее. Царь пожаловал ему звание <b>камер-юнкера</b> — придворный чин, оскорбительный для 34-летнего поэта (его давали молодым людям). Пушкин был в ярости — это унижало его.</p>
-<p>Долги росли. Светское общество сплетничало. Всё это угнетало поэта. Он писал жене:</p>
-<div class="quote">«Моя жизнь проходит в мучениях. Я задыхаюсь в этом свете».</div>
-<p>В <b>1836 году</b> Пушкин основал журнал <b>«Современник»</b> — главное литературное издание того времени. В нём печатались Гоголь, Жуковский, Баратынский.</p>
-<p><b>Произведения последних лет:</b></p>
-<ul>
-<li><b>«Пиковая дама»</b> (1833)</li>
-<li><b>«Медный всадник»</b> (1833)</li>
-<li><b>«Капитанская дочка»</b> (1836)</li>
-<li><b>«Сказка о рыбаке и рыбке»</b> (1833)</li>
-<li><b>«Сказка о царе Салтане»</b> (1831)</li>
-<li><b>«Сказка о мёртвой царевне»</b> (1833)</li>
-<li><b>«Сказка о золотом петушке»</b> (1834)</li>
-</ul>
-
-<h2>9. Дуэль и смерть (1837)</h2>
-<p>В <b>1836 году</b> Пушкин получил анонимные письма, оскорбляющие его и жену. В них говорилось, что Наталья Николаевна изменяет мужу с французом <b>Жоржем Дантесом</b> — приёмным сыном голландского посла.</p>
-<p>Пушкин вызвал Дантеса на дуэль. <b>27 января 1837 года</b> на Чёрной речке под Петербургом состоялась дуэль. Дантес выстрелил первым и смертельно ранил Пушкина в живот.</p>
-<p>Через <b>два дня</b>, 29 января 1837 года, Пушкин умер в своей квартире на Мойке. Ему было <b>37 лет</b>.</p>
-<div class="quote">«Нет, весь я не умру — душа в заветной лире<br>Мой прах переживёт и тленья убежит»<br>— из стихотворения «Я памятник себе воздвиг нерукотворный» (1836)</div>
-<p>Похоронен Пушкин в Святогорском монастыре, рядом с имением Михайловское.</p>
-<div class="fact"><b>💡 Интересно.</b> На дуэли Пушкин был ранен в живот — в те времена это была смертельная рана. Врачи не могли помочь. Перед смертью Пушкин сказал: «Хочу умереть по-христиански». Он исповедовался и причастился. Император Николай I оплатил долги поэта и назначил пенсию его семье.</div>
-
-<h2>10. Творчество Пушкина</h2>
-<p><b>Сказки:</b></p>
-<ul>
-<li>«Сказка о царе Салтане» (1831)</li>
-<li>«Сказка о рыбаке и рыбке» (1833)</li>
-<li>«Сказка о мёртвой царевне и семи богатырях» (1833)</li>
-<li>«Сказка о золотом петушке» (1834)</li>
-<li>«Сказка о попе и работнике его Балде» (1830)</li>
-</ul>
-<p><b>Поэмы:</b></p>
-<ul>
-<li>«Руслан и Людмила» (1820)</li>
-<li>«Кавказский пленник» (1822)</li>
-<li>«Бахчисарайский фонтан» (1823)</li>
-<li>«Цыганы» (1827)</li>
-<li>«Медный всадник» (1833)</li>
-</ul>
-<p><b>Романы и проза:</b></p>
-<ul>
-<li>«Евгений Онегин» — роман в стихах (1823–1831)</li>
-<li>«Повести Белкина» (1830)</li>
-<li>«Дубровский» (1833)</li>
-<li>«Пиковая дама» (1833)</li>
-<li>«Капитанская дочка» (1836)</li>
-</ul>
-<p><b>Драмы:</b></p>
-<ul>
-<li>«Борис Годунов» (1825)</li>
-<li>«Маленькие трагедии» (1830) — 4 пьесы: «Скупой рыцарь», «Моцарт и Сальери», «Каменный гость», «Пир во время чумы»</li>
-</ul>
-
-<h2>11. Значение Пушкина</h2>
-<div class="p"><span class="nm">✍️ Вклад в литературу</span>
-<p>✔ Создал современный русский литературный язык</p>
-<p>✔ Сделал литературу доступной и живой</p>
-<p>✔ Ввёл новые жанры и формы</p>
-<p>✔ Показал красоту русской речи</p>
-<p>✔ Оказал влияние на всех русских писателей после него</p>
-<p>✔ Переведён на более 200 языков мира</p>
-</div>
-
-<div class="d"><b>📌 Важные даты</b>
-<ul>
-<li><b>1799</b> — родился в Москве</li>
-<li><b>1811–1817</b> — Царскосельский лицей</li>
-<li><b>1814</b> — первое стихотворение</li>
-<li><b>1820</b> — поэма «Руслан и Людмила»</li>
-<li><b>1820–1824</b> — южная ссылка</li>
-<li><b>1824–1826</b> — Михайловское</li>
-<li><b>1830</b> — Болдинская осень</li>
-<li><b>1831</b> — женился на Гончаровой</li>
-<li><b>1836</b> — «Капитанская дочка», «Современник»</li>
-<li><b>1837</b> — дуэль и смерть</li>
-</ul>
-</div>
-
-</div>
-<button class="btn" onclick="pickPush('bio')">🎯 Викторина: Биография</button>
-<button class="btn btn2" onclick="pickPush('works')">🎯 Викторина: Произведения</button>
-<button class="btn btn2" onclick="pickPush('quotes')">💬 Викторина: Цитаты</button>
-<button class="btn btn2" onclick="goCrossPush('bio')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('pushkin')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('pushkinTopic')">🏠 К разделу</button>
-</div>
-
-<div id="rus" class="scr">
+</div><div id="rus" class="scr">
 <button class="back" onclick="go('rusTopic')">← К разделу «Русь»</button>
 <h1>🛡️ Древняя Русь</h1>
-<p class="sub">IX–XVII века — от Рюрика до первых Романовых</p>
+<p class="sub">IX–XVII века</p>
 <div class="art">
-
 <h2>Введение</h2>
-<p><b>Древняя Русь</b> — одно из крупнейших государств средневековой Европы. Оно возникло в IX веке на землях восточных славян и просуществовало более 700 лет, пережив расцвет, раздробленность, монгольское нашествие и объединение вокруг Москвы.</p>
-<p>Территория Руси простиралась от Балтики до Чёрного моря, от Карпат до Волги. Через неё проходил знаменитый торговый путь <b>«из варяг в греки»</b> — от Скандинавии до Византии. По нему везли меха, воск, мёд, а взамен получали серебро, шелка, оружие, вина.</p>
+<p><b>Древняя Русь</b> — одно из крупнейших государств средневековой Европы. Возникло в IX веке, просуществовало более 700 лет.</p>
+<p>Через Русь проходил торговый путь <b>«из варяг в греки»</b>.</p>
 
 <h2>1. Происхождение славян</h2>
-<p>Восточные славяне — предки русских, украинцев и белорусов — жили на территории от озера Ильмень до реки Днепр. Они делились на несколько крупных племенных союзов:</p>
-<ul>
-<li><b>Поляне</b> — жили у Днепра, вокруг Киева</li>
-<li><b>Древляне</b> — в лесах к северо-западу от Киева</li>
-<li><b>Кривичи</b> — у верховьев Волги и Днепра</li>
-<li><b>Словене (ильменские)</b> — у озера Ильмень, в Новгороде</li>
-<li><b>Вятичи</b> — на реке Оке</li>
-<li><b>Северяне</b> — на реке Десне</li>
-<li><b>Радимичи, дреговичи, полочане</b> — на других землях</li>
-</ul>
-<p><b>Основные занятия славян:</b> земледелие (рожь, пшеница, просо), скотоводство, охота, рыболовство, <b>бортничество</b> — сбор мёда диких пчёл. Жили в полуземлянках и деревянных избах, строили укреплённые поселения — <b>городища</b>.</p>
-<p><b>Верования:</b> язычество. Главные боги — <b>Перун</b> (бог грома и войны), <b>Велес</b> (бог скота и богатства), <b>Дажьбог</b> (бог солнца), <b>Мокошь</b> (богиня женского рукоделия).</p>
+<p>Племена: <b>поляне, древляне, кривичи, словене, вятичи, северяне</b>.</p>
+<p>Занятия: земледелие, скотоводство, охота, рыболовство, бортничество.</p>
+<p>Боги: <b>Перун, Велес, Дажьбог, Мокошь</b>.</p>
 
-<h2>2. Призвание варягов (862 год)</h2>
-<p>По летописи <i>«Повесть временных лет»</i>, в IX веке между славянскими племенами начались междоусобицы. Чтобы прекратить ссоры, они решили пригласить правителя со стороны:</p>
-<div class="quote">«Земля наша велика и обильна, а порядка в ней нет. Приходите княжить и владеть нами».</div>
-<p>В <b>862 году</b> на княжение пришёл варяг <b>Рюрик</b> с дружиной. Он сел княжить в Новгороде (по другой версии — в Старой Ладоге). Рюрик стал основателем династии <b>Рюриковичей</b>, которая правила Русью до 1598 года — более 700 лет.</p>
-<div class="fact"><b>💡 Спор историков.</b> Одни считают, что варяги действительно пришли «по приглашению». Другие (антинорманская теория, М. В. Ломоносов) — что славяне сами создали государство, а варяги лишь помогали. Точного ответа нет до сих пор.</div>
+<h2>2. Призвание варягов (862)</h2>
+<div class="quote">«Земля наша велика и обильна, а порядка в ней нет».</div>
+<p>В <b>862</b> пришёл <b>Рюрик</b>. Основал династию <b>Рюриковичей</b>.</p>
+<div class="fact"><b>💡 Спор.</b> Норманская и антинорманская теории — кто создал государство.</div>
 
 <h2>3. Первые князья</h2>
-<div class="p"><span class="nm">🛡️ Рюрик (862–879)</span>
-<p>Первый князь, основатель династии Рюриковичей. Правил в Новгороде.</p>
+<div class="p"><span class="nm">🛡️ Рюрик (862–879)</span><p>Первый князь.</p></div>
+<div class="p"><span class="nm">🛡️ Олег (879–912)</span><p><b>882</b> — объединил Новгород и Киев. <b>907</b> — поход на Царьград.</p></div>
+<div class="p"><span class="nm">🛡️ Игорь (912–945)</span><p>Погиб от древлян.</p></div>
+<div class="p"><span class="nm">🛡️ Ольга (945–962)</span><p>Налоговая реформа. Приняла христианство.</p></div>
+<div class="p"><span class="nm">🛡️ Святослав (962–972)</span><p>Разбил Хазарский каганат.</p>
+<div class="quote">«Иду на вы!»</div>
 </div>
-<div class="p"><span class="nm">🛡️ Олег (879–912) — «Вещий»</span>
-<p>Регент при малолетнем сыне Рюрика — Игоре.</p>
-<p><b>882 год</b> — захватил Киев, убив Аскольда и Дира. Объединил Новгород и Киев — <b>Киевская Русь</b>.</p>
-<p><b>907 год</b> — поход на Царьград. Прибил щит на врата города.</p>
-<p>Умер по легенде от укуса змеи, выползшей из черепа коня.</p>
-</div>
-<div class="p"><span class="nm">🛡️ Игорь (912–945)</span>
-<p>Сын Рюрика. Совершил два похода на Византию. В <b>945 году</b> погиб от рук древлян при попытке повторно собрать дань.</p>
-</div>
-<div class="p"><span class="nm">🛡️ Ольга (945–962)</span>
-<p>Жена Игоря. Жестоко отомстила древлянам. Провела первую <b>налоговую реформу</b>: уроки и погосты. Первой приняла христианство (957).</p>
-</div>
-<div class="p"><span class="nm">🛡️ Святослав (962–972)</span>
-<p>Сын Игоря и Ольги. Разгромил <b>Хазарский каганат</b> (965). Погиб в бою с печенегами.</p>
-<div class="quote">«Иду на вы!» — так Святослав предупреждал врагов о начале войны.</div>
-</div><h2>4. Крещение Руси (988 год)</h2>
-<p>Князь <b>Владимир Святославич</b> (980–1015) сначала пытался укрепить язычество. Он создал единый пантеон богов во главе с Перуном — чтобы объединить племена. Но это не помогло.</p>
-<p>По легенде, Владимир отправил послов в разные страны, чтобы выбрать веру:</p>
-<div class="quote">«И пришли мы в Греческую землю... И не знали — на небе или на земле мы: ибо нет на земле такого зрелища и красоты такой».</div>
-<p>В <b>988 году</b> Владимир крестился сам (в Корсуни) и крестил Русь. Христианство стало государственной религией.</p>
-<p><b>Значение крещения:</b></p>
+
+<h2>4. Крещение Руси (988)</h2>
+<p>Князь <b>Владимир</b> крестил Русь. Христианство стало государственной религией.</p>
 <ul>
-<li>Укрепило власть князя — теперь его поддерживала церковь</li>
-<li>Объединило племена в единый народ</li>
-<li>Развило письменность и культуру</li>
-<li>Сблизило Русь с Византией и другими христианскими странами</li>
-<li>Появились монастыри, школы, иконопись</li>
+<li>Укрепило власть</li>
+<li>Объединило племена</li>
+<li>Развило культуру</li>
+<li>Сблизило с Византией</li>
 </ul>
-<div class="fact"><b>💡 Почему выбрали христианство?</b> По одной версии — красота богослужения. По другой — политическая выгода: союз с сильной Византией. По третьей — Владимир хотел жениться на византийской принцессе Анне.</div>
 
 <h2>5. Ярослав Мудрый (1019–1054)</h2>
-<p>Сын Владимира. Пришёл к власти после долгой борьбы со Святополком Окаянным, который убил своих братьев Бориса и Глеба (первые русские святые).</p>
-<p><b>Что сделал:</b></p>
 <ul>
-<li>Составил первый свод законов — <b>«Русская Правда»</b></li>
-<li>Построил <b>Софийский собор</b> в Киеве (1037)</li>
-<li>Разбил печенегов в 1036 году</li>
-<li>Открыл школы и библиотеки при монастырях</li>
-<li>Выдал дочерей замуж за европейских королей</li>
-</ul>
-<p><b>Семья Ярослава:</b></p>
-<ul>
-<li>Дочь <b>Анна</b> — королева Франции</li>
-<li>Дочь <b>Елизавета</b> — королева Норвегии</li>
-<li>Дочь <b>Анастасия</b> — королева Венгрии</li>
-<li>Сын <b>Всеволод</b> — отец Владимира Мономаха</li>
+<li>«Русская Правда»</li>
+<li>Софийский собор в Киеве (1037)</li>
+<li>Разбил печенегов (1036)</li>
+<li>Дочери — королевы Франции, Норвегии, Венгрии</li>
 </ul>
 
-<h2>6. Раздробленность (XII–XV века)</h2>
-<p>После смерти Ярослава Мудрого Русь начала распадаться на отдельные княжества. Причины:</p>
-<ul>
-<li>Большая территория, сложно управлять из одного центра</li>
-<li>Натуральное хозяйство — каждый регион обеспечивает себя сам</li>
-<li>Борьба князей за лучшие земли</li>
-<li>Появление местных династий</li>
-</ul>
-<p>Крупнейшие княжества: <b>Владимиро-Суздальское, Галицко-Волынское, Новгородская республика</b>.</p>
+<h2>6. Раздробленность (XII–XV)</h2>
+<p>Русь распалась на княжества: <b>Владимиро-Суздальское, Галицко-Волынское, Новгородская республика</b>.</p>
 
-<h2>7. Борьба с врагами (XIII век)</h2>
-<h3>Битва на Калке (1223)</h3>
-<p>Первое столкновение с монголами. Русско-половецкое войско потерпело тяжёлое поражение.</p>
-<h3>Невская битва (1240)</h3>
-<p>Шведы высадились на берегу Невы. Князь <b>Александр Ярославич</b>, 19-летний сын Ярослава, с небольшой дружиной разбил их. За победу получил прозвище <b>Невский</b>.</p>
-<div class="quote">«Не в силе Бог, а в правде!» — сказал Александр своей дружине перед боем.</div>
-<h3>Ледовое побоище (1242)</h3>
-<p>5 апреля на льду Чудского озера Александр Невский разбил рыцарей Ливонского ордена.</p>
-<div class="quote">«Кто с мечом к нам придёт — от меча и погибнет. На том стояла и будет стоять Русская земля!»</div>
+<h2>7. Борьба с врагами (XIII)</h2>
+<p><b>1223</b> — Калка.</p>
+<p><b>1240</b> — Невская битва.</p>
+<p><b>1242</b> — Ледовое побоище.</p>
+<div class="quote">«Кто с мечом к нам придёт — от меча и погибнет!»</div>
 
 <h2>8. Монголо-татарское иго (1240–1480)</h2>
-<p>В 1237–1240 годах хан <b>Батый</b> завоевал русские земли.</p>
-<p><b>Что такое иго:</b></p>
-<ul>
-<li>Князья платили дань — <b>«выход»</b></li>
-<li>Получали <b>ярлык</b> на княжение от хана</li>
-<li>Монголы управляли через князей</li>
-</ul>
-<h3>Куликовская битва (1380)</h3>
-<p><b>Дмитрий Донской</b> разбил войско Мамая. Первая крупная победа. Перед битвой получил благословение от <b>Сергия Радонежского</b>.</p>
-<h3>Стояние на Угре (1480)</h3>
-<p><b>Иван III</b> отказался платить дань. Войска хана Ахмата отступили — иго закончилось.</p>
+<p>Хан <b>Батый</b> завоевал Русь.</p>
+<p><b>1380</b> — Куликовская битва (Дмитрий Донской).</p>
+<p><b>1480</b> — стояние на Угре (Иван III). Конец ига.</p>
 
 <h2>9. Возвышение Москвы</h2>
-<p>Москва впервые упомянута в <b>1147 году</b> в связи с Юрием Долгоруким. Усилилась при <b>Иване Калите</b> (1325–1340).</p>
+<p>Москва упомянута в <b>1147</b>. Усилилась при <b>Иване Калите</b> (1325–1340).</p>
 
 <h2>10. Иван Грозный (1533–1584)</h2>
-<p>В <b>1547 году</b> Иван IV первым принял титул <b>царя</b>. Провёл реформы:</p>
-<ul>
-<li>Создал <b>Избранную раду</b></li>
-<li>Созвал первый <b>Земский собор</b> (1549)</li>
-<li>Ввёл <b>Судебник</b> (1550)</li>
-<li>Создал <b>стрелецкое войско</b></li>
-<li>Присоединил <b>Казань (1552)</b> и <b>Астрахань (1556)</b></li>
-</ul>
-<p>В <b>1565–1572</b> ввёл <b>опричнину</b> — политику террора против бояр.</p>
+<p><b>1547</b> — первый <b>царь</b>. Присоединил Казань (1552) и Астрахань (1556). Опричнина (1565–1572).</p>
 
-<h2>11. Смутное время (1598–1613)</h2>
-<p>После смерти царя Фёдора Иоанновича прервалась династия Рюриковичей. Начались голод, самозванцы, интервенция.</p>
-<p>В <b>1612 году</b> <b>Минин и Пожарский</b> возглавили Второе народное ополчение и освободили Москву.</p>
-<p>В <b>1613 году</b> Земский собор избрал царём <b>Михаила Романова</b>.</p>
+<h2>11. Смута (1598–1613)</h2>
+<p><b>1612</b> — Минин и Пожарский освободили Москву.</p>
+<p><b>1613</b> — Михаил Романов — царь.</p>
 
-<div class="d"><b>📌 Все важные даты</b>
+<div class="d"><b>📌 Все даты</b>
 <ul>
-<li><b>862</b> — призвание Рюрика</li>
-<li><b>882</b> — объединение Новгорода и Киева</li>
-<li><b>988</b> — Крещение Руси</li>
-<li><b>1147</b> — первое упоминание Москвы</li>
-<li><b>1223</b> — битва на Калке</li>
+<li><b>862</b> — Рюрик</li>
+<li><b>882</b> — Новгород + Киев</li>
+<li><b>988</b> — Крещение</li>
+<li><b>1147</b> — Москва</li>
 <li><b>1240</b> — Невская битва</li>
 <li><b>1242</b> — Ледовое побоище</li>
 <li><b>1380</b> — Куликовская битва</li>
 <li><b>1480</b> — конец ига</li>
-<li><b>1547</b> — Иван IV — царь</li>
-<li><b>1552</b> — взятие Казани</li>
-<li><b>1612</b> — освобождение Москвы</li>
-<li><b>1613</b> — Михаил Романов — царь</li>
+<li><b>1547</b> — первый царь</li>
+<li><b>1612</b> — Минин и Пожарский</li>
+<li><b>1613</b> — Романовы</li>
 </ul>
 </div>
 
 </div>
 <button class="btn" onclick="pk('rus')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCross('rus')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('rus')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('rusTopic')">🏠 К разделу «Русь»</button>
+<button class="btn btn2" onclick="go('rusTopic')">🏠 К разделу</button>
 </div>
 
 <div id="med" class="scr">
 <button class="back" onclick="go('medTopic')">← К разделу «Средние века»</button>
 <h1>⚔️ Средние века</h1>
-<p class="sub">V–XV века — эпоха рыцарей, замков и городов</p>
+<p class="sub">V–XV века</p>
 <div class="art">
-
 <h2>Введение</h2>
-<p><b>Средние века</b> — эпоха между Античностью и Новым временем. Началась с падения Западной Римской империи в <b>476 году</b> и завершилась открытием Америки в <b>1492 году</b>.</p>
-<p>Средневековье часто называют «тёмными веками», но это не совсем верно. Именно в эту эпоху были заложены основы современной Европы: парламенты, университеты, города, банки.</p>
+<p><b>Средние века</b> — с <b>476</b> до <b>1492</b>.</p>
 
-<h2>1. Что такое Средневековье?</h2>
-<p>Средневековье делится на три периода:</p>
+<h2>1. Периоды</h2>
 <ul>
-<li><b>V–XI вв.</b> — Раннее Средневековье</li>
-<li><b>XI–XV вв.</b> — Классическое Средневековье</li>
-<li><b>XV–XVII вв.</b> — Позднее Средневековье</li>
+<li><b>V–XI вв.</b> — Раннее</li>
+<li><b>XI–XV вв.</b> — Классическое</li>
+<li><b>XV–XVII вв.</b> — Позднее</li>
 </ul>
-<p>Численность населения Европы — 40–70 миллионов человек. Продолжительность жизни — 30–40 лет.</p>
 
-<h2>2. Феодальный строй</h2>
-<p>Земля принадлежала <b>феодалам</b>. Они давали землю — <b>феод</b> — своим <b>вассалам</b> за службу.</p>
+<h2>2. Феодализм</h2>
+<p>Земля у феодалов. <b>Вассалитет</b>.</p>
 <div class="quote">«Вассал моего вассала — не мой вассал».</div>
-<p><b>Сословия:</b> духовенство, рыцарство, крестьянство.</p>
-<p>Крестьяне платили <b>оброк</b> и работали на <b>барщине</b>.</p>
-<div class="fact"><b>💡 Интересно.</b> Крестьянин отдавал феодалу треть урожая, плюс церковную десятину и сборы за помол зерна, печь, разрешение жениться.</div><h2>3. Рыцари и замки</h2>
-<p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Обучение: паж → оруженосец → рыцарь.</p>
-<p><b>Кодекс рыцаря:</b> смелость, верность сеньору, защита слабых, служение даме.</p>
-<p>Жили в <b>замках</b> — крепостях с башнями, рвом, подъёмным мостом. Стены 3–5 метров.</p>
-<div class="fact"><b>💡 Интересно.</b> Рыцарские доспехи весили 20–30 кг. В полном доспехе рыцарь мог упасть и не встать.</div>
+<p>Сословия: духовенство, рыцарство, крестьянство.</p>
+
+<h2>3. Рыцари и замки</h2>
+<p>Паж → оруженосец → рыцарь. Жили в замках с башнями и рвом.</p>
 
 <h2>4. Церковь</h2>
-<p>Католическая церковь владела третью всех земель. Для борьбы с <b>ересью</b> создана <b>инквизиция</b>.</p>
-<div class="quote">«Вне церкви нет спасения».</div>
+<p>Инквизиция — суд против ереси.</p>
 
-<h2>5. Крестовые походы (XI–XIII века)</h2>
-<p>В <b>1095 году</b> папа <b>Урбан II</b> призвал освободить <b>Святую землю</b>. Всего — <b>восемь</b> походов.</p>
-<ul>
-<li><b>1096–1099</b> — Первый, взятие Иерусалима</li>
-<li><b>1147–1149</b> — Второй (неудачный)</li>
-<li><b>1189–1192</b> — Третий (Ричард Львиное Сердце)</li>
-<li><b>1202–1204</b> — Четвёртый, разграбление Константинополя</li>
-<li><b>1291</b> — потеря Акры</li>
-</ul>
+<h2>5. Крестовые походы (XI–XIII)</h2>
+<p>1095 — Урбан II. Всего 8 походов.</p>
 
-<h2>6. Великая чума (1347–1351)</h2>
-<p>Эпидемия <b>чумы</b> унесла <b>треть</b> населения Европы — 25 миллионов человек.</p>
+<h2>6. Чума (1347–1351)</h2>
+<p>Треть Европы погибла.</p>
 
-<h2>7. Города и ремёсла</h2>
-<p>Цеха, гильдии, университеты: <b>1088</b> — Болонья, <b>1096</b> — Оксфорд, <b>1200</b> — Париж.</p>
+<h2>7. Города</h2>
+<p>Цеха, гильдии, университеты (Болонья, Оксфорд, Париж).</p>
 
-<h2>8. Хартия вольностей (1215)</h2>
-<p>Иоанн Безземельный подписал хартию, ограничившую власть короля. Первый шаг к парламенту (1265).</p>
+<h2>8. Хартия (1215)</h2>
+<p>Иоанн Безземельный ограничил власть короля.</p>
 
 <h2>9. Столетняя война (1337–1453)</h2>
-<p>Англия против Франции. Героиня — <b>Жанна д’Арк</b>. Сняла осаду Орлеана в 1429. Сожжена в 1431.</p>
+<p>Жанна д’Арк.</p>
 
 <h2>10. Падение Византии (1453)</h2>
-<p>Турки-османы захватили <b>Константинополь</b>. Империя пала.</p>
+<p>Турки взяли Константинополь.</p>
 
-<h2>11. Реконкиста (VIII–XV века)</h2>
-<p>Христиане отвоёвывали Пиренейский полуостров. Конец — <b>1492</b>, взятие Гранады.</p>
+<h2>11. Реконкиста (1492)</h2>
+<p>Конец отвоевания Пиренеев.</p>
 
 <h2>12. Изобретения</h2>
 <ul>
-<li><b>XIII в.</b> — компас, часы, очки</li>
-<li><b>XIV в.</b> — порох</li>
-<li><b>≈1450</b> — книгопечатание (Гутенберг)</li>
+<li>XIII в. — компас, часы</li>
+<li>XIV в. — порох</li>
+<li>≈1450 — книгопечатание</li>
 </ul>
 
-<div class="d"><b>📌 Все важные даты</b>
+<div class="d"><b>📌 Все даты</b>
 <ul>
-<li><b>476</b> — падение Западного Рима</li>
-<li><b>1096</b> — Крестовые походы</li>
-<li><b>1215</b> — Хартия вольностей</li>
-<li><b>1337</b> — Столетняя война</li>
-<li><b>1347</b> — Чёрная смерть</li>
-<li><b>1453</b> — падение Византии</li>
-<li><b>1492</b> — конец Реконкисты</li>
+<li><b>476</b> — падение Рима</li>
+<li><b>1096</b> — Крестовые</li>
+<li><b>1215</b> — Хартия</li>
+<li><b>1337</b> — Столетняя</li>
+<li><b>1347</b> — Чума</li>
+<li><b>1453</b> — Византия</li>
+<li><b>1492</b> — Реконкиста</li>
 </ul>
 </div>
 
 </div>
 <button class="btn" onclick="pk('med')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCross('med')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('med')">🎨 Пазл</button>
 <button class="btn btn2" onclick="go('medTopic')">🏠 К разделу</button>
-</div>
-
-<div id="fr" class="scr">
+</div><div id="fr" class="scr">
 <button class="back" onclick="go('frTopic')">← К разделу «Франки»</button>
 <h1>👑 Франкское королевство</h1>
-<p class="sub">V–IX века — от Хлодвига до Карла Великого</p>
+<p class="sub">V–IX века</p>
 <div class="art">
+<h2>Введение</h2>
+<p><b>Франкское королевство</b> — одно из самых могущественных государств раннего Средневековья. Основа будущих Франции, Германии, Италии.</p>
+
 <h2>1. Кто такие франки?</h2>
 <p><b>Франки</b> — германское племя в Галлии. «Свободные» — отсюда <b>Франция</b>.</p>
+
 <h2>2. Меровинги</h2>
 <p>Основатель — <b>Меровей</b>. Правили более 250 лет. Носили длинные волосы — знак власти.</p>
+
 <h2>3. Хлодвиг I (481–511)</h2>
+<div class="p"><span class="nm">👑 Первый великий король</span>
 <p><b>481</b> — король. <b>486</b> — Суассон. <b>496</b> — крещение. <b>507</b> — Вуйе. Столица — <b>Париж</b>.</p>
+</div>
+
 <h2>4. «Ленивые короли»</h2>
-<p>Реальная власть у <b>мажордомов</b>.</p>
+<p>Реальная власть у <b>мажордомов</b>. Самые известные: Пипин Геристальский, Карл Мартелл.</p>
+
 <h2>5. Карл Мартелл (717–741)</h2>
-<p><b>732</b> — Пуатье. Создал тяжёлую конницу. Ввёл бенефиции.</p>
+<div class="p"><span class="nm">⚔️ «Молот»</span>
+<p><b>732</b> — Пуатье. Создал тяжёлую конницу. Ввёл <b>бенефиции</b>.</p>
+</div>
+
 <h2>6. Пипин Короткий (751–768)</h2>
-<p>Основал <b>Каролингов</b>. «Пипинов дар».</p>
+<p>Сверг последнего Меровинга. Основал <b>Каролингов</b>. «Пипинов дар».</p>
+
 <h2>7. Карл Великий (768–814)</h2>
-<p><b>800</b> — император. Столица — <b>Ахен</b>. «Каролингское возрождение».</p>
+<div class="p"><span class="nm">👑 Великий император</span>
+<p>Завоевал Италию, Саксонию, Баварию. В <b>800</b> коронован императором. Столица — <b>Ахен</b>. «Каролингское возрождение».</p>
+</div>
+
 <h2>8. Распад (843)</h2>
 <p>Верденский договор: Франция, Германия, Италия.</p>
+
 <div class="d"><b>📌 Все даты</b>
 <ul>
 <li><b>481</b> — Хлодвиг</li>
@@ -768,10 +754,10 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <li><b>843</b> — Верденский раздел</li>
 </ul>
 </div>
+
 </div>
 <button class="btn" onclick="pk('fr')">👑 Викторина</button>
 <button class="btn btn2" onclick="goCross('fr')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('fr')">🎨 Пазл</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div>
 
@@ -782,28 +768,41 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <div class="art">
 <h2>1. Кто такой?</h2>
 <p><b>Хлодвиг I</b> (466–511) — король салических франков, основатель <b>Меровингов</b>.</p>
+
 <h2>2. Завоевания</h2>
-<p><b>486</b> — Суассон. <b>496</b> — алеманны. <b>507</b> — Вуйе.</p>
+<p><b>486</b> — Суассон (Сиагрий). <b>496</b> — алеманны. <b>507</b> — Вуйе (вестготы).</p>
 <div class="quote"><b>Легенда о чаше Суассона.</b> Воин разрубил чашу мечом. Через год Хлодвиг разбил ему голову.</div>
+
 <h2>3. Крещение (496)</h2>
 <div class="quote">«Бог Клотильды, даруй мне победу — я крещусь!»</div>
+<p><b>Значение:</b> укрепило власть, поддержка церкви и галло-римлян.</p>
+
 <h2>4. Управление</h2>
-<p>Столица — Париж. «Салическая правда».</p>
+<p>Столица — <b>Париж</b>. Управляли графы. Создан свод законов — <b>«Салическая правда»</b>.</p>
+
 <h2>5. Раздел (511)</h2>
-<p>4 сына.</p>
-<div class="d"><b>📌 Даты</b>
+<p>Королевство разделили 4 сына.</p>
+
+<h2>6. Значение правления</h2>
+<p>✔ Создал единое Франкское государство</p>
+<p>✔ Объединил почти всю Галлию</p>
+<p>✔ Принял христианство</p>
+<p>✔ Основал Меровингов</p>
+
+<div class="d"><b>📌 Все даты</b>
 <ul>
 <li><b>481</b> — король</li>
 <li><b>486</b> — Суассон</li>
+<li><b>493</b> — женился на Клотильде</li>
 <li><b>496</b> — крещение</li>
 <li><b>507</b> — Вуйе</li>
 <li><b>511</b> — умер</li>
 </ul>
 </div>
+
 </div>
 <button class="btn" onclick="pk('hl')">⚜️ Викторина</button>
 <button class="btn btn2" onclick="goCross('hl')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('hl')">🎨 Пазл</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div>
 
@@ -814,25 +813,43 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <div class="art">
 <h2>1. Кто такой?</h2>
 <p><b>Карл Мартелл</b> (688–741) — мажордом франков. «Молот».</p>
-<h2>2. Пуатье (732)</h2>
-<p>Остановил арабов.</p>
+
+<h2>2. Приход к власти</h2>
+<p>После смерти отца (714) началась борьба. Карл был незаконнорождённым, но победил. К <b>720</b> — единоличный мажордом.</p>
+
+<h2>3. Битва при Пуатье (732)</h2>
+<p>Октябрь <b>732</b>. Разбил арабов, остановил их продвижение в Европу.</p>
 <div class="quote"><b>Гиббон:</b> «Если бы арабы победили при Пуатье, Коран уже преподавали бы в Оксфорде».</div>
-<h2>3. Реформа</h2>
-<p>Тяжёлая конница. <b>Бенефиции</b>.</p>
-<h2>4. Смерть (741)</h2>
-<p>Разделил государство между сыновьями.</p>
-<div class="d"><b>📌 Даты</b>
+
+<h2>4. Военная реформа</h2>
+<ul>
+<li>Создал тяжёлую конницу</li>
+<li>Ввёл бенефиции</li>
+<li>Появилось рыцарство</li>
+</ul>
+
+<h2>5. Смерть (741)</h2>
+<p>Разделил государство между сыновьями Карломаном и Пипином.</p>
+
+<h2>6. Значение</h2>
+<p>✔ Остановил арабов (732)</p>
+<p>✔ Создал рыцарство</p>
+<p>✔ Ввёл бенефиции</p>
+<p>✔ Подготовил Каролингов</p>
+
+<div class="d"><b>📌 Все даты</b>
 <ul>
 <li><b>688</b> — родился</li>
 <li><b>717</b> — мажордом</li>
 <li><b>732</b> — Пуатье</li>
 <li><b>741</b> — умер</li>
+<li><b>751</b> — сын Пипин — король</li>
 </ul>
 </div>
+
 </div>
 <button class="btn" onclick="pk('km')">🔨 Викторина</button>
 <button class="btn btn2" onclick="goCross('km')">🧩 Кроссворд</button>
-<button class="btn btn2" onclick="startPuzzle('km')">🎨 Пазл</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div><div id="setup" class="scr">
 <button class="back" onclick="go('histHome')">← Назад</button>
@@ -940,20 +957,6 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="btn btn2" onclick="go('pushkinTopic')">🏠 К разделу</button>
 </div>
 
-<div id="puzzleScreen" class="scr">
-<button class="back" onclick="go('subjects')">← Назад</button>
-<h1 id="puzzleTitle">🎨 Пазл</h1>
-<p class="sub">Нажимай на плитки рядом с пустой клеткой, чтобы собрать картинку</p>
-<div class="st">
-<div><div class="v" id="puzzleMoves">0</div><div class="l">Ходы</div></div>
-<div><div class="v" id="puzzleDone">0/8</div><div class="l">Собрано</div></div>
-</div>
-<div class="puzzle" id="puzzleGrid"></div>
-<p class="puzzle-info" id="puzzleInfo">Собери картинку целиком!</p>
-<button class="btn btn2" onclick="shufflePuzzle()">🔀 Перемешать</button>
-<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
-</div>
-
 <div id="funScreen" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <h1>😂 Кто прав?</h1>
@@ -975,9 +978,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
 </div>
 
-</div>
-
-<script>
+</div><script>
 var AC=null;
 var SOUND_ON=true;
 function initAudio(){
@@ -1002,8 +1003,6 @@ function sndWin(){ beep(523,0.15,'sine',0.2); setTimeout(function(){ beep(659,0.
 function sndFunWin(){ beep(880,0.1,'square',0.16); setTimeout(function(){beep(1100,0.1,'square',0.16);},100); setTimeout(function(){beep(1320,0.1,'square',0.16);},200); setTimeout(function(){beep(1760,0.25,'sine',0.2);},300); }
 function sndFunLose(){ beep(400,0.15,'triangle',0.12); setTimeout(function(){beep(300,0.15,'triangle',0.12);},150); setTimeout(function(){beep(200,0.25,'triangle',0.14);},300); }
 function sndStartGame(){ beep(440,0.08,'sawtooth',0.12); setTimeout(function(){beep(660,0.08,'sawtooth',0.12);},80); setTimeout(function(){beep(880,0.15,'sine',0.15);},160); }
-function sndMove(){ beep(500,0.05,'square',0.1); }
-function sndPuzzleWin(){ beep(523,0.1,'sine',0.18); setTimeout(function(){beep(659,0.1,'sine',0.18);},100); setTimeout(function(){beep(784,0.1,'sine',0.18);},200); setTimeout(function(){beep(1047,0.3,'sine',0.22);},300); }
 
 function toggleSound(){ SOUND_ON=!SOUND_ON; localStorage.setItem('soundOn',SOUND_ON?'1':'0'); updateSoundBtn(); if(SOUND_ON) beep(880,0.1,'sine',0.15); }
 function updateSoundBtn(){ var b=document.getElementById('soundBtn'); if(SOUND_ON) b.textContent='🔊 Звук'; else b.textContent='🔇 Звук'; }
@@ -1034,17 +1033,6 @@ var D_PUSH_QUOTES=[[1,"«Я вас любил: любовь ещё, быть м�
 var CROSS_PUSH_BIO={title:"✍️ Кроссворд: Пушкин (биография)",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ПУШКИН",q:"Фамилия поэта"},{r:0,c:0,d:'D',w:"ПЕТЕРБУРГ",q:"Город, где погиб"},{r:0,c:5,d:'A',w:"МОСКВА",q:"Город рождения"},{r:2,c:2,d:'A',w:"ЛИЦЕЙ",q:"Учебное заведение"},{r:2,c:2,d:'D',w:"ЛЕРМОНТОВ",q:"Поэт, погибший на дуэли"},{r:2,c:5,d:'D',w:"ГОНЧАРОВА",q:"Фамилия жены"},{r:4,c:0,d:'A',w:"ДАНТЕС",q:"Убийца Пушкина"},{r:4,c:3,d:'D',w:"ДУЭЛЬ",q:"Поединок 1837"}]};
 var CROSS_PUSH_WORKS={title:"✍️ Кроссворд: Произведения Пушкина",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ОНЕГИН",q:"Главный герой романа в стихах"},{r:0,c:0,d:'D',w:"ОЛЬГА",q:"Сестра Татьяны"},{r:0,c:5,d:'A',w:"СКАЗКА",q:"Жанр «О рыбаке»"},{r:0,c:5,d:'D',w:"САЛТАН",q:"Царь в сказке"},{r:2,c:2,d:'A',w:"БЕЛКИН",q:"Фамилия из повестей"},{r:2,c:2,d:'D',w:"БОРИС",q:"Имя царя"},{r:2,c:5,d:'D',w:"ГРИНЁВ",q:"Герой «Капитанской»"},{r:4,c:0,d:'A',w:"РУСЛАН",q:"Рыцарь из поэмы"},{r:4,c:3,d:'D',w:"ТАТЬЯНА",q:"Героиня «Онегина»"}]};
 
-/* ПАЗЛЫ — с настоящими картинками */
-var PUZZLES={
-pushkin:{title:"🎨 Пазл: Портрет Пушкина",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Orest_Kiprensky_-_Portrait_of_Alexander_Pushkin_-_Google_Art_Project.jpg/512px-Orest_Kiprensky_-_Portrait_of_Alexander_Pushkin_-_Google_Art_Project.jpg"},
-skazka:{title:"🎨 Пазл: Сказки Пушкина",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Bilibin_%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%BE_%D1%80%D1%8B%D0%B1%D0%B0%D0%BA%D0%B5_%D0%B8_%D1%80%D1%8B%D0%B1%D0%BA%D0%B5.jpg/512px-Bilibin_%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%BE_%D1%80%D1%8B%D0%B1%D0%B0%D0%BA%D0%B5_%D0%B8_%D1%80%D1%8B%D0%B1%D0%BA%D0%B5.jpg"},
-rus:{title:"🎨 Пазл: Богатыри Васнецова",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Viktor_Vasnetsov_-_Bogatyrs_-_Google_Art_Project.jpg/512px-Viktor_Vasnetsov_-_Bogatyrs_-_Google_Art_Project.jpg"},
-med:{title:"🎨 Пазл: Замок Каркассон",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carcassonne_JPG03.jpg/512px-Carcassonne_JPG03.jpg"},
-fr:{title:"🎨 Пазл: Монета Карла Великого",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Charlemagne_denier_Mayence_812-814.jpg/512px-Charlemagne_denier_Mayence_812-814.jpg"},
-hl:{title:"🎨 Пазл: Крещение Хлодвига",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bapteme_de_Clovis.jpg/512px-Bapteme_de_Clovis.jpg"},
-km:{title:"🎨 Пазл: Битва при Пуатье",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Steuben_-_Bataille_de_Poitiers.png/512px-Steuben_-_Bataille_de_Poitiers.png"}
-};
-
 var FUN=[
 {q:"Учитель: «Почему ты опоздал?»",a:["Автобус уехал без меня 🚌","Я спал и видел во сне, что уже в школе 😴","Часы думали, что ещё рано ⌚","Кот перешёл дорогу 🐈"],c:0,e:"Автобус — классика!"},
 {q:"Ты забыл домашку.",a:["Собака съела тетрадь 🐶","Улетела в параллельную вселенную 🌌","Спрятал и сам не нашёл 🕵️","Утонула в портфеле 🎒"],c:2,e:"«Спрятал и не нашёл» — почти правда!"},
@@ -1064,133 +1052,251 @@ var crossLives=5;
 var funQs=[],funI=0,funScore=0,funAnswered=false;
 var pCur=null,pQs=[],pI=0,pPts=0,pHp=3,pOk=false,pDf=1;
 var currentCrossPush=null,pushCrossLives=5;
-var puzzleState=[],puzzleMoves=0,puzzleCur=null;
 
 function show(id){ var a=document.querySelectorAll('.scr'); for(var k=0;k<a.length;k++)a[k].classList.remove('on'); document.getElementById(id).classList.add('on'); window.scrollTo(0,0); }
 function go(id){ show(id); }
 function pickRole(btn){ var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); currentRole=btn.getAttribute('data-role'); var pb=document.getElementById('passBox'); if(PASSWORDS[currentRole]){ pb.classList.add('on'); document.getElementById('passInput').value=""; } else pb.classList.remove('on'); }
-function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); show('subjects'); }
+function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); renderPanelBtn(); show('subjects'); }
 function roleEmoji(r){ if(r==='Создатель')return'👑'; if(r==='Староста')return'⭐'; if(r==='Учитель')return'📖'; return'🎓'; }
 function logout(){ if(!confirm('Выйти?'))return; localStorage.removeItem('currentUser'); localStorage.removeItem('currentRole'); currentUser=""; document.getElementById('nameInput').value=""; document.getElementById('passInput').value=""; document.getElementById('passBox').classList.remove('on'); var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); show('loginScreen'); }
 
-function pk(g){ sndStartGame(); cur=g; var t='Сложность'; if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века'; else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг'; else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!'; document.getElementById('stT').textContent=t; show('setup'); }
+/* ============ ПАНЕЛЬ ============ */
+function canOpenPanel(){ return currentRole==='Учитель' || currentRole==='Староста' || currentRole==='Создатель'; }
+function renderPanelBtn(){
+  var w=document.getElementById('panelBtn');
+  if(!w) return;
+  if(canOpenPanel()){
+    w.innerHTML='<h2>🎛️ Управление</h2><button class="card" onclick="openPanel()"><div class="ic">🎛️</div><div><b>Панель '+currentRole.toLowerCase()+'</b><small>Статистика · объявления · вопросы</small></div></button>';
+  } else { w.innerHTML=''; }
+}
+function openPanel(){
+  document.getElementById('panelTitle').textContent='🎛️ Панель '+currentRole.toLowerCase();
+  document.getElementById('panelSub').textContent='Доступные команды для роли «'+currentRole+'»';
+  refreshStats(); renderToggles(); renderStarList(); show('teacherPanel');
+}
+function refreshStats(){
+  var all=JSON.parse(localStorage.getItem('results')||'[]');
+  var players={}; var gamesCount=0; var total=0;
+  for(var k=0;k<all.length;k++){
+    var r=all[k];
+    if(!players[r.name]){ players[r.name]={name:r.name,role:r.role||'Ученик',best:0,games:0}; }
+    players[r.name].games++;
+    if(r.score>players[r.name].best) players[r.name].best=r.score;
+    gamesCount++; total+=r.score;
+  }
+  var names=Object.keys(players);
+  document.getElementById('statPlayers').textContent=names.length;
+  document.getElementById('statGames').textContent=gamesCount;
+  document.getElementById('statAvg').textContent=gamesCount?Math.round(total/gamesCount):0;
+  var list=document.getElementById('statList');
+  if(names.length===0){
+    list.innerHTML='<p style="padding:20px;text-align:center;color:#b8956a;font-style:italic">Пока никто не играл</p>';
+  } else {
+    var arr=names.map(function(n){return players[n];});
+    arr.sort(function(a,b){return b.best-a.best;});
+    var html='';
+    for(var k=0;k<arr.length;k++){
+      var medal=k===0?'🥇':k===1?'🥈':k===2?'🥉':'&nbsp;';
+      html+='<div class="statrow"><span class="medal">'+medal+'</span><span class="name">'+arr[k].name+' <small style="color:#b8956a">('+arr[k].role+')</small></span><span class="score">'+arr[k].best+' очк. · '+arr[k].games+' игр</span></div>';
+    }
+    list.innerHTML=html;
+  }
+}
+function postAnnounce(){ var t=document.getElementById('announceInput').value.trim(); if(!t){alert('Введи текст');return;} localStorage.setItem('classAnnounce',t); document.getElementById('announceInput').value=''; renderAnnouncement(); alert('📢 Опубликовано!'); }
+function clearAnnounce(){ if(!confirm('Удалить объявление?'))return; localStorage.removeItem('classAnnounce'); renderAnnouncement(); }
+function renderAnnouncement(){
+  var box=document.getElementById('announcementBox');
+  if(!box) return;
+  var t=localStorage.getItem('classAnnounce');
+  if(t){ box.innerHTML='<div class="announce"><button class="close" onclick="closeAnnounce()">×</button><div class="text">'+t+'</div></div>'; }
+  else { box.innerHTML=''; }
+}
+function closeAnnounce(){ var box=document.getElementById('announcementBox'); if(box) box.innerHTML=''; }
+function addCustomQuestion(){
+  var target=document.getElementById('qTarget').value;
+  var text=document.getElementById('qText').value.trim();
+  var o1=document.getElementById('qOpt1').value.trim();
+  var o2=document.getElementById('qOpt2').value.trim();
+  var o3=document.getElementById('qOpt3').value.trim();
+  var o4=document.getElementById('qOpt4').value.trim();
+  var corr=parseInt(document.getElementById('qCorrect').value.trim())-1;
+  var expl=document.getElementById('qExplain').value.trim()||'Верно!';
+  if(!text || !o1 || !o2 || !o3 || !o4){ alert('Заполни вопрос и все 4 варианта'); return; }
+  if(isNaN(corr) || corr<0 || corr>3){ alert('Правильный — число от 1 до 4'); return; }
+  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
+  if(!all[target]) all[target]=[];
+  all[target].push({q:text,options:[o1,o2,o3,o4],correct:corr,explanation:expl});
+  localStorage.setItem('customQuestions',JSON.stringify(all));
+  document.getElementById('qText').value='';
+  document.getElementById('qOpt1').value='';
+  document.getElementById('qOpt2').value='';
+  document.getElementById('qOpt3').value='';
+  document.getElementById('qOpt4').value='';
+  document.getElementById('qCorrect').value='';
+  document.getElementById('qExplain').value='';
+  alert('➕ Вопрос добавлен!');
+}
+function showCustomQuestions(){
+  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
+  var html='';
+  for(var key in all){
+    html+='<h2>📌 '+key+'</h2>';
+    for(var k=0;k<all[key].length;k++){
+      var q=all[key][k];
+      html+='<div class="cq"><b>'+(k+1)+'. '+q.q+'</b><small>А) '+q.options[0]+' | Б) '+q.options[1]+' | В) '+q.options[2]+' | Г) '+q.options[3]+'<br>✅ '+q.options[q.correct]+'<br>💡 '+q.explanation+'</small></div>';
+    }
+  }
+  if(!html) html='<p style="text-align:center;color:#b8956a;font-style:italic;padding:30px">Пока нет своих вопросов</p>';
+  document.getElementById('customQList').innerHTML=html;
+  show('customQScreen');
+}
+var GAME_KEYS=[
+  {k:'rus',n:'Викторина: Русь'},{k:'med',n:'Викторина: Средние века'},
+  {k:'fr',n:'Викторина: Франки'},{k:'hl',n:'Викторина: Хлодвиг'},
+  {k:'km',n:'Викторина: Карл Мартелл'},{k:'year',n:'Угадай год'},
+  {k:'cross_rus',n:'Кроссворд: Русь'},{k:'cross_med',n:'Кроссворд: Средние века'},
+  {k:'cross_fr',n:'Кроссворд: Франки'},
+  {k:'push_bio',n:'Пушкин: Биография'},{k:'push_works',n:'Пушкин: Произведения'},{k:'push_quotes',n:'Пушкин: Цитаты'}
+];
+function renderToggles(){
+  var list=document.getElementById('toggleList');
+  if(!list) return;
+  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
+  var html='';
+  for(var k=0;k<GAME_KEYS.length;k++){
+    var g=GAME_KEYS[k];
+    var off=disabled.indexOf(g.k)!==-1;
+    html+='<div class="togglerow"><span class="name">'+g.n+'</span><button class="'+(off?'on':'')+'" onclick="toggleGame(\''+g.k+'\')">'+(off?'✅ Включена':'🚫 Отключена')+'</button></div>';
+  }
+  list.innerHTML=html;
+}
+function toggleGame(key){
+  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
+  var i=disabled.indexOf(key);
+  if(i===-1) disabled.push(key); else disabled.splice(i,1);
+  localStorage.setItem('disabledGames',JSON.stringify(disabled));
+  renderToggles();
+}
+function isGameDisabled(key){
+  var disabled=JSON.parse(localStorage.getItem('disabledGames')||'[]');
+  return disabled.indexOf(key)!==-1;
+}
+function renderStarList(){
+  var all=JSON.parse(localStorage.getItem('results')||'[]');
+  var names=[];
+  for(var k=0;k<all.length;k++){ if(names.indexOf(all[k].name)===-1) names.push(all[k].name); }
+  var sel=document.getElementById('starTarget');
+  if(!sel) return;
+  if(names.length===0){ sel.innerHTML='<option value="">Нет игроков</option>'; }
+  else {
+    var html='';
+    for(var k=0;k<names.length;k++) html+='<option value="'+names[k]+'">'+names[k]+'</option>';
+    sel.innerHTML=html;
+  }
+}
+function giveStar(){
+  var name=document.getElementById('starTarget').value;
+  if(!name){ alert('Нет игроков'); return; }
+  var stars=JSON.parse(localStorage.getItem('stars')||'{}');
+  stars[name]=new Date().toLocaleDateString('ru-RU');
+  localStorage.setItem('stars',JSON.stringify(stars));
+  alert('⭐ Ученик '+name+' получил значок «Молодец»!');
+}
+function checkDisabled(key){
+  if(isGameDisabled(key)){ alert('🚫 Эта игра временно отключена учителем'); return true; }
+  return false;
+}
+function mergeCustomQuestions(baseKey,basePool){
+  var all=JSON.parse(localStorage.getItem('customQuestions')||'{}');
+  var custom=all[baseKey];
+  if(custom && custom.length){
+    for(var k=0;k<custom.length;k++){
+      basePool.push([1, custom[k].q, custom[k].options, custom[k].correct, custom[k].explanation]);
+    }
+  }
+  return basePool;
+}
+
+/* ============ ВИКТОРИНА (история) ============ */
+function pk(g){
+  if(checkDisabled(g)) return;
+  sndStartGame(); cur=g;
+  var t='Сложность';
+  if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века';
+  else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг';
+  else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!';
+  document.getElementById('stT').textContent=t; show('setup');
+}
 function pd(btn){ var b=document.querySelectorAll('#setup .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); df=parseInt(btn.getAttribute('data-d')); }
-function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]); for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; } qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
+function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]); pool=mergeCustomQuestions(cur,pool);
+  for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
+  qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
 function us(){ document.getElementById('sc').textContent=pts; document.getElementById('lv').textContent=hp>0?'❤️'.repeat(hp):'💀'; }
 function lq(){ ok=false; var q=qs[i]; document.getElementById('qn').textContent=(i+1)+'/'+qs.length; document.getElementById('qt').textContent=((cur==='year')?'📅 Когда: ':'📖 ')+q[1]; var box=document.getElementById('ans'); box.innerHTML=''; document.getElementById('ex').style.display='none'; document.getElementById('nx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('data-i',k); b.setAttribute('onclick','ck('+k+',this)'); box.appendChild(b); } }
 function ck(sel,btn){ if(ok)return; ok=true; var q=qs[i]; var all=document.querySelectorAll('#ans .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('ex'); if(sel===q[3]){ btn.classList.add('ok'); pts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); hp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; us(); var nb=document.getElementById('nx'); if(hp<=0)nb.textContent='🏁 Завершить'; else if(i===qs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
 function nq(){ if(hp<=0||i===qs.length-1){fin();return;} i++; lq(); }
-function fin(){ var total=qs.length,correct=pts/10,pct=Math.round(correct/total*100); document.getElementById('fs').textContent=pts; document.getElementById('fc').textContent=correct; document.getElementById('ft').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('fm').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; show('fin'); if(pct>=70) sndWin(); else sndWrong(); }
+function fin(){ var total=qs.length,correct=pts/10,pct=Math.round(correct/total*100); document.getElementById('fs').textContent=pts; document.getElementById('fc').textContent=correct; document.getElementById('ft').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('fm').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pts,gr); show('fin'); if(pct>=70) sndWin(); else sndWrong(); }
 
+/* ============ КРОССВОРД (история) ============ */
 function updateCrossLives(){ var el=document.getElementById('crossLives'); if(el) el.textContent=crossLives>0?'❤️'.repeat(crossLives):'💀'; }
-function goCross(g){ currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
+function goCross(g){ if(checkDisabled('cross_'+g)) return; currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
 function checkCross(){ if(crossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ crossLives-=wrong; if(crossLives<0)crossLives=0; updateCrossLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(crossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибок: '+wrong+'. Жизни: '+crossLives); }
 function clearCross(){ var inputs=document.querySelectorAll('#crossGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} crossLives=5; updateCrossLives(); }
 
-function pickPush(g){ sndStartGame(); pCur=g; var t='Сложность'; if(g==='bio')t='🎯 Биография Пушкина'; else if(g==='works')t='🎯 Произведения Пушкина'; else if(g==='quotes')t='💬 Цитаты и герои'; document.getElementById('stPushT').textContent=t; show('setupPush'); }
+/* ============ ВИКТОРИНА ПУШКИНА ============ */
+function pickPush(g){
+  var key = g==='bio'?'push_bio':(g==='works'?'push_works':'push_quotes');
+  if(checkDisabled(key)) return;
+  sndStartGame(); pCur=g;
+  var t='Сложность';
+  if(g==='bio')t='🎯 Биография Пушкина'; else if(g==='works')t='🎯 Произведения Пушкина'; else if(g==='quotes')t='💬 Цитаты и герои';
+  document.getElementById('stPushT').textContent=t; show('setupPush');
+}
 function pdPush(btn){ var b=document.querySelectorAll('#setupPush .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); pDf=parseInt(btn.getAttribute('data-d')); }
-function stPush(){ var all=(pCur==='bio')?D_PUSH_BIO:(pCur==='works')?D_PUSH_WORKS:D_PUSH_QUOTES; var pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=pDf)pool.push(all[k]); for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; } pQs=pool;pI=0;pPts=0;pHp=3; usPush(); show('gamePush'); lqPush(); }
+function stPush(){ var all=(pCur==='bio')?D_PUSH_BIO:(pCur==='works')?D_PUSH_WORKS:D_PUSH_QUOTES; var pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=pDf)pool.push(all[k]);
+  var key = pCur==='bio'?'push_bio':(pCur==='works'?'push_works':'push_quotes');
+  pool=mergeCustomQuestions(key,pool);
+  for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
+  pQs=pool;pI=0;pPts=0;pHp=3; usPush(); show('gamePush'); lqPush(); }
 function usPush(){ document.getElementById('pSc').textContent=pPts; document.getElementById('pLv').textContent=pHp>0?'❤️'.repeat(pHp):'💀'; }
 function lqPush(){ pOk=false; var q=pQs[pI]; document.getElementById('pQn').textContent=(pI+1)+'/'+pQs.length; document.getElementById('pQt').textContent='✍️ '+q[1]; var box=document.getElementById('pAns'); box.innerHTML=''; document.getElementById('pEx').style.display='none'; document.getElementById('pNx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('data-i',k); b.setAttribute('onclick','ckPush('+k+',this)'); box.appendChild(b); } }
 function ckPush(sel,btn){ if(pOk)return; pOk=true; var q=pQs[pI]; var all=document.querySelectorAll('#pAns .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('pEx'); if(sel===q[3]){ btn.classList.add('ok'); pPts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); pHp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; usPush(); var nb=document.getElementById('pNx'); if(pHp<=0)nb.textContent='🏁 Завершить'; else if(pI===pQs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
 function nqPush(){ if(pHp<=0||pI===pQs.length-1){finPush();return;} pI++; lqPush(); }
-function finPush(){ var total=pQs.length,correct=pPts/10,pct=Math.round(correct/total*100); document.getElementById('pfS').textContent=pPts; document.getElementById('pfC').textContent=correct; document.getElementById('pfT').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('pfM').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; show('finPush'); if(pct>=70) sndWin(); else sndWrong(); }
+function finPush(){ var total=pQs.length,correct=pPts/10,pct=Math.round(correct/total*100); document.getElementById('pfS').textContent=pPts; document.getElementById('pfC').textContent=correct; document.getElementById('pfT').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('pfM').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pPts,gr); show('finPush'); if(pct>=70) sndWin(); else sndWrong(); }
 
+/* ============ КРОССВОРД ПУШКИНА ============ */
 function updatePushLives(){ var el=document.getElementById('crossPushLives'); if(el) el.textContent=pushCrossLives>0?'❤️'.repeat(pushCrossLives):'💀'; }
 function goCrossPush(g){ currentCrossPush=g; pushCrossLives=5; var cfg=(g==='bio')?CROSS_PUSH_BIO:CROSS_PUSH_WORKS; document.getElementById('crossPushTitle').textContent=cfg.title; document.getElementById('crossPushSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossPushGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesPushA'),dL=document.getElementById('cluesPushD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updatePushLives(); show('crossPushScreen'); }
 function checkCrossPush(){ if(pushCrossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossPushGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ pushCrossLives-=wrong; if(pushCrossLives<0)pushCrossLives=0; updatePushLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(pushCrossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибки: '+wrong+'. Жизни: '+pushCrossLives); }
 function clearCrossPush(){ var inputs=document.querySelectorAll('#crossPushGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} pushCrossLives=5; updatePushLives(); }
 
-/* ПАЗЛЫ С КАРТИНКАМИ */
-function startPuzzle(key){
-  puzzleCur=key;
-  var cfg=PUZZLES[key];
-  document.getElementById('puzzleTitle').textContent=cfg.title;
-  puzzleState=[0,1,2,3,4,5,6,7,8];
-  puzzleMoves=0;
-  do{
-    for(var k=puzzleState.length-1;k>0;k--){
-      var j=Math.floor(Math.random()*(k+1));
-      var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t;
-    }
-  } while(!isSolvable(puzzleState));
-  renderPuzzle();
-  show('puzzleScreen');
-}
-function isSolvable(arr){
-  var inv=0;
-  for(var i=0;i<arr.length;i++){
-    for(var j=i+1;j<arr.length;j++){
-      if(arr[i]!==8 && arr[j]!==8 && arr[i]>arr[j]) inv++;
-    }
-  }
-  return inv%2===0;
-}
-function renderPuzzle(){
-  var grid=document.getElementById('puzzleGrid');
-  grid.style.gridTemplateColumns='repeat(3,1fr)';
-  grid.innerHTML='';
-  var done=0;
-  var img=PUZZLES[puzzleCur].img;
-  for(var k=0;k<9;k++){
-    var cell=document.createElement('div');
-    cell.className='pcell';
-    var val=puzzleState[k];
-    if(val===8){
-      cell.classList.add('empty');
-    } else {
-      var row=Math.floor(val/3);
-      var col=val%3;
-      cell.style.backgroundImage='url('+img+')';
-      cell.style.backgroundSize='300% 300%';
-      cell.style.backgroundPosition=(col*50)+'% '+(row*50)+'%';
-      if(val===k){ cell.classList.add('correct'); done++; }
-      (function(idx){
-        cell.onclick=function(){ movePuzzle(idx); };
-      })(k);
-    }
-    grid.appendChild(cell);
-  }
-  document.getElementById('puzzleMoves').textContent=puzzleMoves;
-  document.getElementById('puzzleDone').textContent=done+'/8';
-  if(done===8){
-    document.getElementById('puzzleInfo').textContent='🎉 Пазл собран! Молодец!';
-    sndPuzzleWin();
-  } else {
-    document.getElementById('puzzleInfo').textContent='Нажимай на плитки рядом с пустой клеткой';
-  }
-}
-function movePuzzle(idx){
-  var empty=-1;
-  for(var k=0;k<9;k++) if(puzzleState[k]===8){ empty=k; break; }
-  var er=Math.floor(empty/3), ec=empty%3;
-  var ir=Math.floor(idx/3), ic=idx%3;
-  var dist=Math.abs(er-ir)+Math.abs(ec-ic);
-  if(dist===1){
-    var t=puzzleState[idx]; puzzleState[idx]=puzzleState[empty]; puzzleState[empty]=t;
-    puzzleMoves++;
-    sndMove();
-    renderPuzzle();
-  }
-}
-function shufflePuzzle(){
-  do{
-    for(var k=puzzleState.length-1;k>0;k--){
-      var j=Math.floor(Math.random()*(k+1));
-      var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t;
-    }
-  } while(!isSolvable(puzzleState));
-  puzzleMoves=0;
-  renderPuzzle();
-}
-
+/* ============ ИГРА «КТО ПРАВ?» ============ */
 function startFun(){ funQs=[]; for(var k=0;k<FUN.length;k++)funQs.push(FUN[k]); for(var k=funQs.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=funQs[k];funQs[k]=funQs[j];funQs[j]=t; } funI=0;funScore=0; show('funScreen'); loadFun(); }
 function loadFun(){ funAnswered=false; var q=funQs[funI]; document.getElementById('funScore').textContent=funScore; document.getElementById('funNum').textContent=(funI+1)+'/'+funQs.length; document.getElementById('funQuestion').textContent='😂 '+q.q; var box=document.getElementById('funAnswers'); box.innerHTML=''; document.getElementById('funEx').style.display='none'; document.getElementById('funNext').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q.a.length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q.a[k]; b.setAttribute('data-i',k); b.setAttribute('onclick','checkFun('+k+',this)'); box.appendChild(b); } }
 function checkFun(sel,btn){ if(funAnswered)return; funAnswered=true; var q=funQs[funI]; var all=document.querySelectorAll('#funAnswers .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('funEx'); if(sel===q.c){ btn.classList.add('ok'); funScore+=10; sndFunWin(); ex.innerHTML='😂 <b>Красавчик!</b> +10 очков<br>'+q.e; } else { btn.classList.add('no'); all[q.c].classList.add('ok'); sndFunLose(); ex.innerHTML='😅 <b>Не самый удачный вариант.</b><br>Лучше было: <b>'+q.a[q.c]+'</b><br>'+q.e; } ex.style.display='block'; document.getElementById('funScore').textContent=funScore; var nb=document.getElementById('funNext'); if(funI===funQs.length-1)nb.textContent='🏆 Показать результат'; else nb.textContent='➡️ Следующая ситуация'; nb.style.display='block'; }
 function nextFun(){ if(funI===funQs.length-1){finFun();return;} funI++; loadFun(); }
 function finFun(){ var total=funQs.length,correct=funScore/10,pct=Math.round(correct/total*100); var msg,gr; if(pct>=90){msg='😂 <b>Ты король юмора!</b>';gr='Оценка юмора: 5 🤣';} else if(pct>=70){msg='😄 <b>Отличное чувство юмора!</b>';gr='Оценка юмора: 4 😆';} else if(pct>=50){msg='🙂 <b>Юмор понимаешь частично.</b>';gr='Оценка юмора: 3 😅';} else{msg='🤔 <b>Юмор — дело тонкое.</b>';gr='Оценка юмора: 2 😬';} document.getElementById('funMsg').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">'+gr+'</div>'; show('funFin'); if(pct>=70) sndFunWin(); else sndFunLose(); }
 
+/* ============ СОХРАНЕНИЕ РЕЗУЛЬТАТОВ ============ */
+function saveResult(name,role,score,grade){
+  if(!name) return;
+  var all=JSON.parse(localStorage.getItem('results')||'[]');
+  var found=false;
+  for(var k=0;k<all.length;k++){
+    if(all[k].name.toLowerCase()===name.toLowerCase()){
+      if(score>all[k].score){ all[k].score=score; all[k].grade=grade; }
+      all[k].role=role;
+      found=true; break;
+    }
+  }
+  if(!found) all.push({name:name,role:role,score:score,grade:grade});
+  all.sort(function(a,b){return b.score-a.score;});
+  localStorage.setItem('results',JSON.stringify(all));
+}
+
+/* ============ СТАРТ ============ */
 loadTheme();
+renderAnnouncement();
 var saved=localStorage.getItem('currentUser');
 var savedRole=localStorage.getItem('currentRole')||'Ученик';
 if(saved){
@@ -1199,6 +1305,8 @@ if(saved){
   document.getElementById('userName').textContent=saved;
   document.getElementById('userRole').textContent=savedRole;
   document.getElementById('userAvatar').textContent=roleEmoji(savedRole);
+  renderPanelBtn();
+  renderAnnouncement();
   show('subjects');
 } else {
   show('loginScreen');
