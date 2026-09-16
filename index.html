@@ -47,11 +47,6 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 .passbox{margin-top:18px;padding:16px;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:12px;display:none}
 .passbox.on{display:block;animation:fd .3s ease}
 .passbox p{text-align:center;color:#c9a227;font-size:.9em;margin-bottom:6px}
-.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.7em;font-weight:bold;font-family:'Segoe UI',sans-serif;margin-left:6px}
-.b-creator{background:linear-gradient(135deg,#8e44ad,#c0392b);color:#fff}
-.b-starosta{background:linear-gradient(135deg,#27ae60,#16a085);color:#fff}
-.b-teacher{background:linear-gradient(135deg,#2980b9,#3498db);color:#fff}
-.b-student{background:linear-gradient(135deg,#7f8c8d,#95a5a6);color:#fff}
 .st{display:flex;justify-content:space-around;background:linear-gradient(135deg,rgba(201,162,39,.18),rgba(201,162,39,.05));border:1px solid rgba(201,162,39,.4);border-radius:12px;padding:14px 8px;margin-bottom:16px;text-align:center;gap:8px}
 .st>div{flex:1}
 .st .v{font-size:1.6em;color:#f4d03f;font-weight:bold;font-family:'Segoe UI',sans-serif}
@@ -172,7 +167,7 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <h1>🛡️ Древняя Русь</h1>
 <div class="art">
 <h2>1. Возникновение</h2>
-<p>В <b>862 году</b> пригласили на княжение варяга <b>Рюрика</b> — основателя династии Рюриковичей.</p>
+<p>В <b>862 году</b> пригласили на княжение варяга <b>Рюрика</b>.</p>
 <p>В <b>882</b> Олег объединил Новгород и Киев.</p>
 <h2>2. Крещение (988)</h2>
 <p>Князь <b>Владимир Святославич</b> крестил Русь.</p>
@@ -333,7 +328,6 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <div class="col"><h3>⬇️ По вертикали</h3><ol id="cluesD"></ol></div>
 </div>
 <button class="btn" onclick="checkCross()">✅ Проверить</button>
-<button class="btn btn2" onclick="revealCross()">👁️ Показать ответы</button>
 <button class="btn btn2" onclick="clearCross()">🗑️ Очистить</button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К истории</button>
 </div><script>
@@ -739,19 +733,17 @@ function checkCross(){
   }
   if(all===0){ alert('Впиши хотя бы одно слово'); return; }
   if(right===inputs.length){
+    for(var k=0;k<inputs.length;k++){
+      inputs[k].value=inputs[k].getAttribute('data-ans');
+      inputs[k].classList.remove('no');
+      inputs[k].classList.add('ok');
+    }
     alert('🎉 Все слова верны! Молодец!');
   } else {
     alert('Правильно: '+right+' из '+inputs.length+' букв');
   }
 }
-function revealCross(){
-  var inputs=document.querySelectorAll('#crossGrid input');
-  for(var k=0;k<inputs.length;k++){
-    inputs[k].value=inputs[k].getAttribute('data-ans');
-    inputs[k].classList.remove('no');
-    inputs[k].classList.add('ok');
-  }
-}
+
 function clearCross(){
   var inputs=document.querySelectorAll('#crossGrid input');
   for(var k=0;k<inputs.length;k++){
