@@ -1,42 +1,41 @@
-// Массивы данных (перенесены из Java-кода)
+// РњР°СЃСЃРёРІС‹ РґР°РЅРЅС‹С…
 const quizData = [
-	{
-		question: "Какое событие традиционно считается началом Средневековья?",
-		options: ["Падение Западной Римской империи", "Начало правления Карла Великого", "Крещение Руси"],
-		answer: 0,
-		fact: "Это событие произошло в 476 году. Оно привело к распаду античного мира и формированию феодальных отношений."
-	},
-	{
-		question: "Кто был первым русским князем, принявшим христианство в качестве государственной религии?",
-		options: ["Ярослав Мудрый", "Владимир Святославич", "Иван Грозный"],
-		answer: 1,
-		fact: "Речь идет о князе Владимире Красное Солнышко. Это случилось в 988 году и определило культурный путь Древней Руси."
-	},
-	{
-		question: "В каком году произошла Куликовская битва?",
-		options: ["1242 год", "1380 год", "1480 год"],
-		answer: 1,
-		fact: "Битва произошла под предводительством Дмитрия Донского. Она стала переломным моментом в борьбе против ордынского ига."
-	},
-	{
-		question: "Против какого ордена сражались русские войска в Ледовом побоище?",
-		options: ["Тевтонский орден", "Ливонский орден", "Орден тамплиеров"],
-		answer: 1,
-		fact: "Ледовое побоище состоялось 5 апреля 1242 года на льду Чудского озера под командованием Александра Невского."
-	},
-	{
-		question: "Столицей какого государства была Москва до того, как стала центром единого Русского государства?",
-		options: ["Киевская Русь", "Великое княжество Литовское", "Владимиро-Суздальское княжество"],
-		answer: 2,
-		fact: "Именно из Владимиро-Суздальского княжества началось возвышение Москвы при Иване Калите."
-	}
+    {
+        question: "РљР°РєРѕРµ СЃРѕР±С‹С‚РёРµ С‚СЂР°РґРёС†РёРѕРЅРЅРѕ СЃС‡РёС‚Р°РµС‚СЃСЏ РЅР°С‡Р°Р»РѕРј РЎСЂРµРґРЅРµРІРµРєРѕРІСЊСЏ?",
+        options: ["РџР°РґРµРЅРёРµ Р—Р°РїР°РґРЅРѕР№ Р РёРјСЃРєРѕР№ РёРјРїРµСЂРёРё", "РќР°С‡Р°Р»Рѕ РїСЂР°РІР»РµРЅРёСЏ РљР°СЂР»Р° Р’РµР»РёРєРѕРіРѕ", "РљСЂРµС‰РµРЅРёРµ Р СѓСЃРё"],
+        answer: 0,
+        fact: "Р­С‚Рѕ СЃРѕР±С‹С‚РёРµ РїСЂРѕРёР·РѕС€Р»Рѕ РІ 476 РіРѕРґСѓ. РћРЅРѕ РїСЂРёРІРµР»Рѕ Рє СЂР°СЃРїР°РґСѓ Р°РЅС‚РёС‡РЅРѕРіРѕ РјРёСЂР° Рё С„РѕСЂРјРёСЂРѕРІР°РЅРёСЋ С„РµРѕРґР°Р»СЊРЅС‹С… РѕС‚РЅРѕС€РµРЅРёР№."
+    },
+    {
+        question: "РљС‚Рѕ Р±С‹Р» РїРµСЂРІС‹Рј СЂСѓСЃСЃРєРёРј РєРЅСЏР·РµРј, РїСЂРёРЅСЏРІС€РёРј С…СЂРёСЃС‚РёР°РЅСЃС‚РІРѕ РІ РєР°С‡РµСЃС‚РІРµ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅРѕР№ СЂРµР»РёРіРёРё?",
+        options: ["РЇСЂРѕСЃР»Р°РІ РњСѓРґСЂС‹Р№", "Р’Р»Р°РґРёРјРёСЂ РЎРІСЏС‚РѕСЃР»Р°РІРёС‡", "РРІР°РЅ Р“СЂРѕР·РЅС‹Р№"],
+        answer: 1,
+        fact: "Р РµС‡СЊ РёРґРµС‚ Рѕ РєРЅСЏР·Рµ Р’Р»Р°РґРёРјРёСЂРµ РљСЂР°СЃРЅРѕРµ РЎРѕР»РЅС‹С€РєРѕ. Р­С‚Рѕ СЃР»СѓС‡РёР»РѕСЃСЊ РІ 988 РіРѕРґСѓ Рё РѕРїСЂРµРґРµР»РёР»Рѕ РєСѓР»СЊС‚СѓСЂРЅС‹Р№ РїСѓС‚СЊ Р”СЂРµРІРЅРµР№ Р СѓСЃРё."
+    },
+    {
+        question: "Р’ РєР°РєРѕРј РіРѕРґСѓ РїСЂРѕРёР·РѕС€Р»Р° РљСѓР»РёРєРѕРІСЃРєР°СЏ Р±РёС‚РІР°?",
+        options: ["1242 РіРѕРґ", "1380 РіРѕРґ", "1480 РіРѕРґ"],
+        answer: 1,
+        fact: "Р‘РёС‚РІР° РїСЂРѕРёР·РѕС€Р»Р° РїРѕРґ РїСЂРµРґРІРѕРґРёС‚РµР»СЊСЃС‚РІРѕРј Р”РјРёС‚СЂРёСЏ Р”РѕРЅСЃРєРѕРіРѕ. РћРЅР° СЃС‚Р°Р»Р° РїРµСЂРµР»РѕРјРЅС‹Рј РјРѕРјРµРЅС‚РѕРј РІ Р±РѕСЂСЊР±Рµ РїСЂРѕС‚РёРІ РѕСЂРґС‹РЅСЃРєРѕРіРѕ РёРіР°."
+    },
+    {
+        question: "РџСЂРѕС‚РёРІ РєР°РєРѕРіРѕ РѕСЂРґРµРЅР° СЃСЂР°Р¶Р°Р»РёСЃСЊ СЂСѓСЃСЃРєРёРµ РІРѕР№СЃРєР° РІ Р›РµРґРѕРІРѕРј РїРѕР±РѕРёС‰Рµ?",
+        options: ["РўРµРІС‚РѕРЅСЃРєРёР№ РѕСЂРґРµРЅ", "Р›РёРІРѕРЅСЃРєРёР№ РѕСЂРґРµРЅ", "РћСЂРґРµРЅ С‚Р°РјРїР»РёРµСЂРѕРІ"],
+        answer: 1,
+        fact: "Р›РµРґРѕРІРѕРµ РїРѕР±РѕРёС‰Рµ СЃРѕСЃС‚РѕСЏР»РѕСЃСЊ 5 Р°РїСЂРµР»СЏ 1242 РіРѕРґР° РЅР° Р»СЊРґСѓ Р§СѓРґСЃРєРѕРіРѕ РѕР·РµСЂР° РїРѕРґ РєРѕРјР°РЅРґРѕРІР°РЅРёРµРј РђР»РµРєСЃР°РЅРґСЂР° РќРµРІСЃРєРѕРіРѕ."
+    },
+    {
+        question: "РЎС‚РѕР»РёС†РµР№ РєР°РєРѕРіРѕ РіРѕСЃСѓРґР°СЂСЃС‚РІР° Р±С‹Р»Р° РњРѕСЃРєРІР° РґРѕ С‚РѕРіРѕ, РєР°Рє СЃС‚Р°Р»Р° С†РµРЅС‚СЂРѕРј РµРґРёРЅРѕРіРѕ Р СѓСЃСЃРєРѕРіРѕ РіРѕСЃСѓРґР°СЂСЃС‚РІР°?",
+        options: ["РљРёРµРІСЃРєР°СЏ Р СѓСЃСЊ", "Р’РµР»РёРєРѕРµ РєРЅСЏР¶РµСЃС‚РІРѕ Р›РёС‚РѕРІСЃРєРѕРµ", "Р’Р»Р°РґРёРјРёСЂРѕ-РЎСѓР·РґР°Р»СЊСЃРєРѕРµ РєРЅСЏР¶РµСЃС‚РІРѕ"],
+        answer: 2,
+        fact: "РРјРµРЅРЅРѕ РёР· Р’Р»Р°РґРёРјРёСЂРѕ-РЎСѓР·РґР°Р»СЊСЃРєРѕРіРѕ РєРЅСЏР¶РµСЃС‚РІР° РЅР°С‡Р°Р»РѕСЃСЊ РІРѕР·РІС‹С€РµРЅРёРµ РњРѕСЃРєРІС‹ РїСЂРё РРІР°РЅРµ РљР°Р»РёС‚Рµ."
+    }
 ];
 
-// Переменные состояния
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Элементы DOM
+// Р­Р»РµРјРµРЅС‚С‹ DOM
 const startScreen = document.getElementById('start-screen');
 const gameScreen = document.getElementById('game-screen');
 const endScreen = document.getElementById('end-screen');
@@ -47,99 +46,114 @@ const nextBtn = document.getElementById('next-btn');
 const startBtn = document.getElementById('start-btn');
 const scoreValue = document.getElementById('score-value');
 const finalResult = document.getElementById('final-result');
+const progressText = document.getElementById('progress-text');
 
-// Запуск игры
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„Р°РєС‚Р° РІРЅСѓС‚СЂРё СЃС‚СЂР°РЅРёС†С‹ (РІРјРµСЃС‚Рѕ alert)
+function showFact(text) {
+    const factDiv = document.createElement('div');
+    factDiv.className = 'fact-box';
+    
+    // РСЃРїРѕР»СЊР·СѓРµРј Font Awesome РґР»СЏ РёРєРѕРЅРєРё СЃРІРёС‚РєР° РїРµСЂРµРґ С‚РµРєСЃС‚РѕРј
+    factDiv.innerHTML = `<i class="fa-solid fa-scroll"></i> <strong>РСЃС‚РѕСЂРёС‡РµСЃРєРёР№ С„Р°РєС‚:</strong> ${text}`;
+    questionEl.insertAdjacentElement('afterend', factDiv);
+}
+
+// Р—Р°РїСѓСЃРє РёРіСЂС‹
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', showNextQuestion);
 
-function startGame()
-{
-	startScreen.classList.add('hidden');
-	gameScreen.classList.remove('hidden');
-	loadQuestion();
+function startGame() {
+    startScreen.classList.add('hidden');
+    gameScreen.classList.remove('hidden');
+    updateProgress();
+    loadQuestion();
 }
 
-function loadQuestion()
-{
-	resetState();
-	const currentData = quizData[currentQuestionIndex];
-	questionEl.innerText = currentData.question;
-	scoreValue.innerText = score;
-
-	currentData.options.forEach((option, index) => {
-		const button = document.createElement('button');
-		button.innerText = option;
-		button.classList.add('option-btn');
-		button.addEventListener('click', () => selectAnswer(index));
-		optionsContainer.appendChild(button);
-	});
+function updateProgress() {
+    if(progressText){
+        progressText.innerText = `Р’РѕРїСЂРѕСЃ ${currentQuestionIndex + 1} РёР· ${quizData.length}`;
+    }
 }
 
-function resetState()
-{
-	nextBtn.classList.add('hidden');
-	feedbackEl.classList.add('hidden');
-	while (optionsContainer.firstChild) {
-		optionsContainer.removeChild(optionsContainer.firstChild);
-	}
+function loadQuestion() {
+    resetState();
+    const currentData = quizData[currentQuestionIndex];
+    questionEl.innerText = currentData.question;
+    scoreValue.innerText = score;
+
+    currentData.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.classList.add('option-btn');
+        
+        // Р”РѕР±Р°РІР»СЏРµРј РёРєРѕРЅРєСѓ РїРµСЂРµРґ С‚РµРєСЃС‚РѕРј РІР°СЂРёР°РЅС‚Р° РѕС‚РІРµС‚Р°
+        const icon = document.createElement('i');
+        icon.className = 'icon fas fa-helmet-battle'; // РРєРѕРЅРєР° С€Р»РµРјР°
+        button.prepend(icon);
+        
+        button.addEventListener('click', () => selectAnswer(index, currentData));
+        optionsContainer.appendChild(button);
+    });
 }
 
-function selectAnswer(selectedIndex)
-{
-	const currentData = quizData[currentQuestionIndex];
-	const buttons = optionsContainer.querySelectorAll('.option-btn');
-
-	// Проверяем ответ
-	if (selectedIndex === currentData.answer) {
-		score++;
-		feedbackEl.innerText = "Верно!";
-		feedbackEl.classList.add('correct');
-	} else {
-		feedbackEl.innerText = "Неверно.";
-		feedbackEl.classList.add('wrong');
-		// Подсвечиваем правильный ответ
-		buttons[currentData.answer].classList.add('correct');
-	}
-
-	// Показываем исторический факт
-	alert(currentData.fact); // В реальном сайте лучше сделать красивый поп-ап внутри страницы
-
-	feedbackEl.classList.remove('hidden');
-	nextBtn.classList.remove('hidden');
-
-	// Блокируем выбор других вариантов
-	buttons.forEach(btn => btn.disabled = true);
+function resetState() {
+    const oldFact = document.querySelector('.fact-box');
+    if (oldFact) { oldFact.remove(); }
+    
+    nextBtn.classList.add('hidden');
+    feedbackEl.classList.add('hidden');
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
 }
 
-function showNextQuestion()
-{
-	currentQuestionIndex++;
-	feedbackEl.className = 'hidden';
+function selectAnswer(selectedIndex, data) {
+    const buttons = optionsContainer.querySelectorAll('.option-btn');
+    
+    if (selectedIndex === data.answer) {
+        score++;
+        feedbackEl.innerText = "Р’РµСЂРЅРѕ!";
+        feedbackEl.classList.add('correct');
+    } else {
+        feedbackEl.innerText = "РќРµРІРµСЂРЅРѕ.";
+        feedbackEl.classList.add('wrong');
+        buttons[data.answer].classList.add('correct');
+    }
 
-	if (currentQuestionIndex < quizData.length) {
-		loadQuestion();
-	} else {
-		endGame();
-	}
+    showFact(data.fact);
+    feedbackEl.classList.remove('hidden');
+    nextBtn.classList.remove('hidden');
+    
+    buttons.forEach(btn => btn.disabled = true);
 }
 
-function endGame()
-{
-	gameScreen.classList.add('hidden');
-	endScreen.classList.remove('hidden');
+function showNextQuestion() {
+    currentQuestionIndex++;
+    
+    if (currentQuestionIndex < quizData.length) {
+        updateProgress();
+        loadQuestion();
+    } else {
+        endGame();
+    }
+}
 
-	const percentage = (score / quizData.length) * 100;
-	let resultText = `Вы ответили правильно на ${score} из ${quizData.length} вопросов.`;
+function endGame() {
+    gameScreen.classList.add('hidden');
+    endScreen.classList.remove('hidden');
+    
+    const percentage = (score / quizData.length) * 100;
+    let resultText = `Р’С‹ РѕС‚РІРµС‚РёР»Рё РїСЂР°РІРёР»СЊРЅРѕ РЅР° <b>${score}</b> РёР· <b>${quizData.length}</b> РІРѕРїСЂРѕСЃРѕРІ.`;
 
-	if (percentage == 100) {
-		resultText += "\nОтличный результат! Вы настоящий знаток!";
-	} else if (percentage >= 70) {
-		resultText += "\nХороший результат! Вы отлично помните школьную программу.";
-	} else if (percentage >= 40) {
-		resultText += "\nНеплохо, но стоит повторить даты и события.";
-	} else {
-		resultText += "\nГлавное — желание учиться!";
-	}
-
-	finalResult.innerText = resultText;
+    if (percentage == 100) {
+        resultText += "<br><span style='color:#27ae60; font-size:1.2em;'>рџҐ‡ Р’С‹ РЅР°СЃС‚РѕСЏС‰РёР№ Р·РЅР°С‚РѕРє Р»РµС‚РѕРїРёСЃРµР№!</span>";
+    } else if (percentage >= 70) {
+        resultText += "<br><span style='color:#f39c12; font-size:1.2em;'>рџ‘‘ РҐРѕСЂРѕС€РёР№ СЂРµР·СѓР»СЊС‚Р°С‚! РљРЅСЏР¶РµСЃРєРёР№ СѓСЂРѕРІРµРЅСЊ.</span>";
+    } else if (percentage >= 40) {
+        resultText += "<br><span style='color=#e67e22; font-size:1.2em;'>рџ“њ РќРµРїР»РѕС…Рѕ, РЅРѕ СЃС‚РѕРёС‚ РїРѕРІС‚РѕСЂРёС‚СЊ РґРµСЏРЅРёСЏ РєРЅСЏР·РµР№.</span>";
+    } else {
+        resultText += "<br><span style='color:#c0392b; font-size:1.2em;'>вљ”пёЏ Р“Р»Р°РІРЅРѕРµ вЂ” Р¶РµР»Р°РЅРёРµ СѓС‡РёС‚СЊСЃСЏ! Р”СЂСѓР¶РёРЅР° РїРѕРјРѕР¶РµС‚.</span>";
+    }
+    
+    finalResult.innerHTML = resultText;
 }
