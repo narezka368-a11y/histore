@@ -969,11 +969,25 @@ function clearRating(){
 /* СТАРТ */
 var saved=localStorage.getItem('currentUser');
 var savedRole=localStorage.getItem('currentRole')||'Ученик';
-if(isSiteClosed() && savedRole!=='Создатель'){
-  document.getElementById('closedReason').textContent=localStorage.getItem('closeReason')||'Причина не указана';
-  show('closedScreen');
+
+if(saved){
+  currentUser=saved;
+  currentRole=savedRole;
+  document.getElementById('userName').textContent=saved;
+  document.getElementById('userRole').textContent=savedRole;
+  document.getElementById('userAvatar').textContent=roleEmoji(savedRole);
+  addSession(saved,savedRole);
+  renderAdminButton();
+  show('subjects');
+} else {
+  /* если сайт закрыт — покажем экран закрытия, но с кнопкой "Войти как Создатель" */
+  if(isSiteClosed()){
+    document.getElementById('closedReason').textContent=localStorage.getItem('closeReason')||'Причина не указана';
+    show('closedScreen');
+  } else {
+    show('loginScreen');
+  }
 }
-else if(saved){
   currentUser=saved;
   currentRole=savedRole;
   document.getElementById('userName').textContent=saved;
