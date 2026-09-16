@@ -194,8 +194,28 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 <h2>📖 Предметы</h2>
 <button class="card" onclick="go('histHome')"><div class="ic">🏰</div><div><b>История</b><small>Статьи · викторины · кроссворды</small></div></button>
 <button class="card" onclick="go('litHome')"><div class="ic">📖</div><div><b>Литература</b><small>Пушкин · статьи · игры</small></div></button>
+<button class="card" onclick="go('mathHome')"><div class="ic">➗</div><div><b>Математика</b><small>🚧 В разработке</small></div></button>
 <h2>😄 Развлечение</h2>
 <button class="card" onclick="startFun()"><div class="ic">😂</div><div><b>Кто прав?</b><small>Шутливая игра</small></div></button>
+</div>
+
+<div id="mathHome" class="scr">
+<button class="back" onclick="go('subjects')">← Назад</button>
+<div class="hero">➗</div>
+<h1>Математика</h1>
+<p class="sub">🚧 Раздел в разработке</p>
+<div class="art">
+<h2>Скоро здесь будет</h2>
+<p>Мы готовим для вас интересные материалы по математике:</p>
+<ul>
+<li><b>📖 Статьи</b> — правила, формулы, примеры</li>
+<li><b>🎯 Викторины</b> — устный счёт, уравнения, задачи</li>
+<li><b>🧩 Кроссворды</b> — математические термины</li>
+<li><b>🎮 Игры</b> — тренировка счёта и логики</li>
+</ul>
+<div class="fact"><b>💡 А пока</b> — загляни в разделы «История» и «Литература», там уже много всего интересного!</div>
+</div>
+<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
 </div>
 
 <div id="litHome" class="scr">
@@ -213,9 +233,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 <div><b>Другие писатели</b><small>🚧 В разработке</small></div>
 <span class="arrow">›</span>
 </button>
-</div>
-
-<div id="pushkinTopic" class="scr">
+</div><div id="pushkinTopic" class="scr">
 <button class="back" onclick="go('litHome')">← К темам</button>
 <div class="hero">✍️</div>
 <h1>Александр Сергеевич Пушкин</h1>
@@ -310,7 +328,9 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 <button class="btn" onclick="pickPush('bio')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCrossPush('bio')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="go('pushkinTopic')">🏠 К разделу</button>
-</div><div id="histHome" class="scr">
+</div>
+
+<div id="histHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <div class="hero">🏰</div>
 <h1>История — 6-7 класс</h1>
@@ -383,9 +403,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 <button class="card" onclick="goCross('hl')"><div class="ic">🧩</div><div><b>Кроссворд: Хлодвиг</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('km')"><div class="ic">🧩</div><div><b>Кроссворд: Карл Мартелл</b><small>8 слов</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
-</div>
-
-<div id="rus" class="scr">
+</div><div id="rus" class="scr">
 <button class="back" onclick="go('rusTopic')">← К разделу «Русь»</button>
 <h1>🛡️ Древняя Русь</h1>
 <p class="sub">IX–XVII века</p>
@@ -546,7 +564,9 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 <button class="btn" onclick="pk('med')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCross('med')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="go('medTopic')">🏠 К разделу</button>
-</div><div id="fr" class="scr">
+</div>
+
+<div id="fr" class="scr">
 <button class="back" onclick="go('frTopic')">← К разделу «Франки»</button>
 <h1>👑 Франкское королевство</h1>
 <p class="sub">V–IX века</p>
