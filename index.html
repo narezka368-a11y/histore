@@ -2,403 +2,793 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>История — 6-7 класс</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📜 История — 6-7 класс</title>
 <style>
-body{font-family:'Segoe UI',sans-serif;background:#1a0f08;color:#f5e6d3;padding:20px;margin:0}
-.box{max-width:800px;margin:0 auto;background:#2a1810;border:3px solid #c9a227;border-radius:15px;padding:30px}
-h1{color:#c9a227;text-align:center}
-h2{color:#f4d03f;margin-top:20px;border-bottom:2px solid #c9a227;padding-bottom:5px}
-.screen{display:none}
-.screen.active{display:block}
-.card{display:block;width:100%;text-align:left;background:#3a2418;border:2px solid #c9a227;border-radius:10px;padding:15px;margin:10px 0;color:#f5e6d3;cursor:pointer;font-size:16px}
-.card:hover{background:#4a3020}
-.card b{color:#f4d03f;font-size:18px}
-.btn{display:block;width:100%;margin-top:15px;padding:15px;background:#c9a227;color:#2c1810;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer}
-.btn:hover{background:#f4d03f}
-.btn.sec{background:#3a2418;color:#f5e6d3;border:2px solid #c9a227}
-.back{background:none;border:none;color:#b8956a;cursor:pointer;font-size:14px;padding:5px;margin-bottom:10px}
-.back:hover{color:#c9a227}
-.stats{display:flex;justify-content:space-around;background:#3a2418;padding:15px;border-radius:10px;margin-bottom:15px}
-.stat{text-align:center}
-.stat .v{font-size:24px;color:#c9a227;font-weight:bold}
-.stat .l{font-size:12px;color:#b8956a}
-.q{background:#3a2418;padding:15px;border-left:4px solid #c9a227;border-radius:8px;margin-bottom:15px;font-size:18px}
-.ans{padding:14px;background:#3a2418;border:2px solid #c9a227;border-radius:10px;color:#f5e6d3;font-size:16px;text-align:left;cursor:pointer;margin:8px 0;width:100%}
-.ans:hover:not(:disabled){background:#4a3020}
-.ans.correct{background:#1a5c2a;border-color:#27ae60}
-.ans.wrong{background:#6b1f1a;border-color:#e74c3c}
-.expl{background:#3a2418;border-left:4px solid #c9a227;padding:15px;border-radius:8px;margin-top:15px;display:none}
-.diff{display:flex;gap:10px;justify-content:center;margin:15px 0;flex-wrap:wrap}
-.db{padding:10px 20px;background:#3a2418;border:2px solid #c9a227;border-radius:20px;color:#f5e6d3;cursor:pointer}
-.db.active{background:#c9a227;color:#2c1810;font-weight:bold}
-.article p{line-height:1.7;margin:10px 0}
-.article ul{margin:10px 0 10px 25px}
-.article li{margin:5px 0}
-.article b{color:#f4d03f}
-.datebox{background:#3a2418;border-left:4px solid #c9a227;padding:12px;border-radius:8px;margin:15px 0}
-.datebox b{color:#c9a227}
-.final-title{text-align:center;color:#c9a227;font-size:28px}
-.final-msg{text-align:center;background:#3a2418;padding:20px;border-radius:10px;margin:15px 0;font-size:18px;line-height:1.6}
-.summary{display:flex;justify-content:center;gap:30px;margin:15px 0;flex-wrap:wrap}
-.summary div{text-align:center}
-.summary .v{font-size:24px;color:#f4d03f;font-weight:bold}
-.summary .l{font-size:13px;color:#b8956a}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', 'Segoe UI', serif; }
+
+body {
+    min-height: 100vh;
+    background: 
+        radial-gradient(ellipse at top, #3d2418 0%, transparent 60%),
+        radial-gradient(ellipse at bottom, #1a0f08 0%, transparent 60%),
+        linear-gradient(135deg, #0f0904 0%, #2c1810 50%, #1a0f08 100%);
+    background-attachment: fixed;
+    color: #f5e6d3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Свечение-звёзды на фоне */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 15% 25%, rgba(244,208,63,.7), transparent),
+        radial-gradient(1px 1px at 45% 15%, rgba(201,162,39,.6), transparent),
+        radial-gradient(2px 2px at 75% 45%, rgba(244,208,63,.5), transparent),
+        radial-gradient(1px 1px at 25% 75%, rgba(201,162,39,.6), transparent),
+        radial-gradient(2px 2px at 85% 85%, rgba(244,208,63,.4), transparent),
+        radial-gradient(1px 1px at 60% 60%, rgba(201,162,39,.5), transparent);
+    pointer-events: none;
+    animation: twinkle 5s ease-in-out infinite alternate;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    0%   { opacity: .3; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: 820px;
+    background: linear-gradient(160deg, rgba(40,24,14,.98), rgba(25,15,8,.98));
+    border: 3px solid #c9a227;
+    border-radius: 24px;
+    padding: 35px 30px;
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.8),
+        0 0 80px rgba(201,162,39,.15),
+        inset 0 0 60px rgba(201,162,39,.06);
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Декоративные углы */
+.container::before, .container::after {
+    content: '❦';
+    position: absolute;
+    color: #c9a227;
+    font-size: 24px;
+    opacity: .6;
+}
+.container::before { top: 10px; left: 18px; }
+.container::after  { bottom: 10px; right: 18px; }
+
+h1 {
+    text-align: center;
+    font-size: 2.1em;
+    color: #f4d03f;
+    text-shadow: 0 0 20px rgba(244,208,63,.5), 2px 2px 4px rgba(0,0,0,.8);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #c9a227;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-size: 1.05em;
+}
+
+/* Верхний герб с анимацией */
+.hero {
+    font-size: 4.5em;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: float 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 25px rgba(244,208,63,.7));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-15px) rotate(2deg); }
+}
+
+.intro {
+    text-align: center;
+    color: #d4b896;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+}
+
+/* Разделитель разделов */
+.section-title {
+    color: #f4d03f;
+    font-size: 1.15em;
+    margin: 30px 0 15px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, rgba(201,162,39,.18), transparent);
+    border-left: 4px solid #c9a227;
+    border-radius: 8px;
+    letter-spacing: .5px;
+}
+
+/* Карточки */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(201,162,39,.1), rgba(201,162,39,.02));
+    border: 2px solid rgba(201,162,39,.4);
+    border-radius: 16px;
+    padding: 22px;
+    cursor: pointer;
+    transition: all .35s cubic-bezier(.4,0,.2,1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    color: inherit;
+    font-family: inherit;
+    width: 100%;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(244,208,63,.15), transparent);
+    transition: left .6s ease;
+}
+
+.card:hover::before { left: 100%; }
+
+.card:hover {
+    border-color: #f4d03f;
+    background: linear-gradient(135deg, rgba(201,162,39,.25), rgba(201,162,39,.08));
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(201,162,39,.35), 0 0 30px rgba(244,208,63,.2);
+}
+
+.card:active { transform: translateY(-2px); }
+
+.card-icon {
+    font-size: 3em;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 12px rgba(244,208,63,.6));
+    transition: transform .35s ease;
+}
+
+.card:hover .card-icon {
+    transform: scale(1.15) rotate(-8deg);
+}
+
+.card-info h3 {
+    color: #f4d03f;
+    font-size: 1.25em;
+    margin-bottom: 6px;
+    text-shadow: 0 0 10px rgba(244,208,63,.3);
+}
+
+.card-info p {
+    color: #b8956a;
+    font-size: .92em;
+    line-height: 1.45;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .75em;
+    padding: 4px 12px;
+    border-radius: 14px;
+    background: rgba(201,162,39,.25);
+    color: #f4d03f;
+    border: 1px solid rgba(201,162,39,.5);
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: .3px;
+}
+
+.tag.read {
+    background: rgba(80,140,200,.22);
+    color: #9ed0f5;
+    border-color: rgba(80,140,200,.6);
+}
+
+/* Экраны */
+.screen { display: none; }
+.screen.active {
+    display: block;
+    animation: fadeIn .5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Статья */
+.article { line-height: 1.8; font-size: 1.05em; color: #e8d8bf; }
+
+.article h2 {
+    color: #f4d03f;
+    font-size: 1.4em;
+    margin: 30px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(201,162,39,.4);
+    position: relative;
+}
+
+.article h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 60px; height: 2px;
+    background: #f4d03f;
+    box-shadow: 0 0 10px #f4d03f;
+}
+
+.article h3 { color: #c9a227; font-size: 1.15em; margin: 22px 0 10px; }
+.article p  { margin-bottom: 12px; }
+.article ul { margin: 10px 0 15px 25px; }
+.article li { margin-bottom: 8px; }
+.article b  { color: #f4d03f; }
+
+/* Красивый блок с датами */
+.datebox {
+    background: linear-gradient(135deg, rgba(201,162,39,.15), rgba(201,162,39,.05));
+    border: 1px solid rgba(201,162,39,.4);
+    border-left: 5px solid #c9a227;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: inset 0 0 30px rgba(201,162,39,.08);
+}
+
+.datebox .box-title {
+    color: #f4d03f;
+    font-weight: bold;
+    font-size: 1.05em;
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: .5px;
+}
+
+.datebox ul { list-style: none; margin: 0 !important; padding: 0; }
+
+.datebox li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(201,162,39,.25);
+    margin-bottom: 0 !important;
+}
+
+.datebox li:last-child { border-bottom: none; }
+
+.datebox b {
+    color: #c9a227;
+    display: inline-block;
+    min-width: 100px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Статистика */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(135deg, rgba(201,162,39,.15), rgba(201,162,39,.05));
+    border: 1px solid rgba(201,162,39,.4);
+    border-radius: 14px;
+    padding: 18px 15px;
+    margin-bottom: 22px;
+    box-shadow: inset 0 0 30px rgba(201,162,39,.1);
+}
+
+.stat { text-align: center; }
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f4d03f;
+    text-shadow: 0 0 15px rgba(244,208,63,.6);
+    font-family: 'Segoe UI', sans-serif;
+}
+.stat-label {
+    font-size: .85em;
+    color: #b8956a;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 4px;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+    height: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,.6);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a227, #f4d03f, #fff5b8);
+    width: 0%;
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 0 15px rgba(244,208,63,.8);
+    border-radius: 5px;
+}
+
+/* Вопрос */
+.question {
+    font-size: 1.25em;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(201,162,39,.12), rgba(201,162,39,.03));
+    border-left: 5px solid #c9a227;
+    border-radius: 12px;
+    box-shadow: inset 0 0 40px rgba(201,162,39,.05);
+}
+
+/* Ответы */
+.answers { display: flex; flex-direction: column; gap: 12px; }
+
+.answer-btn {
+    padding: 18px 22px;
+    background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border: 2px solid rgba(201,162,39,.4);
+    border-radius: 14px;
+    color: #f5e6d3;
+    font-size: 1.02em;
+    text-align: left;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    font-family: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(201,162,39,.25), rgba(201,162,39,.1));
+    border-color: #f4d03f;
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(201,162,39,.3);
+}
+
+.answer-btn:disabled { cursor: not-allowed; opacity: .75; }
+
+.answer-btn.correct {
+    background: linear-gradient(135deg, rgba(39,174,96,.45), rgba(39,174,96,.2));
+    border-color: #27ae60;
+    box-shadow: 0 0 25px rgba(39,174,96,.5);
+    animation: pulseGreen .6s ease;
+}
+
+.answer-btn.wrong {
+    background: linear-gradient(135deg, rgba(231,76,60,.45), rgba(231,76,60,.2));
+    border-color: #e74c3c;
+    box-shadow: 0 0 25px rgba(231,76,60,.5);
+    animation: shake .4s ease;
+}
+
+@keyframes pulseGreen {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.03); box-shadow: 0 0 40px rgba(39,174,96,.8); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25%     { transform: translateX(-6px); }
+    75%     { transform: translateX(6px); }
+}
+
+/* Пояснение */
+.explanation {
+    margin-top: 20px;
+    padding: 18px;
+    background: linear-gradient(135deg, rgba(201,162,39,.18), rgba(201,162,39,.06));
+    border-radius: 12px;
+    border-left: 5px solid #c9a227;
+    display: none;
+    line-height: 1.6;
+    animation: slideDown .4s ease;
+    box-shadow: inset 0 0 40px rgba(201,162,39,.08);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Кнопки */
+.btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px;
+    background: linear-gradient(135deg, #c9a227, #f4d03f);
+    color: #2c1810;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: .5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(201,162,39,.35);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: left .5s ease;
+}
+
+.btn:hover::before { left: 100%; }
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(244,208,63,.55);
+}
+
+.btn:active { transform: translateY(-1px); }
+
+.btn-secondary {
+    background: rgba(255,255,255,.08);
+    color: #f5e6d3;
+    border: 2px solid rgba(201,162,39,.5);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: rgba(201,162,39,.2);
+    box-shadow: 0 8px 25px rgba(201,162,39,.25);
+}
+
+/* Кнопка "назад" */
+.back {
+    background: transparent;
+    border: none;
+    color: #b8956a;
+    cursor: pointer;
+    font-size: .95em;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all .3s ease;
+    border-radius: 8px;
+}
+
+.back:hover {
+    color: #f4d03f;
+    background: rgba(201,162,39,.1);
+    transform: translateX(-4px);
+}
+
+/* Заголовок статьи */
+.header { text-align: center; margin-bottom: 25px; }
+.header .icon {
+    font-size: 3.5em;
+    display: block;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 20px rgba(244,208,63,.6));
+    animation: float 4s ease-in-out infinite;
+}
+.header h2 {
+    color: #f4d03f;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(244,208,63,.4);
+}
+.header .sub {
+    color: #c9a227;
+    font-style: italic;
+    font-size: 1em;
+}
+
+/* Заголовок игры */
+.game-title {
+    text-align: center;
+    color: #f4d03f;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(244,208,63,.4);
+}
+
+/* Кнопки сложности */
+.diff {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.diff-btn {
+    padding: 12px 24px;
+    background: rgba(255,255,255,.05);
+    border: 2px solid rgba(201,162,39,.5);
+    border-radius: 30px;
+    color: #f5e6d3;
+    cursor: pointer;
+    font-size: .98em;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all .3s ease;
+    font-weight: 500;
+}
+
+.diff-btn:hover {
+    background: rgba(201,162,39,.2);
+    transform: translateY(-2px);
+    border-color: #f4d03f;
+}
+
+.diff-btn.active {
+    background: linear-gradient(135deg, #c9a227, #f4d03f);
+    color: #2c1810;
+    font-weight: bold;
+    border-color: #f4d03f;
+    box-shadow: 0 0 25px rgba(244,208,63,.6);
+    transform: scale(1.05);
+}
+
+.diff-title {
+    text-align: center;
+    color: #c9a227;
+    margin-bottom: 12px;
+    font-size: 1em;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Финальный экран */
+.final-title {
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f4d03f;
+    text-shadow: 0 0 25px rgba(244,208,63,.7);
+    animation: float 3s ease-in-out infinite;
+}
+
+.summary {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.summary-item { text-align: center; }
+.summary-item .value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f4d03f;
+    text-shadow: 0 0 15px rgba(244,208,63,.5);
+    font-family: 'Segoe UI', sans-serif;
+}
+.summary-item .label {
+    font-size: .85em;
+    color: #b8956a;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 5px;
+}
+
+.final-msg {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.7;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(201,162,39,.15), rgba(201,162,39,.05));
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(201,162,39,.3);
+    box-shadow: inset 0 0 40px rgba(201,162,39,.08);
+}
+
+.grade {
+    font-size: 1.6em;
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+    color: #c9a227;
+    text-shadow: 0 0 20px rgba(201,162,39,.6);
+}
+
+/* Кнопки в статьях */
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.actions .btn {
+    margin-top: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Мобильные */
+@media (max-width: 550px) {
+    h1 { font-size: 1.6em; }
+    .container { padding: 22px 18px; }
+    .hero { font-size: 3.2em; }
+    .card-icon { font-size: 2.2em; }
+    .stat-value { font-size: 1.5em; }
+    .actions .btn { min-width: 100%; }
+    .header h2 { font-size: 1.5em; }
+}
 </style>
 </head>
 <body>
 
-<div class="box">
+<div class="container">
 
-<!-- МЕНЮ -->
+<!-- ============ МЕНЮ ============ -->
 <div id="menuScreen" class="screen active">
-    <h1>🏰 История — 6-7 класс</h1>
-    <p style="text-align:center;color:#b8956a">Учись и играй!</p>
+    <div class="hero">🏰</div>
+    <h1>История — 6-7 класс</h1>
+    <p class="subtitle">✦ Учись и играй ✦</p>
+    <p class="intro">Сначала прочитай статью, потом проверь себя в игре 🎯</p>
 
-    <h2>📖 Учебные материалы</h2>
-    <button class="card" onclick="openArticle('rus')">🛡️ <b>Древняя Русь</b><br>Князья, крещение, битвы</button>
-    <button class="card" onclick="openArticle('medieval')">⚔️ <b>Средние века</b><br>Рыцари, замки, Крестовые походы</button>
+    <div class="section-title">📖 Учебные материалы</div>
+    <div class="grid">
+        <button class="card" onclick="openArticle('rus')">
+            <div class="card-icon">🛡️</div>
+            <div class="card-info">
+                <h3>Древняя Русь</h3>
+                <p>Князья, крещение, битвы с врагами, объединение земель вокруг Москвы.</p>
+                <span class="tag read">📖 Читать</span>
+            </div>
+        </button>
+        <button class="card" onclick="openArticle('medieval')">
+            <div class="card-icon">⚔️</div>
+            <div class="card-info">
+                <h3>Средние века</h3>
+                <p>Рыцари, замки, Крестовые походы, Чёрная смерть и великие открытия.</p>
+                <span class="tag read">📖 Читать</span>
+            </div>
+        </button>
+    </div>
 
-    <h2>🎮 Игры-викторины</h2>
-    <button class="card" onclick="openGame('rus')">🎯 <b>Викторина: Древняя Русь</b><br>15 вопросов</button>
-    <button class="card" onclick="openGame('medieval')">🎯 <b>Викторина: Средние века</b><br>15 вопросов</button>
+    <div class="section-title">🎮 Игры-викторины</div>
+    <div class="grid">
+        <button class="card" onclick="openGame('rus')">
+            <div class="card-icon">🎯</div>
+            <div class="card-info">
+                <h3>Викторина: Древняя Русь</h3>
+                <p>Проверь знания о князьях, битвах и объединении русских земель.</p>
+                <span class="tag">15 вопросов</span>
+            </div>
+        </button>
+        <button class="card" onclick="openGame('medieval')">
+            <div class="card-icon">🎯</div>
+            <div class="card-info">
+                <h3>Викторина: Средние века</h3>
+                <p>Рыцари, замки, Крестовые походы и великие события Европы.</p>
+                <span class="tag">15 вопросов</span>
+            </div>
+        </button>
+    </div>
 </div>
 
-<!-- СТАТЬЯ РУСЬ -->
+<!-- ============ СТАТЬЯ РУСЬ ============ -->
 <div id="articleRusScreen" class="screen">
     <button class="back" onclick="goToMenu()">← Назад в меню</button>
-    <h1>🛡️ Древняя Русь</h1>
+    <div class="header">
+        <span class="icon">🛡️</span>
+        <h2>Древняя Русь</h2>
+        <p class="sub">IX–XV века</p>
+    </div>
     <div class="article">
-        <h2>1. Возникновение</h2>
-        <p>В <b>862 году</b> пригласили на княжение варяга <b>Рюрика</b>. Он основал династию <b>Рюриковичей</b>.</p>
-        <p>После — <b>Олег</b> (882–912) объединил Новгород и Киев. Затем <b>Игорь</b>, <b>Ольга</b>, <b>Святослав</b>.</p>
+        <h2>1. Возникновение государства</h2>
+        <p>В <b>862 году</b> славянские племена пригласили на княжение варяга <b>Рюрика</b>. Он стал первым князем и основал династию <b>Рюриковичей</b>.</p>
+        <p>После Рюрика правил <b>Олег</b> (882–912), объединивший Новгород и Киев. Затем — <b>Игорь</b>, <b>Ольга</b>, <b>Святослав</b>.</p>
         <div class="datebox">
-            <b>📌 Даты:</b>
+            <span class="box-title">📌 Важные даты</span>
             <ul>
-                <li><b>862</b> — призвание Рюрика</li>
-                <li><b>882</b> — объединение Новгорода и Киева</li>
-                <li><b>988</b> — Крещение Руси</li>
-                <li><b>1147</b> — первое упоминание Москвы</li>
+                <li><b>862 г.</b> — призвание Рюрика</li>
+                <li><b>882 г.</b> — объединение Новгорода и Киева</li>
+                <li><b>988 г.</b> — Крещение Руси</li>
+                <li><b>1147 г.</b> — первое упоминание Москвы</li>
             </ul>
         </div>
         <h2>2. Крещение Руси</h2>
-        <p>В <b>988 году</b> <b>Владимир Святославич</b> крестил Русь. Христианство стало государственной религией.</p>
+        <p>В <b>988 году</b> князь <b>Владимир Святославич</b> крестил Русь. Христианство стало государственной религией, что укрепило власть и культуру.</p>
         <h2>3. Борьба с врагами</h2>
-        <p><b>1240</b> — Невская битва. Александр разбил шведов, получил прозвище <b>Невский</b>.</p>
-        <p><b>1242</b> — Ледовое побоище. Разбил Ливонский орден на Чудском озере.</p>
+        <h3>Невская битва (1240)</h3>
+        <p><b>Александр Ярославич</b> разбил шведов на Неве и получил прозвище <b>Невский</b>.</p>
+        <h3>Ледовое побоище (1242)</h3>
+        <p>5 апреля на Чудском озере Александр Невский разбил рыцарей Ливонского ордена.</p>
         <h2>4. Монголо-татарское иго</h2>
-        <p>В 1237–1240 хан <b>Батый</b> завоевал Русь. Иго длилось 250 лет.</p>
-        <p><b>1380</b> — Куликовская битва. <b>Дмитрий Донской</b> разбил Мамая.</p>
-        <p><b>1480</b> — Стояние на Угре. <b>Иван III</b> покончил с игом.</p>
+        <p>В 1237–1240 гг. хан <b>Батый</b> завоевал русские земли. Иго длилось почти 250 лет.</p>
+        <h3>Куликовская битва (1380)</h3>
+        <p><b>Дмитрий Донской</b> разбил войско Мамая — первая крупная победа.</p>
+        <h3>Конец ига (1480)</h3>
+        <p><b>Иван III</b> отказался платить дань. После <b>стояния на Угре</b> иго закончилось.</p>
         <h2>5. Возвышение Москвы</h2>
-        <p>Москва усилилась при <b>Иване Калите</b>. Стала центром объединения земель.</p>
-        <p><b>1547</b> — <b>Иван IV Грозный</b> стал первым <b>царём</b>. Присоединил Казань (1552) и Астрахань (1556).</p>
-        <p><b>Опричнина</b> (1565–1572) — политика террора против бояр.</p>
+        <p>Москва усилилась при <b>Иване Калите</b>. Постепенно она стала центром объединения русских земель.</p>
+        <div class="datebox">
+            <span class="box-title">👑 Первый русский царь</span>
+            В <b>1547 году</b> <b>Иван IV Грозный</b> принял титул <b>царя</b>. Присоединил Казань (1552) и Астрахань (1556), но ввёл <b>опричнину</b> (1565–1572).
+        </div>
         <h2>6. Смутное время (1598–1613)</h2>
-        <p>После смерти Фёдора прервалась династия. Голод, самозванцы, интервенция.</p>
-        <p><b>1612</b> — <b>Минин и Пожарский</b> освободили Москву.</p>
-        <p><b>1613</b> — царём избран <b>Михаил Романов</b>.</p>
+        <p>После смерти Фёдора Иоанновича прервалась династия Рюриковичей. Начались голод и интервенция.</p>
+        <p>В <b>1612 году</b> <b>Минин и Пожарский</b> освободили Москву. В <b>1613</b> царём избран <b>Михаил Романов</b>.</p>
     </div>
-    <button class="btn" onclick="openGame('rus')">🎯 Пройти викторину</button>
-    <button class="btn sec" onclick="goToMenu()">🏠 В меню</button>
+    <div class="actions">
+        <button class="btn" onclick="openGame('rus')">🎯 Пройти викторину</button>
+        <button class="btn btn-secondary" onclick="goToMenu()">🏠 В меню</button>
+    </div>
 </div>
 
-<!-- СТАТЬЯ СРЕДНИЕ ВЕКА -->
+<!-- ============ СТАТЬЯ СРЕДНИЕ ВЕКА ============ -->
 <div id="articleMedievalScreen" class="screen">
     <button class="back" onclick="goToMenu()">← Назад в меню</button>
-    <h1>⚔️ Средние века</h1>
+    <div class="header">
+        <span class="icon">⚔️</span>
+        <h2>Средние века</h2>
+        <p class="sub">V–XV века</p>
+    </div>
     <div class="article">
-        <h2>1. Что это?</h2>
-        <p>Эпоха между <b>Античностью</b> и <b>Новым временем</b>: с <b>476</b> (падение Рима) до <b>1492</b> (открытие Америки).</p>
+        <h2>1. Что такое Средневековье?</h2>
+        <p>Эпоха между <b>Античностью</b> и <b>Новым временем</b>: с <b>476</b> (падение Западного Рима) до <b>1492</b> (открытие Америки).</p>
         <div class="datebox">
-            <b>📌 Периоды:</b>
+            <span class="box-title">📌 Три периода</span>
             <ul>
-                <li><b>V–XI вв.</b> — Раннее</li>
-                <li><b>XI–XV вв.</b> — Классическое</li>
-                <li><b>XV–XVII вв.</b> — Позднее</li>
+                <li><b>V–XI вв.</b> — Раннее Средневековье</li>
+                <li><b>XI–XV вв.</b> — Классическое Средневековье</li>
+                <li><b>XV–XVII вв.</b> — Позднее Средневековье</li>
             </ul>
         </div>
         <h2>2. Феодальный строй</h2>
-        <p>Земля у <b>феодалов</b>. Они давали <b>феод</b> вассалам за службу — <b>вассалитет</b>.</p>
-        <p>Крестьяне платили <b>оброк</b> и работали на <b>барщине</b>.</p>
+        <p>Земля принадлежала <b>феодалам</b>. Они давали <b>феод</b> вассалам за службу — так возник <b>вассалитет</b>.</p>
+        <p>Крестьяне платили <b>оброк</b> и отрабатывали <b>барщину</b>.</p>
         <h2>3. Рыцари и замки</h2>
-        <p><b>Рыцарь</b> — конный воин в доспехах. Жил в <b>замке</b> — крепости с башнями и рвом.</p>
-        <h2>4. Церковь</h2>
-        <p>Католическая церковь была очень влиятельной. Для борьбы с <b>ересью</b> — <b>инквизиция</b>.</p>
+        <p><b>Рыцарь</b> — конный воин в доспехах. Жили в <b>замках</b> — крепостях с башнями и рвом.</p>
+        <h2>4. Церковь в Средние века</h2>
+        <p>Католическая церковь была очень влиятельной. Для борьбы с <b>ересью</b> создали <b>инквизицию</b>.</p>
         <h2>5. Крестовые походы (XI–XIII вв.)</h2>
-        <p>В 1095 папа Урбан II призвал освободить <b>Святую землю</b>. Всего 8 походов.</p>
-        <h2>6. Чёрная смерть (1347–1351)</h2>
-        <p>Эпидемия <b>чумы</b> унесла треть населения Европы.</p>
+        <p>В 1095 году папа Урбан II призвал освободить <b>Святую землю</b>. Всего было <b>восемь</b> походов.</p>
+        <h2>6. Великая чума (1347–1351)</h2>
+        <p>Эпидемия <b>чумы</b> («Чёрная смерть») унесла около <b>трети</b> населения Европы.</p>
         <div class="datebox">
-            <b>🖨️ Изобретения:</b>
+            <span class="box-title">🖨️ Великие изобретения</span>
             <ul>
-                <li><b>≈1450</b> — книгопечатание (Гутенберг)</li>
+                <li><b>≈1450 г.</b> — книгопечатание (Гутенберг)</li>
                 <li><b>XIII в.</b> — компас в Европе</li>
                 <li><b>XIV в.</b> — порох в Европе</li>
             </ul>
         </div>
         <h2>7. Великая хартия вольностей (1215)</h2>
-        <p>В Англии король <b>Иоанн Безземельный</b> подписал хартию, ограничившую его власть.</p>
+        <p>В Англии король <b>Иоанн Безземельный</b> подписал хартию, ограничившую власть короля.</p>
         <h2>8. Столетняя война (1337–1453)</h2>
-        <p>Англия против Франции. Прославилась <b>Жанна д’Арк</b>.</p>
+        <p>Война между <b>Англией</b> и <b>Францией</b>. Прославилась <b>Жанна д’Арк</b>.</p>
         <h2>9. Падение Византии (1453)</h2>
-        <p>Турки-османы захватили <b>Константинополь</b>.</p>
+        <p>Турки-османы захватили <b>Константинополь</b>. Империя пала.</p>
         <h2>10. Реконкиста (VIII–XV вв.)</h2>
-        <p>Христиане отвоёвывали Пиренеи у мусульман. Конец — <b>1492</b>.</p>
-        <div class="datebox">
-            <b>🌍 Важные даты:</b>
-            <ul>
-                <li><b>476</b> — падение Западного Рима</li>
-                <li><b>800</b> — Карл Великий — император</li>
-                <li><b>1096</b> — начало Крестовых походов</li>
-                <li><b>1215</b> — Великая хартия вольностей</li>
-                <li><b>1347</b> — начало Чёрной смерти</li>
-                <li><b>1453</b> — падение Византии</li>
-                <li><b>1492</b> — конец Реконкисты</li>
-            </ul>
-        </div>
-    </div>
-    <button class="btn" onclick="openGame('medieval')">🎯 Пройти викторину</button>
-    <button class="btn sec" onclick="goToMenu()">🏠 В меню</button>
-</div>
-
-<!-- СЛОЖНОСТЬ -->
-<div id="setupScreen" class="screen">
-    <button class="back" onclick="goToMenu()">← Назад в меню</button>
-    <h1 id="setupTitle"></h1>
-    <div class="diff">
-        <button class="db active" data-diff="easy" onclick="selectDifficulty(this)">🟢 Лёгкая</button>
-        <button class="db" data-diff="medium" onclick="selectDifficulty(this)">🟡 Средняя</button>
-        <button class="db" data-diff="hard" onclick="selectDifficulty(this)">🔴 Сложная</button>
-    </div>
-    <button class="btn" onclick="startGame()">🚀 Начать игру</button>
-</div>
-
-<!-- ИГРА -->
-<div id="gameScreen" class="screen">
-    <button class="back" onclick="goToMenu()">← Выйти в меню</button>
-    <div class="stats">
-        <div class="stat"><div class="v" id="scoreDisplay">0</div><div class="l">⭐ Очки</div></div>
-        <div class="stat"><div class="v" id="livesDisplay">❤️❤️❤️</div><div class="l">Жизни</div></div>
-        <div class="stat"><div class="v" id="questionNum">1/15</div><div class="l">Вопрос</div></div>
-    </div>
-    <div class="q" id="questionText"></div>
-    <div id="answersContainer"></div>
-    <div class="expl" id="explanation"></div>
-    <button class="btn" id="nextBtn" style="display:none" onclick="nextQuestion()">➡️ Следующий вопрос</button>
-</div>
-
-<!-- ФИНАЛ -->
-<div id="finalScreen" class="screen">
-    <h2 class="final-title">🏆 Игра окончена!</h2>
-    <div class="summary">
-        <div><div class="v" id="finalScore">0</div><div class="l">⭐ Очки</div></div>
-        <div><div class="v" id="finalCorrect">0</div><div class="l">✅ Правильных</div></div>
-        <div><div class="v" id="finalTotal">0</div><div class="l">📚 Всего</div></div>
-    </div>
-    <div class="final-msg" id="finalMessage"></div>
-    <button class="btn" onclick="playAgain()">🔄 Играть снова</button>
-    <button class="btn sec" onclick="goToMenu()">🏠 В главное меню</button>
-</div>
-
-</div>
-
-<script>
-var rusQuestions = [
-    {level:1,q:"В каком году произошло Крещение Руси?",options:["862 г.","988 г.","1147 г.","1240 г."],correct:1,explanation:"Князь Владимир крестил Русь в 988 году."},
-    {level:1,q:"Кто был первым князем Древней Руси?",options:["Игорь","Олег","Рюрик","Святослав"],correct:2,explanation:"Рюрик стал первым князем в 862 году."},
-    {level:1,q:"В каком году произошла Невская битва?",options:["1240 г.","1242 г.","1380 г.","1147 г."],correct:0,explanation:"Александр Невский разбил шведов в 1240 году."},
-    {level:1,q:"Кто разбил Мамая на Куликовом поле?",options:["Иван III","Дмитрий Донской","Иван Калита","Александр Невский"],correct:1,explanation:"Дмитрий Донской в 1380 году."},
-    {level:1,q:"Кто был первым русским царём?",options:["Иван III","Иван IV Грозный","Пётр I","Борис Годунов"],correct:1,explanation:"Иван IV Грозный в 1547 году."},
-    {level:2,q:"В каком году произошло Ледовое побоище?",options:["1240 г.","1242 г.","1380 г.","1480 г."],correct:1,explanation:"5 апреля 1242 года на Чудском озере."},
-    {level:2,q:"В каком году произошла Куликовская битва?",options:["1380 г.","1240 г.","1480 г.","1147 г."],correct:0,explanation:"8 сентября 1380 года."},
-    {level:2,q:"Кто освободил Русь от монголо-татарского ига?",options:["Иван Калита","Дмитрий Донской","Иван III","Иван Грозный"],correct:2,explanation:"Иван III в 1480 году."},
-    {level:2,q:"В каком году Москва впервые упоминается?",options:["862 г.","988 г.","1147 г.","1240 г."],correct:2,explanation:"Москва упомянута в 1147 году."},
-    {level:2,q:"Кто возглавил Второе ополчение 1612?",options:["Минин и Пожарский","Лжедмитрий I","Борис Годунов","Василий Шуйский"],correct:0,explanation:"Минин и Пожарский освободили Москву."},
-    {level:3,q:"Что такое феодальная раздробленность?",options:["Объединение земель","Распад государства на княжества","Война с монголами","Крещение"],correct:1,explanation:"Распад на части в XII–XV вв."},
-    {level:3,q:"Кто написал «Повесть временных лет»?",options:["Нестор","Иларион","Даниил Заточник","Кирилл Туровский"],correct:0,explanation:"Монах Нестор в начале XII века."},
-    {level:3,q:"В каком году взяли Казань?",options:["1547 г.","1552 г.","1565 г.","1584 г."],correct:1,explanation:"Казань взята в 1552 году."},
-    {level:3,q:"Что такое опричнина?",options:["Совет при царе","Политика террора Ивана Грозного","Налог","Город"],correct:1,explanation:"Опричнина 1565–1572 гг."},
-    {level:3,q:"Когда началось Смутное время?",options:["1584 г.","1598 г.","1605 г.","1613 г."],correct:1,explanation:"В 1598 году после смерти Фёдора."}
-];
-
-var medievalQuestions = [
-    {level:1,q:"Что такое феод?",options:["Земля за службу","Замок","Оружие","Праздник"],correct:0,explanation:"Феод — земля, даваемая за службу."},
-    {level:1,q:"Кто такой рыцарь?",options:["Ремесленник","Конный воин в доспехах","Крестьянин","Монах"],correct:1,explanation:"Рыцарь — конный воин из знати."},
-    {level:1,q:"Что такое замок?",options:["Рынок","Укреплённое жилище феодала","Церковь","Хижина"],correct:1,explanation:"Замок — жилище феодала."},
-    {level:1,q:"Эпоха между Античностью и Новым временем?",options:["Каменный век","Средневековье","Ренессанс","Новейшее время"],correct:1,explanation:"Средневековье — V–XV века."},
-    {level:1,q:"Кто жил в замке?",options:["Крестьяне","Феодал","Ремесленники","Горожане"],correct:1,explanation:"Феодал управлял землями."},
-    {level:2,q:"Что такое Крестовые походы?",options:["Восстания","Походы на Восток","Торговля","Открытия"],correct:1,explanation:"Походы XI–XIII вв. на Ближний Восток."},
-    {level:2,q:"Какая эпидемия XIV века унесла треть Европы?",options:["Холера","Чума","Оспа","Грипп"],correct:1,explanation:"Чума («Чёрная смерть») 1347–1351 гг."},
-    {level:2,q:"Что изобрёл Гутенберг?",options:["Порох","Книгопечатание","Компас","Телескоп"],correct:1,explanation:"Около 1450 года."},
-    {level:2,q:"Что такое вассалитет?",options:["Сеньор и вассал","Торговля","Обряда","Оружие"],correct:0,explanation:"Вассал служит сеньору."},
-    {level:2,q:"Кто такой Карл Великий?",options:["Король Англии","Император франков","Папа","Хан"],correct:1,explanation:"Император с 800 года."},
-    {level:3,q:"Что такое инквизиция?",options:["Церковный суд","Орден","Совет","Налог"],correct:0,explanation:"Суд против еретиков."},
-    {level:3,q:"Что такое Великая хартия вольностей?",options:["Договор","Документ 1215 г. в Англии","Устав","Союз"],correct:1,explanation:"Ограничила власть короля."},
-    {level:3,q:"Когда пала Византия?",options:["1204 г.","1356 г.","1453 г.","1492 г."],correct:2,explanation:"В 1453 году турки взяли Константинополь."},
-    {level:3,q:"Кто такая Жанна д’Арк?",options:["Королева","Героиня Столетней войны","Монахиня","Принцесса"],correct:1,explanation:"Возглавила французов в 1429 году."},
-    {level:3,q:"Что такое Реконкиста?",options:["Завоевание Америки","Отвоевание Пиренеев у арабов","Восстание","Реформа"],correct:1,explanation:"VIII–XV вв., конец — 1492."}
-];
-
-var GAMES = {
-    rus: {title:"🎯 Древняя Русь", questions: rusQuestions},
-    medieval: {title:"🎯 Средние века", questions: medievalQuestions}
-};
-
-var currentGameKey = null;
-var currentQuestions = [];
-var currentIndex = 0;
-var score = 0;
-var lives = 3;
-var answered = false;
-var difficulty = 'easy';
-
-function showScreen(id) {
-    var screens = document.querySelectorAll('.screen');
-    for (var i = 0; i < screens.length; i++) screens[i].classList.remove('active');
-    document.getElementById(id).classList.add('active');
-    window.scrollTo(0, 0);
-}
-
-function goToMenu() { showScreen('menuScreen'); }
-
-function openArticle(key) {
-    if (key === 'rus') showScreen('articleRusScreen');
-    else showScreen('articleMedievalScreen');
-}
-
-function openGame(key) {
-    currentGameKey = key;
-    document.getElementById('setupTitle').textContent = GAMES[key].title;
-    difficulty = 'easy';
-    var btns = document.querySelectorAll('.db');
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.toggle('active', btns[i].dataset.diff === 'easy');
-    }
-    showScreen('setupScreen');
-}
-
-function selectDifficulty(btn) {
-    var btns = document.querySelectorAll('.db');
-    for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
-    btn.classList.add('active');
-    difficulty = btn.dataset.diff;
-}
-
-function shuffle(arr) {
-    var a = arr.slice();
-    for (var i = a.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var t = a[i]; a[i] = a[j]; a[j] = t;
-    }
-    return a;
-}
-
-function startGame() {
-    if (!currentGameKey) return;
-    var all = GAMES[currentGameKey].questions;
-    var pool;
-    if (difficulty === 'easy') pool = all.filter(function(q){return q.level === 1;});
-    else if (difficulty === 'medium') pool = all.filter(function(q){return q.level <= 2;});
-    else pool = all;
-    currentQuestions = shuffle(pool);
-    currentIndex = 0;
-    score = 0;
-    lives = 3;
-    answered = false;
-    updateStats();
-    showScreen('gameScreen');
-    loadQuestion();
-}
-
-function updateStats() {
-    document.getElementById('scoreDisplay').textContent = score;
-    document.getElementById('livesDisplay').textContent = lives > 0 ? '❤️'.repeat(lives) : '💀';
-}
-
-function loadQuestion() {
-    answered = false;
-    var q = currentQuestions[currentIndex];
-    document.getElementById('questionNum').textContent = (currentIndex + 1) + '/' + currentQuestions.length;
-    document.getElementById('questionText').textContent = '📖 ' + q.q;
-    var container = document.getElementById('answersContainer');
-    container.innerHTML = '';
-    document.getElementById('explanation').style.display = 'none';
-    document.getElementById('nextBtn').style.display = 'none';
-
-    var letters = ['А', 'Б', 'В', 'Г'];
-    for (var i = 0; i < q.options.length; i++) {
-        (function(idx){
-            var btn = document.createElement('button');
-            btn.className = 'ans';
-            btn.innerHTML = '<b>' + letters[idx] + ')</b> ' + q.options[idx];
-            btn.onclick = function(){ checkAnswer(idx, btn); };
-            container.appendChild(btn);
-        })(i);
-    }
-}
-
-function checkAnswer(selected, btn) {
-    if (answered) return;
-    answered = true;
-    var q = currentQuestions[currentIndex];
-    var btns = document.querySelectorAll('.ans');
-    for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
-
-    var expl = document.getElementById('explanation');
-
-    if (selected === q.correct) {
-        btn.classList.add('correct');
-        score += 10;
-        expl.innerHTML = '✅ <b>Правильно!</b><br>' + q.explanation;
-    } else {
-        btn.classList.add('wrong');
-        btns[q.correct].classList.add('correct');
-        lives--;
-        expl.innerHTML = '❌ <b>Неверно.</b> Правильно: <b>' + q.options[q.correct] + '</b><br>' + q.explanation;
-    }
-    expl.style.display = 'block';
-    updateStats();
-
-    var nb = document.getElementById('nextBtn');
-    if (lives <= 0) nb.textContent = '🏁 Завершить игру';
-    else if (currentIndex === currentQuestions.length - 1) nb.textContent = '🏆 Показать результат';
-    else nb.textContent = '➡️ Следующий вопрос';
-    nb.style.display = 'block';
-}
-
-function nextQuestion() {
-    if (lives <= 0 || currentIndex === currentQuestions.length - 1) {
-        finishGame();
-        return;
-    }
-    currentIndex++;
-    loadQuestion();
-}
-
-function finishGame() {
-    var total = currentQuestions.length;
-    var correct = score / 10;
-    var percent = Math.round(correct / total * 100);
-
-    document.getElementById('finalScore').textContent = score;
-    document.getElementById('finalCorrect').textContent = correct;
-    document.getElementById('finalTotal').textContent = total;
-
-    var msg, grade;
-    if (percent >= 90) { msg = '🌟 Превосходно!'; grade = 'Оценка: 5'; }
-    else if (percent >= 70) { msg = '👍 Отличный результат!'; grade = 'Оценка: 4'; }
-    else if (percent >= 50) { msg = '📖 Неплохо, повтори материал.'; grade = 'Оценка: 3'; }
-    else { msg = '📚 Попробуй ещё раз!'; grade = 'Оценка: 2'; }
-
-    document.getElementById('finalMessage').innerHTML =
-        'Правильных: <b>' + correct + ' из ' + total + '</b><br>' + msg +
-        '<div style="font-size:24px;font-weight:bold;color:#c9a227;margin-top:10px">' + grade + '</div>';
-
-    showScreen('finalScreen');
-}
-
-function playAgain() { showScreen('setupScreen'); }
-</script>
-
-</body>
-</html>
+        <p>Христиане отвоёвывали Пиренейский полуостров у мусульман. Завершилась в <b>1492</b>.</p>
