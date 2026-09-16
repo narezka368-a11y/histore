@@ -2,88 +2,332 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>История</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>История — 6-7 класс</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:Georgia,serif}
+
+html{scroll-behavior:smooth}
+
 body{
   background:linear-gradient(135deg,#0f0904,#2c1810,#1a0f08);
   background-attachment:fixed;
-  color:#f5e6d3;padding:20px;min-height:100vh;
+  color:#f5e6d3;
+  padding:15px;
+  min-height:100vh;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
 }
+
 .box{
-  max-width:750px;margin:20px auto;
+  max-width:750px;
+  margin:0 auto;
   background:linear-gradient(160deg,#30200f,#1a0f08);
-  border:3px solid #c9a227;border-radius:20px;
-  padding:30px;
+  border:3px solid #c9a227;
+  border-radius:20px;
+  padding:25px 22px;
   box-shadow:0 20px 60px rgba(0,0,0,.8),0 0 60px rgba(201,162,39,.2);
+  position:relative;
 }
-h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.5)}
-h2{color:#f4d03f;font-size:1.15em;padding:10px 15px;margin:22px 0 12px;background:rgba(201,162,39,.15);border-left:4px solid #c9a227;border-radius:6px}
-.sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:20px}
-.hero{font-size:4em;text-align:center;margin-bottom:10px;animation:float 3s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+.box::before{content:'❦';position:absolute;top:10px;left:15px;color:#c9a227;font-size:20px;opacity:.6}
+.box::after{content:'❦';position:absolute;bottom:10px;right:15px;color:#c9a227;font-size:20px;opacity:.6}
+
+h1{
+  color:#f4d03f;
+  text-align:center;
+  font-size:1.8em;
+  margin-bottom:8px;
+  text-shadow:0 0 20px rgba(244,208,63,.5);
+  line-height:1.2;
+}
+
+h2{
+  color:#f4d03f;
+  font-size:1.1em;
+  padding:10px 14px;
+  margin:20px 0 12px;
+  background:rgba(201,162,39,.15);
+  border-left:4px solid #c9a227;
+  border-radius:6px;
+}
+
+.sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px;font-size:.95em}
+
+.hero{font-size:3.5em;text-align:center;margin-bottom:8px;animation:float 3s ease-in-out infinite;line-height:1}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* КАРТОЧКИ */
 .card{
-  display:flex;align-items:center;gap:18px;width:100%;text-align:left;
+  display:flex;align-items:center;gap:15px;
+  width:100%;text-align:left;
   background:linear-gradient(135deg,rgba(201,162,39,.12),rgba(201,162,39,.03));
-  border:2px solid rgba(201,162,39,.45);border-radius:14px;
-  padding:18px 20px;margin:10px 0;color:#f5e6d3;
-  cursor:pointer;font-family:inherit;font-size:1em;
-  transition:all .3s ease;
+  border:2px solid rgba(201,162,39,.45);
+  border-radius:14px;
+  padding:16px;
+  margin:10px 0;
+  color:#f5e6d3;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:1em;
+  transition:all .25s ease;
+  min-height:70px;
+  touch-action:manipulation;
 }
-.card:hover{
-  border-color:#f4d03f;background:linear-gradient(135deg,rgba(201,162,39,.3),rgba(201,162,39,.1));
-  transform:translateY(-4px);box-shadow:0 12px 30px rgba(201,162,39,.4);
+.card:hover,.card:active{
+  border-color:#f4d03f;
+  background:linear-gradient(135deg,rgba(201,162,39,.3),rgba(201,162,39,.1));
+  box-shadow:0 12px 30px rgba(201,162,39,.4);
 }
-.card .ic{font-size:2.5em;flex-shrink:0}
-.card b{color:#f4d03f;font-size:1.15em;display:block;margin-bottom:3px}
-.card small{color:#b8956a;font-size:.9em;display:block}
+.card:active{transform:scale(.98)}
+
+.card .ic{font-size:2.3em;flex-shrink:0;line-height:1}
+.card b{color:#f4d03f;font-size:1.1em;display:block;margin-bottom:3px;line-height:1.3}
+.card small{color:#b8956a;font-size:.85em;display:block;line-height:1.3}
+
+/* ЭКРАНЫ */
 .screen{display:none}
 .screen.on{display:block;animation:fade .4s ease}
 @keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+
+/* КНОПКИ */
 .btn{
-  display:block;width:100%;padding:15px;
-  background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;
-  border:none;border-radius:12px;font-size:1.05em;font-weight:bold;
-  cursor:pointer;margin-top:12px;font-family:'Segoe UI',sans-serif;
-  transition:all .3s ease;box-shadow:0 6px 20px rgba(201,162,39,.35);
+  display:block;width:100%;
+  padding:16px;
+  background:linear-gradient(135deg,#c9a227,#f4d03f);
+  color:#2c1810;
+  border:none;
+  border-radius:12px;
+  font-size:1.05em;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:12px;
+  font-family:'Segoe UI',sans-serif;
+  transition:all .25s ease;
+  box-shadow:0 6px 20px rgba(201,162,39,.35);
+  touch-action:manipulation;
+  min-height:52px;
 }
-.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(244,208,63,.55)}
+.btn:active{transform:scale(.98);box-shadow:0 3px 12px rgba(201,162,39,.3)}
 .btn2{background:rgba(255,255,255,.08);color:#f5e6d3;border:2px solid rgba(201,162,39,.5);box-shadow:none}
-.btn2:hover{background:rgba(201,162,39,.2)}
-.back{background:none;border:none;color:#b8956a;cursor:pointer;font-size:.95em;padding:8px 12px;margin-bottom:12px;font-family:'Segoe UI',sans-serif}
-.back:hover{color:#f4d03f}
-.stats{display:flex;justify-content:space-around;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:12px;padding:16px;margin-bottom:18px;text-align:center}
-.stats .v{font-size:1.9em;color:#f4d03f;font-weight:bold;font-family:'Segoe UI',sans-serif}
-.stats .l{font-size:.8em;color:#b8956a;font-family:'Segoe UI',sans-serif;margin-top:3px}
-.q{background:rgba(201,162,39,.1);padding:16px 20px;border-left:5px solid #c9a227;border-radius:10px;margin-bottom:18px;font-size:1.12em;line-height:1.5}
-.ans{
-  display:block;width:100%;padding:15px 20px;
-  background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.4);
-  border-radius:12px;color:#f5e6d3;font-size:1em;text-align:left;
-  cursor:pointer;margin:9px 0;font-family:inherit;transition:all .25s ease;
+.btn2:active{background:rgba(201,162,39,.25)}
+
+.back{
+  background:rgba(201,162,39,.1);
+  border:1px solid rgba(201,162,39,.3);
+  color:#b8956a;
+  cursor:pointer;
+  font-size:.9em;
+  padding:9px 14px;
+  margin-bottom:14px;
+  font-family:'Segoe UI',sans-serif;
+  border-radius:8px;
+  touch-action:manipulation;
 }
-.ans:hover:not(:disabled){background:rgba(201,162,39,.25);border-color:#f4d03f;transform:translateX(6px)}
-.ans:disabled{cursor:not-allowed;opacity:.75}
-.ans.ok{background:rgba(39,174,96,.45);border-color:#27ae60;box-shadow:0 0 25px rgba(39,174,96,.5)}
-.ans.no{background:rgba(231,76,60,.45);border-color:#e74c3c;box-shadow:0 0 25px rgba(231,76,60,.5)}
-.expl{background:rgba(201,162,39,.15);border-left:5px solid #c9a227;padding:15px;border-radius:10px;margin-top:15px;display:none;line-height:1.5}
-.diff{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
-.diff button{padding:10px 20px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.5);border-radius:25px;color:#f5e6d3;cursor:pointer;font-family:'Segoe UI',sans-serif}
-.diff button:hover{background:rgba(201,162,39,.2);border-color:#f4d03f}
-.diff button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold;border-color:#f4d03f;box-shadow:0 0 20px rgba(244,208,63,.5)}
-.art{line-height:1.75;font-size:1.02em;color:#e8d8bf}
-.art h2{color:#f4d03f;font-size:1.25em;margin:25px 0 12px;padding:0 0 8px;background:none;border:none;border-bottom:2px solid rgba(201,162,39,.4);border-radius:0}
+.back:active{color:#f4d03f;background:rgba(201,162,39,.25)}
+
+/* СТАТИСТИКА */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  background:rgba(201,162,39,.12);
+  border:1px solid rgba(201,162,39,.4);
+  border-radius:12px;
+  padding:14px 8px;
+  margin-bottom:16px;
+  text-align:center;
+  gap:8px;
+}
+.stats > div{flex:1;min-width:0}
+.stats .v{font-size:1.6em;color:#f4d03f;font-weight:bold;font-family:'Segoe UI',sans-serif;line-height:1.2}
+.stats .l{font-size:.72em;color:#b8956a;font-family:'Segoe UI',sans-serif;margin-top:3px;line-height:1.2}
+
+/* ВОПРОС */
+.q{
+  background:rgba(201,162,39,.1);
+  padding:15px 17px;
+  border-left:5px solid #c9a227;
+  border-radius:10px;
+  margin-bottom:16px;
+  font-size:1.08em;
+  line-height:1.5;
+  word-wrap:break-word;
+}
+
+/* ОТВЕТЫ */
+.ans{
+  display:block;
+  width:100%;
+  padding:14px 16px;
+  background:rgba(255,255,255,.05);
+  border:2px solid rgba(201,162,39,.4);
+  border-radius:12px;
+  color:#f5e6d3;
+  font-size:1em;
+  text-align:left;
+  cursor:pointer;
+  margin:9px 0;
+  font-family:inherit;
+  transition:all .2s ease;
+  touch-action:manipulation;
+  min-height:52px;
+  line-height:1.4;
+  word-wrap:break-word;
+}
+.ans:active:not(:disabled){background:rgba(201,162,39,.25);border-color:#f4d03f;transform:scale(.98)}
+.ans:disabled{cursor:not-allowed;opacity:.8}
+.ans.ok{background:rgba(39,174,96,.45);border-color:#27ae60;box-shadow:0 0 20px rgba(39,174,96,.4)}
+.ans.no{background:rgba(231,76,60,.45);border-color:#e74c3c;box-shadow:0 0 20px rgba(231,76,60,.4)}
+
+/* ПОЯСНЕНИЕ */
+.expl{
+  background:rgba(201,162,39,.15);
+  border-left:5px solid #c9a227;
+  padding:14px;
+  border-radius:10px;
+  margin-top:14px;
+  display:none;
+  line-height:1.5;
+  font-size:.98em;
+  word-wrap:break-word;
+}
+
+/* СЛОЖНОСТЬ */
+.diff{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin:16px 0;
+  flex-wrap:wrap;
+}
+.diff button{
+  padding:11px 18px;
+  background:rgba(255,255,255,.05);
+  border:2px solid rgba(201,162,39,.5);
+  border-radius:25px;
+  color:#f5e6d3;
+  cursor:pointer;
+  font-family:'Segoe UI',sans-serif;
+  font-size:.95em;
+  touch-action:manipulation;
+  transition:all .2s ease;
+  min-height:44px;
+}
+.diff button:active{transform:scale(.95)}
+.diff button.on{
+  background:linear-gradient(135deg,#c9a227,#f4d03f);
+  color:#2c1810;
+  font-weight:bold;
+  border-color:#f4d03f;
+  box-shadow:0 0 20px rgba(244,208,63,.5);
+}
+
+/* СТАТЬЯ */
+.art{line-height:1.7;font-size:1em;color:#e8d8bf;word-wrap:break-word}
+.art h2{
+  color:#f4d03f;
+  font-size:1.15em;
+  margin:22px 0 12px;
+  padding:0 0 8px;
+  background:none;
+  border:none;
+  border-bottom:2px solid rgba(201,162,39,.4);
+  border-radius:0;
+}
 .art p{margin-bottom:11px}
 .art b{color:#f4d03f}
-.date{background:rgba(201,162,39,.12);border-left:5px solid #c9a227;padding:14px 18px;border-radius:10px;margin:15px 0}
-.date .t{color:#f4d03f;font-weight:bold;display:block;margin-bottom:6px}
+
+.date{
+  background:rgba(201,162,39,.12);
+  border-left:5px solid #c9a227;
+  padding:13px 16px;
+  border-radius:10px;
+  margin:15px 0;
+}
+.date .t{color:#f4d03f;font-weight:bold;display:block;margin-bottom:6px;font-size:.98em}
 .date ul{list-style:none;margin:0;padding:0}
-.date li{padding:6px 0;border-bottom:1px dashed rgba(201,162,39,.25)}
+.date li{padding:6px 0;border-bottom:1px dashed rgba(201,162,39,.25);font-size:.95em;line-height:1.4}
 .date li:last-child{border-bottom:none}
-.date b{color:#c9a227;display:inline-block;min-width:95px;font-family:'Segoe UI',sans-serif}
-.fin{text-align:center;background:rgba(201,162,39,.12);padding:22px;border-radius:12px;margin:16px 0;font-size:1.05em;line-height:1.6;border:1px solid rgba(201,162,39,.3)}
-.fin .g{font-size:1.5em;color:#c9a227;font-weight:bold;margin-top:10px;display:block}
-@media(max-width:550px){h1{font-size:1.5em}.box{padding:20px}.hero{font-size:3em}}
+.date b{color:#c9a227;display:inline-block;min-width:75px;font-family:'Segoe UI',sans-serif}
+
+/* ФИНАЛ */
+.fin{
+  text-align:center;
+  background:rgba(201,162,39,.12);
+  padding:20px;
+  border-radius:12px;
+  margin:16px 0;
+  font-size:1.02em;
+  line-height:1.6;
+  border:1px solid rgba(201,162,39,.3);
+}
+.fin .g{
+  font-size:1.4em;
+  color:#c9a227;
+  font-weight:bold;
+  margin-top:10px;
+  display:block;
+}
+
+/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
+@media (max-width: 600px) {
+  body{padding:8px}
+  .box{padding:18px 14px;border-radius:16px;border-width:2px}
+  .box::before,.box::after{font-size:16px}
+  h1{font-size:1.4em}
+  h2{font-size:1em;padding:8px 12px;margin:16px 0 10px}
+  .sub{font-size:.88em;margin-bottom:14px}
+  .hero{font-size:2.8em}
+  
+  .card{padding:14px;gap:12px;min-height:64px}
+  .card .ic{font-size:2em}
+  .card b{font-size:1em}
+  .card small{font-size:.78em}
+  
+  .btn{padding:14px;font-size:1em;min-height:48px}
+  .back{padding:8px 12px;font-size:.85em}
+  
+  .stats{padding:12px 6px;border-radius:10px}
+  .stats .v{font-size:1.3em}
+  .stats .l{font-size:.65em}
+  
+  .q{padding:13px 15px;font-size:1em;border-left-width:4px}
+  .ans{padding:13px 14px;font-size:.95em;min-height:48px}
+  .expl{padding:12px;font-size:.92em}
+  
+  .diff{gap:8px}
+  .diff button{padding:10px 14px;font-size:.85em;min-height:42px;flex:1;min-width:0}
+  
+  .art{font-size:.96em;line-height:1.65}
+  .art h2{font-size:1.05em;margin:18px 0 10px}
+  .date{padding:11px 13px}
+  .date li{font-size:.9em}
+  .date b{min-width:65px}
+  
+  .fin{padding:16px;font-size:.98em}
+  .fin .g{font-size:1.2em}
+}
+
+/* ОЧЕНЬ УЗКИЕ ЭКРАНЫ */
+@media (max-width: 380px) {
+  h1{font-size:1.25em}
+  .hero{font-size:2.3em}
+  .card .ic{font-size:1.8em}
+  .card b{font-size:.95em}
+  .card small{font-size:.72em}
+  .stats .v{font-size:1.1em}
+  .stats .l{font-size:.6em}
+  .diff button{font-size:.78em;padding:9px 10px}
+}
+
+/* ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ НА ТЕЛЕФОНЕ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero{font-size:2.2em;margin-bottom:4px}
+  h1{font-size:1.3em;margin-bottom:4px}
+  .sub{margin-bottom:10px;font-size:.85em}
+  .card{padding:12px;min-height:56px}
+  .card .ic{font-size:1.8em}
+}
 </style>
 </head>
 <body>
