@@ -31,17 +31,13 @@ body.light .st .v{color:#6b4f0f}
 body.light .st .l{color:#8b6f1f}
 body.light .q{background:linear-gradient(135deg,rgba(139,111,31,.14),rgba(139,111,31,.04));border-color:#8b6f1f;color:#2c1810}
 body.light .a{background:rgba(255,255,255,.5);border-color:rgba(139,111,31,.5);color:#2c1810}
-body.light .a:hover:not(:disabled){background:rgba(139,111,31,.2)}
 body.light .ex{background:rgba(139,111,31,.15);border-color:#8b6f1f;color:#2c1810}
 body.light .art{color:#2c1810}
 body.light .art h2{color:#6b4f0f;border-color:rgba(139,111,31,.5)}
 body.light .art h3{color:#8b6f1f}
 body.light .art b{color:#6b4f0f}
-body.light .art i{color:#8b6f1f}
 body.light .quote{background:rgba(142,68,173,.1);color:#4a235a}
-body.light .quote b{color:#6c3483}
 body.light .fact{background:rgba(41,128,185,.1);color:#1a5276}
-body.light .fact b{color:#2471a3}
 body.light .d{background:rgba(139,111,31,.15);border-color:#8b6f1f}
 body.light .d b{color:#6b4f0f}
 body.light .d li b{color:#8b6f1f}
@@ -67,7 +63,7 @@ body.light .puzzle-info{color:#6b4f0f}
 
 .box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
 h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.55);transition:color .4s}
-h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.22),transparent);border-left:4px solid #c9a227;border-radius:8px;transition:all .4s}
+h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.22),transparent);border-left:4px solid #c9a227;border-radius:8px}
 .sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px}
 .hero{font-size:3.8em;text-align:center;margin-bottom:10px;animation:fl 3s ease-in-out infinite}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
@@ -82,9 +78,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;border:none;border-radius:12px;font-size:1.05em;font-weight:bold;cursor:pointer;margin-top:14px;font-family:inherit;transition:all .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(244,208,63,.6)}
 .btn2{background:rgba(255,255,255,.08);color:#f5e6d3;border:2px solid rgba(201,162,39,.5);box-shadow:none}
-.btn2:hover{background:rgba(201,162,39,.28)}
-.back{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);color:#c9a227;cursor:pointer;font-size:.9em;padding:9px 14px;margin-bottom:14px;font-family:inherit;border-radius:8px;transition:all .25s}
-.back:hover{color:#f4d03f;background:rgba(201,162,39,.28)}
+.back{background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);color:#c9a227;cursor:pointer;font-size:.9em;padding:9px 14px;margin-bottom:14px;font-family:inherit;border-radius:8px}
 .card{display:flex;align-items:center;gap:16px;width:100%;text-align:left;background:linear-gradient(135deg,rgba(201,162,39,.1),rgba(201,162,39,.02));border:2px solid rgba(201,162,39,.4);border-radius:14px;padding:16px;margin:10px 0;color:#f5e6d3;cursor:pointer;font-family:inherit;font-size:1em;transition:all .3s}
 .card:hover{border-color:#f4d03f;background:linear-gradient(135deg,rgba(201,162,39,.3),rgba(201,162,39,.1));transform:translateY(-4px);box-shadow:0 14px 35px rgba(201,162,39,.4)}
 .card .ic{font-size:2.4em}
@@ -96,7 +90,6 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .theme-card b{color:#f4d03f;font-size:1.35em;display:block;margin-bottom:5px}
 .theme-card small{color:#b8956a;font-size:.95em;display:block;line-height:1.4}
 .theme-card .arrow{margin-left:auto;font-size:2em;color:#c9a227;transition:transform .3s}
-.theme-card:hover .arrow{transform:translateX(6px)}
 .userbox{display:flex;align-items:center;gap:12px;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:12px;padding:14px 16px;margin-bottom:15px}
 .userbox .av{font-size:2em}
 .userbox .who{flex:1}
@@ -105,7 +98,6 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .userbox .out{background:rgba(231,76,60,.2);border:1px solid #e74c3c;color:#e74c3c;padding:8px 14px;border-radius:8px;cursor:pointer;font-size:.9em;font-family:inherit}
 .roles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
 .role{padding:16px;background:linear-gradient(135deg,rgba(201,162,39,.08),rgba(201,162,39,.02));border:2px solid rgba(201,162,39,.4);border-radius:14px;cursor:pointer;text-align:center;transition:all .3s;font-family:inherit;color:#f5e6d3}
-.role:hover{border-color:#f4d03f;transform:translateY(-3px)}
 .role.on{background:linear-gradient(135deg,rgba(201,162,39,.35),rgba(201,162,39,.15));border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,63,.5)}
 .role .em{font-size:2.2em;display:block;margin-bottom:6px}
 .role b{color:#f4d03f;display:block;font-size:1em}
@@ -119,7 +111,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .st .v{font-size:1.6em;color:#f4d03f;font-weight:bold;font-family:'Segoe UI',sans-serif}
 .st .l{font-size:.72em;color:#b8956a;margin-top:3px}
 .q{background:linear-gradient(135deg,rgba(201,162,39,.14),rgba(201,162,39,.04));padding:16px 18px;border-left:5px solid #c9a227;border-radius:10px;margin-bottom:16px;font-size:1.08em;line-height:1.55}
-.a{display:block;width:100%;padding:15px 16px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.4);border-radius:12px;color:#f5e6d3;font-size:1em;text-align:left;cursor:pointer;margin:9px 0;font-family:inherit;transition:all .25s}
+.a{display:block;width:100%;padding:15px 16px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.4);border-radius:12px;color:#f5e6d3;font-size:1em;text-align:left;cursor:pointer;margin:9px 0;font-family:inherit}
 .a:hover:not(:disabled){background:rgba(201,162,39,.28);border-color:#f4d03f;transform:translateX(8px)}
 .a:disabled{cursor:not-allowed;opacity:.85}
 .a.ok{background:rgba(39,174,96,.55);border-color:#27ae60}
@@ -164,14 +156,14 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .clues li{counter-increment:clue;margin:7px 0;font-size:.93em;line-height:1.45;color:#e8d8bf;padding-left:26px;position:relative}
 .clues li::before{content:counter(clue) ".";position:absolute;left:0;color:#c9a227;font-weight:bold;min-width:22px}
 .puzzle{display:grid;gap:6px;justify-content:center;margin:20px auto;max-width:100%;padding:12px;background:rgba(0,0,0,.3);border-radius:14px;border:2px solid #c9a227}
-.puzzle .pcell{width:90px;height:90px;display:flex;align-items:center;justify-content:center;font-size:2.5em;border-radius:10px;cursor:pointer;transition:all .25s;user-select:none;border:2px solid rgba(201,162,39,.4)}
-.puzzle .pcell.empty{background:rgba(0,0,0,.3);border-color:rgba(201,162,39,.2);cursor:default}
-.puzzle .pcell:not(.empty){background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-.puzzle .pcell:not(.empty):hover{transform:scale(1.06);box-shadow:0 6px 18px rgba(244,208,63,.6)}
-.puzzle .pcell.correct{background:linear-gradient(135deg,#27ae60,#2ecc71);border-color:#2ecc71;color:#fff}
+.puzzle .pcell{width:110px;height:110px;border-radius:10px;cursor:pointer;transition:all .25s;user-select:none;border:2px solid rgba(201,162,39,.4);background-repeat:no-repeat;background-color:#1a0f08;position:relative}
+.puzzle .pcell.empty{background:rgba(0,0,0,.4);border-color:rgba(201,162,39,.2);cursor:default;background-image:none!important}
+.puzzle .pcell:not(.empty):hover{transform:scale(1.05);box-shadow:0 6px 18px rgba(244,208,63,.6);z-index:2}
+.puzzle .pcell.correct{border-color:#2ecc71;box-shadow:0 0 12px rgba(46,204,113,.7)}
+.puzzle .pcell.correct::after{content:'✓';position:absolute;top:2px;right:4px;color:#2ecc71;font-weight:bold;font-size:1.2em;text-shadow:0 0 6px #000}
 .puzzle-info{text-align:center;color:#c9a227;font-style:italic;margin:14px 0}
-@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}.puzzle .pcell{width:65px;height:65px;font-size:1.8em}}
-@media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}.puzzle .pcell{width:55px;height:55px;font-size:1.4em}}
+@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}.puzzle .pcell{width:80px;height:80px}}
+@media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:16px;gap:14px}.theme-card .ic{font-size:2.5em}.theme-card b{font-size:1.15em}.theme-card small{font-size:.85em}.theme-card .arrow{font-size:1.5em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}.art{font-size:.96em}.art h2{font-size:1.1em}.puzzle .pcell{width:65px;height:65px}}
 </style>
 </head>
 <body>
@@ -237,7 +229,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h1>Александр Сергеевич Пушкин</h1>
 <p class="sub">1799–1837 · «солнце русской поэзии»</p>
 <h2>📖 Читать</h2>
-<button class="card" onclick="go('pushkin')"><div class="ic">📜</div><div><b>Большая статья: Пушкин</b><small>15+ разделов о жизни и творчестве</small></div></button>
+<button class="card" onclick="go('pushkin')"><div class="ic">📜</div><div><b>Большая статья: Пушкин</b><small>11 разделов о жизни и творчестве</small></div></button>
 <h2>🎯 Викторины</h2>
 <button class="card" onclick="pickPush('bio')"><div class="ic">🎯</div><div><b>Викторина 1: Биография</b><small>15 вопросов о жизни</small></div></button>
 <button class="card" onclick="pickPush('works')"><div class="ic">🎯</div><div><b>Викторина 2: Произведения</b><small>15 вопросов о книгах</small></div></button>
@@ -246,8 +238,8 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="card" onclick="goCrossPush('bio')"><div class="ic">🧩</div><div><b>Кроссворд 1: Пушкин</b><small>8 слов о жизни</small></div></button>
 <button class="card" onclick="goCrossPush('works')"><div class="ic">🧩</div><div><b>Кроссворд 2: Произведения</b><small>8 слов о книгах</small></div></button>
 <h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('pushkin')"><div class="ic">🎨</div><div><b>Пазл: Портрет Пушкина</b><small>3×3 — собери картинку</small></div></button>
-<button class="card" onclick="startPuzzle('skazka')"><div class="ic">🎨</div><div><b>Пазл: Сказки Пушкина</b><small>3×3 — собери картинку</small></div></button>
+<button class="card" onclick="startPuzzle('pushkin')"><div class="ic">🎨</div><div><b>Пазл: Портрет Пушкина</b><small>Собери картину Кипренского</small></div></button>
+<button class="card" onclick="startPuzzle('skazka')"><div class="ic">🎨</div><div><b>Пазл: Сказки Пушкина</b><small>Иллюстрация Билибина</small></div></button>
 <button class="btn btn2" onclick="go('litHome')">🏠 К темам</button>
 </div><div id="histHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
@@ -266,7 +258,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 </button>
 <button class="theme-card" onclick="go('frTopic')">
 <div class="ic">👑</div>
-<div><b>Франкское государство</b><small>V–IX века · Хлодвиг, Карл Мартелл, Карл Великий<br>📖 3 большие статьи · 🎯 3 викторины · 🧩 3 кроссворда · 🎨 3 пазла</small></div>
+<div><b>Франкское государство</b><small>V–IX века · Хлодвиг, Карл Мартелл, Карл Великий<br>📖 3 статьи · 🎯 3 викторины · 🧩 3 кроссворда · 🎨 3 пазла</small></div>
 <span class="arrow">›</span>
 </button>
 <button class="theme-card" onclick="pk('year')">
@@ -282,13 +274,13 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h1>Древняя Русь</h1>
 <p class="sub">IX–XVII века — от Рюрика до Романовых</p>
 <h2>📖 Читать</h2>
-<button class="card" onclick="go('rus')"><div class="ic">📜</div><div><b>Большая статья: Древняя Русь</b><small>15+ разделов истории</small></div></button>
+<button class="card" onclick="go('rus')"><div class="ic">📜</div><div><b>Большая статья: Древняя Русь</b><small>11 разделов истории</small></div></button>
 <h2>🎯 Викторины</h2>
 <button class="card" onclick="pk('rus')"><div class="ic">🎯</div><div><b>Викторина: Древняя Русь</b><small>15 вопросов, 3 уровня</small></div></button>
 <h2>🧩 Кроссворды</h2>
 <button class="card" onclick="goCross('rus')"><div class="ic">🧩</div><div><b>Кроссворд: Древняя Русь</b><small>8 слов, 5 жизней</small></div></button>
 <h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('rus')"><div class="ic">🎨</div><div><b>Пазл: Древняя Русь</b><small>3×3 — собери картинку</small></div></button>
+<button class="card" onclick="startPuzzle('rus')"><div class="ic">🎨</div><div><b>Пазл: Богатыри Васнецова</b><small>Собери знаменитую картину</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
 </div>
 
@@ -298,13 +290,13 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h1>Средневековая Европа</h1>
 <p class="sub">V–XV века — рыцари, замки, Крестовые походы</p>
 <h2>📖 Читать</h2>
-<button class="card" onclick="go('med')"><div class="ic">📜</div><div><b>Большая статья: Средние века</b><small>15+ разделов истории</small></div></button>
+<button class="card" onclick="go('med')"><div class="ic">📜</div><div><b>Большая статья: Средние века</b><small>12 разделов истории</small></div></button>
 <h2>🎯 Викторины</h2>
 <button class="card" onclick="pk('med')"><div class="ic">🎯</div><div><b>Викторина: Средние века</b><small>15 вопросов</small></div></button>
 <h2>🧩 Кроссворды</h2>
 <button class="card" onclick="goCross('med')"><div class="ic">🧩</div><div><b>Кроссворд: Средние века</b><small>8 слов</small></div></button>
 <h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('med')"><div class="ic">🎨</div><div><b>Пазл: Средние века</b><small>3×3</small></div></button>
+<button class="card" onclick="startPuzzle('med')"><div class="ic">🎨</div><div><b>Пазл: Замок Каркассон</b><small>Настоящий средневековый замок</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
 </div>
 
@@ -326,9 +318,9 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="card" onclick="goCross('hl')"><div class="ic">🧩</div><div><b>Кроссворд: Хлодвиг</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('km')"><div class="ic">🧩</div><div><b>Кроссворд: Карл Мартелл</b><small>8 слов</small></div></button>
 <h2>🎨 Пазлы</h2>
-<button class="card" onclick="startPuzzle('fr')"><div class="ic">🎨</div><div><b>Пазл: Франки</b><small>3×3</small></div></button>
-<button class="card" onclick="startPuzzle('hl')"><div class="ic">🎨</div><div><b>Пазл: Хлодвиг</b><small>3×3</small></div></button>
-<button class="card" onclick="startPuzzle('km')"><div class="ic">🎨</div><div><b>Пазл: Карл Мартелл</b><small>3×3</small></div></button>
+<button class="card" onclick="startPuzzle('fr')"><div class="ic">🎨</div><div><b>Пазл: Монета Карла Великого</b><small>Средневековая монета</small></div></button>
+<button class="card" onclick="startPuzzle('hl')"><div class="ic">🎨</div><div><b>Пазл: Крещение Хлодвига</b><small>Историческая картина</small></div></button>
+<button class="card" onclick="startPuzzle('km')"><div class="ic">🎨</div><div><b>Пазл: Битва при Пуатье</b><small>Решающее сражение</small></div></button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К темам</button>
 </div><div id="pushkin" class="scr">
 <button class="back" onclick="go('pushkinTopic')">← К разделу «Пушкин»</button>
@@ -529,34 +521,22 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 
 <h2>3. Первые князья</h2>
 <div class="p"><span class="nm">🛡️ Рюрик (862–879)</span>
-<p>Первый князь, основатель династии Рюриковичей. Правил в Новгороде. По легенде, ему подчинялись также Белоозеро и Изборск, куда он посадил своих братьев Синеуса и Трувора.</p>
+<p>Первый князь, основатель династии Рюриковичей. Правил в Новгороде.</p>
 </div>
 <div class="p"><span class="nm">🛡️ Олег (879–912) — «Вещий»</span>
-<p>Регент при малолетнем сыне Рюрика — Игоре. Самый успешный князь раннего периода.</p>
-<p><b>882 год</b> — захватил Киев, убив Аскольда и Дира. Объединил Новгород и Киев в единое государство — <b>Киевскую Русь</b>. С этого момента Киев становится столицей.</p>
-<p><b>907 год</b> — совершил успешный поход на Царьград (Константинополь). По преданию, прибил свой щит на врата города в знак победы. Заключил выгодный торговый договор с Византией.</p>
-<div class="quote">«И повелел Олег своим воинам сделать колёса и поставить на них корабли. И когда подул попутный ветер, подняли они паруса и пошли к городу».</div>
-<p>Умер по легенде от укуса змеи, выползшей из черепа его умершего коня. Отсюда прозвище «Вещий» — знающий будущее.</p>
+<p>Регент при малолетнем сыне Рюрика — Игоре.</p>
+<p><b>882 год</b> — захватил Киев, убив Аскольда и Дира. Объединил Новгород и Киев — <b>Киевская Русь</b>.</p>
+<p><b>907 год</b> — поход на Царьград. Прибил щит на врата города.</p>
+<p>Умер по легенде от укуса змеи, выползшей из черепа коня.</p>
 </div>
 <div class="p"><span class="nm">🛡️ Игорь (912–945)</span>
-<p>Сын Рюрика. Совершил два похода на Византию (941 и 944). Первый был неудачным — византийцы сожгли русские ладьи «греческим огнём».</p>
-<p>В <b>945 году</b> погиб от рук древлян при попытке повторно собрать дань. Древляне восстали, сказав: «Если повадится волк к овцам, то вынесет всё стадо».</p>
+<p>Сын Рюрика. Совершил два похода на Византию. В <b>945 году</b> погиб от рук древлян при попытке повторно собрать дань.</p>
 </div>
 <div class="p"><span class="nm">🛡️ Ольга (945–962)</span>
-<p>Жена Игоря. Жестоко отомстила древлянам за смерть мужа. По летописи, совершила <b>четыре мести</b>:</p>
-<ul>
-<li>Приказала бросить послов древлян в ладью и закопать живыми</li>
-<li>Сожгла других послов в бане</li>
-<li>Устроила тризну на могиле Игоря, напоив древлян и приказав убить их</li>
-<li>Сожгла столицу древлян — город Искоростень, привязав горящую паклю к птицам</li>
-</ul>
-<p>Провела первую <b>налоговую реформу</b>: установила точные размеры дани — <b>«уроки»</b> и места её сбора — <b>«погосты»</b>.</p>
-<p>В <b>957 году</b> первой из русских правителей приняла христианство (в Константинополе). В крещении — Елена.</p>
+<p>Жена Игоря. Жестоко отомстила древлянам. Провела первую <b>налоговую реформу</b>: уроки и погосты. Первой приняла христианство (957).</p>
 </div>
 <div class="p"><span class="nm">🛡️ Святослав (962–972)</span>
-<p>Сын Игоря и Ольги. Большую часть жизни провёл в военных походах.</p>
-<p><b>965</b> — разгромил <b>Хазарский каганат</b>, уничтожив его столицу Итиль.</p>
-<p><b>968–971</b> — воевал с Волжской Булгарией и Византией. Погиб в бою с печенегами у днепровских порогов.</p>
+<p>Сын Игоря и Ольги. Разгромил <b>Хазарский каганат</b> (965). Погиб в бою с печенегами.</p>
 <div class="quote">«Иду на вы!» — так Святослав предупреждал врагов о начале войны.</div>
 </div><h2>4. Крещение Руси (988 год)</h2>
 <p>Князь <b>Владимир Святославич</b> (980–1015) сначала пытался укрепить язычество. Он создал единый пантеон богов во главе с Перуном — чтобы объединить племена. Но это не помогло.</p>
@@ -567,19 +547,19 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <ul>
 <li>Укрепило власть князя — теперь его поддерживала церковь</li>
 <li>Объединило племена в единый народ</li>
-<li>Развило письменность и культуру (кириллица пришла из Болгарии)</li>
+<li>Развило письменность и культуру</li>
 <li>Сблизило Русь с Византией и другими христианскими странами</li>
-<li>Появились монастыри, школы, иконопись, каменное строительство</li>
+<li>Появились монастыри, школы, иконопись</li>
 </ul>
-<div class="fact"><b>💡 Почему выбрали христианство?</b> По одной версии — красота богослужения. По другой — политическая выгода: союз с сильной Византией. По третьей — Владимир хотел жениться на византийской принцессе Анне, а для этого должен был креститься.</div>
+<div class="fact"><b>💡 Почему выбрали христианство?</b> По одной версии — красота богослужения. По другой — политическая выгода: союз с сильной Византией. По третьей — Владимир хотел жениться на византийской принцессе Анне.</div>
 
 <h2>5. Ярослав Мудрый (1019–1054)</h2>
 <p>Сын Владимира. Пришёл к власти после долгой борьбы со Святополком Окаянным, который убил своих братьев Бориса и Глеба (первые русские святые).</p>
 <p><b>Что сделал:</b></p>
 <ul>
 <li>Составил первый свод законов — <b>«Русская Правда»</b></li>
-<li>Построил <b>Софийский собор</b> в Киеве (1037) — главный храм Руси</li>
-<li>Разбил печенегов в 1036 году — они больше не нападали</li>
+<li>Построил <b>Софийский собор</b> в Киеве (1037)</li>
+<li>Разбил печенегов в 1036 году</li>
 <li>Открыл школы и библиотеки при монастырях</li>
 <li>Выдал дочерей замуж за европейских королей</li>
 </ul>
@@ -599,82 +579,55 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <li>Борьба князей за лучшие земли</li>
 <li>Появление местных династий</li>
 </ul>
-<p>Крупнейшие княжества:</p>
-<ul>
-<li><b>Владимиро-Суздальское</b> — на северо-востоке, князья Юрий Долгорукий, Андрей Боголюбский, Всеволод Большое Гнездо</li>
-<li><b>Галицко-Волынское</b> — на юго-западе, князь Даниил Романович</li>
-<li><b>Новгородская республика</b> — на северо-западе, управлял вече и посадник</li>
-</ul>
+<p>Крупнейшие княжества: <b>Владимиро-Суздальское, Галицко-Волынское, Новгородская республика</b>.</p>
 
 <h2>7. Борьба с врагами (XIII век)</h2>
 <h3>Битва на Калке (1223)</h3>
-<p>Первое столкновение с монголами. Русско-половецкое войско потерпело тяжёлое поражение из-за несогласованности князей. Но это была лишь «разведка» — настоящее нашествие началось позже.</p>
+<p>Первое столкновение с монголами. Русско-половецкое войско потерпело тяжёлое поражение.</p>
 <h3>Невская битва (1240)</h3>
-<p>Шведы высадились на берегу Невы, чтобы захватить новгородские земли. Князь <b>Александр Ярославич</b>, 19-летний сын Ярослава, с небольшой дружиной разбил их. За победу получил прозвище <b>Невский</b>.</p>
+<p>Шведы высадились на берегу Невы. Князь <b>Александр Ярославич</b>, 19-летний сын Ярослава, с небольшой дружиной разбил их. За победу получил прозвище <b>Невский</b>.</p>
 <div class="quote">«Не в силе Бог, а в правде!» — сказал Александр своей дружине перед боем.</div>
 <h3>Ледовое побоище (1242)</h3>
-<p>5 апреля на льду Чудского озера Александр Невский разбил рыцарей Ливонского ордена. Знаменитое построение — «свинья» рыцарей было рассечено ударом с флангов.</p>
+<p>5 апреля на льду Чудского озера Александр Невский разбил рыцарей Ливонского ордена.</p>
 <div class="quote">«Кто с мечом к нам придёт — от меча и погибнет. На том стояла и будет стоять Русская земля!»</div>
 
 <h2>8. Монголо-татарское иго (1240–1480)</h2>
-<p>В 1237–1240 годах хан <b>Батый</b> завоевал русские земли. Города были разорены, население частично уничтожено, частично уведено в плен.</p>
+<p>В 1237–1240 годах хан <b>Батый</b> завоевал русские земли.</p>
 <p><b>Что такое иго:</b></p>
 <ul>
 <li>Князья платили дань — <b>«выход»</b></li>
 <li>Получали <b>ярлык</b> на княжение от хана</li>
-<li>Монголы не управляли Русью напрямую, а через князей</li>
-<li>Хан мог казнить любого князя</li>
+<li>Монголы управляли через князей</li>
 </ul>
 <h3>Куликовская битва (1380)</h3>
-<p><b>Дмитрий Донской</b> разбил войско Мамая на Куликовом поле. Первая крупная победа. За неё получил прозвище <b>Донской</b>.</p>
-<p>Перед битвой Дмитрий получил благословение от <b>Сергия Радонежского</b>. В поединке перед битвой сошлись богатыри Пересвет и Челубей — оба погибли.</p>
+<p><b>Дмитрий Донской</b> разбил войско Мамая. Первая крупная победа. Перед битвой получил благословение от <b>Сергия Радонежского</b>.</p>
 <h3>Стояние на Угре (1480)</h3>
-<p><b>Иван III</b> отказался платить дань. Войска хана Ахмата и Ивана III несколько месяцев стояли на реке Угре. Ахмат отступил — иго закончилось.</p>
+<p><b>Иван III</b> отказался платить дань. Войска хана Ахмата отступили — иго закончилось.</p>
 
 <h2>9. Возвышение Москвы</h2>
-<p>Москва впервые упомянута в <b>1147 году</b> в связи с Юрием Долгоруким. Усилилась при <b>Иване Калите</b> (1325–1340):</p>
-<ul>
-<li>Получил ярлык на великое княжение</li>
-<li>Перенёс в Москву резиденцию митрополита</li>
-<li>Построил дубовый Кремль</li>
-<li>Собирал земли вокруг Москвы</li>
-</ul>
+<p>Москва впервые упомянута в <b>1147 году</b> в связи с Юрием Долгоруким. Усилилась при <b>Иване Калите</b> (1325–1340).</p>
 
 <h2>10. Иван Грозный (1533–1584)</h2>
 <p>В <b>1547 году</b> Иван IV первым принял титул <b>царя</b>. Провёл реформы:</p>
 <ul>
-<li>Создал <b>Избранную раду</b> — совет приближённых</li>
+<li>Создал <b>Избранную раду</b></li>
 <li>Созвал первый <b>Земский собор</b> (1549)</li>
 <li>Ввёл <b>Судебник</b> (1550)</li>
 <li>Создал <b>стрелецкое войско</b></li>
-<li>Провёл церковную реформу</li>
+<li>Присоединил <b>Казань (1552)</b> и <b>Астрахань (1556)</b></li>
 </ul>
-<p><b>Присоединения:</b></p>
-<ul>
-<li><b>1552</b> — Казань</li>
-<li><b>1556</b> — Астрахань</li>
-<li>Начало освоения Сибири (Ермак, 1582)</li>
-</ul>
-<p>В <b>1565–1572</b> ввёл <b>опричнину</b> — политику террора против бояр. Это ослабило государство.</p>
+<p>В <b>1565–1572</b> ввёл <b>опричнину</b> — политику террора против бояр.</p>
 
 <h2>11. Смутное время (1598–1613)</h2>
-<p>После смерти царя Фёдора Иоанновича прервалась династия Рюриковичей. Начались:</p>
-<ul>
-<li><b>Голод</b> 1601–1603 годов — от голода погибло около трети населения</li>
-<li><b>Самозванцы</b> — Лжедмитрий I и Лжедмитрий II</li>
-<li><b>Польская и шведская интервенция</b></li>
-<li>Разорение и разбой</li>
-</ul>
-<p>В <b>1612 году</b> <b>Кузьма Минин</b> (земский староста из Нижнего Новгорода) и <b>Дмитрий Пожарский</b> (князь) возглавили Второе народное ополчение и освободили Москву.</p>
-<p>В <b>1613 году</b> Земский собор избрал царём <b>Михаила Романова</b> — началась династия Романовых, правившая до 1917 года.</p>
+<p>После смерти царя Фёдора Иоанновича прервалась династия Рюриковичей. Начались голод, самозванцы, интервенция.</p>
+<p>В <b>1612 году</b> <b>Минин и Пожарский</b> возглавили Второе народное ополчение и освободили Москву.</p>
+<p>В <b>1613 году</b> Земский собор избрал царём <b>Михаила Романова</b>.</p>
 
 <div class="d"><b>📌 Все важные даты</b>
 <ul>
 <li><b>862</b> — призвание Рюрика</li>
 <li><b>882</b> — объединение Новгорода и Киева</li>
-<li><b>907</b> — поход Олега на Царьград</li>
 <li><b>988</b> — Крещение Руси</li>
-<li><b>1019–1054</b> — правление Ярослава Мудрого</li>
 <li><b>1147</b> — первое упоминание Москвы</li>
 <li><b>1223</b> — битва на Калке</li>
 <li><b>1240</b> — Невская битва</li>
@@ -702,129 +655,77 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <div class="art">
 
 <h2>Введение</h2>
-<p><b>Средние века</b> — эпоха между Античностью и Новым временем. Началась с падения Западной Римской империи в <b>476 году</b> и завершилась открытием Америки в <b>1492 году</b>. Это время рыцарей и замков, крестовых походов и чумы, готических соборов и первых университетов.</p>
+<p><b>Средние века</b> — эпоха между Античностью и Новым временем. Началась с падения Западной Римской империи в <b>476 году</b> и завершилась открытием Америки в <b>1492 году</b>.</p>
 <p>Средневековье часто называют «тёмными веками», но это не совсем верно. Именно в эту эпоху были заложены основы современной Европы: парламенты, университеты, города, банки.</p>
 
 <h2>1. Что такое Средневековье?</h2>
 <p>Средневековье делится на три периода:</p>
 <ul>
-<li><b>V–XI вв.</b> — Раннее Средневековье (формирование феодализма)</li>
-<li><b>XI–XV вв.</b> — Классическое Средневековье (расцвет)</li>
-<li><b>XV–XVII вв.</b> — Позднее Средневековье (переход к Новому времени)</li>
+<li><b>V–XI вв.</b> — Раннее Средневековье</li>
+<li><b>XI–XV вв.</b> — Классическое Средневековье</li>
+<li><b>XV–XVII вв.</b> — Позднее Средневековье</li>
 </ul>
-<p>Численность населения Европы в Средние века была небольшой — около 40–70 миллионов человек. Продолжительность жизни — 30–40 лет.</p>
+<p>Численность населения Европы — 40–70 миллионов человек. Продолжительность жизни — 30–40 лет.</p>
 
 <h2>2. Феодальный строй</h2>
-<p>Вся земля принадлежала <b>феодалам</b> (сеньорам). Они давали землю — <b>феод</b> — своим <b>вассалам</b> за службу. Так возникла система <b>вассалитета</b>:</p>
+<p>Земля принадлежала <b>феодалам</b>. Они давали землю — <b>феод</b> — своим <b>вассалам</b> за службу.</p>
 <div class="quote">«Вассал моего вассала — не мой вассал».</div>
-<p>Это означало, что король был сеньором только для своих прямых вассалов, а не для всех.</p>
-<p><b>Сословия:</b></p>
-<ul>
-<li><b>Духовенство</b> — молится за всех</li>
-<li><b>Рыцарство</b> — воюет и защищает</li>
-<li><b>Крестьянство</b> — работает и кормит всех</li>
-</ul>
-<p>Крестьяне платили <b>оброк</b> (продуктами или деньгами) и работали на <b>барщине</b> (на земле феодала).</p>
-<div class="fact"><b>💡 Интересно.</b> В среднем крестьянин отдавал феодалу около трети урожая. Кроме того, он платил церковную десятину (10% дохода) и разные сборы: за помол зерна, за пользование печью, за разрешение жениться.</div><h2>3. Рыцари и замки</h2>
-<p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Чтобы стать рыцарем, мальчик с 7 лет проходил обучение:</p>
-<ul>
-<li><b>Паж</b> (7–14 лет) — прислуживал даме, учился этикету</li>
-<li><b>Оруженосец</b> (14–21 год) — помогал рыцарю, ухаживал за оружием и конём</li>
-<li><b>Рыцарь</b> — в 18–21 год проходил посвящение</li>
-</ul>
-<p><b>Церемония посвящения:</b> будущий рыцарь проводил ночь в молитве, затем ему вручали меч и шпоры. С этого момента он получал право носить оружие.</p>
-<p><b>Кодекс рыцаря:</b></p>
-<ul>
-<li>Смелость в бою</li>
-<li>Верность сеньору</li>
-<li>Защита слабых и обиженных</li>
-<li>Служение прекрасной даме</li>
-<li>Держать слово</li>
-</ul>
-<p>Жили рыцари в <b>замках</b> — крепостях с башнями, рвом, подъёмным мостом. Стены делали из камня, толщина достигала 3–5 метров.</p>
-<div class="fact"><b>💡 Интересно.</b> Рыцарские доспехи весили 20–30 кг. Надеть их в одиночку было невозможно — помогали оруженосцы. В полном доспехе рыцарь мог упасть и не встать — отсюда легенды о беспомощных рыцарях.</div>
+<p><b>Сословия:</b> духовенство, рыцарство, крестьянство.</p>
+<p>Крестьяне платили <b>оброк</b> и работали на <b>барщине</b>.</p>
+<div class="fact"><b>💡 Интересно.</b> Крестьянин отдавал феодалу треть урожая, плюс церковную десятину и сборы за помол зерна, печь, разрешение жениться.</div><h2>3. Рыцари и замки</h2>
+<p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Обучение: паж → оруженосец → рыцарь.</p>
+<p><b>Кодекс рыцаря:</b> смелость, верность сеньору, защита слабых, служение даме.</p>
+<p>Жили в <b>замках</b> — крепостях с башнями, рвом, подъёмным мостом. Стены 3–5 метров.</p>
+<div class="fact"><b>💡 Интересно.</b> Рыцарские доспехи весили 20–30 кг. В полном доспехе рыцарь мог упасть и не встать.</div>
 
-<h2>4. Церковь в Средние века</h2>
-<p>Католическая церковь была очень влиятельной. Она владела третью всех земель Европы. Монастыри были центрами образования и культуры.</p>
-<p>Церковь учила, что земная жизнь — лишь подготовка к вечной. Церковь могла отлучить человека от общины — <b>анафема</b> — это было страшным наказанием.</p>
-<p>Для борьбы с <b>ересью</b> (отклонением от учения церкви) была создана <b>инквизиция</b> — церковный суд.</p>
-<div class="quote">«Вне церкви нет спасения» — так учила католическая церковь.</div>
+<h2>4. Церковь</h2>
+<p>Католическая церковь владела третью всех земель. Для борьбы с <b>ересью</b> создана <b>инквизиция</b>.</p>
+<div class="quote">«Вне церкви нет спасения».</div>
 
 <h2>5. Крестовые походы (XI–XIII века)</h2>
-<p>В <b>1095 году</b> папа <b>Урбан II</b> призвал освободить <b>Святую землю</b> (Иерусалим) от мусульман. Начались Крестовые походы — всего их было <b>восемь</b>.</p>
-<p><b>Главные походы:</b></p>
+<p>В <b>1095 году</b> папа <b>Урбан II</b> призвал освободить <b>Святую землю</b>. Всего — <b>восемь</b> походов.</p>
 <ul>
-<li><b>1096–1099</b> — Первый поход, взятие Иерусалима, создание государств крестоносцев</li>
-<li><b>1147–1149</b> — Второй поход (неудачный)</li>
-<li><b>1189–1192</b> — Третий поход (Ричард Львиное Сердце, Филипп II, Фридрих I)</li>
-<li><b>1202–1204</b> — Четвёртый поход, разграбление Константинополя</li>
-<li><b>1291</b> — крестоносцы потеряли последнюю крепость — Акру</li>
+<li><b>1096–1099</b> — Первый, взятие Иерусалима</li>
+<li><b>1147–1149</b> — Второй (неудачный)</li>
+<li><b>1189–1192</b> — Третий (Ричард Львиное Сердце)</li>
+<li><b>1202–1204</b> — Четвёртый, разграбление Константинополя</li>
+<li><b>1291</b> — потеря Акры</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Во время первого похода крестоносцы шли пешком через всю Европу и Малую Азию — почти 4000 км. Многие умирали от голода и болезней, не дойдя до Иерусалима.</div>
 
 <h2>6. Великая чума (1347–1351)</h2>
-<p>Эпидемия <b>чумы</b> («Чёрная смерть») пришла из Азии. За 4 года она унесла около <b>трети</b> населения Европы — примерно 25 миллионов человек.</p>
-<p>Люди не понимали причин болезни. Одни считали, что это кара Божья, другие — отравление воды. Врачи носили маски с длинными клювами, набитыми травами.</p>
-<p>После чумы феодальный строй начал ослабевать: не хватало рабочих рук, крестьяне стали требовать больше прав.</p>
+<p>Эпидемия <b>чумы</b> унесла <b>треть</b> населения Европы — 25 миллионов человек.</p>
 
 <h2>7. Города и ремёсла</h2>
-<p>В XI–XIII веках начали расти города. Ремесленники объединялись в <b>цеха</b>, купцы — в <b>гильдии</b>. Города боролись за самоуправление.</p>
-<p>Появились <b>университеты</b>:</p>
-<ul>
-<li><b>1088</b> — Болонский (Италия)</li>
-<li><b>1096</b> — Оксфордский (Англия)</li>
-<li><b>1200</b> — Парижский (Франция)</li>
-</ul>
-<p>Обучение велось на латыни. Студенты изучали грамматику, логику, арифметику, астрономию, музыку.</p>
+<p>Цеха, гильдии, университеты: <b>1088</b> — Болонья, <b>1096</b> — Оксфорд, <b>1200</b> — Париж.</p>
 
-<h2>8. Великая хартия вольностей (1215)</h2>
-<p>В Англии король <b>Иоанн Безземельный</b> подписал <b>Великую хартию вольностей</b> — документ, ограничивший власть короля и защитивший права свободных людей.</p>
-<p>Хартия гарантировала:</p>
-<ul>
-<li>Свободные люди не могут быть арестованы без суда</li>
-<li>Король не может вводить новые налоги без согласия совета</li>
-<li>Церковь сохраняет свои права</li>
-</ul>
-<p>Это был первый шаг к парламенту (создан в 1265 году).</p>
+<h2>8. Хартия вольностей (1215)</h2>
+<p>Иоанн Безземельный подписал хартию, ограничившую власть короля. Первый шаг к парламенту (1265).</p>
 
 <h2>9. Столетняя война (1337–1453)</h2>
-<p>Война между <b>Англией</b> и <b>Францией</b> за земли на континенте и французский престол.</p>
-<p>Главные битвы:</p>
-<ul>
-<li><b>1346</b> — Креси</li>
-<li><b>1356</b> — Пуатье</li>
-<li><b>1415</b> — Азенкур</li>
-<li><b>1429</b> — снятие осады Орлеана (Жанна д’Арк)</li>
-<li><b>1453</b> — падение Бордо, конец войны</li>
-</ul>
-<p>Прославилась <b>Жанна д’Арк</b> — девушка, возглавившая французские войска. В 1431 году её сожгли англичане, но она стала символом Франции.</p>
+<p>Англия против Франции. Героиня — <b>Жанна д’Арк</b>. Сняла осаду Орлеана в 1429. Сожжена в 1431.</p>
 
 <h2>10. Падение Византии (1453)</h2>
-<p>Турки-османы захватили <b>Константинополь</b>. Византийская империя, существовавшая более 1000 лет, пала. Это событие считается концом Средневековья.</p>
+<p>Турки-османы захватили <b>Константинополь</b>. Империя пала.</p>
 
 <h2>11. Реконкиста (VIII–XV века)</h2>
-<p>Христиане Пиренейского полуострова отвоёвывали земли у мусульман. Завершилась в <b>1492 году</b> взятием Гранады.</p>
+<p>Христиане отвоёвывали Пиренейский полуостров. Конец — <b>1492</b>, взятие Гранады.</p>
 
-<h2>12. Изобретения Средневековья</h2>
+<h2>12. Изобретения</h2>
 <ul>
-<li><b>XIII в.</b> — компас в Европе</li>
-<li><b>XIII в.</b> — механические часы</li>
-<li><b>XIV в.</b> — порох в Европе</li>
-<li><b>≈1450 г.</b> — книгопечатание (Гутенберг)</li>
-<li><b>XIII в.</b> — очки</li>
-<li><b>XII в.</b> — первые ветряные мельницы</li>
+<li><b>XIII в.</b> — компас, часы, очки</li>
+<li><b>XIV в.</b> — порох</li>
+<li><b>≈1450</b> — книгопечатание (Гутенберг)</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> До изобретения книгопечатания книги переписывали вручную монахи. Одна книга могла стоить как дом. Гутенберг напечатал первую Библию около 1455 года — и книги стали доступны.</div>
 
 <div class="d"><b>📌 Все важные даты</b>
 <ul>
 <li><b>476</b> — падение Западного Рима</li>
-<li><b>1096</b> — начало Крестовых походов</li>
-<li><b>1215</b> — Великая хартия вольностей</li>
-<li><b>1337</b> — начало Столетней войны</li>
-<li><b>1347</b> — начало Чёрной смерти</li>
+<li><b>1096</b> — Крестовые походы</li>
+<li><b>1215</b> — Хартия вольностей</li>
+<li><b>1337</b> — Столетняя война</li>
+<li><b>1347</b> — Чёрная смерть</li>
 <li><b>1453</b> — падение Византии</li>
-<li><b>1492</b> — конец Реконкисты, открытие Америки</li>
+<li><b>1492</b> — конец Реконкисты</li>
 </ul>
 </div>
 
@@ -832,7 +733,7 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="btn" onclick="pk('med')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCross('med')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="startPuzzle('med')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('medTopic')">🏠 К разделу «Средние века»</button>
+<button class="btn btn2" onclick="go('medTopic')">🏠 К разделу</button>
 </div>
 
 <div id="fr" class="scr">
@@ -840,134 +741,60 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h1>👑 Франкское королевство</h1>
 <p class="sub">V–IX века — от Хлодвига до Карла Великого</p>
 <div class="art">
-
-<h2>Введение</h2>
-<p><b>Франкское королевство</b> — одно из самых могущественных государств раннего Средневековья. Оно возникло на землях бывшей римской провинции Галлия и стало основой будущих Франции, Германии и Италии.</p>
-<p>Франки сыграли огромную роль в истории Европы: остановили арабов, создали империю Карла Великого, заложили основы рыцарства.</p>
-
 <h2>1. Кто такие франки?</h2>
-<p><b>Франки</b> — группа германских племён, которые в III–IV веках расселились на территории римской провинции <b>Галлия</b> (современная Франция, Бельгия, запад Германии).</p>
-<p>Сначала франки служили Риму как наёмники, охраняя границы. После падения Западной Римской империи в <b>476 году</b> они создали своё государство.</p>
-<p>Название «франки» означает <i>«свободные»</i>. От него произошло слово <b>Франция</b>.</p>
-<p>Франки делились на две ветви:</p>
-<ul>
-<li><b>Салические франки</b> — жили у моря, их королём стал Хлодвиг</li>
-<li><b>Рипуарские франки</b> — жили по реке Рейн</li>
-</ul>
-
-<h2>2. Династия Меровингов</h2>
-<p>Основателем династии считается легендарный вождь <b>Меровей</b>. Его потомки — <b>Меровинги</b> — правили франками более 250 лет.</p>
-<p>Короли Меровинги носили длинные волосы — это считалось признаком королевской власти. Стрижка означала потерю права на престол.</p>
-<div class="fact"><b>💡 Интересно.</b> Меровинги считались потомками морского чудовища — отсюда легенды о «королях с длинными волосами». Позже возникли легенды о «Святом Граале» и потомках Меровингов — но это уже fiction.</div>
-
+<p><b>Франки</b> — германское племя в Галлии. «Свободные» — отсюда <b>Франция</b>.</p>
+<h2>2. Меровинги</h2>
+<p>Основатель — <b>Меровей</b>. Правили более 250 лет. Носили длинные волосы — знак власти.</p>
 <h2>3. Хлодвиг I (481–511)</h2>
-<div class="p"><span class="nm">👑 Первый великий король франков</span>
-<p>В <b>481 году</b> 15-летний Хлодвиг стал королём салических франков после смерти отца Хильдерика I.</p>
-<p>В <b>486 году</b> разбил римского наместника Сиагрия при Суассоне и захватил северную Галлию.</p>
-<p>В <b>496 году</b> принял христианство — это укрепило его власть.</p>
-<p>В <b>507 году</b> разбил вестготов при Вуйе и захватил Аквитанию.</p>
-<p>Столицей сделал <b>Париж</b>. Создал свод законов — <b>«Салическая правда»</b>.</p>
-</div>
-
-<h2>4. «Ленивые короли» и мажордомы</h2>
-<p>Потомки Хлодвига часто правили плохо и мало интересовались делами государства. Их называли <b>«ленивыми королями»</b>.</p>
-<p>Реальная власть перешла к <b>мажордомам</b> — управляющим королевским двором. Самые известные:</p>
-<ul>
-<li><b>Пипин Геристальский</b> — объединил франков после смуты</li>
-<li><b>Карл Мартелл</b> — его сын, остановивший арабов</li>
-<li><b>Пипин Короткий</b> — сверг Меровингов и стал королём</li>
-</ul>
-
+<p><b>481</b> — король. <b>486</b> — Суассон. <b>496</b> — крещение. <b>507</b> — Вуйе. Столица — <b>Париж</b>.</p>
+<h2>4. «Ленивые короли»</h2>
+<p>Реальная власть у <b>мажордомов</b>.</p>
 <h2>5. Карл Мартелл (717–741)</h2>
-<div class="p"><span class="nm">⚔️ «Молот», спасший Европу</span>
-<p>В <b>732 году</b> в <b>битве при Пуатье</b> разбил арабское войско — остановил их продвижение в Европу.</p>
-<p>Провёл <b>военную реформу</b>: создал тяжёлую конницу. Ввёл <b>бенефиции</b> — землю за службу.</p>
-<p>Укрепил церковь. Подготовил почву для династии Каролингов.</p>
-</div>
-
+<p><b>732</b> — Пуатье. Создал тяжёлую конницу. Ввёл бенефиции.</p>
 <h2>6. Пипин Короткий (751–768)</h2>
-<p>Сын Карла Мартелла. В <b>751 году</b> сверг последнего «ленивого короля» и сам стал королём, основав династию <b>Каролингов</b>.</p>
-<p>В благодарность за поддержку подарил папе римскому земли — <b>«Пипинов дар»</b>. Так возникло <b>Папское государство</b>.</p>
-
+<p>Основал <b>Каролингов</b>. «Пипинов дар».</p>
 <h2>7. Карл Великий (768–814)</h2>
-<div class="p"><span class="nm">👑 Великий император</span>
-<p>Самый знаменитый правитель Средневековья. Правил 46 лет и превратил Франкское королевство в огромную империю.</p>
-<p><b>Завоевания:</b></p>
+<p><b>800</b> — император. Столица — <b>Ахен</b>. «Каролингское возрождение».</p>
+<h2>8. Распад (843)</h2>
+<p>Верденский договор: Франция, Германия, Италия.</p>
+<div class="d"><b>📌 Все даты</b>
 <ul>
-<li><b>774</b> — Италия (разбил лангобардов)</li>
-<li><b>772–804</b> — Саксония (32 года войн!)</li>
-<li><b>778–795</b> — Испанская марка</li>
-<li><b>788</b> — Бавария</li>
-<li><b>796</b> — Аварский каганат</li>
-</ul>
-<p>В <b>800 году</b> папа Лев III короновал его <b>императором</b> в Риме.</p>
-<p>Столица — <b>Ахен</b>. При нём расцвели науки и искусство — <b>«Каролингское возрождение»</b>.</p>
-<p>Открывались школы, переписывались книги, был создан новый шрифт — <b>каролингский минускул</b>.</p>
-</div>
-
-<h2>8. Распад империи (843)</h2>
-<p>После смерти Карла Великого его сын <b>Людовик Благочестивый</b> ещё удерживал империю. Но после его смерти начались войны между внуками.</p>
-<p>В <b>843 году</b> был заключён <b>Верденский договор</b> — империя разделилась на три части:</p>
-<ul>
-<li>🇫🇷 <b>Западно-Франкское королевство</b> (Карл Лысый) — будущая Франция</li>
-<li>🇩🇪 <b>Восточно-Франкское королевство</b> (Людовик Немецкий) — будущая Германия</li>
-<li>🇮🇹 <b>Срединное королевство</b> (Лотарь) — Италия</li>
-</ul>
-
-<div class="d"><b>📌 Все важные даты</b>
-<ul>
-<li><b>481</b> — Хлодвиг — король</li>
-<li><b>486</b> — Суассон</li>
-<li><b>496</b> — крещение Хлодвига</li>
-<li><b>507</b> — битва при Вуйе</li>
-<li><b>511</b> — смерть Хлодвига</li>
-<li><b>717</b> — Карл Мартелл — мажордом</li>
-<li><b>732</b> — битва при Пуатье</li>
-<li><b>741</b> — смерть Карла Мартелла</li>
-<li><b>751</b> — Пипин Короткий — король</li>
-<li><b>800</b> — Карл Великий — император</li>
+<li><b>481</b> — Хлодвиг</li>
+<li><b>496</b> — крещение</li>
+<li><b>507</b> — Вуйе</li>
+<li><b>732</b> — Пуатье</li>
+<li><b>751</b> — Пипин</li>
+<li><b>800</b> — Карл Великий</li>
 <li><b>843</b> — Верденский раздел</li>
 </ul>
 </div>
-
 </div>
 <button class="btn" onclick="pk('fr')">👑 Викторина</button>
 <button class="btn btn2" onclick="goCross('fr')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="startPuzzle('fr')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу «Франки»</button>
+<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div>
 
 <div id="hl" class="scr">
 <button class="back" onclick="go('frTopic')">← К разделу «Франки»</button>
 <h1>⚜️ Правление Хлодвига</h1>
-<p class="sub">481–511 годы — рождение Франкского государства</p>
+<p class="sub">481–511 годы</p>
 <div class="art">
-<h2>1. Кто такой Хлодвиг?</h2>
-<p><b>Хлодвиг I</b> (466–511) — король салических франков, основатель династии <b>Меровингов</b>. Сын Хильдерика I.</p>
-<p>В <b>481 году</b> в 15 лет стал королём небольшого племени салических франков на севере Галлии.</p>
-<h2>2. Завоевание Галлии</h2>
-<p><b>486</b> — разбил Сиагрия при Суассоне.</p>
-<p><b>496</b> — разбил алеманнов.</p>
-<p><b>507</b> — разбил вестготов при Вуйе.</p>
-<div class="quote"><b>Легенда о чаше Суассона.</b> После битвы франки делили добычу. Хлодвиг попросил чашу для епископа. Один воин разрубил её мечом. Через год Хлодвиг узнал его и разбил ему голову — «Так ты поступил с чашей!».</div>
+<h2>1. Кто такой?</h2>
+<p><b>Хлодвиг I</b> (466–511) — король салических франков, основатель <b>Меровингов</b>.</p>
+<h2>2. Завоевания</h2>
+<p><b>486</b> — Суассон. <b>496</b> — алеманны. <b>507</b> — Вуйе.</p>
+<div class="quote"><b>Легенда о чаше Суассона.</b> Воин разрубил чашу мечом. Через год Хлодвиг разбил ему голову.</div>
 <h2>3. Крещение (496)</h2>
-<p>Принял <b>христианство</b> по католическому обряду.</p>
 <div class="quote">«Бог Клотильды, даруй мне победу — я крещусь!»</div>
-<p><b>Значение:</b> укрепило власть, поддержка церкви и галло-римлян.</p>
 <h2>4. Управление</h2>
-<p>Столица — <b>Париж</b>. Управляли графы. Создан свод законов — <b>«Салическая правда»</b>.</p>
+<p>Столица — Париж. «Салическая правда».</p>
 <h2>5. Раздел (511)</h2>
-<p>Королевство разделили 4 сына: Теодорих, Хлодомир, Хильдеберт, Хлотарь.</p>
-<h2>6. Значение правления</h2>
-<p>✔ Создал единое Франкское государство</p>
-<p>✔ Объединил почти всю Галлию</p>
-<p>✔ Принял христианство</p>
-<p>✔ Основал Меровингов</p>
-<div class="d"><b>📌 Все даты</b>
+<p>4 сына.</p>
+<div class="d"><b>📌 Даты</b>
 <ul>
 <li><b>481</b> — король</li>
 <li><b>486</b> — Суассон</li>
-<li><b>493</b> — женился на Клотильде</li>
 <li><b>496</b> — крещение</li>
 <li><b>507</b> — Вуйе</li>
 <li><b>511</b> — умер</li>
@@ -977,48 +804,36 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <button class="btn" onclick="pk('hl')">⚜️ Викторина</button>
 <button class="btn btn2" onclick="goCross('hl')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="startPuzzle('hl')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу «Франки»</button>
+<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div>
 
 <div id="km" class="scr">
 <button class="back" onclick="go('frTopic')">← К разделу «Франки»</button>
 <h1>🔨 Карл Мартелл</h1>
-<p class="sub">717–741 годы — «Молот», спасший Европу</p>
+<p class="sub">717–741 годы</p>
 <div class="art">
 <h2>1. Кто такой?</h2>
-<p><b>Карл Мартелл</b> (688–741) — мажордом франков. Прозвище <b>«Мартелл»</b> — <i>«Молот»</i>.</p>
-<h2>2. Приход к власти</h2>
-<p>После смерти отца (714) началась борьба. Карл был незаконнорождённым, но победил. К <b>720</b> — единоличный мажордом.</p>
-<h2>3. Битва при Пуатье (732)</h2>
-<p>Октябрь <b>732</b>. Разбил арабов, остановил их продвижение в Европу.</p>
-<div class="quote"><b>Английский историк Эдуард Гиббон:</b> «Если бы арабы победили при Пуатье, Коран уже преподавали бы в Оксфорде».</div>
-<h2>4. Военная реформа</h2>
-<ul>
-<li>Создал тяжёлую конницу</li>
-<li>Ввёл <b>бенефиции</b> — земля за службу</li>
-<li>Появилось рыцарство</li>
-</ul>
-<h2>5. Последние годы</h2>
-<p>Умер <b>741</b>. Разделил государство между сыновьями Карломаном и Пипином.</p>
-<h2>6. Значение</h2>
-<p>✔ Остановил арабов (732)</p>
-<p>✔ Создал рыцарство</p>
-<p>✔ Ввёл бенефиции</p>
-<p>✔ Подготовил Каролингов</p>
-<div class="d"><b>📌 Все даты</b>
+<p><b>Карл Мартелл</b> (688–741) — мажордом франков. «Молот».</p>
+<h2>2. Пуатье (732)</h2>
+<p>Остановил арабов.</p>
+<div class="quote"><b>Гиббон:</b> «Если бы арабы победили при Пуатье, Коран уже преподавали бы в Оксфорде».</div>
+<h2>3. Реформа</h2>
+<p>Тяжёлая конница. <b>Бенефиции</b>.</p>
+<h2>4. Смерть (741)</h2>
+<p>Разделил государство между сыновьями.</p>
+<div class="d"><b>📌 Даты</b>
 <ul>
 <li><b>688</b> — родился</li>
 <li><b>717</b> — мажордом</li>
 <li><b>732</b> — Пуатье</li>
 <li><b>741</b> — умер</li>
-<li><b>751</b> — сын Пипин — король</li>
 </ul>
 </div>
 </div>
 <button class="btn" onclick="pk('km')">🔨 Викторина</button>
 <button class="btn btn2" onclick="goCross('km')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="startPuzzle('km')">🎨 Пазл</button>
-<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу «Франки»</button>
+<button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
 </div><div id="setup" class="scr">
 <button class="back" onclick="go('histHome')">← Назад</button>
 <h1 id="stT">Сложность</h1>
@@ -1131,10 +946,10 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <p class="sub">Нажимай на плитки рядом с пустой клеткой, чтобы собрать картинку</p>
 <div class="st">
 <div><div class="v" id="puzzleMoves">0</div><div class="l">Ходы</div></div>
-<div><div class="v" id="puzzleDone">0/9</div><div class="l">Собрано</div></div>
+<div><div class="v" id="puzzleDone">0/8</div><div class="l">Собрано</div></div>
 </div>
 <div class="puzzle" id="puzzleGrid"></div>
-<p class="puzzle-info" id="puzzleInfo">Собери эмодзи в правильном порядке!</p>
+<p class="puzzle-info" id="puzzleInfo">Собери картинку целиком!</p>
 <button class="btn btn2" onclick="shufflePuzzle()">🔀 Перемешать</button>
 <button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
 </div>
@@ -1190,30 +1005,10 @@ function sndStartGame(){ beep(440,0.08,'sawtooth',0.12); setTimeout(function(){b
 function sndMove(){ beep(500,0.05,'square',0.1); }
 function sndPuzzleWin(){ beep(523,0.1,'sine',0.18); setTimeout(function(){beep(659,0.1,'sine',0.18);},100); setTimeout(function(){beep(784,0.1,'sine',0.18);},200); setTimeout(function(){beep(1047,0.3,'sine',0.22);},300); }
 
-function toggleSound(){
-  SOUND_ON=!SOUND_ON;
-  localStorage.setItem('soundOn',SOUND_ON?'1':'0');
-  updateSoundBtn();
-  if(SOUND_ON) beep(880,0.1,'sine',0.15);
-}
-function updateSoundBtn(){
-  var b=document.getElementById('soundBtn');
-  if(SOUND_ON) b.textContent='🔊 Звук';
-  else b.textContent='🔇 Звук';
-}
-function toggleTheme(){
-  document.body.classList.toggle('light');
-  var isLight=document.body.classList.contains('light');
-  localStorage.setItem('theme',isLight?'light':'dark');
-  var b=document.getElementById('themeBtn');
-  b.textContent=isLight?'☀️ Тема':'🌙 Тема';
-}
-function loadTheme(){
-  var t=localStorage.getItem('theme');
-  if(t==='light'){ document.body.classList.add('light'); document.getElementById('themeBtn').textContent='☀️ Тема'; }
-  var s=localStorage.getItem('soundOn');
-  if(s==='0'){ SOUND_ON=false; updateSoundBtn(); }
-}
+function toggleSound(){ SOUND_ON=!SOUND_ON; localStorage.setItem('soundOn',SOUND_ON?'1':'0'); updateSoundBtn(); if(SOUND_ON) beep(880,0.1,'sine',0.15); }
+function updateSoundBtn(){ var b=document.getElementById('soundBtn'); if(SOUND_ON) b.textContent='🔊 Звук'; else b.textContent='🔇 Звук'; }
+function toggleTheme(){ document.body.classList.toggle('light'); var isLight=document.body.classList.contains('light'); localStorage.setItem('theme',isLight?'light':'dark'); var b=document.getElementById('themeBtn'); b.textContent=isLight?'☀️ Тема':'🌙 Тема'; }
+function loadTheme(){ var t=localStorage.getItem('theme'); if(t==='light'){ document.body.classList.add('light'); document.getElementById('themeBtn').textContent='☀️ Тема'; } var s=localStorage.getItem('soundOn'); if(s==='0'){ SOUND_ON=false; updateSoundBtn(); } }
 
 var D={
 rus:[[1,"Крещение Руси?",["862","988","1147","1240"],1,"Владимир в 988."],[1,"Первый князь?",["Игорь","Олег","Рюрик","Святослав"],2,"Рюрик 862."],[1,"Невская битва?",["1240","1242","1380","1147"],0,"1240."],[1,"Кто разбил Мамая?",["Иван III","Дмитрий Донской","Калита","Невский"],1,"Донской."],[1,"Первый царь?",["Иван III","Иван IV","Пётр I","Годунов"],1,"Грозный 1547."],[2,"Ледовое побоище?",["1240","1242","1380","1480"],1,"1242."],[2,"Куликовская битва?",["1380","1240","1480","1147"],0,"1380."],[2,"Конец ига?",["Калита","Донской","Иван III","Грозный"],2,"Иван III 1480."],[2,"Москва впервые?",["862","988","1147","1240"],2,"1147."],[2,"Второе ополчение?",["Минин и Пожарский","Лжедмитрий","Годунов","Шуйский"],0,"1612."],[3,"Раздробленность?",["Объединение","Распад","Война","Крещение"],1,"XII–XV вв."],[3,"Повесть временных лет?",["Нестор","Иларион","Даниил","Кирилл"],0,"Нестор."],[3,"Взятие Казани?",["1547","1552","1565","1584"],1,"1552."],[3,"Опричнина?",["Совет","Террор","Налог","Город"],1,"1565–1572."],[3,"Начало Смуты?",["1584","1598","1605","1613"],1,"1598."]],
@@ -1239,14 +1034,15 @@ var D_PUSH_QUOTES=[[1,"«Я вас любил: любовь ещё, быть м�
 var CROSS_PUSH_BIO={title:"✍️ Кроссворд: Пушкин (биография)",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ПУШКИН",q:"Фамилия поэта"},{r:0,c:0,d:'D',w:"ПЕТЕРБУРГ",q:"Город, где погиб"},{r:0,c:5,d:'A',w:"МОСКВА",q:"Город рождения"},{r:2,c:2,d:'A',w:"ЛИЦЕЙ",q:"Учебное заведение"},{r:2,c:2,d:'D',w:"ЛЕРМОНТОВ",q:"Поэт, погибший на дуэли"},{r:2,c:5,d:'D',w:"ГОНЧАРОВА",q:"Фамилия жены"},{r:4,c:0,d:'A',w:"ДАНТЕС",q:"Убийца Пушкина"},{r:4,c:3,d:'D',w:"ДУЭЛЬ",q:"Поединок 1837"}]};
 var CROSS_PUSH_WORKS={title:"✍️ Кроссворд: Произведения Пушкина",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ОНЕГИН",q:"Главный герой романа в стихах"},{r:0,c:0,d:'D',w:"ОЛЬГА",q:"Сестра Татьяны"},{r:0,c:5,d:'A',w:"СКАЗКА",q:"Жанр «О рыбаке»"},{r:0,c:5,d:'D',w:"САЛТАН",q:"Царь в сказке"},{r:2,c:2,d:'A',w:"БЕЛКИН",q:"Фамилия из повестей"},{r:2,c:2,d:'D',w:"БОРИС",q:"Имя царя"},{r:2,c:5,d:'D',w:"ГРИНЁВ",q:"Герой «Капитанской»"},{r:4,c:0,d:'A',w:"РУСЛАН",q:"Рыцарь из поэмы"},{r:4,c:3,d:'D',w:"ТАТЬЯНА",q:"Героиня «Онегина»"}]};
 
+/* ПАЗЛЫ — с настоящими картинками */
 var PUZZLES={
-pushkin:{title:"🎨 Пазл: Портрет Пушкина",tiles:["🎩","✒️","📜","🖋️","👨","📖","🕊️","⚜️",""]},
-skazka:{title:"🎨 Пазл: Сказки Пушкина",tiles:["🐟","👑","🦢","🐿️","⚓","🌊","👴","👵",""]},
-rus:{title:"🎨 Пазл: Древняя Русь",tiles:["🛡️","⚔️","👑","⛪","🐻","🪓","🏰","🕊️",""]},
-med:{title:"🎨 Пазл: Средние века",tiles:["⚔️","🏰","🐉","👑","🐴","🛡️","🕯️","📜",""]},
-fr:{title:"🎨 Пазл: Франки",tiles:["👑","⚔️","🏰","🐴","📜","⚜️","🛡️","🍷",""]},
-hl:{title:"🎨 Пазл: Хлодвиг",tiles:["👑","⚔️","🕊️","🏰","📜","💒","🐴","🛡️",""]},
-km:{title:"🎨 Пазл: Карл Мартелл",tiles:["🔨","⚔️","🐴","🏰","👑","🛡️","📜","⚜️",""]}
+pushkin:{title:"🎨 Пазл: Портрет Пушкина",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Orest_Kiprensky_-_Portrait_of_Alexander_Pushkin_-_Google_Art_Project.jpg/512px-Orest_Kiprensky_-_Portrait_of_Alexander_Pushkin_-_Google_Art_Project.jpg"},
+skazka:{title:"🎨 Пазл: Сказки Пушкина",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Bilibin_%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%BE_%D1%80%D1%8B%D0%B1%D0%B0%D0%BA%D0%B5_%D0%B8_%D1%80%D1%8B%D0%B1%D0%BA%D0%B5.jpg/512px-Bilibin_%D0%A1%D0%BA%D0%B0%D0%B7%D0%BA%D0%B0_%D0%BE_%D1%80%D1%8B%D0%B1%D0%B0%D0%BA%D0%B5_%D0%B8_%D1%80%D1%8B%D0%B1%D0%BA%D0%B5.jpg"},
+rus:{title:"🎨 Пазл: Богатыри Васнецова",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Viktor_Vasnetsov_-_Bogatyrs_-_Google_Art_Project.jpg/512px-Viktor_Vasnetsov_-_Bogatyrs_-_Google_Art_Project.jpg"},
+med:{title:"🎨 Пазл: Замок Каркассон",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Carcassonne_JPG03.jpg/512px-Carcassonne_JPG03.jpg"},
+fr:{title:"🎨 Пазл: Монета Карла Великого",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Charlemagne_denier_Mayence_812-814.jpg/512px-Charlemagne_denier_Mayence_812-814.jpg"},
+hl:{title:"🎨 Пазл: Крещение Хлодвига",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bapteme_de_Clovis.jpg/512px-Bapteme_de_Clovis.jpg"},
+km:{title:"🎨 Пазл: Битва при Пуатье",img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Steuben_-_Bataille_de_Poitiers.png/512px-Steuben_-_Bataille_de_Poitiers.png"}
 };
 
 var FUN=[
@@ -1305,10 +1101,88 @@ function goCrossPush(g){ currentCrossPush=g; pushCrossLives=5; var cfg=(g==='bio
 function checkCrossPush(){ if(pushCrossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossPushGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ pushCrossLives-=wrong; if(pushCrossLives<0)pushCrossLives=0; updatePushLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(pushCrossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибки: '+wrong+'. Жизни: '+pushCrossLives); }
 function clearCrossPush(){ var inputs=document.querySelectorAll('#crossPushGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} pushCrossLives=5; updatePushLives(); }
 
-function startPuzzle(key){ puzzleCur=key; var cfg=PUZZLES[key]; document.getElementById('puzzleTitle').textContent=cfg.title; puzzleState=cfg.tiles.slice(); puzzleMoves=0; for(var k=puzzleState.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t; } renderPuzzle(); show('puzzleScreen'); }
-function renderPuzzle(){ var grid=document.getElementById('puzzleGrid'); grid.style.gridTemplateColumns='repeat(3,1fr)'; grid.innerHTML=''; var done=0; for(var k=0;k<puzzleState.length;k++){ var cell=document.createElement('div'); cell.className='pcell'; if(puzzleState[k]===''){ cell.classList.add('empty'); cell.textContent=''; } else { cell.textContent=puzzleState[k]; if(puzzleState[k]===PUZZLES[puzzleCur].tiles[k]){ cell.classList.add('correct'); done++; } (function(idx){ cell.onclick=function(){ movePuzzle(idx); }; })(k); } grid.appendChild(cell); } document.getElementById('puzzleMoves').textContent=puzzleMoves; document.getElementById('puzzleDone').textContent=done+'/9'; if(done===8){ document.getElementById('puzzleInfo').textContent='🎉 Пазл собран! Молодец!'; sndPuzzleWin(); } else { document.getElementById('puzzleInfo').textContent='Нажимай на плитки рядом с пустой клеткой'; } }
-function movePuzzle(idx){ var empty=-1; for(var k=0;k<puzzleState.length;k++) if(puzzleState[k]===''){ empty=k; break; } var er=Math.floor(empty/3), ec=empty%3; var ir=Math.floor(idx/3), ic=idx%3; var dist=Math.abs(er-ir)+Math.abs(ec-ic); if(dist===1){ var t=puzzleState[idx]; puzzleState[idx]=puzzleState[empty]; puzzleState[empty]=t; puzzleMoves++; sndMove(); renderPuzzle(); } }
-function shufflePuzzle(){ for(var k=puzzleState.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t; } puzzleMoves=0; renderPuzzle(); }
+/* ПАЗЛЫ С КАРТИНКАМИ */
+function startPuzzle(key){
+  puzzleCur=key;
+  var cfg=PUZZLES[key];
+  document.getElementById('puzzleTitle').textContent=cfg.title;
+  puzzleState=[0,1,2,3,4,5,6,7,8];
+  puzzleMoves=0;
+  do{
+    for(var k=puzzleState.length-1;k>0;k--){
+      var j=Math.floor(Math.random()*(k+1));
+      var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t;
+    }
+  } while(!isSolvable(puzzleState));
+  renderPuzzle();
+  show('puzzleScreen');
+}
+function isSolvable(arr){
+  var inv=0;
+  for(var i=0;i<arr.length;i++){
+    for(var j=i+1;j<arr.length;j++){
+      if(arr[i]!==8 && arr[j]!==8 && arr[i]>arr[j]) inv++;
+    }
+  }
+  return inv%2===0;
+}
+function renderPuzzle(){
+  var grid=document.getElementById('puzzleGrid');
+  grid.style.gridTemplateColumns='repeat(3,1fr)';
+  grid.innerHTML='';
+  var done=0;
+  var img=PUZZLES[puzzleCur].img;
+  for(var k=0;k<9;k++){
+    var cell=document.createElement('div');
+    cell.className='pcell';
+    var val=puzzleState[k];
+    if(val===8){
+      cell.classList.add('empty');
+    } else {
+      var row=Math.floor(val/3);
+      var col=val%3;
+      cell.style.backgroundImage='url('+img+')';
+      cell.style.backgroundSize='300% 300%';
+      cell.style.backgroundPosition=(col*50)+'% '+(row*50)+'%';
+      if(val===k){ cell.classList.add('correct'); done++; }
+      (function(idx){
+        cell.onclick=function(){ movePuzzle(idx); };
+      })(k);
+    }
+    grid.appendChild(cell);
+  }
+  document.getElementById('puzzleMoves').textContent=puzzleMoves;
+  document.getElementById('puzzleDone').textContent=done+'/8';
+  if(done===8){
+    document.getElementById('puzzleInfo').textContent='🎉 Пазл собран! Молодец!';
+    sndPuzzleWin();
+  } else {
+    document.getElementById('puzzleInfo').textContent='Нажимай на плитки рядом с пустой клеткой';
+  }
+}
+function movePuzzle(idx){
+  var empty=-1;
+  for(var k=0;k<9;k++) if(puzzleState[k]===8){ empty=k; break; }
+  var er=Math.floor(empty/3), ec=empty%3;
+  var ir=Math.floor(idx/3), ic=idx%3;
+  var dist=Math.abs(er-ir)+Math.abs(ec-ic);
+  if(dist===1){
+    var t=puzzleState[idx]; puzzleState[idx]=puzzleState[empty]; puzzleState[empty]=t;
+    puzzleMoves++;
+    sndMove();
+    renderPuzzle();
+  }
+}
+function shufflePuzzle(){
+  do{
+    for(var k=puzzleState.length-1;k>0;k--){
+      var j=Math.floor(Math.random()*(k+1));
+      var t=puzzleState[k];puzzleState[k]=puzzleState[j];puzzleState[j]=t;
+    }
+  } while(!isSolvable(puzzleState));
+  puzzleMoves=0;
+  renderPuzzle();
+}
 
 function startFun(){ funQs=[]; for(var k=0;k<FUN.length;k++)funQs.push(FUN[k]); for(var k=funQs.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=funQs[k];funQs[k]=funQs[j];funQs[j]=t; } funI=0;funScore=0; show('funScreen'); loadFun(); }
 function loadFun(){ funAnswered=false; var q=funQs[funI]; document.getElementById('funScore').textContent=funScore; document.getElementById('funNum').textContent=(funI+1)+'/'+funQs.length; document.getElementById('funQuestion').textContent='😂 '+q.q; var box=document.getElementById('funAnswers'); box.innerHTML=''; document.getElementById('funEx').style.display='none'; document.getElementById('funNext').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q.a.length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q.a[k]; b.setAttribute('data-i',k); b.setAttribute('onclick','checkFun('+k+',this)'); box.appendChild(b); } }
