@@ -322,6 +322,9 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <button class="back" onclick="go('histHome')">← Назад к истории</button>
 <h1 id="crossTitle">🧩 Кроссворд</h1>
 <p class="sub" id="crossSub">Впиши слова по подсказкам</p>
+<div class="st">
+<div><div class="v" id="crossLives">❤️❤️❤️❤️❤️</div><div class="l">Жизни</div></div>
+</div>
 <div class="cross" id="crossGrid"></div>
 <div class="clues">
 <div class="col"><h3>➡️ По горизонтали</h3><ol id="cluesA"></ol></div>
@@ -331,6 +334,45 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <button class="btn btn2" onclick="clearCross()">🗑️ Очистить</button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К истории</button>
 </div><script>
+/* ===== ЗВУКИ ===== */
+var AC=null;
+function initAudio(){
+  if(!AC){
+    try{ AC=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC=null; }
+  }
+  if(AC && AC.state==='suspended') AC.resume();
+}
+function beep(freq,dur,type,vol){
+  initAudio();
+  if(!AC) return;
+  type=type||'sine';
+  vol=vol||0.15;
+  var o=AC.createOscillator();
+  var g=AC.createGain();
+  o.type=type;
+  o.frequency.value=freq;
+  g.gain.value=vol;
+  o.connect(g);
+  g.connect(AC.destination);
+  o.start();
+  g.gain.exponentialRampToValueAtTime(0.001,AC.currentTime+dur);
+  o.stop(AC.currentTime+dur);
+}
+function sndCorrect(){
+  beep(660,0.12,'sine',0.18);
+  setTimeout(function(){ beep(880,0.18,'sine',0.18); },120);
+}
+function sndWrong(){
+  beep(220,0.18,'square',0.12);
+  setTimeout(function(){ beep(160,0.25,'square',0.12); },130);
+}
+function sndWin(){
+  beep(523,0.15,'sine',0.2);
+  setTimeout(function(){ beep(659,0.15,'sine',0.2); },150);
+  setTimeout(function(){ beep(784,0.15,'sine',0.2); },300);
+  setTimeout(function(){ beep(1047,0.4,'sine',0.25); },450);
+}
+
 var D={
 rus:[
 [1,"Крещение Руси?",["862","988","1147","1240"],1,"Владимир в 988."],
@@ -496,6 +538,7 @@ km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words
 
 var PASSWORDS={"Староста":"1312","Учитель":"1313","Создатель":"100001"};
 var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,df=1,currentUser="",currentRole="Ученик",currentCross=null;
+var crossLives=5;
 
 function show(id){
   var a=document.querySelectorAll('.scr');
@@ -615,11 +658,13 @@ function ck(sel,btn){
   if(sel===q[3]){
     btn.classList.add('ok');
     pts+=10;
+    sndCorrect();
     ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4];
   }else{
     btn.classList.add('no');
     all[q[3]].classList.add('ok');
     hp--;
+    sndWrong();
     ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4];
   }
   ex.style.display='block';
@@ -649,13 +694,20 @@ function fin(){
   else{msg='📚 Попробуй ещё!';gr=2;}
   document.getElementById('fm').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>';
   show('fin');
+  if(pct>=70) sndWin(); else sndWrong();
+}
+
+function updateCrossLives(){
+  var el=document.getElementById('crossLives');
+  if(el) el.textContent = crossLives>0 ? '❤️'.repeat(crossLives) : '💀';
 }
 
 function goCross(g){
   currentCross=g;
+  crossLives=5;
   var cfg=CROSS[g];
   document.getElementById('crossTitle').textContent=cfg.title;
-  document.getElementById('crossSub').textContent='Впиши слова по подсказкам';
+  document.getElementById('crossSub').textContent='Впиши слова по подсказкам. Жизней: 5';
   var grid=document.getElementById('crossGrid');
   grid.style.gridTemplateColumns='repeat('+cfg.cols+', 1fr)';
   grid.innerHTML='';
@@ -715,12 +767,14 @@ function goCross(g){
     if(word.d==='A') aList.appendChild(li);
     else dList.appendChild(li);
   }
+  updateCrossLives();
   show('crossScreen');
 }
 
 function checkCross(){
+  if(crossLives<=0){ alert('Жизни закончились. Нажми «Очистить» и начни заново'); return; }
   var inputs=document.querySelectorAll('#crossGrid input');
-  var all=0,right=0;
+  var all=0,right=0,wrong=0;
   for(var k=0;k<inputs.length;k++){
     var v=inputs[k].value.trim().toUpperCase();
     var ans=inputs[k].getAttribute('data-ans');
@@ -728,20 +782,42 @@ function checkCross(){
     if(v){
       all++;
       if(v===ans){ inputs[k].classList.add('ok'); right++; }
-      else inputs[k].classList.add('no');
+      else { inputs[k].classList.add('no'); wrong++; }
     }
   }
   if(all===0){ alert('Впиши хотя бы одно слово'); return; }
+
+  if(wrong===0){ sndCorrect(); } else { sndWrong(); }
+
+  if(wrong>0){
+    crossLives -= wrong;
+    if(crossLives<0) crossLives=0;
+    updateCrossLives();
+  }
+
   if(right===inputs.length){
     for(var k=0;k<inputs.length;k++){
       inputs[k].value=inputs[k].getAttribute('data-ans');
       inputs[k].classList.remove('no');
       inputs[k].classList.add('ok');
     }
+    sndWin();
     alert('🎉 Все слова верны! Молодец!');
-  } else {
-    alert('Правильно: '+right+' из '+inputs.length+' букв');
+    return;
   }
+
+  if(crossLives<=0){
+    for(var k=0;k<inputs.length;k++){
+      inputs[k].value=inputs[k].getAttribute('data-ans');
+      inputs[k].classList.remove('no');
+      inputs[k].classList.add('ok');
+    }
+    sndWrong();
+    alert('💀 Жизни закончились! Вот правильные ответы.');
+    return;
+  }
+
+  alert('Правильно: '+right+' из '+inputs.length+' букв. Ошибок: '+wrong+'. Жизни: '+crossLives);
 }
 
 function clearCross(){
@@ -750,6 +826,8 @@ function clearCross(){
     inputs[k].value='';
     inputs[k].classList.remove('ok','no');
   }
+  crossLives=5;
+  updateCrossLives();
 }
 
 var saved=localStorage.getItem('currentUser');
