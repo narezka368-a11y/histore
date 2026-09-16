@@ -3,138 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>История 6-7 класс</title>
+<title>История — 6-7 класс</title>
 <style>
-body{background:#2c1810;color:#f5e6d3;font-family:Georgia,serif;padding:15px;margin:0}
-.box{max-width:700px;margin:0 auto;background:#3a2418;border:3px solid #c9a227;border-radius:20px;padding:25px}
-h1{color:#f4d03f;text-align:center}
-h2{color:#f4d03f;font-size:1.1em;padding:8px 12px;background:#4a3020;border-left:4px solid #c9a227;border-radius:6px;margin:20px 0 10px}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:Georgia,serif}
+body{
+  background:
+    radial-gradient(ellipse at top,rgba(201,162,39,.15),transparent 50%),
+    linear-gradient(135deg,#0f0904,#2c1810,#1a0f08);
+  background-attachment:fixed;color:#f5e6d3;padding:15px;min-height:100vh;
+}
+.box{
+  max-width:780px;margin:0 auto;
+  background:linear-gradient(160deg,#30200f,#1a0f08);
+  border:3px solid #c9a227;border-radius:22px;padding:28px 24px;
+  box-shadow:0 25px 70px rgba(0,0,0,.8),0 0 80px rgba(201,162,39,.15);
+  position:relative;
+}
+.box::before{content:'❦';position:absolute;top:12px;left:18px;color:#c9a227;font-size:20px;opacity:.6}
+.box::after{content:'❦';position:absolute;bottom:12px;right:18px;color:#c9a227;font-size:20px;opacity:.6}
+h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.5);line-height:1.2}
+h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:22px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.2),transparent);border-left:4px solid #c9a227;border-radius:8px}
+.sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px;font-size:.95em}
+.hero{font-size:3.8em;text-align:center;margin-bottom:8px;line-height:1;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(244,208,63,.5))}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.card{
+  display:flex;align-items:center;gap:16px;width:100%;text-align:left;
+  background:linear-gradient(135deg,rgba(201,162,39,.1),rgba(201,162,39,.02));
+  border:2px solid rgba(201,162,39,.4);border-radius:14px;padding:16px;margin:10px 0;
+  color:#f5e6d3;cursor:pointer;font-family:inherit;font-size:1em;transition:all .25s ease;
+  min-height:68px;
+}
+.card:hover{border-color:#f4d03f;background:linear-gradient(135deg,rgba(201,162,39,.28),rgba(201,162,39,.1));transform:translateY(-3px);box-shadow:0 10px 25px rgba(201,162,39,.3)}
+.card:active{transform:translateY(-1px)}
+.card .ic{font-size:2.2em;flex-shrink:0;line-height:1}
+.card b{color:#f4d03f;font-size:1.12em;display:block;margin-bottom:3px;line-height:1.3}
+.card small{color:#b8956a;font-size:.86em;display:block;line-height:1.3}
+
 .screen{display:none}
-.screen.on{display:block}
-.card{display:block;width:100%;text-align:left;background:#4a3020;border:2px solid #c9a227;border-radius:12px;padding:15px;margin:10px 0;color:#f5e6d3;font-size:16px;font-family:inherit;cursor:pointer}
-.card:hover{background:#5a3a28}
-.card b{color:#f4d03f;display:block;margin-bottom:3px}
-.card small{color:#b8956a;font-size:13px}
-.btn{display:block;width:100%;padding:15px;background:#c9a227;color:#2c1810;border:none;border-radius:10px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:10px;font-family:inherit}
-.btn:hover{background:#f4d03f}
-.btn2{background:#4a3020;color:#f5e6d3;border:2px solid #c9a227}
-.back{background:none;border:none;color:#b8956a;cursor:pointer;font-size:14px;padding:6px;margin-bottom:10px;font-family:inherit}
-.back:hover{color:#f4d03f}
-.stats{display:flex;justify-content:space-around;background:#4a3020;padding:14px;border-radius:10px;margin-bottom:15px;text-align:center}
-.stats div div:first-child{font-size:22px;color:#f4d03f;font-weight:bold}
-.stats div div:last-child{font-size:12px;color:#b8956a}
-.q{background:#4a3020;padding:15px;border-left:4px solid #c9a227;border-radius:8px;margin-bottom:15px;font-size:17px}
-.ans{display:block;width:100%;padding:14px;background:#4a3020;border:2px solid #c9a227;border-radius:10px;color:#f5e6d3;font-size:15px;text-align:left;cursor:pointer;margin:8px 0;font-family:inherit}
-.ans:hover{background:#5a3a28}
-.ans.ok{background:#1a5c2a;border-color:#27ae60}
-.ans.no{background:#6b1f1a;border-color:#e74c3c}
-.expl{background:#4a3020;border-left:4px solid #c9a227;padding:14px;border-radius:8px;margin-top:12px;display:none;line-height:1.5}
-.diff{display:flex;gap:8px;justify-content:center;margin:15px 0;flex-wrap:wrap}
-.diff button{padding:10px 18px;background:#4a3020;border:2px solid #c9a227;border-radius:20px;color:#f5e6d3;cursor:pointer;font-family:inherit}
-.diff button.on{background:#c9a227;color:#2c1810;font-weight:bold}
-.date{background:#4a3020;border-left:4px solid #c9a227;padding:12px;border-radius:8px;margin:12px 0}
-.date b{color:#f4d03f}
-.date ul{margin:8px 0 0 20px;padding:0}
-.date li{margin:5px 0}
-p{line-height:1.7;margin:10px 0}
-b{color:#f4d03f}
-.fin{text-align:center;background:#4a3020;padding:20px;border-radius:10px;margin:12px 0;font-size:17px;line-height:1.7}
+.screen.on{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+
+.btn{
+  display:block;width:100%;padding:15px;
+  background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;
+  border:none;border-radius:12px;font-size:1.05em;font-weight:bold;
+  cursor:pointer;margin-top:12px;font-family:'Segoe UI',sans-serif;transition:all .25s ease;
+  box-shadow:0 6px 18px rgba(201,162,39,.3);min-height:52px;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(244,208,63,.5)}
+.btn:active{transform:translateY(0)}
+.btn2{background:rgba(255,255,255,.08);color:#f5e6d3;border:2px solid rgba(201,162,39,.5);box-shadow:none}
+.btn2:hover{background:rgba(201,162,39,.25)}
+
+.back{
+  background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.35);color:#c9a227;
+  cursor:pointer;font-size:.9em;padding:9px 14px;margin-bottom:14px;
+  font-family:'Segoe UI',sans-serif;border-radius:8px;transition:all .2s ease;
+}
+.back:hover{color:#f4d03f;background:rgba(201,162,39,.25)}
+
+.stats{
+  display:flex;justify-content:space-around;background:rgba(201,162,39,.12);
+  border:1px solid rgba(201,162,39,.4);border-radius:12px;padding:14px 8px;
+  margin-bottom:16px;text-align:center;gap:8px;
+}
+.stats>div{flex:1}
+.stats .v{font-size:1.6em;color:#f4d03f;font-weight:bold;font-family:'Segoe UI',sans-serif}
+.stats .l{font-size:.72em;color:#b8956a;font-family:'Segoe UI',sans-serif;margin-top:3px}
+
+.q{background:rgba(201,162,39,.1);padding:15px 17px;border-left:5px solid #c9a227;border-radius:10px;margin-bottom:16px;font-size:1.08em;line-height:1.5}
+.ans{
+  display:block;width:100%;padding:14px 16px;background:rgba(255,255,255,.05);
+  border:2px solid rgba(201,162,39,.4);border-radius:12px;color:#f5e6d3;font-size:1em;
+  text-align:left;cursor:pointer;margin:9px 0;font-family:inherit;transition:all .2s ease;min-height:52px;
+}
+.ans:hover:not(:disabled){background:rgba(201,162,39,.25);border-color:#f4d03f;transform:translateX(6px)}
+.ans:disabled{cursor:not-allowed;opacity:.85}
+.ans.ok{background:rgba(39,174,96,.45);border-color:#27ae60;box-shadow:0 0 20px rgba(39,174,96,.4)}
+.ans.no{background:rgba(231,76,60,.45);border-color:#e74c3c;box-shadow:0 0 20px rgba(231,76,60,.4)}
+
+.expl{background:rgba(201,162,39,.15);border-left:5px solid #c9a227;padding:14px;border-radius:10px;margin-top:14px;display:none;line-height:1.5}
+
+.diff{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+.diff button{
+  padding:11px 18px;background:rgba(255,255,255,.05);border:2px solid rgba(201,162,39,.5);
+  border-radius:25px;color:#f5e6d3;cursor:pointer;font-family:'Segoe UI',sans-serif;transition:all .2s ease;
+}
+.diff button.on{background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;font-weight:bold;border-color:#f4d03f;box-shadow:0 0 18px rgba(244,208,63,.5)}
+
+.art{line-height:1.75;font-size:1em;color:#e8d8bf}
+.art h2{color:#f4d03f;font-size:1.15em;margin:24px 0 12px;padding:0 0 8px;background:none;border:none;border-bottom:2px solid rgba(201,162,39,.4);border-radius:0}
+.art h3{color:#c9a227;font-size:1.03em;margin:16px 0 8px}
+.art p{margin-bottom:11px}
+.art b{color:#f4d03f}
+
+.date{background:linear-gradient(135deg,rgba(201,162,39,.15),rgba(201,162,39,.05));border-left:5px solid #c9a227;padding:13px 16px;border-radius:10px;margin:15px 0;box-shadow:inset 0 0 30px rgba(201,162,39,.08)}
+.date .t{color:#f4d03f;font-weight:bold;display:block;margin-bottom:6px}
+.date ul{list-style:none;margin:0;padding:0}
+.date li{padding:6px 0;border-bottom:1px dashed rgba(201,162,39,.25);font-size:.95em}
+.date li:last-child{border-bottom:none}
+.date b{color:#c9a227;display:inline-block;min-width:80px;font-family:'Segoe UI',sans-serif}
+
+.fin{text-align:center;background:rgba(201,162,39,.12);padding:20px;border-radius:12px;margin:16px 0;font-size:1.02em;line-height:1.6;border:1px solid rgba(201,162,39,.3)}
+.fin .g{font-size:1.4em;color:#c9a227;font-weight:bold;margin-top:10px;display:block}
+
+@media (max-width:600px){
+  body{padding:8px}
+  .box{padding:18px 14px}
+  h1{font-size:1.5em}
+  .hero{font-size:2.9em}
+  .card{padding:14px;gap:12px}
+  .card .ic{font-size:1.9em}
+  .card b{font-size:1em}
+  .card small{font-size:.78em}
+  .stats .v{font-size:1.3em}
+  .q{padding:13px 15px;font-size:1em}
+  .ans{padding:13px 14px;font-size:.95em}
+  .diff button{padding:10px 14px;font-size:.85em;flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
 <div class="box">
 
+<!-- МЕНЮ -->
 <div id="home" class="screen on">
-  <h1>🏰 История 6-7 класс</h1>
+  <div class="hero">🏰</div>
+  <h1>История — 6-7 класс</h1>
+  <p class="sub">✦ Учись и играй ✦</p>
+
   <h2>📖 Читать</h2>
-  <button class="card" onclick="go('rus')"><b>🛡️ Древняя Русь</b><small>Князья, крещение, битвы</small></button>
-  <button class="card" onclick="go('med')"><b>⚔️ Средние века</b><small>Рыцари, Франкское королевство</small></button>
+  <button class="card" onclick="go('rus')">
+    <div class="ic">🛡️</div>
+    <div><b>Древняя Русь</b><small>Князья, крещение, битвы</small></div>
+  </button>
+  <button class="card" onclick="go('med')">
+    <div class="ic">⚔️</div>
+    <div><b>Средние века</b><small>Рыцари, замки, походы</small></div>
+  </button>
+  <button class="card" onclick="go('frank')">
+    <div class="ic">👑</div>
+    <div><b>Франкское королевство</b><small>Хлодвиг, Карл Мартелл, Карл Великий</small></div>
+  </button>
+
   <h2>🎮 Играть</h2>
-  <button class="card" onclick="pick('rus')"><b>🎯 Викторина: Русь</b><small>15 вопросов</small></button>
-  <button class="card" onclick="pick('med')"><b>🎯 Викторина: Средние века</b><small>20 вопросов</small></button>
-  <button class="card" onclick="pick('year')"><b>📅 Угадай год!</b><small>23 события</small></button>
+  <button class="card" onclick="pick('rus')">
+    <div class="ic">🎯</div>
+    <div><b>Викторина: Древняя Русь</b><small>15 вопросов</small></div>
+  </button>
+  <button class="card" onclick="pick('med')">
+    <div class="ic">🎯</div>
+    <div><b>Викторина: Средние века</b><small>15 вопросов</small></div>
+  </button>
+  <button class="card" onclick="pick('frank')">
+    <div class="ic">🎯</div>
+    <div><b>Викторина: Франки</b><small>12 вопросов</small></div>
+  </button>
+  <button class="card" onclick="pick('year')">
+    <div class="ic">📅</div>
+    <div><b>Угадай год!</b><small>23 события</small></div>
+  </button>
 </div>
 
+<!-- СТАТЬЯ: РУСЬ -->
 <div id="rus" class="screen">
   <button class="back" onclick="go('home')">← Назад</button>
   <h1>🛡️ Древняя Русь</h1>
-  <h2>1. Возникновение</h2>
-  <p>В <b>862 году</b> пригласили Рюрика — основателя династии Рюриковичей.</p>
-  <div class="date"><b>📌 Даты</b>
-    <ul>
-      <li><b>862</b> — призвание Рюрика</li>
-      <li><b>882</b> — Новгород + Киев</li>
-      <li><b>988</b> — Крещение Руси</li>
-      <li><b>1147</b> — Москва</li>
-    </ul>
+  <p class="sub">IX–XV века</p>
+  <div class="art">
+    <h2>1. Возникновение</h2>
+    <p>В <b>862 году</b> пригласили княжить <b>Рюрика</b> — основателя династии <b>Рюриковичей</b>.</p>
+    <p>При <b>Олеге</b> Новгород и Киев объединились.</p>
+    <div class="date">
+      <span class="t">📌 Даты</span>
+      <ul>
+        <li><b>862</b> — призвание Рюрика</li>
+        <li><b>882</b> — Новгород + Киев</li>
+        <li><b>988</b> — Крещение Руси</li>
+        <li><b>1147</b> — Москва</li>
+      </ul>
+    </div>
+    <h2>2. Крещение</h2>
+    <p>В <b>988</b> князь <b>Владимир</b> крестил Русь.</p>
+    <h2>3. Битвы</h2>
+    <p><b>1240</b> — Невская битва (Александр Невский).</p>
+    <p><b>1242</b> — Ледовое побоище.</p>
+    <h2>4. Иго</h2>
+    <p><b>1380</b> — Куликовская битва (Дмитрий Донской).</p>
+    <p><b>1480</b> — стояние на Угре (Иван III).</p>
+    <h2>5. Иван Грозный</h2>
+    <p><b>1547</b> — первый русский <b>царь</b>. Опричнина (1565–1572).</p>
+    <h2>6. Смута</h2>
+    <p><b>1612</b> — Минин и Пожарский. <b>1613</b> — Михаил Романов.</p>
   </div>
-  <h2>2. Крещение</h2>
-  <p>В <b>988</b> князь Владимир крестил Русь.</p>
-  <h2>3. Битвы</h2>
-  <p><b>1240</b> — Невская битва.</p>
-  <p><b>1242</b> — Ледовое побоище.</p>
-  <h2>4. Иго</h2>
-  <p><b>1380</b> — Куликовская битва.</p>
-  <p><b>1480</b> — стояние на Угре.</p>
-  <h2>5. Иван Грозный</h2>
-  <p><b>1547</b> — первый русский царь.</p>
-  <h2>6. Смута</h2>
-  <p><b>1612</b> — Минин и Пожарский.</p>
   <button class="btn" onclick="pick('rus')">🎯 Викторина</button>
   <button class="btn btn2" onclick="go('home')">🏠 В меню</button>
 </div>
 
+<!-- СТАТЬЯ: СРЕДНИЕ ВЕКА -->
 <div id="med" class="screen">
   <button class="back" onclick="go('home')">← Назад</button>
   <h1>⚔️ Средние века</h1>
-  <h2>1. Эпоха</h2>
-  <p>С <b>476</b> до <b>1492</b>.</p>
-
-  <h2>2. 🏰 Франкское королевство</h2>
-  <p><b>Франки</b> — германское племя, создавшее одно из самых сильных государств раннего Средневековья.</p>
-  <h3>Хлодвиг I (481–511)</h3>
-  <p>Первый король франков. В <b>496</b> принял христианство.</p>
-  <h3>Карл Мартелл (717–741)</h3>
-  <p>В <b>732</b> разбил арабов при <b>Пуатье</b>.</p>
-  <h3>Пипин Короткий (751–768)</h3>
-  <p>В <b>751</b> основал династию <b>Каролингов</b>.</p>
-  <h3>Карл Великий (768–814)</h3>
-  <p>В <b>800</b> коронован императором. Столица — <b>Ахен</b>.</p>
-  <h3>Распад (843)</h3>
-  <p><b>Верденский договор</b> — Франция, Германия, Италия.</p>
-  <div class="date"><b>📌 Даты Франков</b>
-    <ul>
-      <li><b>496</b> — крещение Хлодвига</li>
-      <li><b>732</b> — битва при Пуатье</li>
-      <li><b>751</b> — Пипин Короткий</li>
-      <li><b>800</b> — Карл Великий — император</li>
-      <li><b>843</b> — Верденский раздел</li>
-    </ul>
+  <p class="sub">V–XV века</p>
+  <div class="art">
+    <h2>1. Эпоха</h2>
+    <p>С <b>476</b> (падение Рима) до <b>1492</b> (открытие Америки).</p>
+    <div class="date">
+      <span class="t">📌 Периоды</span>
+      <ul>
+        <li><b>V–XI</b> — Раннее</li>
+        <li><b>XI–XV</b> — Классическое</li>
+        <li><b>XV–XVII</b> — Позднее</li>
+      </ul>
+    </div>
+    <h2>2. Феодализм</h2>
+    <p>Земля у <b>феодалов</b>. <b>Феод</b> давали вассалам за службу. Так возник <b>вассалитет</b>: «вассал моего вассала — не мой вассал».</p>
+    <p>Крестьяне платили <b>оброк</b> и работали на <b>барщине</b>.</p>
+    <h2>3. Рыцари</h2>
+    <p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Жили в <b>замках</b> — крепостях с башнями, рвом и подъёмным мостом.</p>
+    <h2>4. Церковь</h2>
+    <p>Католическая церковь была очень влиятельной. Для борьбы с <b>ересью</b> создали <b>инквизицию</b> — церковный суд.</p>
+    <h2>5. Крестовые походы</h2>
+    <p>XI–XIII вв. В 1095 папа Урбан II призвал освободить <b>Святую землю</b>. Всего было 8 походов.</p>
+    <h2>6. Чума</h2>
+    <p>1347–1351 — эпидемия <b>чумы</b> («Чёрная смерть») унесла около трети населения Европы.</p>
+    <div class="date">
+      <span class="t">🖨️ Изобретения</span>
+      <ul>
+        <li><b>≈1450</b> — книгопечатание (Гутенберг)</li>
+        <li><b>XIII в.</b> — компас в Европе</li>
+        <li><b>XIV в.</b> — порох в Европе</li>
+      </ul>
+    </div>
+    <h2>7. Хартия (1215)</h2>
+    <p>В Англии король <b>Иоанн Безземельный</b> подписал <b>Великую хартию вольностей</b> — ограничила власть короля.</p>
+    <h2>8. Столетняя война</h2>
+    <p>1337–1453. Англия против Франции. Героиня — <b>Жанна д’Арк</b>.</p>
+    <h2>9. Византия</h2>
+    <p>1453 — турки-османы захватили <b>Константинополь</b>.</p>
+    <h2>10. Реконкиста</h2>
+    <p>VIII–XV вв. Христиане отвоёвывали Пиренейский полуостров. Конец — <b>1492</b>.</p>
   </div>
-
-  <h2>3. Феодализм</h2>
-  <p>Земля у феодалов. Вассалитет.</p>
-  <h2>4. Рыцари</h2>
-  <p>Жили в замках.</p>
-  <h2>5. Церковь</h2>
-  <p>Инквизиция — суд против ереси.</p>
-  <h2>6. Крестовые походы</h2>
-  <p>XI–XIII вв., 8 походов.</p>
-  <h2>7. Чума</h2>
-  <p>1347–1351 — Чёрная смерть.</p>
-  <h2>8. Хартия (1215)</h2>
-  <p>Ограничила власть короля.</p>
-  <h2>9. Столетняя война</h2>
-  <p>1337–1453, Жанна д’Арк.</p>
-  <h2>10. Византия</h2>
-  <p>1453 — падение Константинополя.</p>
   <button class="btn" onclick="pick('med')">🎯 Викторина</button>
   <button class="btn btn2" onclick="go('home')">🏠 В меню</button>
 </div>
 
+<!-- СТАТЬЯ: ФРАНКСКОЕ КОРОЛЕВСТВО -->
+<div id="frank" class="screen">
+  <button class="back" onclick="go('home')">← Назад</button>
+  <h1>👑 Франкское королевство</h1>
+  <p class="sub">V–IX века</p>
+  <div class="art">
+    <h2>1. Кто такие франки?</h2>
+    <p><b>Франки</b> — германское племя, жившее на территории современной Франции и западной Германии. Они создали одно из самых могущественных государств раннего Средневековья.</p>
+
+    <h2>2. Хлодвиг I (481–511)</h2>
+    <p>Первый король франков из династии <b>Меровингов</b>. В <b>496 году</b> принял христианство — это укрепило его власть и объединило народ.</p>
+    <p>При Хлодвиге франки завоевали <b>Галлию</b> — территория современной Франции. Столицей стал Париж.</p>
+    <div class="date">
+      <span class="t">📌 Правление Хлодвига</span>
+      <ul>
+        <li><b>481</b> — стал королём</li>
+        <li><b>496</b> — принял христианство</li>
+        <li><b>507</b> — разбил вестготов при Вуйе</li>
+        <li><b>511</b> — умер, королевство разделено между сыновьями</li>
+      </ul>
+    </div>
+
+    <h2>3. «Ленивые короли» и мажордомы</h2>
+    <p>Потомки Хлодвига правили плохо, их называли <b>«ленивыми королями»</b>. Реальная власть перешла к <b>мажордомам</b> — управляющим королевским двором.</p>
+
+    <h2>4. Карл Мартелл (717–741)</h2>
+    <p>Самый известный мажордом. В <b>732 году</b> разбил арабов в <b>битве при Пуатье</b> — остановил их продвижение в Европу.</p>
+    <p>Провёл военную реформу: создал тяжёлую конницу. За службу раздавал землю — <b>бенефиции</b>.</p>
+
+    <h2>5. Пипин Короткий (751–768)</h2>
+    <p>Сын Карла Мартелла. В <b>751 году</b> сверг последнего Меровинга и сам стал королём, основав династию <b>Каролингов</b>.</p>
+
+    <h2>6. Карл Великий (768–814)</h2>
+    <p>Самый знаменитый правитель Средневековья. За 46 лет правления завоевал Италию, Саксонию, Испанскую марку.</p>
+    <p>В <b>800 году</b> папа Лев III короновал его <b>императором</b> в Риме. Столица — <b>Ахен</b>.</p>
+    <p>При Карле расцвели науки и искусство — <b>«Каролингское возрождение»</b>. Открывались школы, переписывались книги.</p>
+
+    <h2>7. Распад империи (843)</h2>
+    <p>После смерти Карла его внуки разделили государство по <b>Верденскому договору (843)</b>. Образовались три будущих государства:</p>
+    <p>🇫🇷 <b>Франция</b> (Карл Лысый)<br>🇩🇪 <b>Германия</b> (Людовик Немецкий)<br>🇮🇹 <b>Италия</b> (Лотарь)</p>
+
+    <div class="date">
+      <span class="t">📌 Важные даты</span>
+      <ul>
+        <li><b>496</b> — крещение Хлодвига</li>
+        <li><b>732</b> — битва при Пуатье</li>
+        <li><b>751</b> — Пипин Короткий — король</li>
+        <li><b>800</b> — Карл Великий — император</li>
+        <li><b>843</b> — Верденский раздел</li>
+      </ul>
+    </div>
+  </div>
+  <button class="btn" onclick="pick('frank')">🎯 Викторина</button>
+  <button class="btn btn2" onclick="go('home')">🏠 В меню</button>
+</div>
+
+<!-- СЛОЖНОСТЬ -->
 <div id="setup" class="screen">
   <button class="back" onclick="go('home')">← Назад</button>
   <h1 id="setupTitle">Выбор сложности</h1>
+  <p class="sub">Сколько осилишь?</p>
   <div class="diff">
     <button class="on" data-d="1" onclick="pickDiff(this)">🟢 Лёгкая</button>
     <button data-d="2" onclick="pickDiff(this)">🟡 Средняя</button>
@@ -143,12 +318,13 @@ b{color:#f4d03f}
   <button class="btn" onclick="start()">🚀 Начать</button>
 </div>
 
+<!-- ИГРА -->
 <div id="game" class="screen">
   <button class="back" onclick="go('home')">← Выйти</button>
   <div class="stats">
-    <div><div id="score">0</div><div>⭐ Очки</div></div>
-    <div><div id="lives">❤️❤️❤️</div><div>Жизни</div></div>
-    <div><div id="qnum">1/15</div><div>Вопрос</div></div>
+    <div><div class="v" id="score">0</div><div class="l">⭐ Очки</div></div>
+    <div><div class="v" id="lives">❤️❤️❤️</div><div class="l">Жизни</div></div>
+    <div><div class="v" id="qnum">1/15</div><div class="l">Вопрос</div></div>
   </div>
   <div class="q" id="qtext"></div>
   <div id="answers"></div>
@@ -156,12 +332,13 @@ b{color:#f4d03f}
   <button class="btn" id="next" style="display:none" onclick="nextQ()">➡️ Дальше</button>
 </div>
 
+<!-- ФИНАЛ -->
 <div id="finish" class="screen">
   <h1>🏆 Игра окончена!</h1>
   <div class="stats">
-    <div><div id="fScore">0</div><div>⭐ Очки</div></div>
-    <div><div id="fCorrect">0</div><div>✅ Верно</div></div>
-    <div><div id="fTotal">0</div><div>📚 Всего</div></div>
+    <div><div class="v" id="fScore">0</div><div class="l">⭐ Очки</div></div>
+    <div><div class="v" id="fCorrect">0</div><div class="l">✅ Верно</div></div>
+    <div><div class="v" id="fTotal">0</div><div class="l">📚 Всего</div></div>
   </div>
   <div class="fin" id="fMsg"></div>
   <button class="btn" onclick="go('setup')">🔄 Снова</button>
@@ -178,15 +355,15 @@ rus:[
 [1,"Год Невской битвы?",["1240","1242","1380","1147"],0,"Александр Невский в 1240."],
 [1,"Кто разбил Мамая?",["Иван III","Дмитрий Донской","Иван Калита","Александр Невский"],1,"Дмитрий Донской в 1380."],
 [1,"Первый русский царь?",["Иван III","Иван IV","Пётр I","Борис Годунов"],1,"Иван Грозный в 1547."],
-[2,"Год Ледового побоища?",["1240","1242","1380","1480"],1,"1242 год."],
-[2,"Год Куликовской битвы?",["1380","1240","1480","1147"],0,"1380 год."],
+[2,"Год Ледового побоища?",["1240","1242","1380","1480"],1,"5 апреля 1242."],
+[2,"Год Куликовской битвы?",["1380","1240","1480","1147"],0,"8 сентября 1380."],
 [2,"Кто покончил с игом?",["Калита","Донской","Иван III","Грозный"],2,"Иван III в 1480."],
 [2,"Первое упоминание Москвы?",["862","988","1147","1240"],2,"1147 год."],
 [2,"Кто вёл Второе ополчение?",["Минин и Пожарский","Лжедмитрий","Годунов","Шуйский"],0,"1612 год."],
-[3,"Феодальная раздробленность — это?",["Объединение","Распад","Война","Крещение"],1,"XII–XV вв."],
+[3,"Феодальная раздробленность — это?",["Объединение","Распад на княжества","Война","Крещение"],1,"XII–XV вв."],
 [3,"Автор «Повести временных лет»?",["Нестор","Иларион","Даниил","Кирилл"],0,"Монах Нестор."],
 [3,"Год взятия Казани?",["1547","1552","1565","1584"],1,"1552 год."],
-[3,"Что такое опричнина?",["Совет","Террор","Налог","Город"],1,"1565–1572."],
+[3,"Что такое опричнина?",["Совет","Террор Ивана Грозного","Налог","Город"],1,"1565–1572."],
 [3,"Когда началась Смута?",["1584","1598","1605","1613"],1,"1598 год."]
 ],
 med:[
@@ -195,161 +372,22 @@ med:[
 [1,"Что такое замок?",["Рынок","Жилище феодала","Церковь","Хижина"],1,"Жилище феодала."],
 [1,"Эпоха между Античностью и Новым временем?",["Каменный век","Средневековье","Ренессанс","Новейшее"],1,"V–XV вв."],
 [1,"Кто жил в замке?",["Крестьяне","Феодал","Ремесленники","Горожане"],1,"Феодал."],
-[1,"Какое племя создало Франкское королевство?",["Готы","Франки","Вандалы","Саксы"],1,"Франки."],
-[1,"Кто был первым королём франков?",["Карл Великий","Хлодвиг","Пипин","Карл Мартелл"],1,"Хлодвиг I."],
 [2,"Крестовые походы — это?",["Восстания","Походы на Восток","Торговля","Открытия"],1,"XI–XIII вв."],
 [2,"Эпидемия XIV века?",["Холера","Чума","Оспа","Грипп"],1,"Чёрная смерть."],
-[2,"Что изобрёл Гутенберг?",["Порох","Книгопечатание","Компас","Телескоп"],1,"1450 г."],
+[2,"Что изобрёл Гутенберг?",["Порох","Книгопечатание","Компас","Телескоп"],1,"≈1450 г."],
 [2,"Что такое вассалитет?",["Сеньор и вассал","Торговля","Обряды","Оружие"],0,"Вассал служит сеньору."],
-[2,"Кто такой Карл Великий?",["Король Англии","Император франков","Папа","Хан"],1,"Император с 800 г."],
-[2,"В каком году Хлодвиг принял христианство?",["476","496","500","511"],1,"496 год."],
-[2,"Кто разбил арабов при Пуатье?",["Хлодвиг","Карл Мартелл","Карл Великий","Пипин"],1,"Карл Мартелл."],
+[2,"Кто такой Иоанн Безземельный?",["Король Англии","Император франков","Папа","Хан"],0,"Подписал хартию 1215."],
 [3,"Что такое инквизиция?",["Церковный суд","Орден","Совет","Налог"],0,"Суд против еретиков."],
 [3,"Хартия вольностей?",["Договор","Документ 1215 г.","Устав","Союз"],1,"1215, Англия."],
 [3,"Когда пала Византия?",["1204","1356","1453","1492"],2,"1453 г."],
-[3,"Когда Карл Великий стал императором?",["768","800","814","843"],1,"800 год."],
-[3,"Что было в 843 году?",["Крещение Хлодвига","Коронация Карла","Верденский раздел","Битва при Пуатье"],2,"Раздел империи."],
-[3,"Кто основал Каролингов?",["Хлодвиг","Пипин Короткий","Карл Мартелл","Карл Великий"],1,"Пипин в 751."]
+[3,"Кто такая Жанна д’Арк?",["Королева","Героиня Столетней войны","Монахиня","Принцесса"],1,"1429 г."],
+[3,"Что такое Реконкиста?",["Захват Америки","Отвоевание Пиренеев","Восстание","Реформа"],1,"VIII–XV вв."]
 ],
-year:[
-[1,"Крещение Руси",["862","988","1147","1240"],1,"988 год."],
-[1,"Первое упоминание Москвы",["988","1054","1147","1237"],2,"1147 год."],
-[1,"Невская битва",["1223","1240","1242","1380"],1,"1240 год."],
-[1,"Ледовое побоище",["1240","1242","1252","1263"],1,"1242 год."],
-[1,"Куликовская битва",["1378","1380","1382","1395"],1,"1380 год."],
-[2,"Призвание Рюрика",["862","882","907","911"],0,"862 год."],
-[2,"Стояние на Угре",["1471","1478","1480","1497"],2,"1480 год."],
-[2,"Титул царя Ивана IV",["1533","1547","1552","1565"],1,"1547 год."],
-[2,"Взятие Казани",["1547","1552","1556","1558"],1,"1552 год."],
-[2,"Начало Смуты",["1598","1605","1610","1613"],0,"1598 год."],
-[2,"Освобождение Москвы",["1610","1611","1612","1613"],2,"1612 год."],
-[3,"Михаил Романов — царь",["1612","1613","1618","1625"],1,"1613 год."],
-[3,"Падение Западного Рима",["395","410","476","500"],2,"476 год."],
-[3,"Крещение Хлодвига",["476","481","496","511"],2,"496 год."],
-[3,"Битва при Пуатье",["717","732","741","751"],1,"732 год."],
-[3,"Карл Великий — император",["768","800","814","843"],1,"800 год."],
-[3,"Верденский раздел",["800","814","830","843"],3,"843 год."],
-[3,"Первый крестовый поход",["1066","1095","1096","1099"],2,"1096 год."],
-[3,"Хартия вольностей",["1212","1215","1258","1265"],1,"1215 год."],
-[3,"Начало Столетней войны",["1337","1340","1347","1356"],0,"1337 год."],
-[3,"Чёрная смерть в Европе",["1340","1347","1350","1361"],1,"1347 год."],
-[3,"Падение Константинополя",["1204","1356","1453","1492"],2,"1453 год."],
-[3,"Конец Реконкисты",["1453","1479","1492","1500"],2,"1492 год."]
-]
-};
-
-var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,diff=1;
-
-function go(id){
-  var a=document.querySelectorAll('.screen');
-  for(var k=0;k<a.length;k++)a[k].classList.remove('on');
-  document.getElementById(id).classList.add('on');
-  window.scrollTo(0,0);
-}
-
-function pick(g){
-  cur=g;
-  var t='Выбор сложности';
-  if(g==='rus')t='🎯 Древняя Русь';
-  else if(g==='med')t='🎯 Средние века';
-  else if(g==='year')t='📅 Угадай год!';
-  document.getElementById('setupTitle').textContent=t;
-  go('setup');
-}
-
-function pickDiff(btn){
-  var b=document.querySelectorAll('.diff button');
-  for(var k=0;k<b.length;k++)b[k].classList.remove('on');
-  btn.classList.add('on');
-  diff=parseInt(btn.getAttribute('data-d'));
-}
-
-function start(){
-  var all=data[cur],pool=[];
-  for(var k=0;k<all.length;k++){if(all[k][0]<=diff)pool.push(all[k]);}
-  for(var k=pool.length-1;k>0;k--){
-    var j=Math.floor(Math.random()*(k+1));
-    var t=pool[k];pool[k]=pool[j];pool[j]=t;
-  }
-  qs=pool;i=0;pts=0;hp=3;
-  updateStats();
-  go('game');
-  loadQ();
-}
-
-function updateStats(){
-  document.getElementById('score').textContent=pts;
-  document.getElementById('lives').textContent=hp>0?'❤️'.repeat(hp):'💀';
-}
-
-function loadQ(){
-  ok=false;
-  var q=qs[i];
-  document.getElementById('qnum').textContent=(i+1)+'/'+qs.length;
-  var p=(cur==='year')?'📅 Когда: ':'📖 ';
-  document.getElementById('qtext').textContent=p+q[1];
-  var box=document.getElementById('answers');
-  box.innerHTML='';
-  document.getElementById('expl').style.display='none';
-  document.getElementById('next').style.display='none';
-  var L=['А','Б','В','Г'];
-  for(var k=0;k<q[2].length;k++){
-    var b=document.createElement('button');
-    b.className='ans';
-    b.innerHTML='<b>'+L[k]+')</b> '+q[2][k];
-    b.setAttribute('data-i',k);
-    b.setAttribute('onclick','check('+k+',this)');
-    box.appendChild(b);
-  }
-}
-
-function check(sel,btn){
-  if(ok)return;
-  ok=true;
-  var q=qs[i];
-  var all=document.querySelectorAll('#answers .ans');
-  for(var k=0;k<all.length;k++)all[k].disabled=true;
-  var ex=document.getElementById('expl');
-  if(sel===q[3]){
-    btn.classList.add('ok');
-    pts+=10;
-    ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4];
-  }else{
-    btn.classList.add('no');
-    all[q[3]].classList.add('ok');
-    hp--;
-    ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4];
-  }
-  ex.style.display='block';
-  updateStats();
-  var nb=document.getElementById('next');
-  if(hp<=0)nb.textContent='🏁 Завершить';
-  else if(i===qs.length-1)nb.textContent='🏆 Результат';
-  else nb.textContent='➡️ Следующий вопрос';
-  nb.style.display='block';
-}
-
-function nextQ(){
-  if(hp<=0||i===qs.length-1){finish();return;}
-  i++;
-  loadQ();
-}
-
-function finish(){
-  var total=qs.length;
-  var correct=pts/10;
-  var pct=Math.round(correct/total*100);
-  document.getElementById('fScore').textContent=pts;
-  document.getElementById('fCorrect').textContent=correct;
-  document.getElementById('fTotal').textContent=total;
-  var msg,gr;
-  if(pct>=90){msg='🌟 Превосходно!';gr='Оценка: 5';}
-  else if(pct>=70){msg='👍 Отличный результат!';gr='Оценка: 4';}
-  else if(pct>=50){msg='📖 Неплохо.';gr='Оценка: 3';}
-  else{msg='📚 Попробуй ещё раз!';gr='Оценка: 2';}
-  document.getElementById('fMsg').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div style="font-size:1.4em;color:#c9a227;font-weight:bold;margin-top:10px">'+gr+'</div>';
-  go('finish');
-}
-</script>
-</body>
-</html>
+frank:[
+[1,"Какое племя создало Франкское королевство?",["Готы","Франки","Вандалы","Саксы"],1,"Франки — германское племя."],
+[1,"Кто был первым королём франков?",["Карл Великий","Хлодвиг","Пипин","Карл Мартелл"],1,"Хлодвиг I (481–511)."],
+[1,"Какую религию принял Хлодвиг?",["Язычество","Христианство","Ислам","Иудаизм"],1,"В 496 году — христианство."],
+[1,"Столица при Хлодвиге?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],
+[1,"При каком правителе был расцвет империи?",["Хлодвиг","Карл Мартелл","Карл Великий","Пипин"],2,"Карл Великий."],
+[2,"В каком году Хлодвиг принял христианство?",["476","496","500","511"],1,"496 год."],
+[2,"Кто разбил арабов при Пу
