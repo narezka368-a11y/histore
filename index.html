@@ -16,7 +16,7 @@ h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;backgroun
 .scr{display:none}
 .scr.on{display:block;animation:fd .5s ease}
 @keyframes fd{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-input[type=text],input[type=password],input[type=email]{width:100%;padding:16px;font-size:1.1em;background:rgba(255,255,255,.06);border:2px solid rgba(201,162,39,.5);border-radius:12px;color:#f5e6d3;font-family:inherit;text-align:center;margin-top:14px}
+input[type=text],input[type=password]{width:100%;padding:16px;font-size:1.1em;background:rgba(255,255,255,.06);border:2px solid rgba(201,162,39,.5);border-radius:12px;color:#f5e6d3;font-family:inherit;text-align:center;margin-top:14px}
 input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,63,.5)}
 .btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#c9a227,#f4d03f);color:#2c1810;border:none;border-radius:12px;font-size:1.05em;font-weight:bold;cursor:pointer;margin-top:14px;font-family:inherit;transition:all .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(244,208,63,.6)}
@@ -108,8 +108,6 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 .clues ol{margin:0 0 0 20px;padding:0;list-style:none;counter-reset:clue}
 .clues li{counter-increment:clue;margin:7px 0;font-size:.93em;line-height:1.45;color:#e8d8bf;padding-left:26px;position:relative}
 .clues li::before{content:counter(clue) ".";position:absolute;left:0;color:#c9a227;font-weight:bold;min-width:22px}
-
-/* АДМИН-ПАНЕЛЬ */
 .adminbox{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(192,57,43,.08));border:2px solid #8e44ad;border-radius:14px;padding:18px;margin:14px 0}
 .adminbox h3{color:#c39bd3;font-size:1.1em;margin-bottom:10px}
 .status-open{display:inline-block;padding:6px 14px;border-radius:20px;background:rgba(39,174,96,.3);color:#2ecc71;font-weight:bold;font-size:.9em}
@@ -118,21 +116,19 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 .closed-screen .icon{font-size:5em;margin-bottom:20px;animation:fl 3s ease-in-out infinite}
 .closed-screen h1{color:#e74c3c;font-size:2em;margin-bottom:15px}
 .closed-screen .reason{background:rgba(231,76,60,.15);border:2px solid #e74c3c;border-radius:12px;padding:20px;margin:20px auto;max-width:500px;color:#fff;font-size:1.1em;line-height:1.6}
-
 @media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.1em}.clues{grid-template-columns:1fr}}
 @media(max-width:600px){body{padding:8px}.box{padding:20px 15px}h1{font-size:1.5em}.hero{font-size:2.9em}.card{padding:14px}.card .ic{font-size:2em}.card b{font-size:1em}.card small{font-size:.78em}.st .v{font-size:1.3em}.q{padding:13px 15px;font-size:1em}.a{padding:13px 14px;font-size:.95em}.df button{padding:10px 14px;font-size:.85em;flex:1}.roles{grid-template-columns:1fr}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:1em}}
 </style>
 </head>
 <body>
-<div class="box">
-
-<div id="closedScreen" class="scr">
+<div class="box"><div id="closedScreen" class="scr">
 <div class="closed-screen">
 <div class="icon">🔒</div>
 <h1>Сайт закрыт</h1>
 <p class="sub">Доступ временно запрещён администратором</p>
 <div class="reason" id="closedReason">Причина не указана</div>
-<button class="btn btn2" onclick="checkStatus()">🔄 Обновить</button>
+<button class="btn" onclick="go('loginScreen')">🔑 Войти как Создатель</button>
+<button class="btn btn2" onclick="location.reload()">🔄 Обновить</button>
 </div>
 </div>
 
@@ -179,12 +175,12 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 
 <div class="adminbox">
 <h3>📊 Статус сайта</h3>
-<p>Текущее состояние: <span id="adminStatus" class="status-open">Открыт</span></p>
+<p>Состояние: <span id="adminStatus" class="status-open">Открыт</span></p>
 </div>
 
 <div class="adminbox">
-<h3>🔒 Запрет доступа</h3>
-<p style="margin-bottom:10px;font-size:.95em;color:#b8956a">Если закрыть — все ученики увидят сообщение «Сайт закрыт» и не смогут войти.</p>
+<h3>🔒 Управление доступом</h3>
+<p style="margin-bottom:10px;font-size:.95em;color:#b8956a">Если закрыть — все ученики увидят «Сайт закрыт».</p>
 <input type="text" id="reasonInput" placeholder="Причина (например: идут экзамены)" maxlength="100">
 <button class="btn btn-danger" onclick="closeSite()">🔒 Закрыть доступ</button>
 <button class="btn btn-ok" onclick="openSite()">🔓 Открыть доступ</button>
@@ -192,7 +188,6 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 
 <div class="adminbox">
 <h3>👥 Активные сессии</h3>
-<p style="font-size:.9em;color:#b8956a;margin-bottom:10px">Все, кто входил в этот браузер</p>
 <div id="sessionsList"></div>
 <button class="btn btn2" onclick="clearSessions()">🗑️ Очистить сессии</button>
 </div>
@@ -241,12 +236,19 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <button class="card" onclick="goCross('fr')"><div class="ic">👑</div><div><b>Кроссворд: Франки</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('hl')"><div class="ic">⚜️</div><div><b>Кроссворд: Хлодвиг</b><small>8 слов</small></div></button>
 <button class="card" onclick="goCross('km')"><div class="ic">🔨</div><div><b>Кроссворд: Карл Мартелл</b><small>8 слов</small></div></button>
+</div>
+
+<div id="ratingScreen" class="scr">
+<button class="back" onclick="go('subjects')">← Назад</button>
+<h1>🏆 Рейтинг</h1>
+<ul class="rate" id="ratingList"></ul>
+<button class="btn" onclick="clearRating()" style="background:rgba(231,76,60,.25);color:#e74c3c;border:2px solid #e74c3c;box-shadow:none">🗑️ Очистить</button>
 </div><div id="rus" class="scr">
 <button class="back" onclick="go('histHome')">← Назад</button>
 <h1>🛡️ Древняя Русь</h1>
 <div class="art">
 <h2>1. Возникновение</h2>
-<p>В <b>862 году</b> пригласили на княжение варяга <b>Рюрика</b>.</p>
+<p>В <b>862 году</b> пригласили на княжение варяга <b>Рюрика</b> — основателя династии Рюриковичей.</p>
 <p>В <b>882</b> Олег объединил Новгород и Киев.</p>
 <h2>2. Крещение (988)</h2>
 <p>Князь <b>Владимир Святославич</b> крестил Русь.</p>
@@ -258,6 +260,17 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <p>Первый русский <b>царь</b>. Опричнина.</p>
 <h2>6. Смута (1598–1613)</h2>
 <p>В <b>1612</b> Минин и Пожарский освободили Москву. В <b>1613</b> — Михаил Романов.</p>
+<div class="d"><b>📌 Даты</b><ul>
+<li><b>862</b> — Рюрик</li>
+<li><b>882</b> — Новгород + Киев</li>
+<li><b>988</b> — Крещение</li>
+<li><b>1147</b> — Москва</li>
+<li><b>1240</b> — Невская битва</li>
+<li><b>1380</b> — Куликовская битва</li>
+<li><b>1480</b> — конец ига</li>
+<li><b>1547</b> — первый царь</li>
+<li><b>1613</b> — Романовы</li>
+</ul></div>
 </div>
 <button class="btn" onclick="pk('rus')">🎯 Викторина</button>
 <button class="btn btn2" onclick="goCross('rus')">🧩 Кроссворд</button>
@@ -295,6 +308,15 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <h2>5. Пипин Короткий (751–768)</h2><p>Основал <b>Каролингов</b>.</p>
 <h2>6. Карл Великий (768–814)</h2><p>В <b>800</b> коронован императором. Столица — Ахен.</p>
 <h2>7. Распад (843)</h2><p>Верденский договор: Франция, Германия, Италия.</p>
+<div class="d"><b>📌 Даты</b><ul>
+<li><b>481</b> — Хлодвиг</li>
+<li><b>496</b> — крещение</li>
+<li><b>507</b> — Вуйе</li>
+<li><b>732</b> — Пуатье</li>
+<li><b>751</b> — Пипин</li>
+<li><b>800</b> — Карл Великий</li>
+<li><b>843</b> — Верденский раздел</li>
+</ul></div>
 </div>
 <button class="btn" onclick="pk('fr')">👑 Викторина</button>
 <button class="btn btn2" onclick="goCross('fr')">🧩 Кроссворд</button>
@@ -310,6 +332,13 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <h2>3. Крещение (496)</h2><p>Принял христианство.</p>
 <h2>4. Управление</h2><p>Столица — <b>Париж</b>. «Салическая правда».</p>
 <h2>5. Раздел (511)</h2><p>Королевство разделили 4 сына.</p>
+<div class="d"><b>📌 Даты</b><ul>
+<li><b>481</b> — король</li>
+<li><b>486</b> — Суассон</li>
+<li><b>496</b> — крещение</li>
+<li><b>507</b> — Вуйе</li>
+<li><b>511</b> — умер</li>
+</ul></div>
 </div>
 <button class="btn" onclick="pk('hl')">⚜️ Викторина</button>
 <button class="btn btn2" onclick="goCross('hl')">🧩 Кроссворд</button>
@@ -323,6 +352,11 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <h2>1. Кто такой?</h2><p>Мажордом франков.</p>
 <h2>2. Битва при Пуатье (732)</h2><p>Разбил арабов.</p>
 <h2>3. Военная реформа</h2><p>Создал конницу. Ввёл бенефиции.</p>
+<div class="d"><b>📌 Даты</b><ul>
+<li><b>717</b> — мажордом</li>
+<li><b>732</b> — Пуатье</li>
+<li><b>741</b> — умер</li>
+</ul></div>
 </div>
 <button class="btn" onclick="pk('km')">🔨 Викторина</button>
 <button class="btn btn2" onclick="goCross('km')">🧩 Кроссворд</button>
@@ -379,15 +413,6 @@ input[type=text]:focus,input[type=password]:focus{outline:none;border-color:#f4d
 <button class="btn btn2" onclick="revealCross()">👁️ Показать ответы</button>
 <button class="btn btn2" onclick="clearCross()">🗑️ Очистить</button>
 <button class="btn btn2" onclick="go('histHome')">🏠 К истории</button>
-</div>
-
-<div id="ratingScreen" class="scr">
-<button class="back" onclick="go('subjects')">← Назад</button>
-<h1>🏆 Рейтинг</h1>
-<ul class="rate" id="ratingList"></ul>
-<button class="btn" onclick="clearRating()" style="background:rgba(231,76,60,.25);color:#e74c3c;border:2px solid #e74c3c;box-shadow:none">🗑️ Очистить</button>
-</div>
-
 </div><script>
 var D={
 rus:[
@@ -550,9 +575,7 @@ km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words
 {r:4,c:2,d:'A',w:"КОННИЦА",q:"Создал тяжёлую ..."},
 {r:4,c:2,d:'D',w:"КАРОЛИНГИ",q:"Династия сына"}
 ]}
-};
-
-var PASSWORDS={"Староста":"1312","Учитель":"1313","Создатель":"100001"};
+};var PASSWORDS={"Староста":"1312","Учитель":"1313","Создатель":"100001"};
 var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,df=1,currentUser="",currentRole="Ученик",currentCross=null;
 
 function show(id){
@@ -561,7 +584,6 @@ function show(id){
   document.getElementById(id).classList.add('on');
   window.scrollTo(0,0);
 }
-
 function go(id){ show(id); }
 
 function pickRole(btn){
@@ -575,9 +597,8 @@ function pickRole(btn){
 }
 
 function doLogin(){
-  /* проверить: закрыт ли сайт */
   if(isSiteClosed() && currentRole!=='Создатель'){
-    show('closedScreen');
+    showClosed();
     return;
   }
   var n=document.getElementById('nameInput').value.trim();
@@ -621,23 +642,22 @@ function logout(){
   var b=document.querySelectorAll('.role');
   for(var k=0;k<b.length;k++)b[k].classList.remove('on');
   document.getElementById('adminBtnWrapper').innerHTML='';
-  /* проверить, открыт ли сайт */
-  if(isSiteClosed()){ show('closedScreen'); }
-  else { show('loginScreen'); }
+  if(isSiteClosed()){ showClosed(); } else { show('loginScreen'); }
 }
 
-/* АДМИН */
-function isSiteClosed(){
-  return localStorage.getItem('siteClosed')==='1';
+function isSiteClosed(){ return localStorage.getItem('siteClosed')==='1'; }
+
+function showClosed(){
+  document.getElementById('closedReason').textContent=localStorage.getItem('closeReason')||'Причина не указана';
+  show('closedScreen');
 }
 
 function closeSite(){
-  var reason=document.getElementById('reasonInput').value.trim();
-  if(!reason) reason='Причина не указана';
+  var reason=document.getElementById('reasonInput').value.trim()||'Причина не указана';
   if(!confirm('Закрыть доступ для всех учеников?')) return;
   localStorage.setItem('siteClosed','1');
   localStorage.setItem('closeReason',reason);
-  alert('✅ Доступ закрыт! Ученики увидят «Сайт закрыт».');
+  alert('✅ Доступ закрыт!');
   renderAdminStatus();
 }
 
@@ -668,17 +688,15 @@ function renderAdminButton(){
   var w=document.getElementById('adminBtnWrapper');
   if(!w) return;
   if(currentRole==='Создатель'){
-    w.innerHTML='<h2>⚙️ Управление</h2><button class="card admin" onclick="go(\'adminScreen\');renderAdminStatus()"><div class="ic">⚙️</div><div><b>Админ-панель</b><small>Только для Создателя</small></div></button>';
+    w.innerHTML='<h2>⚙️ Управление</h2><button class="card admin" onclick="show(\'adminScreen\');renderAdminStatus()"><div class="ic">⚙️</div><div><b>Админ-панель</b><small>Только для Создателя</small></div></button>';
   } else {
     w.innerHTML='';
   }
 }
 
-/* СЕССИИ */
 function addSession(name,role){
   var list=JSON.parse(localStorage.getItem('sessions')||'[]');
   var now=new Date().toLocaleString('ru-RU');
-  /* удалить старую запись этого пользователя */
   list=list.filter(function(s){ return s.name.toLowerCase()!==name.toLowerCase(); });
   list.unshift({name:name,role:role,time:now});
   if(list.length>50) list=list.slice(0,50);
@@ -694,8 +712,7 @@ function renderSessions(){
   } else {
     var html='';
     for(var k=0;k<list.length;k++){
-      var em=roleEmoji(list[k].role);
-      html+='<div style="padding:8px 12px;margin:6px 0;background:rgba(255,255,255,.05);border-radius:8px;font-size:.9em"><b style="color:#f4d03f">'+em+' '+list[k].name+'</b> <span style="color:#b8956a">('+list[k].role+')</span><br><small style="color:#888">'+list[k].time+'</small></div>';
+      html+='<div style="padding:8px 12px;margin:6px 0;background:rgba(255,255,255,.05);border-radius:8px;font-size:.9em"><b style="color:#f4d03f">'+roleEmoji(list[k].role)+' '+list[k].name+'</b> <span style="color:#b8956a">('+list[k].role+')</span><br><small style="color:#888">'+list[k].time+'</small></div>';
     }
     box.innerHTML=html;
   }
@@ -707,14 +724,6 @@ function clearSessions(){
   renderSessions();
 }
 
-/* При запуске — проверить статус */
-function checkStatus(){
-  if(isSiteClosed()){ show('closedScreen'); }
-  else { show('loginScreen'); }
-  location.reload();
-}
-
-/* ВИКТОРИНА */
 function pk(g){
   cur=g;
   var t='Сложность';
@@ -816,7 +825,6 @@ function fin(){
   show('fin');
 }
 
-/* КРОССВОРД */
 function goCross(g){
   currentCross=g;
   var cfg=CROSS[g];
@@ -862,8 +870,6 @@ function goCross(g){
         var inp=document.createElement('input');
         inp.type='text';
         inp.maxLength=1;
-        inp.setAttribute('data-r',r);
-        inp.setAttribute('data-c',c);
         inp.setAttribute('data-ans',map[key].letter);
         inp.oninput=function(){
           this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,'');
@@ -923,7 +929,6 @@ function clearCross(){
   }
 }
 
-/* РЕЙТИНГ */
 function saveResult(name,role,score,grade){
   var all=JSON.parse(localStorage.getItem('results')||'[]');
   var found=false;
@@ -952,9 +957,7 @@ function showRating(){
       var cls=r.grade===5?'g5':r.grade===4?'g4':r.grade===3?'g3':'g2';
       var medal=k===0?'🥇':k===1?'🥈':k===2?'🥉':(k+1);
       var role=r.role||'Ученик';
-      var rc=roleClass(role);
-      var em=roleEmoji(role);
-      list.innerHTML+='<li><div class="pos">'+medal+'</div><div class="name">'+r.name+'<span class="badge '+rc+'">'+em+' '+role+'</span></div><div class="score">'+r.score+' очк.</div><div class="grade '+cls+'">'+r.grade+'</div></li>';
+      list.innerHTML+='<li><div class="pos">'+medal+'</div><div class="name">'+r.name+'<span class="badge '+roleClass(role)+'">'+roleEmoji(role)+' '+role+'</span></div><div class="score">'+r.score+' очк.</div><div class="grade '+cls+'">'+r.grade+'</div></li>';
     }
   }
   show('ratingScreen');
@@ -966,14 +969,9 @@ function clearRating(){
   showRating();
 }
 
-/* СТАРТ */
 var saved=localStorage.getItem('currentUser');
 var savedRole=localStorage.getItem('currentRole')||'Ученик';
-if(isSiteClosed() && savedRole!=='Создатель'){
-  document.getElementById('closedReason').textContent=localStorage.getItem('closeReason')||'Причина не указана';
-  show('closedScreen');
-}
-else if(saved){
+if(saved){
   currentUser=saved;
   currentRole=savedRole;
   document.getElementById('userName').textContent=saved;
@@ -982,13 +980,10 @@ else if(saved){
   addSession(saved,savedRole);
   renderAdminButton();
   show('subjects');
-}else{
-  if(isSiteClosed()){
-    document.getElementById('closedReason').textContent=localStorage.getItem('closeReason')||'Причина не указана';
-    show('closedScreen');
-  } else {
-    show('loginScreen');
-  }
+} else if(isSiteClosed()){
+  showClosed();
+} else {
+  show('loginScreen');
 }
 </script>
 </body>
