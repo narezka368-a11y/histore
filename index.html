@@ -43,6 +43,10 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 .role .em{font-size:2.2em;display:block;margin-bottom:6px}
 .role b{color:#f4d03f;display:block;font-size:1em}
 .role small{color:#b8956a;font-size:.75em}
+.role .lock{font-size:.75em;color:#e74c3c;display:block;margin-top:4px}
+.passbox{margin-top:18px;padding:16px;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.4);border-radius:12px;display:none}
+.passbox.on{display:block;animation:fd .3s ease}
+.passbox p{text-align:center;color:#c9a227;font-size:.9em;margin-bottom:6px}
 .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.7em;font-weight:bold;font-family:'Segoe UI',sans-serif;margin-left:6px}
 .b-creator{background:linear-gradient(135deg,#8e44ad,#c0392b);color:#fff}
 .b-starosta{background:linear-gradient(135deg,#27ae60,#16a085);color:#fff}
@@ -99,9 +103,13 @@ input:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px rgba(244,208,6
 <h2>🎭 Выбери роль</h2>
 <div class="roles">
 <button class="role" data-role="Ученик" onclick="pickRole(this)"><span class="em">🎓</span><b>Ученик</b><small>обычный</small></button>
-<button class="role" data-role="Учитель" onclick="pickRole(this)"><span class="em">📖</span><b>Учитель</b><small>преподаёт</small></button>
-<button class="role" data-role="Староста" onclick="pickRole(this)"><span class="em">⭐</span><b>Староста</b><small>помогает</small></button>
-<button class="role" data-role="Создатель" onclick="pickRole(this)"><span class="em">👑</span><b>Создатель</b><small>особый</small></button>
+<button class="role" data-role="Учитель" onclick="pickRole(this)"><span class="em">📖</span><b>Учитель</b><small>преподаёт</small><span class="lock">🔒 нужен пароль</span></button>
+<button class="role" data-role="Староста" onclick="pickRole(this)"><span class="em">⭐</span><b>Староста</b><small>помогает</small><span class="lock">🔒 нужен пароль</span></button>
+<button class="role" data-role="Создатель" onclick="pickRole(this)"><span class="em">👑</span><b>Создатель</b><small>особый</small><span class="lock">🔒 нужен пароль</span></button>
+</div>
+<div class="passbox" id="passBox">
+<p>🔒 Введи пароль для роли</p>
+<input type="password" id="passInput" placeholder="Пароль" maxlength="20">
 </div>
 <button class="btn" onclick="doLogin()">🚀 Войти</button>
 </div>
@@ -455,6 +463,12 @@ year:[
 ]
 };
 
+var PASSWORDS={
+"Староста":"1312",
+"Учитель":"1313",
+"Создатель":"100001"
+};
+
 var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,df=1,currentUser="",currentRole="Ученик";
 
 function show(id){
@@ -471,11 +485,25 @@ function pickRole(btn){
   for(var k=0;k<b.length;k++)b[k].classList.remove('on');
   btn.classList.add('on');
   currentRole=btn.getAttribute('data-role');
+  var pb=document.getElementById('passBox');
+  if(PASSWORDS[currentRole]){
+    pb.classList.add('on');
+    document.getElementById('passInput').value="";
+  } else {
+    pb.classList.remove('on');
+  }
 }
 
 function doLogin(){
   var n=document.getElementById('nameInput').value.trim();
   if(n.length<2){alert('Введи имя (минимум 2 буквы)');return;}
+  if(PASSWORDS[currentRole]){
+    var p=document.getElementById('passInput').value.trim();
+    if(p !== PASSWORDS[currentRole]){
+      alert('❌ Неверный пароль для роли «'+currentRole+'»');
+      return;
+    }
+  }
   currentUser=n;
   localStorage.setItem('currentUser',n);
   localStorage.setItem('currentRole',currentRole);
@@ -505,6 +533,10 @@ function logout(){
   localStorage.removeItem('currentRole');
   currentUser="";
   document.getElementById('nameInput').value="";
+  document.getElementById('passInput').value="";
+  document.getElementById('passBox').classList.remove('on');
+  var b=document.querySelectorAll('.role');
+  for(var k=0;k<b.length;k++)b[k].classList.remove('on');
   show('loginScreen');
 }
 
