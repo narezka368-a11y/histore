@@ -1842,6 +1842,12 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 var AC=null;
 var SOUND_ON=true;
 var SOUND_PACK='standard';
+document.addEventListener('click', function(){
+  if(!AC){
+    try{ AC=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC=null; }
+  }
+  if(AC && AC.state==='suspended') AC.resume();
+}, { once: false });
 var memeAudio=new Audio('musor-drop_P5245U6.mp3');
 memeAudio.volume=0.5;
 var memeAudio2=new Audio('okhaeshechki-dattebaeshechki.mp3');
