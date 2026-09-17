@@ -1146,3 +1146,215 @@ input:focus,select:focus{outline:none;border-color:#f4d03f;box-shadow:0 0 25px r
 </div>
 
 </div>
+<script>
+var AC=null;
+var SOUND_ON=true;
+function initAudio(){
+  if(!SOUND_ON) return;
+  if(!AC){ try{ AC=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC=null; } }
+  if(AC && AC.state==='suspended') AC.resume();
+}
+function beep(freq,dur,type,vol){
+  if(!SOUND_ON) return;
+  initAudio();
+  if(!AC) return;
+  type=type||'sine'; vol=vol||0.15;
+  var o=AC.createOscillator(); var g=AC.createGain();
+  o.type=type; o.frequency.value=freq; g.gain.value=vol;
+  o.connect(g); g.connect(AC.destination); o.start();
+  g.gain.exponentialRampToValueAtTime(0.001,AC.currentTime+dur);
+  o.stop(AC.currentTime+dur);
+}
+function sndCorrect(){ beep(660,0.12,'sine',0.18); setTimeout(function(){ beep(880,0.18,'sine',0.18); },120); }
+function sndWrong(){ beep(220,0.18,'square',0.12); setTimeout(function(){ beep(160,0.25,'square',0.12); },130); }
+function sndWin(){ beep(523,0.15,'sine',0.2); setTimeout(function(){ beep(659,0.15,'sine',0.2); },150); setTimeout(function(){ beep(784,0.15,'sine',0.2); },300); setTimeout(function(){ beep(1047,0.4,'sine',0.25); },450); }
+function sndFunWin(){ beep(880,0.1,'square',0.16); setTimeout(function(){beep(1100,0.1,'square',0.16);},100); setTimeout(function(){beep(1320,0.1,'square',0.16);},200); setTimeout(function(){beep(1760,0.25,'sine',0.2);},300); }
+function sndFunLose(){ beep(400,0.15,'triangle',0.12); setTimeout(function(){beep(300,0.15,'triangle',0.12);},150); setTimeout(function(){beep(200,0.25,'triangle',0.14);},300); }
+function sndStartGame(){ beep(440,0.08,'sawtooth',0.12); setTimeout(function(){beep(660,0.08,'sawtooth',0.12);},80); setTimeout(function(){beep(880,0.15,'sine',0.15);},160); }
+
+function toggleSound(){ SOUND_ON=!SOUND_ON; localStorage.setItem('soundOn',SOUND_ON?'1':'0'); updateSoundBtn(); if(SOUND_ON) beep(880,0.1,'sine',0.15); }
+function updateSoundBtn(){ var b=document.getElementById('soundBtn'); if(SOUND_ON) b.textContent='🔊 Звук'; else b.textContent='🔇 Звук'; }
+
+/* ===== ТЕМЫ ===== */
+var THEMES=['dark','light','parchment','space','nature','neon','blood','gold'];
+function applyTheme(name){
+  if(THEMES.indexOf(name)===-1) name='dark';
+  document.body.className='';
+  if(name!=='dark') document.body.classList.add(name);
+}
+function setTheme(name){
+  applyTheme(name);
+  localStorage.setItem('theme',name);
+  var tiles=document.querySelectorAll('.themeTile');
+  for(var k=0;k<tiles.length;k++){
+    if(tiles[k].getAttribute('data-theme')===name) tiles[k].classList.add('active');
+    else tiles[k].classList.remove('active');
+  }
+  if(SOUND_ON) beep(660,0.08,'sine',0.12);
+}
+function openThemeModal(){
+  var m=document.getElementById('themeModal');
+  var cur=localStorage.getItem('theme')||'dark';
+  var tiles=document.querySelectorAll('.themeTile');
+  for(var k=0;k<tiles.length;k++){
+    if(tiles[k].getAttribute('data-theme')===cur) tiles[k].classList.add('active');
+    else tiles[k].classList.remove('active');
+  }
+  m.classList.add('on');
+}
+function closeThemeModal(){ document.getElementById('themeModal').classList.remove('on'); }
+function loadTheme(){
+  var t=localStorage.getItem('theme')||'dark';
+  applyTheme(t);
+  var s=localStorage.getItem('soundOn'); if(s==='0'){ SOUND_ON=false; updateSoundBtn(); }
+}
+
+var D={
+rus:[[1,"Крещение Руси?",["862","988","1147","1240"],1,"Владимир в 988."],[1,"Первый князь?",["Игорь","Олег","Рюрик","Святослав"],2,"Рюрик 862."],[1,"Невская битва?",["1240","1242","1380","1147"],0,"1240."],[1,"Кто разбил Мамая?",["Иван III","Дмитрий Донской","Калита","Невский"],1,"Донской."],[1,"Первый царь?",["Иван III","Иван IV","Пётр I","Годунов"],1,"Грозный 1547."],[2,"Ледовое побоище?",["1240","1242","1380","1480"],1,"1242."],[2,"Куликовская битва?",["1380","1240","1480","1147"],0,"1380."],[2,"Конец ига?",["Калита","Донской","Иван III","Грозный"],2,"Иван III 1480."],[2,"Москва впервые?",["862","988","1147","1240"],2,"1147."],[2,"Второе ополчение?",["Минин и Пожарский","Лжедмитрий","Годунов","Шуйский"],0,"1612."],[3,"Раздробленность?",["Объединение","Распад","Война","Крещение"],1,"XII–XV вв."],[3,"Повесть временных лет?",["Нестор","Иларион","Даниил","Кирилл"],0,"Нестор."],[3,"Взятие Казани?",["1547","1552","1565","1584"],1,"1552."],[3,"Опричнина?",["Совет","Террор","Налог","Город"],1,"1565–1572."],[3,"Начало Смуты?",["1584","1598","1605","1613"],1,"1598."]],
+med:[[1,"Феод?",["Земля за службу","Замок","Оружие","Праздник"],0,"Земля."],[1,"Рыцарь?",["Ремесленник","Конный воин","Крестьянин","Монах"],1,"Воин."],[1,"Замок?",["Рынок","Жилище феодала","Церковь","Хижина"],1,"Жилище."],[1,"Средневековье?",["Каменный век","V–XV вв.","Ренессанс","Новейшее"],1,"V–XV."],[1,"Кто жил в замке?",["Крестьяне","Феодал","Ремесленники","Горожане"],1,"Феодал."],[2,"Крестовые походы?",["Восстания","Походы на Восток","Торговля","Открытия"],1,"XI–XIII."],[2,"Эпидемия XIV века?",["Холера","Чума","Оспа","Грипп"],1,"Чума."],[2,"Гутенберг?",["Порох","Книгопечатание","Компас","Телескоп"],1,"Печать."],[2,"Вассалитет?",["Сеньор и вассал","Торговля","Обряды","Оружие"],0,"Вассал."],[2,"Иоанн Безземельный?",["Король Англии","Император","Папа","Хан"],0,"Король."],[3,"Инквизиция?",["Церковный суд","Орден","Совет","Налог"],0,"Суд."],[3,"Хартия вольностей?",["Договор","Документ 1215","Устав","Союз"],1,"1215."],[3,"Пала Византия?",["1204","1356","1453","1492"],2,"1453."],[3,"Жанна д’Арк?",["Королева","Героиня","Монахиня","Принцесса"],1,"1429."],[3,"Реконкиста?",["Захват Америки","Отвоевание Пиренеев","Восстание","Реформа"],1,"VIII–XV."]],
+fr:[[1,"Племя?",["Готы","Франки","Вандалы","Саксы"],1,"Франки."],[1,"Первый король?",["Карл Великий","Хлодвиг","Пипин","Мартелл"],1,"Хлодвиг I."],[1,"Религия Хлодвига?",["Язычество","Христианство","Ислам","Иудаизм"],1,"496."],[1,"Столица Хлодвига?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Расцвет?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],2,"Карл Великий."],[2,"Крещение Хлодвига?",["476","496","500","511"],1,"496."],[2,"Пуатье?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],1,"Мартелл."],[2,"Каролинги?",["Хлодвиг","Пипин","Мартелл","Карл Великий"],1,"Пипин 751."],[2,"Карл — император?",["768","800","814","843"],1,"800."],[2,"Столица Карла?",["Париж","Ахен","Рим","Лондон"],1,"Ахен."],[3,"843 год?",["Крещение","Коронация","Верденский раздел","Пуатье"],2,"Раздел."],[3,"Распад на что?",["Франция, Германия, Италия","Англия, Испания","Рим, Греция","Русь, Польша"],0,"Верденский договор."]],
+hl:[[1,"Кто такой Хлодвиг?",["Король франков","Император","Король Англии","Хан"],0,"Король."],[1,"Династия?",["Каролинги","Меровинги","Рюриковичи","Романовы"],1,"Меровинги."],[1,"Начало?",["476","481","496","511"],1,"481."],[1,"Столица?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Религия?",["Язычество","Христианство","Ислам","Иудаизм"],1,"Христианство."],[1,"Жена?",["Клотильда","Ольга","Анна","Елена"],0,"Клотильда."],[2,"Крещение?",["476","496","500","511"],1,"496."],[2,"486 год?",["Сиагрий","Мамай","Батый","Цезарь"],0,"Сиагрий."],[2,"Вуйе — кто?",["Готы","Вестготы","Вандалы","Гунны"],1,"Вестготы."],[2,"Когда умер?",["476","496","507","511"],3,"511."],[2,"Обряд?",["Арианский","Католический","Православный","Языческий"],1,"Католический."],[2,"Салическая?",["Свод законов","Хроника","Поэма","Устав"],0,"Правда."],[3,"Сколько сыновей?",["2","3","4","5"],2,"4."],[3,"Что НЕ сделал?",["Галлия","Христианство","Каролинги","Париж"],2,"Каролинги — Пипин."],[3,"Племя в 496?",["Готы","Алеманны","Саксы","Викинги"],1,"Алеманны."],[3,"Разбил вестготов?",["Суассон","Вуйе","Пуатье","Калка"],1,"Вуйе."]],
+km:[[1,"Кто такой?",["Мажордом","Император","Король Англии","Папа"],0,"Мажордом."],[1,"Мартелл?",["Молот","Щит","Меч","Копьё"],0,"Молот."],[1,"Отец?",["Пипин Геристальский","Хлодвиг","Карл Великий","Меровей"],0,"Пипин."],[1,"Сын?",["Пипин Короткий","Карл Великий","Хлодвиг","Меровей"],0,"Пипин."],[1,"Против кого?",["Арабов","Римлян","Викингов","Монголов"],0,"Арабов."],[2,"Пуатье?",["717","732","741","751"],1,"732."],[2,"Что создал?",["Конницу","Флот","Артиллерию","Стрельцов"],0,"Конницу."],[2,"Бенефиций?",["Земля за службу","Налог","Титул","Оружие"],0,"Земля."],[2,"Мажордом с?",["714","717","732","741"],1,"717."],[3,"Умер?",["717","732","741","751"],2,"741."],[3,"Между кем разделил?",["Карломан и Пипин","Теодорих","Хильдеберт","Меровей"],0,"Сыновья."]],
+year:[[1,"Крещение Руси",["862","988","1147","1240"],1,"988."],[1,"Москва впервые",["988","1054","1147","1237"],2,"1147."],[1,"Невская битва",["1223","1240","1242","1380"],1,"1240."],[1,"Ледовое побоище",["1240","1242","1252","1263"],1,"1242."],[1,"Куликовская битва",["1378","1380","1382","1395"],1,"1380."],[2,"Призвание Рюрика",["862","882","907","911"],0,"862."],[2,"Стояние на Угре",["1471","1478","1480","1497"],2,"1480."],[2,"Иван IV — царь",["1533","1547","1552","1565"],1,"1547."],[2,"Взятие Казани",["1547","1552","1556","1558"],1,"1552."],[2,"Начало Смуты",["1598","1605","1610","1613"],0,"1598."],[2,"Минин и Пожарский",["1610","1611","1612","1613"],2,"1612."],[3,"Михаил Романов",["1612","1613","1618","1625"],1,"1613."],[3,"Падение Западного Рима",["395","410","476","500"],2,"476."],[3,"Хлодвиг — король",["476","481","496","511"],1,"481."],[3,"Крещение Хлодвига",["476","481","496","511"],2,"496."],[3,"Битва при Вуйе",["486","496","507","511"],2,"507."],[3,"Битва при Пуатье",["717","732","741","751"],1,"732."],[3,"Пипин — король",["732","741","751","800"],2,"751."],[3,"Карл — император",["768","800","814","843"],1,"800."],[3,"Верденский раздел",["800","814","830","843"],3,"843."],[3,"Первый крестовый поход",["1066","1095","1096","1099"],2,"1096."],[3,"Хартия вольностей",["1212","1215","1258","1265"],1,"1215."],[3,"Столетняя война",["1337","1340","1347","1356"],0,"1337."],[3,"Чёрная смерть",["1340","1347","1350","1361"],1,"1347."],[3,"Падение Константинополя",["1204","1356","1453","1492"],2,"1453."],[3,"Конец Реконкисты",["1453","1479","1492","1500"],2,"1492."]]
+};
+
+var CROSS={
+rus:{title:"🛡️ Кроссворд: Древняя Русь",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"РЮРИК",q:"Первый князь (862)"},{r:0,c:0,d:'D',w:"РУСЬ",q:"Государство в Киеве"},{r:0,c:5,d:'A',w:"КИЕВ",q:"Столица"},{r:2,c:2,d:'A',w:"ВЛАДИМИР",q:"Крестил Русь"},{r:2,c:2,d:'D',w:"ВАРЯГИ",q:"Скандинавские воины"},{r:2,c:5,d:'D',w:"ЛЕТОПИСЬ",q:"Запись событий"},{r:4,c:0,d:'A',w:"МАМАЙ",q:"Хан"},{r:4,c:3,d:'D',w:"НОВГОРОД",q:"Город"}]},
+med:{title:"⚔️ Кроссворд: Средние века",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ФЕОД",q:"Земля за службу"},{r:0,c:0,d:'D',w:"ФЕОДАЛ",q:"Владелец земли"},{r:0,c:5,d:'A',w:"РЫЦАРЬ",q:"Конный воин"},{r:0,c:5,d:'D',w:"РАЗДРОБЛЕННОСТЬ",q:"Распад"},{r:2,c:0,d:'A',w:"ЧУМА",q:"Чёрная смерть"},{r:2,c:0,d:'D',w:"ЦЕРКОВЬ",q:"Религиозная организация"},{r:4,c:2,d:'A',w:"ИНКВИЗИЦИЯ",q:"Суд против ереси"},{r:4,c:4,d:'D',w:"ГОРОД",q:"Место торговли"}]},
+fr:{title:"👑 Кроссворд: Франки",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Первый король"},{r:0,c:0,d:'D',w:"ХЛОТАРЬ",q:"Сын Хлодвига"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПИПИН",q:"Основал Каролингов"},{r:2,c:0,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:2,c:0,d:'D',w:"МАРТЕЛЛ",q:"«Молот»"},{r:4,c:2,d:'A',w:"КАРОЛИНГИ",q:"Династия Карла"},{r:4,c:2,d:'D',w:"КАРЛ",q:"Император 800"}]},
+hl:{title:"⚜️ Кроссворд: Хлодвиг",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Король"},{r:0,c:0,d:'D',w:"ХИЛЬДЕРИК",q:"Отец"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПРАВДА",q:"«Салическая ...»"},{r:2,c:0,d:'A',w:"СУАССОН",q:"Битва 486"},{r:2,c:0,d:'D',w:"СИАГРИЙ",q:"Римский наместник"},{r:4,c:2,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:4,c:2,d:'D',w:"МЕРОВЕЙ",q:"Основатель"}]},
+km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"МАРТЕЛЛ",q:"Прозвище"},{r:0,c:0,d:'D',w:"МАЖОРДОМ",q:"Управляющий"},{r:0,c:4,d:'A',w:"ПУАТЬЕ",q:"Битва 732"},{r:0,c:4,d:'D',w:"ПИПИН",q:"Сын Карла"},{r:2,c:0,d:'A',w:"АРАБЫ",q:"Противники"},{r:2,c:0,d:'D',w:"БЕНЕФИЦИЙ",q:"Земля за службу"},{r:4,c:2,d:'A',w:"КОННИЦА",q:"Тяжёлая ..."},{r:4,c:2,d:'D',w:"КАРОЛИНГИ",q:"Династия"}]}
+};
+
+var D_PUSH_BIO=[[1,"Когда родился Пушкин?",["1799","1801","1811","1825"],0,"6 июня 1799."],[1,"Где родился?",["В Москве","В Петербурге","В Михайловском","В Болдино"],0,"В Москве."],[1,"Как звали няню?",["Арина Родионовна","Наталья","Ольга","Мария"],0,"Арина Родионовна."],[1,"Куда поступил в 1811?",["Царскосельский лицей","Московский университет","Кадетский корпус","Академия"],0,"Лицей."],[1,"Как звали жену?",["Наталья Гончарова","Анна Керн","Мария Волконская","Екатерина Бакунина"],0,"Гончарова."],[2,"Когда женился?",["1831","1828","1830","1833"],0,"В феврале 1831."],[2,"Сколько лет в лицее?",["6 лет","4 года","8 лет","5 лет"],0,"1811–1817."],[2,"Где ссылка 1824–1826?",["Михайловское","Болдино","Царское Село","Кишинёв"],0,"Михайловское."],[2,"Осень 1830?",["Болдинская осень","Золотая осень","Творческая","Пушкинская"],0,"Болдинская осень."],[2,"Сколько детей?",["4","2","3","5"],0,"Мария, Александр, Григорий, Наталья."],[3,"Предок-арап?",["Абрам Ганнибал","Пётр I","Екатерина II","Николай I"],0,"Абрам Ганнибал."],[3,"Кто написал оперу «Евгений Онегин»?",["Чайковский","Мусоргский","Римский-Корсаков","Глинка"],0,"Чайковский."],[3,"Сколько лет при смерти?",["37","35","40","42"],0,"37 лет."],[3,"Где похоронен?",["Святогорский монастырь","Петербург","Москва","Михайловское"],0,"Святогорский монастырь."],[3,"Какой журнал основал?",["«Современник»","«Отечественные записки»","«Северная пчела»","«Москвитянин»"],0,"«Современник»."]];
+var D_PUSH_WORKS=[[1,"Кто написал «Сказку о рыбаке и рыбке»?",["Пушкин","Гоголь","Толстой","Тургенев"],0,"Пушкин."],[1,"Главный герой романа в стихах?",["Евгений Онегин","Печорин","Чацкий","Базаров"],0,"Онегин."],[1,"Кто выходит из моря в «Салтане»?",["33 богатыря","Русалка","Золотая рыбка","Кот"],0,"33 богатыря."],[1,"Где золотая рыбка?",["Сказка о рыбаке","Салтан","Поп","Петушок"],0,"В сказке о рыбаке."],[1,"Герой «Руслан и Людмила»?",["Руслан","Онегин","Езерский","Мазепа"],0,"Руслан."],[2,"Автор «Бориса Годунова»?",["Пушкин","Лермонтов","Некрасов","Островский"],0,"Пушкин."],[2,"1836 год — что?",["«Капитанская дочка»","«Дубровский»","«Пиковая дама»","«Медный всадник»"],0,"«Капитанская дочка»."],[2,"Где Германн?",["«Пиковая дама»","«Евгений Онегин»","«Дубровский»","«Капитанская дочка»"],0,"«Пиковая дама»."],[2,"Герой «Капитанской дочки»?",["Пётр Гринёв","Дубровский","Онегин","Германн"],0,"Гринёв."],[2,"Сколько «Маленьких трагедий»?",["4","3","5","6"],0,"4."],[3,"Поэма о наводнении?",["«Медный всадник»","«Полтава»","«Фонтан»","«Цыганы»"],0,"«Медный всадник»."],[3,"Кто убил друга на дуэли?",["Онегин","Гринёв","Дубровский","Германн"],0,"Онегин убил Ленского."],[3,"Пугачёвское восстание?",["«Капитанская дочка»","«Дубровский»","«История Петра»","«Полтава»"],0,"«Капитанская дочка»."],[3,"Сборник 1830?",["«Повести Белкина»","«Повести Пушкина»","«Русские повести»","«Повести о России»"],0,"«Повести Белкина»."],[3,"«Я вас любил» — это?",["Стихотворение","Поэма","Роман","Сказка"],0,"Стихотворение 1829."]];
+var D_PUSH_QUOTES=[[1,"«Я вас любил: любовь ещё, быть может...»",["Пушкин","Лермонтов","Тютчев","Фет"],0,"Пушкин."],[1,"«Мороз и солнце; день чудесный!»",["Пушкин","Некрасов","Есенин","Блок"],0,"«Зимнее утро»."],[1,"«У лукоморья дуб зелёный...»",["Пушкин","Гоголь","Жуковский","Крылов"],0,"«Руслан и Людмила»."],[1,"«Сказка ложь, да в ней намёк!»",["Пушкин","Толстой","Ушинский","Даль"],0,"«Сказка о золотом петушке»."],[1,"«Жил старик со своею старухой...»",["Пушкин","Некрасов","Ершов","Аксаков"],0,"«Сказка о рыбаке и рыбке»."],[2,"«Чем меньше женщину мы любим, тем легче нравимся мы ей»",["Пушкин","Лермонтов","Тургенев","Достоевский"],0,"«Евгений Онегин»."],[2,"«Все счастливые семьи похожи друг на друга»",["Толстой","Пушкин","Гоголь","Чехов"],0,"Толстой, «Анна Каренина»."],[2,"«Я помню чудное мгновенье...»",["Пушкин","Тютчев","Лермонтов","Жуковский"],0,"Пушкин."],[2,"«Привычка свыше нам дана: замена счастию она»",["Пушкин","Гоголь","Тургенев","Чехов"],0,"«Евгений Онегин»."],[3,"«Нет, весь я не умру — душа в заветной лире...»",["Пушкин","Державин","Ломоносов","Жуковский"],0,"«Я памятник себе воздвиг...»."],[3,"«Любви все возрасты покорны»",["Пушкин","Лермонтов","Некрасов","Тютчев"],0,"«Евгений Онегин»."],[3,"«Онегин, добрый мой приятель...»",["Пушкин","Гоголь","Лермонтов","Толстой"],0,"«Евгений Онегин»."]];
+
+var CROSS_PUSH_BIO={title:"✍️ Кроссворд: Пушкин (биография)",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ПУШКИН",q:"Фамилия поэта"},{r:0,c:0,d:'D',w:"ПЕТЕРБУРГ",q:"Город, где погиб"},{r:0,c:5,d:'A',w:"МОСКВА",q:"Город рождения"},{r:2,c:2,d:'A',w:"ЛИЦЕЙ",q:"Учебное заведение"},{r:2,c:2,d:'D',w:"ЛЕРМОНТОВ",q:"Поэт, погибший на дуэли"},{r:2,c:5,d:'D',w:"ГОНЧАРОВА",q:"Фамилия жены"},{r:4,c:0,d:'A',w:"ДАНТЕС",q:"Убийца Пушкина"},{r:4,c:3,d:'D',w:"ДУЭЛЬ",q:"Поединок 1837"}]};
+var CROSS_PUSH_WORKS={title:"✍️ Кроссворд: Произведения Пушкина",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ОНЕГИН",q:"Главный герой романа в стихах"},{r:0,c:0,d:'D',w:"ОЛЬГА",q:"Сестра Татьяны"},{r:0,c:5,d:'A',w:"СКАЗКА",q:"Жанр «О рыбаке»"},{r:0,c:5,d:'D',w:"САЛТАН",q:"Царь в сказке"},{r:2,c:2,d:'A',w:"БЕЛКИН",q:"Фамилия из повестей"},{r:2,c:2,d:'D',w:"БОРИС",q:"Имя царя"},{r:2,c:5,d:'D',w:"ГРИНЁВ",q:"Герой «Капитанской»"},{r:4,c:0,d:'A',w:"РУСЛАН",q:"Рыцарь из поэмы"},{r:4,c:3,d:'D',w:"ТАТЬЯНА",q:"Героиня «Онегина»"}]};
+
+var FUN=[
+{q:"Учитель: «Почему ты опоздал?»",a:["Автобус уехал без меня 🚌","Я спал и видел во сне, что уже в школе 😴","Часы думали, что ещё рано ⌚","Кот перешёл дорогу 🐈"],c:0,e:"Автобус — классика!"},
+{q:"Ты забыл домашку.",a:["Собака съела тетрадь 🐶","Улетела в параллельную вселенную 🌌","Спрятал и сам не нашёл 🕵️","Утонула в портфеле 🎒"],c:2,e:"«Спрятал и не нашёл» — почти правда!"},
+{q:"Не принёс форму на физру.",a:["Форма дома, я мысленно с вами 🧘","Тренируюсь на переменах 💪","Форма испугалась и убежала 🏃","Я болельщик 📣"],c:3,e:"Болельщик — профессия!"},
+{q:"Получил 2. Как сообщить родителям?",a:["Мама, я стал ближе к природе 🌿","В школе новая система: 2 = круто! 🎉","Это не оценка, это смайлик 😢","Погода сегодня отличная! ☀️"],c:3,e:"Перевод темы — искусство!"},
+{q:"На контрольной не знаешь ответ.",a:["Вспомнить, что учил в прошлой жизни 🔮","Посмотреть в потолок 👀","Написать «42» 🚀","Подсмотреть у соседа 😂"],c:3,e:"Ищи того, кто знает!"},
+{q:"Друг зовёт гулять, а у тебя уроки.",a:["Уроки подождут! 🎈","Учусь на будущее 💪","Сейчас закончу и приду ⏰","Давай в 20:00 🌙"],c:2,e:"«Закончу и приду» — по-взрослому."},
+{q:"Съел пирожок в столовой.",a:["Пойду за вторым 🥧","Скажу, что не я 🐈","Отработаю в спортзале 🏋️","Пирожок сам упал 🤷"],c:0,e:"Второй пирожок — святое!"},
+{q:"Учитель: «К доске!»",a:["Звёздный час! 🌟","Я — избранный 🎯","Забыл, что в этом классе 😶","Готов, если с подсказкой 📖"],c:0,e:"Позитив!"},
+{q:"Мама: «Сделал уроки?»",a:["Уже 3 часа назад! ⏰","Почти — осталось начать 😅","В уме сделал ✍️","Уроки — философия 🧘"],c:2,e:"«В уме сделал» — гениально!"},
+{q:"Заснул на уроке. Как объяснить?",a:["Обдумывал домашку 💭","Медитировал 🧘","Проверял учителя 👁️","Слышал каждое слово во сне 😴"],c:0,e:"«Обдумывал» — почти правда!"}
+];
+
+var PASSWORDS={"Староста":"1312","Учитель":"1313","Создатель":"100001"};
+var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,df=1,currentUser="",currentRole="Ученик",currentCross=null;
+var crossLives=5;
+var funQs=[],funI=0,funScore=0,funAnswered=false;
+var pCur=null,pQs=[],pI=0,pPts=0,pHp=3,pOk=false,pDf=1;
+var currentCrossPush=null,pushCrossLives=5;
+
+function show(id){ var a=document.querySelectorAll('.scr'); for(var k=0;k<a.length;k++)a[k].classList.remove('on'); document.getElementById(id).classList.add('on'); window.scrollTo(0,0); }
+function go(id){ show(id); }
+function pickRole(btn){ var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); currentRole=btn.getAttribute('data-role'); var pb=document.getElementById('passBox'); if(PASSWORDS[currentRole]){ pb.classList.add('on'); document.getElementById('passInput').value=""; } else pb.classList.remove('on'); }
+function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); show('subjects'); }
+function roleEmoji(r){ if(r==='Создатель')return'👑'; if(r==='Староста')return'⭐'; if(r==='Учитель')return'📖'; return'🎓'; }
+function logout(){ if(!confirm('Выйти?'))return; localStorage.removeItem('currentUser'); localStorage.removeItem('currentRole'); currentUser=""; document.getElementById('nameInput').value=""; document.getElementById('passInput').value=""; document.getElementById('passBox').classList.remove('on'); var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); show('loginScreen'); }
+
+function renderAnnouncement(){
+  var box=document.getElementById('announcementBox');
+  if(!box) return;
+  var t=localStorage.getItem('classAnnounce');
+  if(t){ box.innerHTML='<div class="announce"><div class="text">'+t+'</div></div>'; }
+  else { box.innerHTML=''; }
+}
+
+/* ============ ВИКТОРИНА (история) ============ */
+function pk(g){
+  sndStartGame(); cur=g;
+  var t='Сложность';
+  if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века';
+  else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг';
+  else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!';
+  document.getElementById('stT').textContent=t; show('setup');
+}
+function pd(btn){ var b=document.querySelectorAll('#setup .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); df=parseInt(btn.getAttribute('data-d')); }
+function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]);
+  for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
+  qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
+function us(){ document.getElementById('sc').textContent=pts; document.getElementById('lv').textContent=hp>0?'❤️'.repeat(hp):'💀'; }
+function lq(){ ok=false; var q=qs[i]; document.getElementById('qn').textContent=(i+1)+'/'+qs.length; document.getElementById('qt').textContent=((cur==='year')?'📅 Когда: ':'📖 ')+q[1]; var box=document.getElementById('ans'); box.innerHTML=''; document.getElementById('ex').style.display='none'; document.getElementById('nx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('data-i',k); b.setAttribute('onclick','ck('+k+',this)'); box.appendChild(b); } }
+function ck(sel,btn){ if(ok)return; ok=true; var q=qs[i]; var all=document.querySelectorAll('#ans .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('ex'); if(sel===q[3]){ btn.classList.add('ok'); pts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); hp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; us(); var nb=document.getElementById('nx'); if(hp<=0)nb.textContent='🏁 Завершить'; else if(i===qs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
+function nq(){ if(hp<=0||i===qs.length-1){fin();return;} i++; lq(); }
+function fin(){ var total=qs.length,correct=pts/10,pct=Math.round(correct/total*100); document.getElementById('fs').textContent=pts; document.getElementById('fc').textContent=correct; document.getElementById('ft').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('fm').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pts,gr); show('fin'); if(pct>=70) sndWin(); else sndWrong(); }
+
+/* ============ КРОССВОРД (история) ============ */
+function updateCrossLives(){ var el=document.getElementById('crossLives'); if(el) el.textContent=crossLives>0?'❤️'.repeat(crossLives):'💀'; }
+function goCross(g){ currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
+function checkCross(){ if(crossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ crossLives-=wrong; if(crossLives<0)crossLives=0; updateCrossLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(crossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибок: '+wrong+'. Жизни: '+crossLives); }
+function clearCross(){ var inputs=document.querySelectorAll('#crossGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} crossLives=5; updateCrossLives(); }
+
+/* ============ ВИКТОРИНА ПУШКИНА ============ */
+function pickPush(g){
+  sndStartGame(); pCur=g;
+  var t='Сложность';
+  if(g==='bio')t='🎯 Биография Пушкина'; else if(g==='works')t='🎯 Произведения Пушкина'; else if(g==='quotes')t='💬 Цитаты и герои';
+  document.getElementById('stPushT').textContent=t; show('setupPush');
+}
+function pdPush(btn){ var b=document.querySelectorAll('#setupPush .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); pDf=parseInt(btn.getAttribute('data-d')); }
+function stPush(){ var all=(pCur==='bio')?D_PUSH_BIO:(pCur==='works')?D_PUSH_WORKS:D_PUSH_QUOTES; var pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=pDf)pool.push(all[k]);
+  for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; }
+  pQs=pool;pI=0;pPts=0;pHp=3; usPush(); show('gamePush'); lqPush(); }
+function usPush(){ document.getElementById('pSc').textContent=pPts; document.getElementById('pLv').textContent=pHp>0?'❤️'.repeat(pHp):'💀'; }
+function lqPush(){ pOk=false; var q=pQs[pI]; document.getElementById('pQn').textContent=(pI+1)+'/'+pQs.length; document.getElementById('pQt').textContent='✍️ '+q[1]; var box=document.getElementById('pAns'); box.innerHTML=''; document.getElementById('pEx').style.display='none'; document.getElementById('pNx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('data-i',k); b.setAttribute('onclick','ckPush('+k+',this)'); box.appendChild(b); } }
+function ckPush(sel,btn){ if(pOk)return; pOk=true; var q=pQs[pI]; var all=document.querySelectorAll('#pAns .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('pEx'); if(sel===q[3]){ btn.classList.add('ok'); pPts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); pHp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; usPush(); var nb=document.getElementById('pNx'); if(pHp<=0)nb.textContent='🏁 Завершить'; else if(pI===pQs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
+function nqPush(){ if(pHp<=0||pI===pQs.length-1){finPush();return;} pI++; lqPush(); }
+function finPush(){ var total=pQs.length,correct=pPts/10,pct=Math.round(correct/total*100); document.getElementById('pfS').textContent=pPts; document.getElementById('pfC').textContent=correct; document.getElementById('pfT').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('pfM').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pPts,gr); show('finPush'); if(pct>=70) sndWin(); else sndWrong(); }
+
+/* ============ КРОССВОРД ПУШКИНА ============ */
+function updatePushLives(){ var el=document.getElementById('crossPushLives'); if(el) el.textContent=pushCrossLives>0?'❤️'.repeat(pushCrossLives):'💀'; }
+function goCrossPush(g){ currentCrossPush=g; pushCrossLives=5; var cfg=(g==='bio')?CROSS_PUSH_BIO:CROSS_PUSH_WORKS; document.getElementById('crossPushTitle').textContent=cfg.title; document.getElementById('crossPushSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossPushGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesPushA'),dL=document.getElementById('cluesPushD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updatePushLives(); show('crossPushScreen'); }
+function checkCrossPush(){ if(pushCrossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossPushGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong===0){sndCorrect();} else {sndWrong();} if(wrong>0){ pushCrossLives-=wrong; if(pushCrossLives<0)pushCrossLives=0; updatePushLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(pushCrossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибки: '+wrong+'. Жизни: '+pushCrossLives); }
+function clearCrossPush(){ var inputs=document.querySelectorAll('#crossPushGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} pushCrossLives=5; updatePushLives(); }
+
+/* ============ ИГРА «КТО ПРАВ?» ============ */
+function startFun(){ funQs=[]; for(var k=0;k<FUN.length;k++)funQs.push(FUN[k]); for(var k=funQs.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=funQs[k];funQs[k]=funQs[j];funQs[j]=t; } funI=0;funScore=0; show('funScreen'); loadFun(); }
+function loadFun(){ funAnswered=false; var q=funQs[funI]; document.getElementById('funScore').textContent=funScore; document.getElementById('funNum').textContent=(funI+1)+'/'+funQs.length; document.getElementById('funQuestion').textContent='😂 '+q.q; var box=document.getElementById('funAnswers'); box.innerHTML=''; document.getElementById('funEx').style.display='none'; document.getElementById('funNext').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q.a.length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q.a[k]; b.setAttribute('data-i',k); b.setAttribute('onclick','checkFun('+k+',this)'); box.appendChild(b); } }
+function checkFun(sel,btn){ if(funAnswered)return; funAnswered=true; var q=funQs[funI]; var all=document.querySelectorAll('#funAnswers .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('funEx'); if(sel===q.c){ btn.classList.add('ok'); funScore+=10; sndFunWin(); ex.innerHTML='😂 <b>Красавчик!</b> +10 очков<br>'+q.e; } else { btn.classList.add('no'); all[q.c].classList.add('ok'); sndFunLose(); ex.innerHTML='😅 <b>Не самый удачный вариант.</b><br>Лучше было: <b>'+q.a[q.c]+'</b><br>'+q.e; } ex.style.display='block'; document.getElementById('funScore').textContent=funScore; var nb=document.getElementById('funNext'); if(funI===funQs.length-1)nb.textContent='🏆 Показать результат'; else nb.textContent='➡️ Следующая ситуация'; nb.style.display='block'; }
+function nextFun(){ if(funI===funQs.length-1){finFun();return;} funI++; loadFun(); }
+function finFun(){ var total=funQs.length,correct=funScore/10,pct=Math.round(correct/total*100); var msg,gr; if(pct>=90){msg='😂 <b>Ты король юмора!</b>';gr='Оценка юмора: 5 🤣';} else if(pct>=70){msg='😄 <b>Отличное чувство юмора!</b>';gr='Оценка юмора: 4 😆';} else if(pct>=50){msg='🙂 <b>Юмор понимаешь частично.</b>';gr='Оценка юмора: 3 😅';} else{msg='🤔 <b>Юмор — дело тонкое.</b>';gr='Оценка юмора: 2 😬';} document.getElementById('funMsg').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">'+gr+'</div>'; show('funFin'); if(pct>=70) sndFunWin(); else sndFunLose(); }
+
+/* ============ СОХРАНЕНИЕ РЕЗУЛЬТАТОВ ============ */
+function saveResult(name,role,score,grade){
+  if(!name) return;
+  var all=JSON.parse(localStorage.getItem('results')||'[]');
+  var found=false;
+  for(var k=0;k<all.length;k++){
+    if(all[k].name.toLowerCase()===name.toLowerCase()){
+      if(score>all[k].score){ all[k].score=score; all[k].grade=grade; }
+      all[k].role=role;
+      found=true; break;
+    }
+  }
+  if(!found) all.push({name:name,role:role,score:score,grade:grade});
+  all.sort(function(a,b){return b.score-a.score;});
+  localStorage.setItem('results',JSON.stringify(all));
+}
+
+/* ============ СТАРТ ============ */
+loadTheme();
+renderAnnouncement();
+var saved=localStorage.getItem('currentUser');
+var savedRole=localStorage.getItem('currentRole')||'Ученик';
+if(saved){
+  currentUser=saved;
+  currentRole=savedRole;
+  document.getElementById('userName').textContent=saved;
+  document.getElementById('userRole').textContent=savedRole;
+  document.getElementById('userAvatar').textContent=roleEmoji(savedRole);
+  show('subjects');
+} else {
+  show('loginScreen');
+}
+</script>
+</body>
+</html>
