@@ -1844,9 +1844,9 @@ var SOUND_ON=true;
 var SOUND_PACK='standard';
 var memeAudio=new Audio('musor-drop_P5245U6.mp3');
 memeAudio.volume=0.5;
-var memeAudio3=new Audio('okhaeshechki-dattebaeshechki.mp3');
+var memeAudio2=new Audio('okhaeshechki-dattebaeshechki.mp3');
 memeAudio2.volume=0.5;
-var memeAudio2=new Audio('discipline_eqjphn0.mp3');
+var memeAudio3=new Audio('discipline_eqjphn0.mp3');
 memeAudio2.volume=0.5;
 
 function initAudio(){
@@ -1915,7 +1915,7 @@ function setSoundPack(pack){
   }
   if(pack==='meme'){ memeAudio.play().catch(function(){}); }
   else if(pack==='meme2'){ memeAudio2.play().catch(function(){}); }
-else if(pack==='meme3'){ memeAudio3.play().catch(function(){}); }
+  else if(pack==='meme3'){ memeAudio3.play().catch(function(){}); }
 }
 function openSoundModal(){
   var m=document.getElementById('soundModal');
