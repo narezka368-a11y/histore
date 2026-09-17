@@ -1867,6 +1867,7 @@ function beep(freq,dur,type,vol){
 }
 function sndCorrect(){
   if(SOUND_PACK==='meme'){ if(SOUND_ON) memeAudio.play().catch(function(){}); return; }
+  if(SOUND_PACK==='meme2'){ if(SOUND_ON) memeAudio2.play().catch(function(){}); return; }
   if(SOUND_PACK==='retro'){ beep(880,0.08,'square',0.2); setTimeout(function(){beep(1100,0.08,'square',0.2);},80); setTimeout(function(){beep(1320,0.15,'square',0.2);},160); return; }
   if(SOUND_PACK==='soft'){ beep(523,0.2,'sine',0.12); setTimeout(function(){beep(659,0.3,'sine',0.1);},180); return; }
   if(SOUND_PACK==='bell'){ beep(1200,0.15,'sine',0.15); setTimeout(function(){beep(1600,0.25,'sine',0.12);},120); return; }
@@ -1875,6 +1876,7 @@ function sndCorrect(){
 }
 function sndWrong(){
   if(SOUND_PACK==='meme'){ if(SOUND_ON) memeAudio.play().catch(function(){}); return; }
+  if(SOUND_PACK==='meme2'){ if(SOUND_ON) memeAudio2.play().catch(function(){}); return; }
   if(SOUND_PACK==='retro'){ beep(220,0.15,'square',0.15); setTimeout(function(){beep(160,0.2,'square',0.15);},150); return; }
   if(SOUND_PACK==='soft'){ beep(330,0.25,'sine',0.1); return; }
   if(SOUND_PACK==='bell'){ beep(500,0.3,'sine',0.12); return; }
@@ -1883,6 +1885,7 @@ function sndWrong(){
 }
 function sndWin(){
   if(SOUND_PACK==='meme'){ if(SOUND_ON) memeAudio.play().catch(function(){}); return; }
+  if(SOUND_PACK==='meme2'){ if(SOUND_ON) memeAudio2.play().catch(function(){}); return; }
   if(SOUND_PACK==='retro'){ beep(660,0.1,'square',0.2); setTimeout(function(){beep(880,0.1,'square',0.2);},100); setTimeout(function(){beep(1100,0.1,'square',0.2);},200); setTimeout(function(){beep(1320,0.3,'square',0.2);},300); return; }
   if(SOUND_PACK==='soft'){ beep(523,0.2,'sine',0.12); setTimeout(function(){beep(659,0.2,'sine',0.12);},200); setTimeout(function(){beep(784,0.3,'sine',0.12);},400); setTimeout(function(){beep(1047,0.4,'sine',0.12);},600); return; }
   if(SOUND_PACK==='bell'){ beep(1047,0.2,'sine',0.15); setTimeout(function(){beep(1319,0.2,'sine',0.15);},200); setTimeout(function(){beep(1568,0.4,'sine',0.15);},400); return; }
@@ -1908,7 +1911,7 @@ function setSoundPack(pack){
     else tiles[k].classList.remove('active');
   }
   if(pack==='meme'){ memeAudio.play().catch(function(){}); }
-  else if(pack!=='off'){ sndCorrect(); }
+else if(pack==='meme2'){ memeAudio2.play().catch(function(){}); }
 }
 function openSoundModal(){
   var m=document.getElementById('soundModal');
