@@ -12,3 +12,227 @@
 @media (max-width: 380px) {
   .card { padding: 12px; }
 }
+body.parchment{background:linear-gradient(135deg,#f4ecd8,#e6d3ab,#d4b483);color:#3b2a14}
+body.parchment .box{background:linear-gradient(160deg,#fbf3dd,#f0e2c0);border-color:#a67c2a}
+body.parchment h1,body.parchment h2{color:#7a5a14}
+body.parchment .sub{color:#a67c2a}
+body.parchment .card,body.parchment .theme-card{background:rgba(166,124,42,.14);border-color:rgba(166,124,42,.55);color:#3b2a14}
+body.parchment .card b,body.parchment .theme-card b{color:#7a5a14}
+body.parchment .userbox,body.parchment .st{background:rgba(166,124,42,.15);border-color:rgba(166,124,42,.5);color:#3b2a14}
+body.parchment .role{background:rgba(166,124,42,.12);border-color:rgba(166,124,42,.5);color:#3b2a14}
+body.parchment input,body.parchment select{background:rgba(255,255,255,.75);border-color:#a67c2a;color:#3b2a14}
+body.parchment .btn{background:linear-gradient(135deg,#a67c2a,#d4a017);color:#fff}
+body.parchment .topbar button{background:rgba(166,124,42,.15);color:#7a5a14;border-color:#a67c2a}
+body.parchment .themeModalBox{background:linear-gradient(160deg,#fbf3dd,#f0e2c0);border-color:#a67c2a}
+body.parchment .themeTile{background:rgba(166,124,42,.12);border-color:rgba(166,124,42,.5);color:#3b2a14}
+body.parchment .art{color:#3b2a14}
+body.parchment .art h2{color:#7a5a14;border-color:rgba(166,124,42,.5)}
+body.parchment .art b{color:#7a5a14}
+body.parchment .quote{background:rgba(142,68,173,.1);color:#4a235a}
+body.parchment .fact{background:rgba(41,128,185,.1);color:#1a5276}
+body.parchment .d{background:rgba(166,124,42,.15);border-color:#a67c2a}
+body.parchment .d b{color:#7a5a14}
+body.parchment .p{background:rgba(166,124,42,.1);border-color:rgba(166,124,42,.45)}
+body.parchment .p .nm{color:#7a5a14}
+body.parchment .fin{background:rgba(166,124,42,.15);color:#3b2a14}
+body.parchment .fin .g{color:#7a5a14}
+body.parchment .cross{background:#e6d3ab;border-color:#a67c2a}
+body.parchment .cross .cell{background:#fbf3dd;border-color:rgba(166,124,42,.5)}
+body.parchment .cross .cell input{color:#3b2a14}
+body.parchment .clues .col h3{color:#7a5a14;background:rgba(166,124,42,.15)}
+body.parchment .clues li{color:#3b2a14}
+body.parchment .q{background:rgba(166,124,42,.16);border-color:#a67c2a;color:#3b2a14}
+body.parchment .a{background:rgba(255,255,255,.6);border-color:rgba(166,124,42,.55);color:#3b2a14}
+body.parchment .ex{background:rgba(166,124,42,.18);border-color:#a67c2a;color:#3b2a14}
+body.parchment .back{background:rgba(166,124,42,.15);color:#8b6f2a;border-color:#a67c2a}
+body.parchment .df button{background:rgba(166,124,42,.1);border-color:#a67c2a;color:#3b2a14}
+body.parchment .df button.on{background:linear-gradient(135deg,#a67c2a,#d4a017);color:#fff}
+body.parchment .btn2{background:rgba(166,124,42,.15);color:#3b2a14;border-color:#a67c2a}
+body.parchment .announce{background:linear-gradient(135deg,rgba(142,68,173,.12),rgba(192,57,43,.06))}
+body.parchment .announce .text{color:#3b2a14}
+
+body.space{background:linear-gradient(135deg,#050418,#0f0a2e,#1a0f3a);color:#d8e0ff}
+body.space .box{background:linear-gradient(160deg,#0f0a2e,#050418);border-color:#5b8cff}
+body.space h1,body.space h2{color:#7ba7ff}
+body.space .sub{color:#8fa8e0}
+body.space .card,body.space .theme-card{background:rgba(91,140,255,.15);border-color:rgba(91,140,255,.5);color:#d8e0ff}
+body.space .card b,body.space .theme-card b{color:#7ba7ff}
+body.space .userbox,body.space .st{background:rgba(91,140,255,.15);border-color:rgba(91,140,255,.5);color:#d8e0ff}
+body.space .role{background:rgba(91,140,255,.1);border-color:rgba(91,140,255,.5);color:#d8e0ff}
+body.space input,body.space select{background:rgba(255,255,255,.08);border-color:#5b8cff;color:#d8e0ff}
+body.space .btn{background:linear-gradient(135deg,#5b8cff,#7ba7ff);color:#050418}
+body.space .topbar button{background:rgba(91,140,255,.15);color:#7ba7ff;border-color:#5b8cff}
+body.space .themeModalBox{background:linear-gradient(160deg,#0f0a2e,#050418);border-color:#5b8cff}
+body.space .themeTile{background:rgba(91,140,255,.12);border-color:rgba(91,140,255,.5);color:#d8e0ff}
+body.space .art{color:#d8e0ff}
+body.space .art h2{color:#7ba7ff;border-color:rgba(91,140,255,.5)}
+body.space .art b{color:#7ba7ff}
+body.space .quote{background:rgba(142,68,173,.2);color:#c39bd3}
+body.space .fact{background:rgba(41,128,185,.2);color:#aed6f1}
+body.space .d{background:rgba(91,140,255,.15);border-color:#5b8cff}
+body.space .d b{color:#7ba7ff}
+body.space .p{background:rgba(91,140,255,.1);border-color:rgba(91,140,255,.45)}
+body.space .p .nm{color:#7ba7ff}
+body.space .fin{background:rgba(91,140,255,.15);color:#d8e0ff}
+body.space .fin .g{color:#7ba7ff}
+body.space .cross{background:#0a0820;border-color:#5b8cff}
+body.space .cross .cell{background:#1a1a4a;border-color:rgba(91,140,255,.5)}
+body.space .cross .cell input{color:#d8e0ff}
+body.space .clues .col h3{color:#7ba7ff;background:rgba(91,140,255,.15)}
+body.space .clues li{color:#d8e0ff}
+body.space .q{background:rgba(91,140,255,.16);border-color:#5b8cff;color:#d8e0ff}
+body.space .a{background:rgba(255,255,255,.06);border-color:rgba(91,140,255,.55);color:#d8e0ff}
+body.space .ex{background:rgba(91,140,255,.2);border-color:#5b8cff;color:#d8e0ff}
+body.space .back{background:rgba(91,140,255,.15);color:#7ba7ff;border-color:#5b8cff}
+body.space .df button{background:rgba(91,140,255,.1);border-color:#5b8cff;color:#d8e0ff}
+body.space .df button.on{background:linear-gradient(135deg,#5b8cff,#7ba7ff);color:#050418}
+body.space .btn2{background:rgba(91,140,255,.15);color:#d8e0ff;border-color:#5b8cff}
+
+body.nature{background:linear-gradient(135deg,#0a1f10,#14402a,#0a2018);color:#d8f5e0}
+body.nature .box{background:linear-gradient(160deg,#14402a,#0a1f10);border-color:#4ade80}
+body.nature h1,body.nature h2{color:#86efac}
+body.nature .sub{color:#a7d9b5}
+body.nature .card,body.nature .theme-card{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.5);color:#d8f5e0}
+body.nature .card b,body.nature .theme-card b{color:#86efac}
+body.nature .userbox,body.nature .st{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.5);color:#d8f5e0}
+body.nature .role{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.5);color:#d8f5e0}
+body.nature input,body.nature select{background:rgba(255,255,255,.08);border-color:#4ade80;color:#d8f5e0}
+body.nature .btn{background:linear-gradient(135deg,#4ade80,#86efac);color:#0a1f10}
+body.nature .topbar button{background:rgba(74,222,128,.15);color:#86efac;border-color:#4ade80}
+body.nature .themeModalBox{background:linear-gradient(160deg,#14402a,#0a1f10);border-color:#4ade80}
+body.nature .themeTile{background:rgba(74,222,128,.12);border-color:rgba(74,222,128,.5);color:#d8f5e0}
+body.nature .art{color:#d8f5e0}
+body.nature .art h2{color:#86efac;border-color:rgba(74,222,128,.5)}
+body.nature .art b{color:#86efac}
+body.nature .quote{background:rgba(142,68,173,.15);color:#c39bd3}
+body.nature .fact{background:rgba(41,128,185,.15);color:#aed6f1}
+body.nature .d{background:rgba(74,222,128,.15);border-color:#4ade80}
+body.nature .d b{color:#86efac}
+body.nature .p{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.45)}
+body.nature .p .nm{color:#86efac}
+body.nature .fin{background:rgba(74,222,128,.15);color:#d8f5e0}
+body.nature .fin .g{color:#86efac}
+body.nature .cross{background:#0a2018;border-color:#4ade80}
+body.nature .cross .cell{background:#1a4a30;border-color:rgba(74,222,128,.5)}
+body.nature .cross .cell input{color:#d8f5e0}
+body.nature .clues .col h3{color:#86efac;background:rgba(74,222,128,.15)}
+body.nature .clues li{color:#d8f5e0}
+body.nature .q{background:rgba(74,222,128,.16);border-color:#4ade80;color:#d8f5e0}
+body.nature .a{background:rgba(255,255,255,.06);border-color:rgba(74,222,128,.55);color:#d8f5e0}
+body.nature .ex{background:rgba(74,222,128,.2);border-color:#4ade80;color:#d8f5e0}
+body.nature .back{background:rgba(74,222,128,.15);color:#86efac;border-color:#4ade80}
+body.nature .df button{background:rgba(74,222,128,.1);border-color:#4ade80;color:#d8f5e0}
+body.nature .df button.on{background:linear-gradient(135deg,#4ade80,#86efac);color:#0a1f10}
+body.nature .btn2{background:rgba(74,222,128,.15);color:#d8f5e0;border-color:#4ade80}
+
+body.neon{background:linear-gradient(135deg,#0a000a,#1a0030,#0a0020);color:#f0e0ff}
+body.neon .box{background:linear-gradient(160deg,#1a0030,#0a000a);border-color:#ff00c8}
+body.neon h1{color:#ff00c8}
+body.neon h2{color:#00ffff}
+body.neon .sub{color:#ff77dd}
+body.neon .card,body.neon .theme-card{background:rgba(255,0,200,.15);border-color:rgba(255,0,200,.6);color:#f0e0ff}
+body.neon .card b,body.neon .theme-card b{color:#00ffff}
+body.neon .userbox,body.neon .st{background:rgba(255,0,200,.15);border-color:rgba(255,0,200,.6);color:#f0e0ff}
+body.neon .role{background:rgba(255,0,200,.1);border-color:rgba(255,0,200,.6);color:#f0e0ff}
+body.neon input,body.neon select{background:rgba(255,255,255,.06);border-color:#ff00c8;color:#f0e0ff}
+body.neon .btn{background:linear-gradient(135deg,#ff00c8,#00ffff);color:#0a000a}
+body.neon .topbar button{background:rgba(255,0,200,.15);color:#00ffff;border-color:#ff00c8}
+body.neon .themeModalBox{background:linear-gradient(160deg,#1a0030,#0a000a);border-color:#ff00c8}
+body.neon .themeTile{background:rgba(255,0,200,.12);border-color:rgba(255,0,200,.5);color:#f0e0ff}
+body.neon .art{color:#f0e0ff}
+body.neon .art h2{color:#00ffff;border-color:rgba(255,0,200,.5)}
+body.neon .art b{color:#00ffff}
+body.neon .quote{background:rgba(142,68,173,.25);color:#d2b4de}
+body.neon .fact{background:rgba(41,128,185,.25);color:#aed6f1}
+body.neon .d{background:rgba(255,0,200,.15);border-color:#ff00c8}
+body.neon .d b{color:#00ffff}
+body.neon .p{background:rgba(255,0,200,.1);border-color:rgba(255,0,200,.5)}
+body.neon .p .nm{color:#00ffff}
+body.neon .fin{background:rgba(255,0,200,.15);color:#f0e0ff}
+body.neon .fin .g{color:#00ffff}
+body.neon .cross{background:#0a000a;border-color:#ff00c8}
+body.neon .cross .cell{background:#2a0040;border-color:rgba(255,0,200,.5)}
+body.neon .cross .cell input{color:#f0e0ff}
+body.neon .clues .col h3{color:#00ffff;background:rgba(255,0,200,.15)}
+body.neon .clues li{color:#f0e0ff}
+body.neon .q{background:rgba(255,0,200,.16);border-color:#ff00c8;color:#f0e0ff}
+body.neon .a{background:rgba(255,255,255,.05);border-color:rgba(255,0,200,.55);color:#f0e0ff}
+body.neon .ex{background:rgba(0,255,255,.15);border-color:#00ffff;color:#f0e0ff}
+body.neon .back{background:rgba(255,0,200,.15);color:#00ffff;border-color:#ff00c8}
+body.neon .df button{background:rgba(255,0,200,.1);border-color:#ff00c8;color:#f0e0ff}
+body.neon .df button.on{background:linear-gradient(135deg,#ff00c8,#00ffff);color:#0a000a}
+body.neon .btn2{background:rgba(255,0,200,.15);color:#f0e0ff;border-color:#ff00c8}
+
+body.blood{background:linear-gradient(135deg,#1a0000,#3a0000,#0a0000);color:#ffe0e0}
+body.blood .box{background:linear-gradient(160deg,#3a0000,#1a0000);border-color:#dc143c}
+body.blood h1,body.blood h2{color:#ff4444}
+body.blood .sub{color:#e0a0a0}
+body.blood .card,body.blood .theme-card{background:rgba(220,20,60,.15);border-color:rgba(220,20,60,.5);color:#ffe0e0}
+body.blood .card b,body.blood .theme-card b{color:#ff4444}
+body.blood .userbox,body.blood .st{background:rgba(220,20,60,.15);border-color:rgba(220,20,60,.5);color:#ffe0e0}
+body.blood .role{background:rgba(220,20,60,.1);border-color:rgba(220,20,60,.5);color:#ffe0e0}
+body.blood input,body.blood select{background:rgba(255,255,255,.06);border-color:#dc143c;color:#ffe0e0}
+body.blood .btn{background:linear-gradient(135deg,#dc143c,#ff4444);color:#fff}
+body.blood .topbar button{background:rgba(220,20,60,.15);color:#ff4444;border-color:#dc143c}
+body.blood .themeModalBox{background:linear-gradient(160deg,#3a0000,#1a0000);border-color:#dc143c}
+body.blood .themeTile{background:rgba(220,20,60,.12);border-color:rgba(220,20,60,.5);color:#ffe0e0}
+body.blood .art{color:#ffe0e0}
+body.blood .art h2{color:#ff4444;border-color:rgba(220,20,60,.5)}
+body.blood .art b{color:#ff4444}
+body.blood .quote{background:rgba(142,68,173,.2);color:#c39bd3}
+body.blood .fact{background:rgba(41,128,185,.2);color:#aed6f1}
+body.blood .d{background:rgba(220,20,60,.15);border-color:#dc143c}
+body.blood .d b{color:#ff4444}
+body.blood .p{background:rgba(220,20,60,.1);border-color:rgba(220,20,60,.45)}
+body.blood .p .nm{color:#ff4444}
+body.blood .fin{background:rgba(220,20,60,.15);color:#ffe0e0}
+body.blood .fin .g{color:#ff4444}
+body.blood .cross{background:#0a0000;border-color:#dc143c}
+body.blood .cross .cell{background:#4a1010;border-color:rgba(220,20,60,.5)}
+body.blood .cross .cell input{color:#ffe0e0}
+body.blood .clues .col h3{color:#ff4444;background:rgba(220,20,60,.15)}
+body.blood .clues li{color:#ffe0e0}
+body.blood .q{background:rgba(220,20,60,.16);border-color:#dc143c;color:#ffe0e0}
+body.blood .a{background:rgba(255,255,255,.05);border-color:rgba(220,20,60,.55);color:#ffe0e0}
+body.blood .ex{background:rgba(220,20,60,.2);border-color:#dc143c;color:#ffe0e0}
+body.blood .back{background:rgba(220,20,60,.15);color:#ff4444;border-color:#dc143c}
+body.blood .df button{background:rgba(220,20,60,.1);border-color:#dc143c;color:#ffe0e0}
+body.blood .df button.on{background:linear-gradient(135deg,#dc143c,#ff4444);color:#fff}
+body.blood .btn2{background:rgba(220,20,60,.15);color:#ffe0e0;border-color:#dc143c}
+
+body.gold{background:linear-gradient(135deg,#0a0800,#1a1400,#000000);color:#fff8d8}
+body.gold .box{background:linear-gradient(160deg,#1a1400,#0a0800);border-color:#ffd700}
+body.gold h1,body.gold h2{color:#ffd700}
+body.gold .sub{color:#d4b860}
+body.gold .card,body.gold .theme-card{background:rgba(255,215,0,.15);border-color:rgba(255,215,0,.55);color:#fff8d8}
+body.gold .card b,body.gold .theme-card b{color:#ffd700}
+body.gold .userbox,body.gold .st{background:rgba(255,215,0,.15);border-color:rgba(255,215,0,.55);color:#fff8d8}
+body.gold .role{background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.55);color:#fff8d8}
+body.gold input,body.gold select{background:rgba(255,255,255,.06);border-color:#ffd700;color:#fff8d8}
+body.gold .btn{background:linear-gradient(135deg,#ffd700,#ffed4e);color:#0a0800}
+body.gold .topbar button{background:rgba(255,215,0,.15);color:#ffd700;border-color:#ffd700}
+body.gold .themeModalBox{background:linear-gradient(160deg,#1a1400,#0a0800);border-color:#ffd700}
+body.gold .themeTile{background:rgba(255,215,0,.12);border-color:rgba(255,215,0,.5);color:#fff8d8}
+body.gold .art{color:#fff8d8}
+body.gold .art h2{color:#ffd700;border-color:rgba(255,215,0,.5)}
+body.gold .art b{color:#ffd700}
+body.gold .quote{background:rgba(142,68,173,.2);color:#c39bd3}
+body.gold .fact{background:rgba(41,128,185,.2);color:#aed6f1}
+body.gold .d{background:rgba(255,215,0,.15);border-color:#ffd700}
+body.gold .d b{color:#ffd700}
+body.gold .p{background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.5)}
+body.gold .p .nm{color:#ffd700}
+body.gold .fin{background:rgba(255,215,0,.15);color:#fff8d8}
+body.gold .fin .g{color:#ffd700}
+body.gold .cross{background:#000;border-color:#ffd700}
+body.gold .cross .cell{background:#3a2e00;border-color:rgba(255,215,0,.5)}
+body.gold .cross .cell input{color:#fff8d8}
+body.gold .clues .col h3{color:#ffd700;background:rgba(255,215,0,.15)}
+body.gold .clues li{color:#fff8d8}
+body.gold .q{background:rgba(255,215,0,.16);border-color:#ffd700;color:#fff8d8}
+body.gold .a{background:rgba(255,255,255,.05);border-color:rgba(255,215,0,.55);color:#fff8d8}
+body.gold .ex{background:rgba(255,215,0,.2);border-color:#ffd700;color:#fff8d8}
+body.gold .back{background:rgba(255,215,0,.15);color:#ffd700;border-color:#ffd700}
+body.gold .df button{background:rgba(255,215,0,.1);border-color:#ffd700;color:#fff8d8}
+body.gold .df button.on{background:linear-gradient(135deg,#ffd700,#ffed4e);color:#0a0800}
+body.gold .btn2{background:rgba(255,215,0,.15);color:#fff8d8;border-color:#ffd700}
