@@ -6,14 +6,11 @@
 <title>Учись и играй</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Georgia,serif}
-
-/* ТЁМНАЯ (по умолчанию) */
 body{background:radial-gradient(ellipse at top,rgba(201,162,39,.18),transparent 55%),linear-gradient(135deg,#0f0904,#2c1810,#1a0f08);background-attachment:fixed;color:#f5e6d3;padding:15px;min-height:100vh;transition:background .4s,color .4s}
-
-/* СВЕТЛАЯ */
 body.light{background:radial-gradient(ellipse at top,rgba(230,200,120,.4),transparent 55%),linear-gradient(135deg,#f5eedc,#e8d8b8,#d4c094);color:#2c1810}
 body.light .box{background:linear-gradient(160deg,#fbf5e5,#efe3c8);border-color:#8b6f1f}
-body.light h1,body.light h2{color:#6b4f0f}
+body.light h1{color:#6b4f0f}
+body.light h2{color:#6b4f0f;background:linear-gradient(90deg,rgba(139,111,31,.22),transparent);border-color:#8b6f1f}
 body.light .sub{color:#8b6f1f}
 body.light .card{background:linear-gradient(135deg,rgba(139,111,31,.12),rgba(139,111,31,.03));border-color:rgba(139,111,31,.5);color:#2c1810}
 body.light .card b{color:#6b4f0f}
@@ -59,10 +56,7 @@ body.light .topbar button{background:rgba(139,111,31,.15);color:#6b4f0f;border-c
 body.light .themeModalBox{background:linear-gradient(160deg,#fbf5e5,#efe3c8);border-color:#8b6f1f}
 body.light .themeTile{background:rgba(139,111,31,.1);border-color:rgba(139,111,31,.5);color:#2c1810}
 body.light .announce{background:linear-gradient(135deg,rgba(142,68,173,.15),rgba(192,57,43,.08))}
-body.light .announce .text{color:#2c1810}
-
-/* ПЕРГАМЕНТ */
-body.parchment{background:linear-gradient(135deg,#f4ecd8,#e6d3ab,#d4b483);color:#3b2a14}
+body.light .announce .text{color:#2c1810}body.parchment{background:linear-gradient(135deg,#f4ecd8,#e6d3ab,#d4b483);color:#3b2a14}
 body.parchment .box{background:linear-gradient(160deg,#fbf3dd,#f0e2c0);border-color:#a67c2a}
 body.parchment h1,body.parchment h2{color:#7a5a14}
 body.parchment .sub{color:#a67c2a}
@@ -80,7 +74,6 @@ body.parchment .art h2{color:#7a5a14;border-color:rgba(166,124,42,.5)}
 body.parchment .art b{color:#7a5a14}
 body.parchment .d{background:rgba(166,124,42,.15);border-color:#a67c2a}
 body.parchment .d b{color:#7a5a14}
-body.parchment .p{background:rgba(166,124,42,.1);border-color:rgba(166,124,42,.45)}
 body.parchment .fin{background:rgba(166,124,42,.15);color:#3b2a14}
 body.parchment .fin .g{color:#7a5a14}
 body.parchment .cross{background:#e6d3ab;border-color:#a67c2a}
@@ -98,7 +91,6 @@ body.parchment .btn2{background:rgba(166,124,42,.15);color:#3b2a14;border-color:
 body.parchment .announce{background:linear-gradient(135deg,rgba(142,68,173,.12),rgba(192,57,43,.06))}
 body.parchment .announce .text{color:#3b2a14}
 
-/* КОСМОС */
 body.space{background:linear-gradient(135deg,#050418,#0f0a2e,#1a0f3a);color:#d8e0ff}
 body.space .box{background:linear-gradient(160deg,#0f0a2e,#050418);border-color:#5b8cff}
 body.space h1,body.space h2{color:#7ba7ff}
@@ -132,7 +124,6 @@ body.space .df button{background:rgba(91,140,255,.1);border-color:#5b8cff;color:
 body.space .df button.on{background:linear-gradient(135deg,#5b8cff,#7ba7ff);color:#050418}
 body.space .btn2{background:rgba(91,140,255,.15);color:#d8e0ff;border-color:#5b8cff}
 
-/* ПРИРОДА */
 body.nature{background:linear-gradient(135deg,#0a1f10,#14402a,#0a2018);color:#d8f5e0}
 body.nature .box{background:linear-gradient(160deg,#14402a,#0a1f10);border-color:#4ade80}
 body.nature h1,body.nature h2{color:#86efac}
@@ -166,7 +157,6 @@ body.nature .df button{background:rgba(74,222,128,.1);border-color:#4ade80;color
 body.nature .df button.on{background:linear-gradient(135deg,#4ade80,#86efac);color:#0a1f10}
 body.nature .btn2{background:rgba(74,222,128,.15);color:#d8f5e0;border-color:#4ade80}
 
-/* НЕОН */
 body.neon{background:linear-gradient(135deg,#0a000a,#1a0030,#0a0020);color:#f0e0ff}
 body.neon .box{background:linear-gradient(160deg,#1a0030,#0a000a);border-color:#ff00c8}
 body.neon h1{color:#ff00c8}
@@ -199,10 +189,7 @@ body.neon .ex{background:rgba(0,255,255,.15);border-color:#00ffff;color:#f0e0ff}
 body.neon .back{background:rgba(255,0,200,.15);color:#00ffff;border-color:#ff00c8}
 body.neon .df button{background:rgba(255,0,200,.1);border-color:#ff00c8;color:#f0e0ff}
 body.neon .df button.on{background:linear-gradient(135deg,#ff00c8,#00ffff);color:#0a000a}
-body.neon .btn2{background:rgba(255,0,200,.15);color:#f0e0ff;border-color:#ff00c8}
-
-/* КРАСНАЯ */
-body.blood{background:linear-gradient(135deg,#1a0000,#3a0000,#0a0000);color:#ffe0e0}
+body.neon .btn2{background:rgba(255,0,200,.15);color:#f0e0ff;border-color:#ff00c8}body.blood{background:linear-gradient(135deg,#1a0000,#3a0000,#0a0000);color:#ffe0e0}
 body.blood .box{background:linear-gradient(160deg,#3a0000,#1a0000);border-color:#dc143c}
 body.blood h1,body.blood h2{color:#ff4444}
 body.blood .sub{color:#e0a0a0}
@@ -235,7 +222,6 @@ body.blood .df button{background:rgba(220,20,60,.1);border-color:#dc143c;color:#
 body.blood .df button.on{background:linear-gradient(135deg,#dc143c,#ff4444);color:#fff}
 body.blood .btn2{background:rgba(220,20,60,.15);color:#ffe0e0;border-color:#dc143c}
 
-/* ЗОЛОТАЯ */
 body.gold{background:linear-gradient(135deg,#0a0800,#1a1400,#000000);color:#fff8d8}
 body.gold .box{background:linear-gradient(160deg,#1a1400,#0a0800);border-color:#ffd700}
 body.gold h1,body.gold h2{color:#ffd700}
@@ -269,8 +255,234 @@ body.gold .df button{background:rgba(255,215,0,.1);border-color:#ffd700;color:#f
 body.gold .df button.on{background:linear-gradient(135deg,#ffd700,#ffed4e);color:#0a0800}
 body.gold .btn2{background:rgba(255,215,0,.15);color:#fff8d8;border-color:#ffd700}
 
-/* ОБЩИЕ СТИЛИ */
-.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
+body.ocean{background:linear-gradient(135deg,#021b2e,#064663,#0a7ea4);color:#d0f0ff}
+body.ocean .box{background:linear-gradient(160deg,#064663,#021b2e);border-color:#00b4d8}
+body.ocean h1,body.ocean h2{color:#00d4ff}
+body.ocean .sub{color:#7fd8f0}
+body.ocean .card,body.ocean .theme-card{background:rgba(0,180,216,.15);border-color:rgba(0,180,216,.5);color:#d0f0ff}
+body.ocean .card b,body.ocean .theme-card b{color:#00d4ff}
+body.ocean .userbox,body.ocean .st{background:rgba(0,180,216,.15);border-color:rgba(0,180,216,.5);color:#d0f0ff}
+body.ocean .role{background:rgba(0,180,216,.1);border-color:rgba(0,180,216,.5);color:#d0f0ff}
+body.ocean input,body.ocean select{background:rgba(255,255,255,.08);border-color:#00b4d8;color:#d0f0ff}
+body.ocean .btn{background:linear-gradient(135deg,#00b4d8,#00d4ff);color:#021b2e}
+body.ocean .topbar button{background:rgba(0,180,216,.15);color:#00d4ff;border-color:#00b4d8}
+body.ocean .themeModalBox{background:linear-gradient(160deg,#064663,#021b2e);border-color:#00b4d8}
+body.ocean .themeTile{background:rgba(0,180,216,.12);border-color:rgba(0,180,216,.5);color:#d0f0ff}
+body.ocean .art{color:#d0f0ff}
+body.ocean .art h2{color:#00d4ff;border-color:rgba(0,180,216,.5)}
+body.ocean .art b{color:#00d4ff}
+body.ocean .d{background:rgba(0,180,216,.15);border-color:#00b4d8}
+body.ocean .d b{color:#00d4ff}
+body.ocean .fin{background:rgba(0,180,216,.15);color:#d0f0ff}
+body.ocean .fin .g{color:#00d4ff}
+body.ocean .cross{background:#021b2e;border-color:#00b4d8}
+body.ocean .cross .cell{background:#064663;border-color:rgba(0,180,216,.5)}
+body.ocean .cross .cell input{color:#d0f0ff}
+body.ocean .clues .col h3{color:#00d4ff;background:rgba(0,180,216,.15)}
+body.ocean .clues li{color:#d0f0ff}
+body.ocean .q{background:rgba(0,180,216,.16);border-color:#00b4d8;color:#d0f0ff}
+body.ocean .a{background:rgba(255,255,255,.06);border-color:rgba(0,180,216,.55);color:#d0f0ff}
+body.ocean .ex{background:rgba(0,180,216,.2);border-color:#00b4d8;color:#d0f0ff}
+body.ocean .back{background:rgba(0,180,216,.15);color:#00d4ff;border-color:#00b4d8}
+body.ocean .df button{background:rgba(0,180,216,.1);border-color:#00b4d8;color:#d0f0ff}
+body.ocean .df button.on{background:linear-gradient(135deg,#00b4d8,#00d4ff);color:#021b2e}
+body.ocean .btn2{background:rgba(0,180,216,.15);color:#d0f0ff;border-color:#00b4d8}
+
+body.sakura{background:linear-gradient(135deg,#fff0f5,#ffe0eb,#ffd1dc);color:#5a1a2e}
+body.sakura .box{background:linear-gradient(160deg,#fff5f8,#ffe4ec);border-color:#ff69b4}
+body.sakura h1,body.sakura h2{color:#c71585}
+body.sakura .sub{color:#db7093}
+body.sakura .card,body.sakura .theme-card{background:rgba(255,105,180,.15);border-color:rgba(255,105,180,.5);color:#5a1a2e}
+body.sakura .card b,body.sakura .theme-card b{color:#c71585}
+body.sakura .userbox,body.sakura .st{background:rgba(255,105,180,.15);border-color:rgba(255,105,180,.5);color:#5a1a2e}
+body.sakura .role{background:rgba(255,105,180,.1);border-color:rgba(255,105,180,.5);color:#5a1a2e}
+body.sakura input,body.sakura select{background:rgba(255,255,255,.7);border-color:#ff69b4;color:#5a1a2e}
+body.sakura .btn{background:linear-gradient(135deg,#ff69b4,#ff1493);color:#fff}
+body.sakura .topbar button{background:rgba(255,105,180,.15);color:#c71585;border-color:#ff69b4}
+body.sakura .themeModalBox{background:linear-gradient(160deg,#fff5f8,#ffe4ec);border-color:#ff69b4}
+body.sakura .themeTile{background:rgba(255,105,180,.12);border-color:rgba(255,105,180,.5);color:#5a1a2e}
+body.sakura .art{color:#5a1a2e}
+body.sakura .art h2{color:#c71585;border-color:rgba(255,105,180,.5)}
+body.sakura .art b{color:#c71585}
+body.sakura .d{background:rgba(255,105,180,.15);border-color:#ff69b4}
+body.sakura .d b{color:#c71585}
+body.sakura .fin{background:rgba(255,105,180,.15);color:#5a1a2e}
+body.sakura .fin .g{color:#c71585}
+body.sakura .cross{background:#ffe4ec;border-color:#ff69b4}
+body.sakura .cross .cell{background:#fff5f8;border-color:rgba(255,105,180,.5)}
+body.sakura .cross .cell input{color:#5a1a2e}
+body.sakura .clues .col h3{color:#c71585;background:rgba(255,105,180,.15)}
+body.sakura .clues li{color:#5a1a2e}
+body.sakura .q{background:rgba(255,105,180,.16);border-color:#ff69b4;color:#5a1a2e}
+body.sakura .a{background:rgba(255,255,255,.6);border-color:rgba(255,105,180,.55);color:#5a1a2e}
+body.sakura .ex{background:rgba(255,105,180,.18);border-color:#ff69b4;color:#5a1a2e}
+body.sakura .back{background:rgba(255,105,180,.15);color:#c71585;border-color:#ff69b4}
+body.sakura .df button{background:rgba(255,105,180,.1);border-color:#ff69b4;color:#5a1a2e}
+body.sakura .df button.on{background:linear-gradient(135deg,#ff69b4,#ff1493);color:#fff}
+body.sakura .btn2{background:rgba(255,105,180,.15);color:#5a1a2e;border-color:#ff69b4}body.volcano{background:linear-gradient(135deg,#0a0000,#2a0a00,#1a0000);color:#ffd0a0}
+body.volcano .box{background:linear-gradient(160deg,#2a0a00,#0a0000);border-color:#ff4500}
+body.volcano h1,body.volcano h2{color:#ff6600}
+body.volcano .sub{color:#ff8c42}
+body.volcano .card,body.volcano .theme-card{background:rgba(255,69,0,.15);border-color:rgba(255,69,0,.5);color:#ffd0a0}
+body.volcano .card b,body.volcano .theme-card b{color:#ff6600}
+body.volcano .userbox,body.volcano .st{background:rgba(255,69,0,.15);border-color:rgba(255,69,0,.5);color:#ffd0a0}
+body.volcano .role{background:rgba(255,69,0,.1);border-color:rgba(255,69,0,.5);color:#ffd0a0}
+body.volcano input,body.volcano select{background:rgba(255,255,255,.06);border-color:#ff4500;color:#ffd0a0}
+body.volcano .btn{background:linear-gradient(135deg,#ff4500,#ff6600);color:#0a0000}
+body.volcano .topbar button{background:rgba(255,69,0,.15);color:#ff6600;border-color:#ff4500}
+body.volcano .themeModalBox{background:linear-gradient(160deg,#2a0a00,#0a0000);border-color:#ff4500}
+body.volcano .themeTile{background:rgba(255,69,0,.12);border-color:rgba(255,69,0,.5);color:#ffd0a0}
+body.volcano .art{color:#ffd0a0}
+body.volcano .art h2{color:#ff6600;border-color:rgba(255,69,0,.5)}
+body.volcano .art b{color:#ff6600}
+body.volcano .d{background:rgba(255,69,0,.15);border-color:#ff4500}
+body.volcano .d b{color:#ff6600}
+body.volcano .fin{background:rgba(255,69,0,.15);color:#ffd0a0}
+body.volcano .fin .g{color:#ff6600}
+body.volcano .cross{background:#0a0000;border-color:#ff4500}
+body.volcano .cross .cell{background:#2a0a00;border-color:rgba(255,69,0,.5)}
+body.volcano .cross .cell input{color:#ffd0a0}
+body.volcano .clues .col h3{color:#ff6600;background:rgba(255,69,0,.15)}
+body.volcano .clues li{color:#ffd0a0}
+body.volcano .q{background:rgba(255,69,0,.16);border-color:#ff4500;color:#ffd0a0}
+body.volcano .a{background:rgba(255,255,255,.05);border-color:rgba(255,69,0,.55);color:#ffd0a0}
+body.volcano .ex{background:rgba(255,69,0,.2);border-color:#ff4500;color:#ffd0a0}
+body.volcano .back{background:rgba(255,69,0,.15);color:#ff6600;border-color:#ff4500}
+body.volcano .df button{background:rgba(255,69,0,.1);border-color:#ff4500;color:#ffd0a0}
+body.volcano .df button.on{background:linear-gradient(135deg,#ff4500,#ff6600);color:#0a0000}
+body.volcano .btn2{background:rgba(255,69,0,.15);color:#ffd0a0;border-color:#ff4500}
+
+body.autumn{background:linear-gradient(135deg,#3a1e0a,#5a2e0a,#2a1508);color:#ffe0b0}
+body.autumn .box{background:linear-gradient(160deg,#5a2e0a,#3a1e0a);border-color:#d2691e}
+body.autumn h1,body.autumn h2{color:#ff8c00}
+body.autumn .sub{color:#daa520}
+body.autumn .card,body.autumn .theme-card{background:rgba(210,105,30,.15);border-color:rgba(210,105,30,.5);color:#ffe0b0}
+body.autumn .card b,body.autumn .theme-card b{color:#ff8c00}
+body.autumn .userbox,body.autumn .st{background:rgba(210,105,30,.15);border-color:rgba(210,105,30,.5);color:#ffe0b0}
+body.autumn .role{background:rgba(210,105,30,.1);border-color:rgba(210,105,30,.5);color:#ffe0b0}
+body.autumn input,body.autumn select{background:rgba(255,255,255,.06);border-color:#d2691e;color:#ffe0b0}
+body.autumn .btn{background:linear-gradient(135deg,#d2691e,#ff8c00);color:#2a1508}
+body.autumn .topbar button{background:rgba(210,105,30,.15);color:#ff8c00;border-color:#d2691e}
+body.autumn .themeModalBox{background:linear-gradient(160deg,#5a2e0a,#3a1e0a);border-color:#d2691e}
+body.autumn .themeTile{background:rgba(210,105,30,.12);border-color:rgba(210,105,30,.5);color:#ffe0b0}
+body.autumn .art{color:#ffe0b0}
+body.autumn .art h2{color:#ff8c00;border-color:rgba(210,105,30,.5)}
+body.autumn .art b{color:#ff8c00}
+body.autumn .d{background:rgba(210,105,30,.15);border-color:#d2691e}
+body.autumn .d b{color:#ff8c00}
+body.autumn .fin{background:rgba(210,105,30,.15);color:#ffe0b0}
+body.autumn .fin .g{color:#ff8c00}
+body.autumn .cross{background:#2a1508;border-color:#d2691e}
+body.autumn .cross .cell{background:#5a2e0a;border-color:rgba(210,105,30,.5)}
+body.autumn .cross .cell input{color:#ffe0b0}
+body.autumn .clues .col h3{color:#ff8c00;background:rgba(210,105,30,.15)}
+body.autumn .clues li{color:#ffe0b0}
+body.autumn .q{background:rgba(210,105,30,.16);border-color:#d2691e;color:#ffe0b0}
+body.autumn .a{background:rgba(255,255,255,.05);border-color:rgba(210,105,30,.55);color:#ffe0b0}
+body.autumn .ex{background:rgba(210,105,30,.2);border-color:#d2691e;color:#ffe0b0}
+body.autumn .back{background:rgba(210,105,30,.15);color:#ff8c00;border-color:#d2691e}
+body.autumn .df button{background:rgba(210,105,30,.1);border-color:#d2691e;color:#ffe0b0}
+body.autumn .df button.on{background:linear-gradient(135deg,#d2691e,#ff8c00);color:#2a1508}
+body.autumn .btn2{background:rgba(210,105,30,.15);color:#ffe0b0;border-color:#d2691e}
+
+body.sunset{background:linear-gradient(135deg,#2a0a2e,#8b1a4a,#ff6347);color:#fff0e0}
+body.sunset .box{background:linear-gradient(160deg,#4a0a3a,#2a0a2e);border-color:#ff6347}
+body.sunset h1,body.sunset h2{color:#ffb347}
+body.sunset .sub{color:#ffa07a}
+body.sunset .card,body.sunset .theme-card{background:rgba(255,99,71,.15);border-color:rgba(255,99,71,.5);color:#fff0e0}
+body.sunset .card b,body.sunset .theme-card b{color:#ffb347}
+body.sunset .userbox,body.sunset .st{background:rgba(255,99,71,.15);border-color:rgba(255,99,71,.5);color:#fff0e0}
+body.sunset .role{background:rgba(255,99,71,.1);border-color:rgba(255,99,71,.5);color:#fff0e0}
+body.sunset input,body.sunset select{background:rgba(255,255,255,.08);border-color:#ff6347;color:#fff0e0}
+body.sunset .btn{background:linear-gradient(135deg,#ff6347,#ffb347);color:#2a0a2e}
+body.sunset .topbar button{background:rgba(255,99,71,.15);color:#ffb347;border-color:#ff6347}
+body.sunset .themeModalBox{background:linear-gradient(160deg,#4a0a3a,#2a0a2e);border-color:#ff6347}
+body.sunset .themeTile{background:rgba(255,99,71,.12);border-color:rgba(255,99,71,.5);color:#fff0e0}
+body.sunset .art{color:#fff0e0}
+body.sunset .art h2{color:#ffb347;border-color:rgba(255,99,71,.5)}
+body.sunset .art b{color:#ffb347}
+body.sunset .d{background:rgba(255,99,71,.15);border-color:#ff6347}
+body.sunset .d b{color:#ffb347}
+body.sunset .fin{background:rgba(255,99,71,.15);color:#fff0e0}
+body.sunset .fin .g{color:#ffb347}
+body.sunset .cross{background:#2a0a2e;border-color:#ff6347}
+body.sunset .cross .cell{background:#4a0a3a;border-color:rgba(255,99,71,.5)}
+body.sunset .cross .cell input{color:#fff0e0}
+body.sunset .clues .col h3{color:#ffb347;background:rgba(255,99,71,.15)}
+body.sunset .clues li{color:#fff0e0}
+body.sunset .q{background:rgba(255,99,71,.16);border-color:#ff6347;color:#fff0e0}
+body.sunset .a{background:rgba(255,255,255,.06);border-color:rgba(255,99,71,.55);color:#fff0e0}
+body.sunset .ex{background:rgba(255,99,71,.2);border-color:#ff6347;color:#fff0e0}
+body.sunset .back{background:rgba(255,99,71,.15);color:#ffb347;border-color:#ff6347}
+body.sunset .df button{background:rgba(255,99,71,.1);border-color:#ff6347;color:#fff0e0}
+body.sunset .df button.on{background:linear-gradient(135deg,#ff6347,#ffb347);color:#2a0a2e}
+body.sunset .btn2{background:rgba(255,99,71,.15);color:#fff0e0;border-color:#ff6347}
+
+body.choco{background:linear-gradient(135deg,#1a0e08,#3e2418,#2a1810);color:#f5deb3}
+body.choco .box{background:linear-gradient(160deg,#3e2418,#1a0e08);border-color:#8b4513}
+body.choco h1,body.choco h2{color:#d2691e}
+body.choco .sub{color:#c9a96e}
+body.choco .card,body.choco .theme-card{background:rgba(139,69,19,.2);border-color:rgba(139,69,19,.6);color:#f5deb3}
+body.choco .card b,body.choco .theme-card b{color:#d2691e}
+body.choco .userbox,body.choco .st{background:rgba(139,69,19,.2);border-color:rgba(139,69,19,.6);color:#f5deb3}
+body.choco .role{background:rgba(139,69,19,.15);border-color:rgba(139,69,19,.6);color:#f5deb3}
+body.choco input,body.choco select{background:rgba(255,255,255,.08);border-color:#8b4513;color:#f5deb3}
+body.choco .btn{background:linear-gradient(135deg,#8b4513,#d2691e);color:#f5deb3}
+body.choco .topbar button{background:rgba(139,69,19,.2);color:#d2691e;border-color:#8b4513}
+body.choco .themeModalBox{background:linear-gradient(160deg,#3e2418,#1a0e08);border-color:#8b4513}
+body.choco .themeTile{background:rgba(139,69,19,.15);border-color:rgba(139,69,19,.6);color:#f5deb3}
+body.choco .art{color:#f5deb3}
+body.choco .art h2{color:#d2691e;border-color:rgba(139,69,19,.6)}
+body.choco .art b{color:#d2691e}
+body.choco .d{background:rgba(139,69,19,.2);border-color:#8b4513}
+body.choco .d b{color:#d2691e}
+body.choco .fin{background:rgba(139,69,19,.2);color:#f5deb3}
+body.choco .fin .g{color:#d2691e}
+body.choco .cross{background:#1a0e08;border-color:#8b4513}
+body.choco .cross .cell{background:#3e2418;border-color:rgba(139,69,19,.6)}
+body.choco .cross .cell input{color:#f5deb3}
+body.choco .clues .col h3{color:#d2691e;background:rgba(139,69,19,.2)}
+body.choco .clues li{color:#f5deb3}
+body.choco .q{background:rgba(139,69,19,.25);border-color:#8b4513;color:#f5deb3}
+body.choco .a{background:rgba(255,255,255,.06);border-color:rgba(139,69,19,.6);color:#f5deb3}
+body.choco .ex{background:rgba(139,69,19,.25);border-color:#8b4513;color:#f5deb3}
+body.choco .back{background:rgba(139,69,19,.2);color:#d2691e;border-color:#8b4513}
+body.choco .df button{background:rgba(139,69,19,.15);border-color:#8b4513;color:#f5deb3}
+body.choco .df button.on{background:linear-gradient(135deg,#8b4513,#d2691e);color:#f5deb3}
+body.choco .btn2{background:rgba(139,69,19,.2);color:#f5deb3;border-color:#8b4513}
+
+body.crystal{background:linear-gradient(135deg,#e0f7fa,#b2ebf2,#80deea);color:#004d5a}
+body.crystal .box{background:linear-gradient(160deg,#e8f9fc,#c8eef5);border-color:#00acc1}
+body.crystal h1,body.crystal h2{color:#00838f}
+body.crystal .sub{color:#00897b}
+body.crystal .card,body.crystal .theme-card{background:rgba(0,172,193,.15);border-color:rgba(0,172,193,.5);color:#004d5a}
+body.crystal .card b,body.crystal .theme-card b{color:#00838f}
+body.crystal .userbox,body.crystal .st{background:rgba(0,172,193,.15);border-color:rgba(0,172,193,.5);color:#004d5a}
+body.crystal .role{background:rgba(0,172,193,.1);border-color:rgba(0,172,193,.5);color:#004d5a}
+body.crystal input,body.crystal select{background:rgba(255,255,255,.7);border-color:#00acc1;color:#004d5a}
+body.crystal .btn{background:linear-gradient(135deg,#00acc1,#00bcd4);color:#fff}
+body.crystal .topbar button{background:rgba(0,172,193,.15);color:#00838f;border-color:#00acc1}
+body.crystal .themeModalBox{background:linear-gradient(160deg,#e8f9fc,#c8eef5);border-color:#00acc1}
+body.crystal .themeTile{background:rgba(0,172,193,.12);border-color:rgba(0,172,193,.5);color:#004d5a}
+body.crystal .art{color:#004d5a}
+body.crystal .art h2{color:#00838f;border-color:rgba(0,172,193,.5)}
+body.crystal .art b{color:#00838f}
+body.crystal .d{background:rgba(0,172,193,.15);border-color:#00acc1}
+body.crystal .d b{color:#00838f}
+body.crystal .fin{background:rgba(0,172,193,.15);color:#004d5a}
+body.crystal .fin .g{color:#00838f}
+body.crystal .cross{background:#c8eef5;border-color:#00acc1}
+body.crystal .cross .cell{background:#e8f9fc;border-color:rgba(0,172,193,.5)}
+body.crystal .cross .cell input{color:#004d5a}
+body.crystal .clues .col h3{color:#00838f;background:rgba(0,172,193,.15)}
+body.crystal .clues li{color:#004d5a}
+body.crystal .q{background:rgba(0,172,193,.16);border-color:#00acc1;color:#004d5a}
+body.crystal .a{background:rgba(255,255,255,.6);border-color:rgba(0,172,193,.55);color:#004d5a}
+body.crystal .ex{background:rgba(0,172,193,.18);border-color:#00acc1;color:#004d5a}
+body.crystal .back{background:rgba(0,172,193,.15);color:#00838f;border-color:#00acc1}
+body.crystal .df button{background:rgba(0,172,193,.1);border-color:#00acc1;color:#004d5a}
+body.crystal .df button.on{background:linear-gradient(135deg,#00acc1,#00bcd4);color:#fff}
+body.crystal .btn2{background:rgba(0,172,193,.15);color:#004d5a;border-color:#00acc1}.box{max-width:900px;margin:20px auto;background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:22px;padding:30px 26px;box-shadow:0 25px 70px rgba(0,0,0,.85);transition:background .4s,border-color .4s}
 h1{color:#f4d03f;text-align:center;font-size:1.9em;margin-bottom:8px;text-shadow:0 0 20px rgba(244,208,63,.55)}
 h2{color:#f4d03f;font-size:1.15em;padding:10px 14px;margin:24px 0 12px;background:linear-gradient(90deg,rgba(201,162,39,.22),transparent);border-left:4px solid #c9a227;border-radius:8px}
 .sub{text-align:center;color:#c9a227;font-style:italic;margin-bottom:18px}
@@ -361,7 +573,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 .announce .date{display:block;color:#b8956a;font-size:.8em;margin-top:8px;font-style:italic}
 .themeModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:1000;justify-content:center;align-items:center;padding:20px}
 .themeModal.on{display:flex}
-.themeModalBox{background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:20px;padding:24px;max-width:420px;width:100%}
+.themeModalBox{background:linear-gradient(160deg,#30200f,#1a0f08);border:3px solid #c9a227;border-radius:20px;padding:24px;max-width:420px;width:100%;max-height:90vh;overflow-y:auto}
 .themeModalBox h2{margin:0 0 16px;text-align:center;font-size:1.2em;padding:10px;background:linear-gradient(90deg,rgba(201,162,39,.25),transparent);border-left:4px solid #c9a227;border-radius:8px}
 .themeGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .themeTile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 10px;background:rgba(255,255,255,.06);border:2px solid rgba(201,162,39,.4);border-radius:12px;cursor:pointer;font-family:inherit;font-size:.9em;color:#f5e6d3}
@@ -369,74 +581,9 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 .themeTile .tic{font-size:1.8em}
 .themeCloseBtn{margin-top:16px;width:100%;padding:12px;background:rgba(255,255,255,.08);border:2px solid rgba(201,162,39,.5);border-radius:10px;color:inherit;cursor:pointer;font-family:inherit;font-size:1em}
 
-/* ТЕЛЕФОН */
-@media(max-width:700px){
-  .cross .cell{width:34px;height:34px}
-  .cross .cell input{font-size:1.05em}
-  .clues{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  body{padding:8px}
-  .box{padding:18px 14px;border-radius:16px}
-  h1{font-size:1.4em}
-  h2{font-size:1.05em;padding:8px 10px}
-  .hero{font-size:2.6em}
-  .sub{font-size:.9em}
-  .topbar{gap:6px}
-  .topbar button{padding:10px 12px;font-size:.85em;flex:1}
-  .card{padding:12px;gap:10px}
-  .card .ic{font-size:1.8em}
-  .card b{font-size:1em}
-  .card small{font-size:.78em}
-  .theme-card{padding:14px;gap:12px}
-  .theme-card .ic{font-size:2.2em}
-  .theme-card b{font-size:1.05em}
-  .theme-card small{font-size:.8em}
-  .theme-card .arrow{font-size:1.4em}
-  .roles{grid-template-columns:1fr 1fr;gap:8px}
-  .role{padding:12px 8px}
-  .role .em{font-size:1.6em}
-  .st{padding:10px 6px;gap:5px}
-  .st .v{font-size:1.2em}
-  .st .l{font-size:.65em}
-  .q{padding:12px 14px;font-size:1em}
-  .a{padding:13px 12px;font-size:.95em}
-  .art{font-size:.95em;line-height:1.7}
-  .art h2{font-size:1.1em;margin:22px 0 10px}
-  .btn{padding:14px;font-size:1em}
-  .df button{padding:9px 12px;font-size:.85em;flex:1}
-  .cross .cell{width:30px;height:30px}
-  .cross .cell input{font-size:.95em}
-  .cross .cell .num{font-size:.55em}
-  .clues .col h3{font-size:.92em;padding:6px 8px}
-  .clues li{font-size:.86em;padding-left:22px}
-  .themeGrid{grid-template-columns:1fr 1fr;gap:8px}
-  .themeTile{padding:11px 8px;font-size:.82em}
-  .themeTile .tic{font-size:1.5em}
-  .themeModalBox{padding:18px}
-  .userbox{padding:11px 12px;gap:8px}
-  .userbox .av{font-size:1.6em}
-  .userbox .who b{font-size:1em}
-  .userbox .who small{font-size:.78em}
-  .userbox .out{padding:7px 10px;font-size:.8em}
-  input[type=text],input[type=password],select{padding:14px;font-size:1em}
-  .back{padding:8px 11px;font-size:.85em}
-  .announce{padding:12px 14px}
-  .announce .text{font-size:.92em}
-}
-@media(max-width:380px){
-  .box{padding:14px 10px}
-  h1{font-size:1.25em}
-  .hero{font-size:2.2em}
-  .card{padding:10px;gap:8px}
-  .card .ic{font-size:1.6em}
-  .theme-card .ic{font-size:2em}
-  .st .v{font-size:1.05em}
-  .cross .cell{width:26px;height:26px}
-  .cross .cell input{font-size:.85em}
-  .roles{grid-template-columns:1fr}
-  .themeGrid{grid-template-columns:1fr}
-}
+@media(max-width:700px){.cross .cell{width:34px;height:34px}.cross .cell input{font-size:1.05em}.clues{grid-template-columns:1fr}}
+@media(max-width:600px){body{padding:8px}.box{padding:18px 14px;border-radius:16px}h1{font-size:1.4em}h2{font-size:1.05em;padding:8px 10px}.hero{font-size:2.6em}.sub{font-size:.9em}.topbar{gap:6px}.topbar button{padding:10px 12px;font-size:.85em;flex:1}.card{padding:12px;gap:10px}.card .ic{font-size:1.8em}.card b{font-size:1em}.card small{font-size:.78em}.theme-card{padding:14px;gap:12px}.theme-card .ic{font-size:2.2em}.theme-card b{font-size:1.05em}.theme-card small{font-size:.8em}.theme-card .arrow{font-size:1.4em}.roles{grid-template-columns:1fr 1fr;gap:8px}.role{padding:12px 8px}.role .em{font-size:1.6em}.st{padding:10px 6px;gap:5px}.st .v{font-size:1.2em}.st .l{font-size:.65em}.q{padding:12px 14px;font-size:1em}.a{padding:13px 12px;font-size:.95em}.art{font-size:.95em;line-height:1.7}.art h2{font-size:1.1em;margin:22px 0 10px}.btn{padding:14px;font-size:1em}.df button{padding:9px 12px;font-size:.85em;flex:1}.cross .cell{width:30px;height:30px}.cross .cell input{font-size:.95em}.cross .cell .num{font-size:.55em}.clues .col h3{font-size:.92em;padding:6px 8px}.clues li{font-size:.86em;padding-left:22px}.themeGrid{grid-template-columns:1fr 1fr;gap:8px}.themeTile{padding:11px 8px;font-size:.82em}.themeTile .tic{font-size:1.5em}.themeModalBox{padding:18px}.userbox{padding:11px 12px;gap:8px}.userbox .av{font-size:1.6em}.userbox .who b{font-size:1em}.userbox .who small{font-size:.78em}.userbox .out{padding:7px 10px;font-size:.8em}input[type=text],input[type=password],select{padding:14px;font-size:1em}.back{padding:8px 11px;font-size:.85em}.announce{padding:12px 14px}.announce .text{font-size:.92em}}
+@media(max-width:380px){.box{padding:14px 10px}h1{font-size:1.25em}.hero{font-size:2.2em}.card{padding:10px;gap:8px}.card .ic{font-size:1.6em}.theme-card .ic{font-size:2em}.st .v{font-size:1.05em}.cross .cell{width:26px;height:26px}.cross .cell input{font-size:.85em}.roles{grid-template-columns:1fr}.themeGrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -444,8 +591,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <div class="topbar">
 <button id="soundBtn" onclick="toggleSound()">🔊 Звук</button>
 <button id="themeBtn" onclick="openThemeModal()">🎨 Темы</button>
-</div>
-<div id="loginScreen" class="scr on">
+</div><div id="loginScreen" class="scr on">
 <div class="hero">👤</div>
 <h1>Вход</h1>
 <p class="sub">Напиши имя и выбери роль</p>
@@ -473,8 +619,8 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <div id="announcementBox">
   <div class="announce">
     <div class="text">
-      Привет всем, спасибо что слушаете меня, я буду очень рад если вы все зайдёте на мой сайт. Спасибо!
-      <span class="date">17 сентября 2026</span>
+     Я добовляю сюда номерацию обновления это уже 3 обновление сайта спасибо сато зашли!
+      <span class="date">17-18 сентября 2026</span>
     </div>
   </div>
 </div>
@@ -484,30 +630,34 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <h2>📖 Предметы</h2>
 <button class="card" onclick="go('histHome')"><div class="ic">🏰</div><div><b>История</b><small>Статьи · викторины · кроссворды</small></div></button>
 <button class="card" onclick="go('litHome')"><div class="ic">📖</div><div><b>Литература</b><small>Пушкин · статьи · игры</small></div></button>
-<button class="card" onclick="go('mathHome')"><div class="ic">➗</div><div><b>Математика</b><small>🚧 В разработке</small></div></button>
+<button class="card" onclick="go('mathHome')"><div class="ic">➗</div><div><b>Математика</b><small>Примеры · задачи · уравнения</small></div></button>
 <h2>😄 Развлечение</h2>
 <button class="card" onclick="startFun()"><div class="ic">😂</div><div><b>Кто прав?</b><small>Шутливая игра</small></div></button>
 </div>
 
-<div id="mathHome" class="scr">
-<button class="back" onclick="go('subjects')">← Назад</button>
-<div class="hero">➗</div>
-<h1>Математика</h1>
-<p class="sub">🚧 Раздел в разработке</p>
-<div class="art">
-<h2>Скоро здесь будет</h2>
-<ul>
-<li><b>📖 Статьи</b> — правила, формулы, примеры</li>
-<li><b>🎯 Викторины</b> — устный счёт, уравнения, задачи</li>
-<li><b>🧩 Кроссворды</b> — математические термины</li>
-<li><b>🎮 Игры</b> — тренировка счёта и логики</li>
-</ul>
-<div class="fact"><b>💡 А пока</b> — загляни в разделы «История» и «Литература»!</div>
-</div>
-<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
-</div>
-
-<div id="litHome" class="scr">
+<div id="themeModal" class="themeModal">
+  <div class="themeModalBox">
+    <h2>🎨 Выбери тему оформления</h2>
+    <div class="themeGrid">
+      <button class="themeTile" data-theme="dark" onclick="setTheme('dark')"><span class="tic">🌙</span><b>Тёмная</b></button>
+      <button class="themeTile" data-theme="light" onclick="setTheme('light')"><span class="tic">☀️</span><b>Светлая</b></button>
+      <button class="themeTile" data-theme="parchment" onclick="setTheme('parchment')"><span class="tic">📜</span><b>Пергамент</b></button>
+      <button class="themeTile" data-theme="space" onclick="setTheme('space')"><span class="tic">🌌</span><b>Космос</b></button>
+      <button class="themeTile" data-theme="nature" onclick="setTheme('nature')"><span class="tic">🌿</span><b>Природа</b></button>
+      <button class="themeTile" data-theme="neon" onclick="setTheme('neon')"><span class="tic">🎮</span><b>Неон</b></button>
+      <button class="themeTile" data-theme="blood" onclick="setTheme('blood')"><span class="tic">🩸</span><b>Красная</b></button>
+      <button class="themeTile" data-theme="gold" onclick="setTheme('gold')"><span class="tic">👑</span><b>Золотая</b></button>
+      <button class="themeTile" data-theme="ocean" onclick="setTheme('ocean')"><span class="tic">🌊</span><b>Океан</b></button>
+      <button class="themeTile" data-theme="sakura" onclick="setTheme('sakura')"><span class="tic">🌸</span><b>Сакура</b></button>
+      <button class="themeTile" data-theme="volcano" onclick="setTheme('volcano')"><span class="tic">🌋</span><b>Вулкан</b></button>
+      <button class="themeTile" data-theme="autumn" onclick="setTheme('autumn')"><span class="tic">🍂</span><b>Осень</b></button>
+      <button class="themeTile" data-theme="sunset" onclick="setTheme('sunset')"><span class="tic">🌇</span><b>Закат</b></button>
+      <button class="themeTile" data-theme="choco" onclick="setTheme('choco')"><span class="tic">🍫</span><b>Шоколад</b></button>
+      <button class="themeTile" data-theme="crystal" onclick="setTheme('crystal')"><span class="tic">💎</span><b>Кристалл</b></button>
+    </div>
+    <button class="themeCloseBtn" onclick="closeThemeModal()">Закрыть</button>
+  </div>
+</div><div id="litHome" class="scr">
 <button class="back" onclick="go('subjects')">← Назад</button>
 <div class="hero">📖</div>
 <h1>Литература — 6-7 класс</h1>
@@ -539,106 +689,87 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <button class="card" onclick="goCrossPush('bio')"><div class="ic">🧩</div><div><b>Кроссворд 1: Пушкин</b><small>8 слов о жизни</small></div></button>
 <button class="card" onclick="goCrossPush('works')"><div class="ic">🧩</div><div><b>Кроссворд 2: Произведения</b><small>8 слов о книгах</small></div></button>
 <button class="btn btn2" onclick="go('litHome')">🏠 К темам</button>
-</div><div id="pushkin" class="scr">
+</div>
+
+<div id="pushkin" class="scr">
 <button class="back" onclick="go('pushkinTopic')">← К разделу «Пушкин»</button>
 <h1>✍️ Александр Сергеевич Пушкин</h1>
 <p class="sub">1799–1837 · великий русский поэт</p>
 <div class="art">
 
 <h2>Введение</h2>
-<p><b>Александр Сергеевич Пушкин</b> (1799–1837) — великий русский поэт, драматург и прозаик, реформатор русского литературного языка. Его называют <b>«солнцем русской поэзии»</b> — и это точное описание его роли в культуре.</p>
-<p>Пушкин прожил всего <b>37 лет</b>, но успел написать более <b>800 произведений</b>: стихи, поэмы, сказки, романы, повести, драмы, критические статьи, письма. Его произведения переведены на <b>более 200 языков мира</b>.</p>
-<div class="quote">«Пушкин — наше всё» — Аполлон Григорьев (1859). Эти слова стали крылатыми.</div>
-<p><b>Почему Пушкин так важен?</b> До него русский литературный язык был тяжёлым, книжным, далёким от живой речи. Пушкин соединил книжный и разговорный язык, сделал его живым, простым и красивым. Именно он создал тот русский язык, на котором мы говорим сегодня.</p>
-<div class="fact"><b>💡 Интересно.</b> Пушкин знал французский, немецкий, английский, итальянский, испанский, латынь, греческий. Но писал только по-русски — и считал это принципиальным.</div>
+<p><b>Александр Сергеевич Пушкин</b> (1799–1837) — великий русский поэт, драматург и прозаик, реформатор русского литературного языка. Его называют <b>«солнцем русской поэзии»</b>.</p>
+<p>Пушкин прожил всего <b>37 лет</b>, но успел написать более <b>800 произведений</b>: стихи, поэмы, сказки, романы, повести, драмы. Его произведения переведены на <b>более 200 языков мира</b>.</p>
+<div class="quote">«Пушкин — наше всё» — Аполлон Григорьев (1859).</div>
+<p><b>Почему Пушкин так важен?</b> До него русский литературный язык был тяжёлым, книжным. Пушкин соединил книжный и разговорный язык, сделал его живым, простым и красивым.</p>
+<div class="fact"><b>💡 Интересно.</b> Пушкин знал французский, немецкий, английский, итальянский, испанский, латынь, греческий. Но писал только по-русски.</div>
 
 <h2>1. Детство (1799–1811)</h2>
-<p>Александр Сергеевич Пушкин родился <b>6 июня 1799 года</b> в Москве, в дворянской семье. Отец — <b>Сергей Львович Пушкин</b>, отставной военный, любитель литературы. Мать — <b>Надежда Осиповна</b>, внучка знаменитого «арапа Петра Великого» <b>Абрама Ганнибала</b>.</p>
-<p>Семья была образованной: в доме Пушкиных бывали <b>Николай Карамзин</b>, <b>Василий Жуковский</b>, <b>Константин Батюшков</b>. Но особую роль в жизни Саши сыграла няня — <b>Арина Родионовна</b>. Именно она рассказывала ему русские народные сказки, пела песни, учила живому русскому языку.</p>
+<p>Александр Сергеевич Пушкин родился <b>6 июня 1799 года</b> в Москве, в дворянской семье. Отец — <b>Сергей Львович Пушкин</b>, мать — <b>Надежда Осиповна</b>, внучка «арапа Петра Великого» <b>Абрама Ганнибала</b>.</p>
+<p>Семья была образованной: в доме Пушкиных бывали <b>Карамзин</b>, <b>Жуковский</b>, <b>Батюшков</b>. Но особую роль сыграла няня — <b>Арина Родионовна</b>.</p>
 <div class="quote">«Мастерица ведь была и откуда что брала!» — говорил Пушкин о няне.</div>
-<div class="fact"><b>💡 Интересно.</b> Дома Пушкины говорили в основном по-французски. Русский язык маленький Саша выучил от няни и бабушки — Марии Алексеевны Ганнибал.</div>
-<p>Уже в детстве Саша начал сочинять — сначала на французском, потом на русском. Родители не принимали его творчество всерьёз, но бабушка и няня всегда поддерживали.</p>
+<div class="fact"><b>💡 Интересно.</b> Дома Пушкины говорили по-французски. Русский язык Саша выучил от няни и бабушки.</div>
 
 <h2>2. Царскосельский лицей (1811–1817)</h2>
-<p>В <b>1811 году</b> 12-летний Пушкин поступил в только что открытый <b>Царскосельский лицей</b> — привилегированное учебное заведение для дворянских детей. Здесь он учился <b>6 лет</b>.</p>
-<p><b>Друзья по лицею:</b></p>
-<ul>
-<li><b>Иван Пущин</b> — самый близкий друг, будущий декабрист</li>
-<li><b>Антон Дельвиг</b> — поэт, издатель</li>
-<li><b>Вильгельм Кюхельбекер</b> — поэт, декабрист</li>
-<li><b>Александр Горчаков</b> — будущий министр иностранных дел</li>
-</ul>
-<p>В <b>1814 году</b>, в возрасте 15 лет, Пушкин написал первое серьёзное стихотворение — <b>«Воспоминания в Царском Селе»</b>. Оно было прочитано на экзамене в присутствии самого <b>Гаврилы Державина</b> — крупнейшего поэта того времени.</p>
-<div class="quote">«Я не умер! Вот кто заменит Державина!» — воскликнул потрясённый Державин, услышав юного Пушкина.</div>
-<div class="fact"><b>💡 Интересно.</b> В лицее Пушкин учился неровно: по словесности — отлично, по математике — плохо. Однажды учитель вызвал его к доске и спросил уравнение. Пушкин долго молчал, потом написал ответ. «Что же ты не решаешь?» — «Я не решаю, а пишу ответ», — ответил поэт.</div>
+<p>В <b>1811 году</b> 12-летний Пушкин поступил в <b>Царскосельский лицей</b>. Здесь он учился <b>6 лет</b>.</p>
+<p><b>Друзья по лицею:</b> Иван Пущин, Антон Дельвиг, Вильгельм Кюхельбекер, Александр Горчаков.</p>
+<p>В <b>1814 году</b> Пушкин написал первое серьёзное стихотворение — <b>«Воспоминания в Царском Селе»</b>. Оно было прочитано на экзамене в присутствии самого <b>Гаврилы Державина</b>.</p>
+<div class="quote">«Я не умер! Вот кто заменит Державина!» — воскликнул потрясённый Державин.</div>
+<div class="fact"><b>💡 Интересно.</b> В лицее Пушкин учился неровно: по словесности — отлично, по математике — плохо.</div>
 
 <h2>3. Петербург (1817–1820)</h2>
-<p>После лицея Пушкин поступил на службу в <b>Коллегию иностранных дел</b>. Он вёл светский образ жизни: балы, театры, дружеские пирушки. Но главное — писал.</p>
-<p>В <b>1820 году</b> он закончил поэму <b>«Руслан и Людмила»</b> — первую большую поэму, которая сразу принесла ему всероссийскую известность.</p>
-<p>Одновременно Пушкин писал <b>политические стихи</b>: «Вольность», «К Чаадаеву», «Деревня». В них он критиковал самодержавие и крепостное право.</p>
-<div class="quote">«Пока свободою горим, пока сердца для чести живы, мой друг, отчизне посвятим души прекрасные порывы!» — «К Чаадаеву» (1818).</div>
-<div class="fact"><b>💡 Интересно.</b> За эти стихи Пушкина отправили в ссылку. Царь Александр I хотел сослать его в Сибирь, но за поэта заступились Карамзин и Жуковский — и ссылку заменили на южную.</div>
+<p>После лицея Пушкин поступил на службу в <b>Коллегию иностранных дел</b>. Вёл светский образ жизни. В <b>1820 году</b> закончил поэму <b>«Руслан и Людмила»</b>.</p>
+<p>Одновременно писал <b>политические стихи</b>: «Вольность», «К Чаадаеву», «Деревня».</p>
+<div class="quote">«Пока свободою горим, пока сердца для чести живы...» — «К Чаадаеву» (1818).</div>
+<div class="fact"><b>💡 Интересно.</b> За эти стихи Пушкина отправили в ссылку. Царь хотел сослать в Сибирь, но за поэта заступились Карамзин и Жуковский.</div>
 
 <h2>4. Южная ссылка (1820–1824)</h2>
 <p>Пушкина сослали сначала в <b>Кишинёв</b>, потом в <b>Одессу</b>. Здесь он провёл 4 года.</p>
-<p>В ссылке Пушкин написал:</p>
 <ul>
 <li>Поэму <b>«Кавказский пленник»</b> (1822)</li>
 <li>Поэму <b>«Бахчисарайский фонтан»</b> (1823)</li>
 <li>Поэму <b>«Цыганы»</b> (1824)</li>
 <li>Начал роман в стихах <b>«Евгений Онегин»</b></li>
 </ul>
-<p>В Одессе Пушкин влюбился в <b>Елизавету Воронцову</b>, жену генерал-губернатора. Это вызвало конфликт, и поэта выслали в родовое имение.</p>
 
 <h2>5. Михайловское (1824–1826)</h2>
-<p>Пушкина сослали в родовое имение <b>Михайловское</b> (Псковская губерния). Здесь он жил под надзором, но именно здесь создал одно из главных своих произведений — трагедию <b>«Борис Годунов»</b> (1825).</p>
-<p>В Михайловском Пушкина навещал его лицейский друг <b>Иван Пущин</b>. Это была их последняя встреча: через несколько месяцев Пущин был арестован за участие в восстании декабристов.</p>
-<div class="fact"><b>💡 Интересно.</b> В Михайловском у Пушкина была только няня Арина Родионовна. Он писал: «Уединение — моя муза». Здесь он сочинял особенно много — до 100 стихотворений за год.</div>
+<p>Пушкина сослали в родовое имение <b>Михайловское</b>. Здесь он создал трагедию <b>«Борис Годунов»</b> (1825).</p>
+<p>В Михайловском Пушкина навещал его лицейский друг <b>Иван Пущин</b>. Это была их последняя встреча.</p>
+<div class="fact"><b>💡 Интересно.</b> В Михайловском у Пушкина была только няня Арина Родионовна. Он писал: «Уединение — моя муза».</div>
 
 <h2>6. Возвращение и Болдинская осень (1826–1830)</h2>
-<p>В <b>1826 году</b> новый царь <b>Николай I</b> вернул Пушкина из ссылки. Но свобода была условной: поэт оставался под полицейским надзором.</p>
-<p>В <b>1828 году</b> на балу Пушкин встретил <b>Наталью Николаевну Гончарову</b> — первую красавицу Москвы. Он влюбился и сделал предложение.</p>
-<p>В <b>1830 году</b> Пушкин поехал в имение <b>Болдино</b> улаживать дела перед свадьбой. Там он застрял из-за холеры — и за <b>3 месяца</b> написал столько, сколько иные писатели не пишут за всю жизнь:</p>
-<div class="fact"><b>💡 Болдинская осень (1830).</b> За 3 месяца Пушкин написал:
+<p>В <b>1826 году</b> новый царь <b>Николай I</b> вернул Пушкина из ссылки. Но свобода была условной.</p>
+<p>В <b>1828 году</b> Пушкин встретил <b>Наталью Николаевну Гончарову</b> — первую красавицу Москвы.</p>
+<p>В <b>1830 году</b> Пушкин поехал в имение <b>Болдино</b>. Там застрял из-за холеры — и за <b>3 месяца</b> написал:</p>
+<div class="fact"><b>💡 Болдинская осень (1830).</b>
 <ul>
 <li>«Повести Белкина» — 5 повестей</li>
 <li>«Маленькие трагедии» — 4 пьесы</li>
 <li>30 стихотворений</li>
 <li>Завершил роман «Евгений Онегин»</li>
-<li>Поэму «Домик в Коломне»</li>
-</ul>
-Это один из самых плодотворных периодов в истории литературы.</div>
+</ul></div>
 
 <h2>7. Женитьба и семейная жизнь (1831)</h2>
-<p>В феврале <b>1831 года</b> Пушкин обвенчался с <b>Натальей Гончаровой</b>. У них родились четверо детей:</p>
-<ul>
-<li><b>Мария</b> (1832)</li>
-<li><b>Александр</b> (1833)</li>
-<li><b>Григорий</b> (1835)</li>
-<li><b>Наталья</b> (1836)</li>
-</ul>
-<p>Семейная жизнь была счастливой, но омрачалась двумя проблемами: <b>долгами</b> и <b>завистью высшего света</b>.</p>
+<p>В феврале <b>1831 года</b> Пушкин обвенчался с <b>Натальей Гончаровой</b>. У них родились четверо детей: <b>Мария</b>, <b>Александр</b>, <b>Григорий</b>, <b>Наталья</b>.</p>
 
 <h2>8. Последние годы (1831–1837)</h2>
-<p>В <b>1833 году</b> царь пожаловал Пушкину звание <b>камер-юнкера</b> — придворный чин для молодых людей. Для 34-летнего поэта это было оскорблением.</p>
-<p>В <b>1836 году</b> Пушкин основал литературный журнал <b>«Современник»</b>. В нём он публиковал Гоголя, Жуковского, Баратынского.</p>
-<p>В это же время вокруг Натальи Николаевны начал виться француз <b>Жорж Дантес</b> — приёмный сын нидерландского посла. По Петербургу поползли слухи. Пушкин получил анонимный пасквиль, оскорблявший его и жену.</p>
+<p>В <b>1833 году</b> царь пожаловал Пушкину звание <b>камер-юнкера</b> — оскорбительное для поэта.</p>
+<p>В <b>1836 году</b> Пушкин основал журнал <b>«Современник»</b>.</p>
+<p>В это же время вокруг Натальи Николаевны начал виться француз <b>Жорж Дантес</b>.</p>
 
 <h2>9. Дуэль и смерть (1837)</h2>
-<p>Дуэль с <b>Дантесом</b> состоялась <b>27 января 1837 года</b> на Чёрной речке под Петербургом. Дантес выстрелил первым и смертельно ранил Пушкина в живот.</p>
-<p>Поэта привезли домой на Мойке. Врачи боролись за его жизнь <b>2 дня</b>, но рана была смертельной.</p>
-<div class="quote">«Хочу умереть по-христиански» — сказал Пушкин перед смертью, исповедавшись и причастившись.</div>
-<p>Александр Сергеевич Пушкин умер <b>29 января 1837 года</b> в возрасте <b>37 лет</b>. Похоронен в <b>Святогорском монастыре</b> (Псковская область).</p>
-<div class="fact"><b>💡 Интересно.</b> За несколько дней до дуэли Пушкин написал стихотворение «Я памятник себе воздвиг нерукотворный...» — как будто предчувствовал смерть.</div>
+<p>Дуэль с <b>Дантесом</b> состоялась <b>27 января 1837 года</b> на Чёрной речке. Дантес смертельно ранил Пушкина в живот.</p>
+<p>Пушкин умер <b>29 января 1837 года</b> в возрасте <b>37 лет</b>. Похоронен в <b>Святогорском монастыре</b>.</p>
+<div class="fact"><b>💡 Интересно.</b> За несколько дней до дуэли Пушкин написал «Я памятник себе воздвиг нерукотворный...».</div>
 
 <h2>10. Творчество</h2>
 <h3>📖 Сказки</h3>
 <ul>
-<li><b>«Сказка о попе и о работнике его Балде»</b> (1830)</li>
-<li><b>«Сказка о царе Салтане»</b> (1831)</li>
-<li><b>«Сказка о рыбаке и рыбке»</b> (1833)</li>
-<li><b>«Сказка о мёртвой царевне и о семи богатырях»</b> (1833)</li>
-<li><b>«Сказка о золотом петушке»</b> (1834)</li>
+<li>«Сказка о попе и о работнике его Балде» (1830)</li>
+<li>«Сказка о царе Салтане» (1831)</li>
+<li>«Сказка о рыбаке и рыбке» (1833)</li>
+<li>«Сказка о мёртвой царевне» (1833)</li>
+<li>«Сказка о золотом петушке» (1834)</li>
 </ul>
 <h3>📜 Поэмы</h3>
 <ul>
@@ -651,49 +782,43 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 </ul>
 <h3>📚 Романы и повести</h3>
 <ul>
-<li><b>«Евгений Онегин»</b> (1823–1831) — роман в стихах, главное произведение</li>
+<li><b>«Евгений Онегин»</b> (1823–1831)</li>
 <li><b>«Дубровский»</b> (1833)</li>
 <li><b>«Пиковая дама»</b> (1834)</li>
 <li><b>«Капитанская дочка»</b> (1836)</li>
-<li><b>«Повести Белкина»</b> (1830) — 5 повестей</li>
+<li><b>«Повести Белкина»</b> (1830)</li>
 </ul>
 <h3>🎭 Драмы</h3>
 <ul>
 <li>«Борис Годунов» (1825)</li>
-<li>«Маленькие трагедии» (1830) — 4 пьесы</li>
+<li>«Маленькие трагедии» (1830)</li>
 </ul>
 
 <h2>11. Значение Пушкина</h2>
 <div class="p"><span class="nm">✍️ Вклад в литературу</span>
 <p>✔ Создал современный русский литературный язык</p>
 <p>✔ Показал красоту русской речи</p>
-<p>✔ Соединил книжный и разговорный язык</p>
 <p>✔ Оказал влияние на всех русских писателей</p>
-<p>✔ Открыл новые жанры и формы</p>
-<p>✔ Сделал литературу живой и народной</p>
 </div>
 <div class="p"><span class="nm">🌍 Мировое значение</span>
 <p>✔ Произведения переведены на 200+ языков</p>
 <p>✔ Поставлены оперы, сняты фильмы, созданы балеты</p>
-<p>✔ Изучается в школах и университетах всего мира</p>
 </div>
 
 <div class="d"><b>📌 Важные даты</b>
 <ul>
 <li><b>1799</b> — родился в Москве</li>
 <li><b>1811–1817</b> — Царскосельский лицей</li>
-<li><b>1814</b> — первое стихотворение</li>
-<li><b>1820</b> — «Руслан и Людмила», южная ссылка</li>
+<li><b>1820</b> — «Руслан и Людмила»</li>
 <li><b>1824–1826</b> — Михайловское</li>
-<li><b>1825</b> — «Борис Годунов»</li>
 <li><b>1830</b> — Болдинская осень</li>
-<li><b>1831</b> — женился на Гончаровой</li>
+<li><b>1831</b> — женился</li>
 <li><b>1836</b> — основал «Современник»</li>
 <li><b>1837</b> — дуэль и смерть</li>
 </ul>
 </div>
 
-<div class="quote">«Нет, весь я не умру — душа в заветной лире мой прах переживёт и тленья убежит...» — «Я памятник себе воздвиг нерукотворный...» (1836).</div>
+<div class="quote">«Нет, весь я не умру — душа в заветной лире мой прах переживёт и тленья убежит...»</div>
 
 </div>
 <button class="btn" onclick="pickPush('bio')">🎯 Викторина</button>
@@ -747,178 +872,132 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <div class="art">
 
 <h2>Введение</h2>
-<p><b>Древняя Русь</b> — одно из крупнейших государств средневековой Европы. Оно возникло в <b>IX веке</b> и просуществовало более <b>700 лет</b>, превратившись из союза славянских племён в могучее государство, которое стало основой для России, Украины и Беларуси.</p>
-<p>Через земли Руси проходил знаменитый торговый путь <b>«из варяг в греки»</b> — из Скандинавии в Византию. Этот путь обогащал страну и связывал её с другими народами.</p>
-<div class="quote">«Земля наша велика и обильна, а порядка в ней нет. Приходите княжить и владеть нами» — слова, с которых началась история Руси.</div>
+<p><b>Древняя Русь</b> — одно из крупнейших государств средневековой Европы. Оно возникло в <b>IX веке</b> и просуществовало более <b>700 лет</b>, превратившись из союза славянских племён в могучее государство.</p>
+<p>Через земли Руси проходил знаменитый торговый путь <b>«из варяг в греки»</b> — из Скандинавии в Византию.</p>
+<div class="quote">«Земля наша велика и обильна, а порядка в ней нет. Приходите княжить и владеть нами».</div>
 
 <h2>1. Происхождение славян</h2>
-<p><b>Славяне</b> — одна из крупнейших групп народов Европы. Они пришли на Восточно-Европейскую равнину примерно в <b>VI–VII веках</b> и расселились по берегам рек: Днепра, Волхова, Оки, Волги.</p>
+<p><b>Славяне</b> пришли на Восточно-Европейскую равнину примерно в <b>VI–VII веках</b>.</p>
 <h3>Восточнославянские племена</h3>
 <ul>
-<li><b>Поляне</b> — жили у Днепра, вокруг Киева</li>
+<li><b>Поляне</b> — у Днепра, вокруг Киева</li>
 <li><b>Древляне</b> — в лесах, к северо-западу от Киева</li>
-<li><b>Кривичи</b> — верховья Днепра, Волги, Западной Двины</li>
+<li><b>Кривичи</b> — верховья Днепра</li>
 <li><b>Словене</b> — у озера Ильмень (Новгород)</li>
 <li><b>Вятичи</b> — в бассейне Оки</li>
 <li><b>Северяне</b> — у реки Десны</li>
-<li><b>Радимичи</b> — у реки Сож</li>
-<li><b>Дреговичи</b> — между Припятью и Двиной</li>
 </ul>
 <h3>Занятия славян</h3>
 <ul>
-<li><b>Земледелие</b> — пшеница, рожь, ячмень, овёс, просо</li>
-<li><b>Скотоводство</b> — коровы, овцы, свиньи, лошади</li>
-<li><b>Охота</b> — на пушного зверя</li>
-<li><b>Рыболовство</b> — на реках и озёрах</li>
+<li><b>Земледелие</b> — пшеница, рожь, ячмень</li>
+<li><b>Скотоводство</b> — коровы, овцы, лошади</li>
+<li><b>Охота</b>, <b>рыболовство</b></li>
 <li><b>Бортничество</b> — сбор мёда диких пчёл</li>
 <li><b>Ремёсла</b> — кузнечное, гончарное, ткацкое</li>
 </ul>
-<h3>Языческие боги славян</h3>
+<h3>Языческие боги</h3>
 <div class="p"><span class="nm">🌩️ Перун</span><p>Бог грома и молнии, покровитель воинов.</p></div>
 <div class="p"><span class="nm">🐄 Велес</span><p>Бог скота и богатства.</p></div>
 <div class="p"><span class="nm">☀️ Дажьбог</span><p>Бог солнца, света и тепла.</p></div>
-<div class="p"><span class="nm">🌾 Мокошь</span><p>Богиня плодородия и женской судьбы.</p></div>
-<div class="fact"><b>💡 Интересно.</b> Славяне верили в духов: домовых, леших, водяных, русалок. Даже приняв христианство, они долго сохраняли языческие обряды — Масленицу, Ивана Купалу, колядки.</div>
+<div class="p"><span class="nm">🌾 Мокошь</span><p>Богиня плодородия.</p></div>
+<div class="fact"><b>💡 Интересно.</b> Даже приняв христианство, славяне долго сохраняли языческие обряды — Масленицу, Ивана Купалу, колядки.</div>
 
 <h2>2. Призвание варягов (862)</h2>
-<p>По летописи «Повесть временных лет», в <b>862 году</b> славянские племена (словене, кривичи, чудь, весь) пригласили княжить <b>варягов</b> — скандинавских воинов. Пришёл <b>Рюрик</b> с дружиной и сел в Новгороде.</p>
-<div class="quote">«Земля наша велика и обильна, а порядка в ней нет. Приходите княжить и владеть нами».</div>
-<p>С этого события началась династия <b>Рюриковичей</b>, которая правила Русью и Россией более <b>700 лет</b>.</p>
-<div class="fact"><b>💡 Исторический спор.</b> Есть две теории:
-<ul>
-<li><b>Норманская</b> — государство создали варяги (норманны)</li>
-<li><b>Антинорманская</b> — государство возникло естественно, варяги лишь помогли</li>
-</ul>
-Современные историки считают, что истина посередине: государство возникло естественно, но варяги ускорили этот процесс.</div>
+<p>По летописи «Повесть временных лет», в <b>862 году</b> славянские племена пригласили княжить <b>варягов</b>. Пришёл <b>Рюрик</b> с дружиной и сел в Новгороде.</p>
+<p>С этого события началась династия <b>Рюриковичей</b>, которая правила Русью более <b>700 лет</b>.</p>
+<div class="fact"><b>💡 Исторический спор.</b> Две теории: <b>норманская</b> (государство создали варяги) и <b>антинорманская</b> (государство возникло само).</div>
 
 <h2>3. Первые князья</h2>
 <div class="p"><span class="nm">🛡️ Рюрик (862–879)</span>
-<p>Первый князь, основатель династии Рюриковичей. Правил в Новгороде.</p></div>
+<p>Первый князь, основатель династии Рюриковичей.</p></div>
 <div class="p"><span class="nm">🛡️ Олег (879–912)</span>
-<p><b>Вещий Олег</b> — опекун малолетнего сына Рюрика, Игоря. В <b>882 году</b> захватил Киев и объединил Новгород и Киев в одно государство. В <b>907 году</b> совершил поход на Царьград (Константинополь) и заключил выгодный договор с Византией.</p>
-<div class="quote">«Иду на вы!» — так Олег предупреждал врагов о войне.</div>
+<p><b>Вещий Олег</b> — опекун Игоря. В <b>882 году</b> захватил Киев и объединил Новгород и Киев. В <b>907 году</b> совершил поход на Царьград.</p>
+<div class="quote">«Иду на вы!» — так Олег предупреждал врагов.</div>
 </div>
 <div class="p"><span class="nm">🛡️ Игорь (912–945)</span>
-<p>Сын Рюрика. Пытался удержать единство Руси. В <b>945 году</b> был убит древлянами при попытке повторно собрать дань.</p></div>
+<p>Сын Рюрика. В <b>945 году</b> убит древлянами при сборе дани.</p></div>
 <div class="p"><span class="nm">🛡️ Ольга (945–962)</span>
-<p>Жена Игоря. Отомстила древлянам за мужа. Провела <b>налоговую реформу</b>: ввела «уроки» (фиксированный размер дани) и «погосты» (места сбора). Приняла христианство. Первая женщина-правительница Руси.</p></div>
+<p>Жена Игоря. Провела <b>налоговую реформу</b>: ввела «уроки» и «погосты». Приняла христианство.</p></div>
 <div class="p"><span class="nm">🛡️ Святослав (962–972)</span>
-<p>Сын Игоря и Ольги. Великий воин, почти всю жизнь провёл в походах. Разбил <b>Хазарский каганат</b> (965), воевал с Византией на Балканах. Погиб в бою с печенегами.</p>
-<div class="quote">«Мёртвые сраму не имут» — говорил Святослав перед битвой.</div>
+<p>Великий воин. Разбил <b>Хазарский каганат</b> (965). Погиб в бою с печенегами.</p>
+<div class="quote">«Мёртвые сраму не имут».</div>
 </div>
-<div class="fact"><b>💡 Интересно.</b> Святослав перед битвой всегда отправлял гонца со словами «Иду на вы!». Это был честный вызов — без внезапного нападения. Славяне ценили воинскую честь.</div>
 
 <h2>4. Крещение Руси (988)</h2>
-<p>Самое важное событие в истории Древней Руси — принятие христианства. Князь <b>Владимир Святославич</b> (внук Ольги) долго выбирал веру: рассматривал ислам, иудаизм, католичество и православие. Выбор пал на <b>православие из Византии</b>.</p>
-<p>В <b>988 году</b> Владимир крестился сам и крестил Русь. Христианство стало государственной религией.</p>
+<p>Князь <b>Владимир Святославич</b> долго выбирал веру. Выбор пал на <b>православие из Византии</b>.</p>
+<p>В <b>988 году</b> Владимир крестился сам и крестил Русь.</p>
 <h3>Значение крещения</h3>
 <ul>
-<li><b>Укрепило власть</b> князя — теперь он был «помазанником Божьим»</li>
-<li><b>Объединило племена</b> — единая вера вместо разных языческих культов</li>
-<li><b>Развило культуру</b> — письменность, книги, храмы, иконопись</li>
-<li><b>Сблизило с Византией</b> — самой развитой страной того времени</li>
-<li><b>Повысило международный авторитет</b> Руси</li>
+<li><b>Укрепило власть</b> князя</li>
+<li><b>Объединило племена</b></li>
+<li><b>Развило культуру</b> — письменность, книги, храмы</li>
+<li><b>Сблизило с Византией</b></li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Владимир сначала был ярым язычником — даже ставил идолов на холмах и приносил жертвы. Но после крещения полностью изменился: раздавал еду бедным, строил храмы, отменил смертную казнь.</div>
-<div class="quote">«Кто не придёт креститься — тот будет мне не друг» — сказал Владимир киевлянам.</div>
+<div class="fact"><b>💡 Интересно.</b> Владимир сначала был ярым язычником. Но после крещения полностью изменился: раздавал еду бедным, строил храмы.</div>
 
 <h2>5. Ярослав Мудрый (1019–1054)</h2>
-<p>Сын Владимира, <b>Ярослав Мудрый</b> — один из величайших правителей Древней Руси. При нём Русь достигла расцвета.</p>
-<h3>Что сделал Ярослав</h3>
+<p>Сын Владимира. При нём Русь достигла расцвета.</p>
 <ul>
-<li>Издал свод законов <b>«Русская Правда»</b> — первый письменный закон Руси</li>
+<li>Издал свод законов <b>«Русская Правда»</b></li>
 <li>Построил <b>Софийский собор</b> в Киеве (1037)</li>
-<li>Разбил <b>печенегов</b> (1036) — кочевников, которые грабили Русь</li>
-<li>Основал <b>Киево-Печерский монастырь</b> — центр книжности</li>
+<li>Разбил <b>печенегов</b> (1036)</li>
 <li>Открыл <b>школы</b> при церквях</li>
-<li>Собрал <b>библиотеку</b> — одну из первых на Руси</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Дочери Ярослава стали королевами:
-<ul>
-<li><b>Анна</b> — королевой Франции (вышла за Генриха I)</li>
-<li><b>Елизавета</b> — королевой Норвегии</li>
-<li><b>Анастасия</b> — королевой Венгрии</li>
-</ul>
-Сам Ярослав был женат на шведской принцессе Ингигерде. Русь при нём была связана родственными узами со всей Европой.</div>
-<div class="quote">«Русская Правда» — первый свод законов. За убийство — штраф (вира), а не кровная месть. Это был огромный шаг вперёд.</div>
+<div class="fact"><b>💡 Интересно.</b> Дочери Ярослава стали королевами: <b>Анна</b> — Франции, <b>Елизавета</b> — Норвегии, <b>Анастасия</b> — Венгрии.</div>
 
 <h2>6. Раздробленность (XII–XV века)</h2>
-<p>После смерти Ярослава Мудрого (1054) Русь постепенно распалась на отдельные княжества. Это время называется <b>раздробленностью</b>.</p>
-<h3>Причины раздробленности</h3>
-<ul>
-<li>Каждый князь хотел править сам</li>
-<li>Натуральное хозяйство — не нужны связи с другими землями</li>
-<li>Разные интересы у разных регионов</li>
-<li>Отсутствие единой армии</li>
-</ul>
+<p>После смерти Ярослава Русь распалась на отдельные княжества.</p>
 <h3>Крупнейшие княжества</h3>
-<div class="p"><span class="nm">🛡️ Владимиро-Суздальское</span><p>Северо-восток. Князья: Юрий Долгорукий, Андрей Боголюбский, Всеволод Большое Гнездо.</p></div>
+<div class="p"><span class="nm">🛡️ Владимиро-Суздальское</span><p>Северо-восток. Князья: Юрий Долгорукий, Андрей Боголюбский.</p></div>
 <div class="p"><span class="nm">🛡️ Галицко-Волынское</span><p>Юго-запад. Князья: Роман Мстиславич, Даниил Галицкий.</p></div>
-<div class="p"><span class="nm">🛡️ Новгородская республика</span><p>Северо-запад. Управлял вече (народное собрание), приглашали князя для защиты.</p></div>
+<div class="p"><span class="nm">🛡️ Новгородская республика</span><p>Северо-запад. Управлял вече.</p></div>
 
 <h2>7. Борьба с врагами (XIII век)</h2>
-<p>В XIII веке на Русь обрушились две страшные угрозы: с запада — <b>шведы и немецкие рыцари</b>, с востока — <b>монголо-татары</b>.</p>
-<h3>Ключевые события</h3>
 <ul>
-<li><b>1223</b> — битва на реке <b>Калке</b>: русские впервые столкнулись с монголами. Поражение.</li>
-<li><b>1237–1240</b> — нашествие <b>хана Батыя</b>. Разорены Рязань, Владимир, Киев.</li>
-<li><b>1240</b> — <b>Невская битва</b>: Александр Невский разбил шведов.</li>
-<li><b>1242</b> — <b>Ледовое побоище</b>: Александр Невский разбил немецких рыцарей на Чудском озере.</li>
+<li><b>1223</b> — битва на реке <b>Калке</b>: поражение от монголов</li>
+<li><b>1237–1240</b> — нашествие <b>хана Батыя</b></li>
+<li><b>1240</b> — <b>Невская битва</b>: Александр Невский разбил шведов</li>
+<li><b>1242</b> — <b>Ледовое побоище</b>: разбил немецких рыцарей</li>
 </ul>
-<div class="quote">«Кто с мечом к нам придёт — от меча и погибнет!» — приписывают Александру Невскому.</div>
+<div class="quote">«Кто с мечом к нам придёт — от меча и погибнет!»</div>
 
 <h2>8. Монголо-татарское иго (1240–1480)</h2>
-<p>С <b>1240 по 1480 год</b> Русь находилась под властью <b>Золотой Орды</b> — монгольского государства. Это время называют <b>игом</b>.</p>
-<h3>Что такое иго</h3>
-<ul>
-<li>Русские князья платили <b>дань</b> (выход) ордынскому хану</li>
-<li>Получали <b>ярлык</b> (грамоту) на княжение от хана</li>
-<li>Поставляли воинов для монгольских походов</li>
-<li>Терпели набеги и разорения</li>
-</ul>
-<h3>Ключевые события</h3>
+<p>С <b>1240 по 1480 год</b> Русь была под властью <b>Золотой Орды</b>.</p>
 <ul>
 <li><b>1327</b> — антиордынское восстание в Твери</li>
 <li><b>1380</b> — <b>Куликовская битва</b>: Дмитрий Донской разбил Мамая</li>
 <li><b>1480</b> — <b>стояние на Угре</b>: Иван III положил конец игу</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Куликовская битва не прекратила иго, но стала символом победы. Перед битвой Дмитрий получил благословение от <b>Сергия Радонежского</b>. На битву вышел монах <b>Пересвет</b> — бывший воин.</div>
+<div class="fact"><b>💡 Интересно.</b> Перед Куликовской битвой Дмитрий получил благословение от <b>Сергия Радонежского</b>.</div>
 
 <h2>9. Возвышение Москвы</h2>
-<p>Москва впервые упомянута в летописи в <b>1147 году</b>. Долго была маленьким городом, но постепенно стала центром русских земель.</p>
-<h3>Московские князья</h3>
+<p>Москва впервые упомянута в <b>1147 году</b>.</p>
 <ul>
 <li><b>Даниил Московский</b> (1263–1303) — первый князь Москвы</li>
-<li><b>Иван Калита</b> (1325–1340) — получил ярлык на великое княжение, расширил земли</li>
+<li><b>Иван Калита</b> (1325–1340) — расширил земли</li>
 <li><b>Дмитрий Донской</b> (1359–1389) — победил в Куликовской битве</li>
-<li><b>Василий II Тёмный</b> (1425–1462) — пережил междоусобицу</li>
 <li><b>Иван III</b> (1462–1505) — объединил Русь, сбросил иго</li>
 </ul>
 
 <h2>10. Иван Грозный (1533–1584)</h2>
-<p><b>Иван IV Грозный</b> — первый русский <b>царь</b>. В <b>1547 году</b> он венчался на царство.</p>
-<h3>Что сделал Иван Грозный</h3>
+<p>Первый русский <b>царь</b> (с 1547 года).</p>
 <ul>
-<li><b>Реформы</b> — создал Избранную раду, Земский собор, приказы</li>
 <li><b>Присоединил Казань</b> (1552) и <b>Астрахань</b> (1556)</li>
-<li>Начал <b>Ливонскую войну</b> (1558–1583) за выход к Балтике</li>
-<li>Ввёл <b>опричнину</b> (1565–1572) — террор против бояр</li>
+<li>Начал <b>Ливонскую войну</b> (1558–1583)</li>
+<li>Ввёл <b>опричнину</b> (1565–1572)</li>
 <li>Присоединил <b>Сибирь</b> (поход Ермака, 1581)</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Опричнина — тёмная страница правления. Царь разделил страну на опричнину и земщину, устроил массовые казни. Убил своего сына Ивана в приступе гнева.</div>
 
 <h2>11. Смута (1598–1613)</h2>
-<p>После смерти Ивана Грозного и его сына Фёдора династия Рюриковичей пресеклась. Началась <b>Смута</b> — гражданская война, голод, иностранная интервенция.</p>
-<h3>Ключевые события Смуты</h3>
+<p>После смерти Ивана Грозного династия Рюриковичей пресеклась.</p>
 <ul>
-<li><b>1598–1605</b> — правление Бориса Годунова</li>
+<li><b>1598–1605</b> — Борис Годунов</li>
 <li><b>1605–1606</b> — Лжедмитрий I</li>
-<li><b>1606–1610</b> — Василий Шуйский</li>
-<li><b>1610–1612</b> — польская оккупация Москвы</li>
-<li><b>1612</b> — <b>Второе ополчение</b> Минина и Пожарского освободило Москву</li>
-<li><b>1613</b> — <b>Земский собор</b> избрал царём <b>Михаила Романова</b></li>
+<li><b>1610–1612</b> — польская оккупация</li>
+<li><b>1612</b> — <b>Минин и Пожарский</b> освободили Москву</li>
+<li><b>1613</b> — <b>Михаил Романов</b> — царь</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> 4 ноября — <b>День народного единства</b> — праздник в честь освобождения Москвы ополчением Минина и Пожарского в 1612 году.</div>
+<div class="fact"><b>💡 Интересно.</b> 4 ноября — <b>День народного единства</b>.</div>
 
 <h2>📌 Все даты</h2>
 <div class="d">
@@ -926,19 +1005,16 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>862</b> — призвание Рюрика</li>
 <li><b>882</b> — Олег объединил Новгород и Киев</li>
 <li><b>988</b> — Крещение Руси</li>
-<li><b>1019–1054</b> — правление Ярослава Мудрого</li>
-<li><b>1147</b> — первое упоминание Москвы</li>
-<li><b>1223</b> — битва на Калке</li>
-<li><b>1237–1240</b> — нашествие Батыя</li>
+<li><b>1019–1054</b> — Ярослав Мудрый</li>
+<li><b>1147</b> — Москва</li>
+<li><b>1223</b> — Калка</li>
 <li><b>1240</b> — Невская битва</li>
 <li><b>1242</b> — Ледовое побоище</li>
 <li><b>1380</b> — Куликовская битва</li>
 <li><b>1480</b> — конец ига</li>
-<li><b>1547</b> — Иван IV — первый царь</li>
-<li><b>1552</b> — взятие Казани</li>
-<li><b>1565–1572</b> — опричнина</li>
+<li><b>1547</b> — первый царь</li>
 <li><b>1612</b> — Минин и Пожарский</li>
-<li><b>1613</b> — Михаил Романов</li>
+<li><b>1613</b> — Романовы</li>
 </ul>
 </div>
 
@@ -968,8 +1044,8 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 
 <h2>Введение</h2>
 <p><b>Средние века</b> — это эпоха в истории Европы, которая длилась примерно <b>1000 лет</b> — с <b>476</b> (падение Западной Римской империи) до <b>1492</b> (открытие Америки) или <b>1453</b> (падение Византии).</p>
-<p>Это время рыцарей и замков, крестовых походов и чумы, королей и церкви, университетов и великих соборов. Средневековье — не «тёмные века», как считали раньше, а эпоха, которая заложила основы современной Европы.</p>
-<div class="quote">«Средние века — это мост между античностью и Новым временем» — говорят историки.</div>
+<p>Это время рыцарей и замков, крестовых походов и чумы, королей и церкви, университетов и великих соборов.</p>
+<div class="quote">«Средние века — это мост между античностью и Новым временем».</div>
 
 <h2>1. Периоды Средневековья</h2>
 <div class="p"><span class="nm">📅 Раннее (V–XI вв.)</span>
@@ -978,10 +1054,10 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <p>Расцвет феодализма, крестовые походы, города, университеты, готические соборы.</p></div>
 <div class="p"><span class="nm">📅 Позднее (XV–XVII вв.)</span>
 <p>Кризис феодализма, Возрождение, Реформация, Великие географические открытия.</p></div>
-<div class="fact"><b>💡 Интересно.</b> Само слово «Средние века» (Medium Aevum) придумали гуманисты эпохи Возрождения. Они считали это время «варварским» и хотели вернуться к античности.</div>
+<div class="fact"><b>💡 Интересно.</b> Слово «Средние века» (Medium Aevum) придумали гуманисты эпохи Возрождения. Они считали это время «варварским».</div>
 
 <h2>2. Феодализм</h2>
-<p>Главная система Средневековья — <b>феодализм</b>. Это порядок, при котором земля принадлежит <b>феодалам</b> (землевладельцам), а крестьяне работают на них.</p>
+<p>Главная система Средневековья — <b>феодализм</b>. Земля принадлежит <b>феодалам</b>, а крестьяне работают на них.</p>
 <h3>Феодальная лестница</h3>
 <ul>
 <li><b>Король</b> — верховный правитель</li>
@@ -991,134 +1067,91 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>Крестьяне</b> — работают на земле</li>
 </ul>
 <h3>Вассалитет</h3>
-<p><b>Вассал</b> — тот, кто служит <b>сеньору</b> (господину). Вассал получал <b>феод</b> (землю) за службу. Сеньор защищал вассала.</p>
-<div class="quote">«Вассал моего вассала — не мой вассал» — главный принцип феодализма. Король не мог приказывать вассалам своего вассала.</div>
-<div class="fact"><b>💡 Интересно.</b> Обряд посвящения в вассалы назывался <b>оммаж</b> (от французского «человек»). Вассал становился на колени, клал руки в руки сеньора и клялся в верности.</div>
+<p><b>Вассал</b> — тот, кто служит <b>сеньору</b>. Вассал получал <b>феод</b> (землю) за службу.</p>
+<div class="quote">«Вассал моего вассала — не мой вассал».</div>
+<div class="fact"><b>💡 Интересно.</b> Обряд посвящения в вассалы назывался <b>оммаж</b>. Вассал становился на колени и клялся в верности.</div>
 
 <h2>3. Сословия</h2>
-<p>Средневековое общество делилось на <b>три сословия</b>:</p>
 <div class="p"><span class="nm">⛪ Духовенство</span>
 <p>Священники, монахи, епископы. Их задача — молиться за всех.</p></div>
 <div class="p"><span class="nm">⚔️ Рыцарство</span>
 <p>Воины. Их задача — защищать.</p></div>
 <div class="p"><span class="nm">🌾 Крестьянство</span>
 <p>Работники. Их задача — кормить всех.</p></div>
-<div class="fact"><b>💡 Интересно.</b> Крестьяне делились на <b>свободных</b> и <b>зависимых</b> (крепостных). Зависимые не могли уйти с земли, платили оброк (дань продуктами) и отрабатывали барщину (работа на сеньора).</div>
+<div class="fact"><b>💡 Интересно.</b> Крестьяне делились на <b>свободных</b> и <b>зависимых</b> (крепостных).</div>
 
 <h2>4. Рыцари и замки</h2>
-<p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Чтобы стать рыцарем, мальчик проходил долгий путь:</p>
+<p><b>Рыцарь</b> — конный воин в тяжёлых доспехах. Путь в рыцари:</p>
 <ul>
 <li><b>7 лет</b> — <b>паж</b> при дворе сеньора</li>
 <li><b>14 лет</b> — <b>оруженосец</b> у рыцаря</li>
 <li><b>21 год</b> — посвящение в рыцари</li>
 </ul>
-<h3>Замок</h3>
 <p>Рыцари жили в <b>замках</b> — каменных крепостях с высокими стенами, рвом, подъёмным мостом и башней-донжоном.</p>
-<div class="fact"><b>💡 Интересно.</b> Рыцарский кодекс требовал от воина:
-<ul>
-<li>Защищать слабых</li>
-<li>Быть верным сеньору</li>
-<li>Не лгать</li>
-<li>Уважать дам</li>
-</ul>
-Но на практике рыцари часто грабили крестьян и воевали друг с другом.</div>
+<div class="fact"><b>💡 Интересно.</b> Рыцарский кодекс требовал: защищать слабых, быть верным сеньору, не лгать, уважать дам.</div>
 
 <h2>5. Церковь</h2>
-<p>Церковь в Средние века была огромной силой. Она владела землями, влияла на королей, управляла умами людей.</p>
+<p>Церковь в Средние века была огромной силой.</p>
 <h3>Инквизиция</h3>
-<p><b>Инквизиция</b> — суд против <b>ереси</b> (отступничества от веры). Еретиков сжигали на кострах.</p>
-<div class="fact"><b>💡 Интересно.</b> Инквизиция была особенно активна в Испании и Италии. Самым страшным судьёй был Торквемада — за 15 лет он отправил на костёр более 2000 человек.</div>
+<p><b>Инквизиция</b> — суд против <b>ереси</b>. Еретиков сжигали на кострах.</p>
+<div class="fact"><b>💡 Интересно.</b> Самым страшным судьёй был Торквемада — за 15 лет отправил на костёр более 2000 человек.</div>
 <h3>Монашество</h3>
-<p>Монахи жили в монастырях, молились, переписывали книги, вели хозяйство. Крупнейшие ордена: <b>бенедиктинцы</b>, <b>францисканцы</b>, <b>доминиканцы</b>.</p>
-<div class="quote">«Молись и работай» (Ora et labora) — девиз бенедиктинцев.</div>
+<p>Монахи жили в монастырях, молились, переписывали книги. Крупнейшие ордена: <b>бенедиктинцы</b>, <b>францисканцы</b>, <b>доминиканцы</b>.</p>
+<div class="quote">«Молись и работай» (Ora et labora).</div>
 
 <h2>6. Крестовые походы (XI–XIII века)</h2>
-<p><b>Крестовые походы</b> — военные походы европейцев на Восток, чтобы освободить Святую землю (Палестину) от мусульман.</p>
-<h3>Ключевые даты</h3>
+<p><b>Крестовые походы</b> — военные походы европейцев на Восток, чтобы освободить Святую землю.</p>
 <ul>
 <li><b>1095</b> — папа Урбан II призвал к походу</li>
-<li><b>1096–1099</b> — <b>Первый поход</b> — успешный, взяли Иерусалим</li>
-<li><b>1189–1192</b> — <b>Третий поход</b> — Ричард Львиное Сердце против Саладина</li>
+<li><b>1096–1099</b> — <b>Первый поход</b> — успешный</li>
+<li><b>1189–1192</b> — <b>Третий поход</b> — Ричард Львиное Сердце</li>
 <li><b>1202–1204</b> — <b>Четвёртый поход</b> — разграбление Константинополя</li>
-<li><b>Всего — 8 походов</b></li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Поход детей (1212) — трагический эпизод. Тысячи детей отправились в Святую землю, но большинство погибли в пути или были проданы в рабство.</div>
-<div class="quote">«Так хочет Бог!» (Deus vult) — клич крестоносцев.</div>
+<div class="quote">«Так хочет Бог!» (Deus vult).</div>
 
 <h2>7. Чума (1347–1351)</h2>
-<p><b>Чёрная смерть</b> — страшная эпидемия чумы, которая выкосила <b>треть Европы</b>. Погибло около <b>25 миллионов человек</b>.</p>
-<h3>Как распространялась</h3>
-<ul>
-<li>Через крыс и блох</li>
-<li>По торговым путям</li>
-<li>В городах — очень быстро</li>
-</ul>
-<div class="fact"><b>💡 Интересно.</b> Во время чумы появились «чумные доктора» — врачи в масках с длинным клювом, в который клали травы. Считалось, что это защищает от заражения. На самом деле — не помогало.</div>
+<p><b>Чёрная смерть</b> — страшная эпидемия чумы, выкосившая <b>треть Европы</b>. Погибло около <b>25 миллионов человек</b>.</p>
+<div class="fact"><b>💡 Интересно.</b> Появились «чумные доктора» — в масках с длинным клювом, куда клали травы.</div>
 
 <h2>8. Города и университеты</h2>
-<p>В XI–XIII веках в Европе начали расти <b>города</b>. Здесь жили ремесленники и купцы.</p>
-<h3>Что было в городах</h3>
+<p>В XI–XIII веках начали расти <b>города</b>.</p>
 <ul>
-<li><b>Цеха</b> — объединения ремесленников одной профессии</li>
+<li><b>Цеха</b> — объединения ремесленников</li>
 <li><b>Гильдии</b> — объединения купцов</li>
 <li><b>Университеты</b> — центры науки</li>
 <li><b>Ратуши</b> — здания городского управления</li>
-<li><b>Соборы</b> — главные храмы</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Первые университеты:
-<ul>
-<li><b>Болонья</b> (1088) — Италия</li>
-<li><b>Оксфорд</b> (1096) — Англия</li>
-<li><b>Париж</b> (1150) — Франция</li>
-<li><b>Кембридж</b> (1209) — Англия</li>
-</ul>
-Студенты учились 4 года на бакалавра, потом ещё 2 — на магистра. Обучение велось на латыни.</div>
+<div class="fact"><b>💡 Интересно.</b> Первые университеты: <b>Болонья</b> (1088), <b>Оксфорд</b> (1096), <b>Париж</b> (1150).</div>
 
 <h2>9. Хартия вольностей (1215)</h2>
-<p>В <b>1215 году</b> английский король <b>Иоанн Безземельный</b> подписал <b>Великую хартию вольностей</b> — документ, который ограничил власть короля.</p>
-<h3>Что давала хартия</h3>
+<p>В <b>1215 году</b> английский король <b>Иоанн Безземельный</b> подписал <b>Великую хартию вольностей</b> — документ, ограничивший власть короля.</p>
 <ul>
 <li>Король не мог арестовать свободного человека без суда</li>
-<li>Король не мог вводить налоги без согласия совета</li>
-<li>Церковь получила свободу</li>
-<li>Города получили права</li>
+<li>Не мог вводить налоги без согласия совета</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Хартия 1215 года — один из первых документов о правах человека в истории. Многие идеи из неё вошли в Конституцию США и другие законы.</div>
+<div class="fact"><b>💡 Интересно.</b> Хартия 1215 года — один из первых документов о правах человека.</div>
 
 <h2>10. Столетняя война (1337–1453)</h2>
-<p>Война между <b>Англией</b> и <b>Францией</b>, которая длилась <b>116 лет</b> (с перерывами).</p>
-<h3>Ключевые события</h3>
+<p>Война между <b>Англией</b> и <b>Францией</b>, длившаяся <b>116 лет</b>.</p>
 <ul>
-<li><b>1346</b> — битва при Креси — англичане победили</li>
-<li><b>1415</b> — битва при Азенкуре — снова англичане</li>
+<li><b>1346</b> — битва при Креси</li>
+<li><b>1415</b> — битва при Азенкуре</li>
 <li><b>1429</b> — <b>Жанна д’Арк</b> сняла осаду Орлеана</li>
-<li><b>1431</b> — Жанну д’Арк сожгли в Руане</li>
-<li><b>1453</b> — французы победили, англичане ушли</li>
+<li><b>1453</b> — французы победили</li>
 </ul>
-<div class="quote"><b>Жанна д’Арк</b> — простая крестьянка, которая слышала «голоса святых» и повела французскую армию. Она стала символом Франции.</div>
-<div class="fact"><b>💡 Интересно.</b> Жанну д’Арк сожгли как «еретичку» в 1431 году. Через 25 лет её оправдали, а в 1920 году — причислили к лику святых.</div>
+<div class="fact"><b>💡 Интересно.</b> Жанну д’Арк сожгли как «еретичку» в 1431 году. Через 25 лет её оправдали, а в 1920 — причислили к лику святых.</div>
 
 <h2>11. Падение Византии (1453)</h2>
-<p>В <b>1453 году</b> турки-османы захватили <b>Константинополь</b> — столицу Византии. Это был конец тысячелетней империи.</p>
-<div class="fact"><b>💡 Интересно.</b> Последний император Византии <b>Константин XI</b> погиб в бою. Турки во главе с султаном <b>Мехмедом II</b> взяли город после 53-дневной осады.</div>
+<p>В <b>1453 году</b> турки-османы захватили <b>Константинополь</b>. Конец тысячелетней империи.</p>
 
 <h2>12. Реконкиста (VIII–XV века)</h2>
-<p><b>Реконкиста</b> — отвоевание христианами Пиренейского полуострова у мусульман. Длилась <b>700 лет</b> и завершилась в <b>1492 году</b>.</p>
-<h3>Результат</h3>
-<ul>
-<li>Образовались <b>Испания</b> и <b>Португалия</b></li>
-<li>В 1492 году испанцы взяли Гранаду — последний оплот мусульман</li>
-<li>Началась эпоха Великих географических открытий</li>
-</ul>
+<p><b>Реконкиста</b> — отвоевание христианами Пиренейского полуострова у мусульман. Завершилась в <b>1492 году</b>.</p>
 
-<h2>13. Изобретения Средневековья</h2>
-<div class="p"><span class="nm">🔧 XIII век</span>
-<p>Компас, механические часы, очки.</p></div>
-<div class="p"><span class="nm">🔧 XIV век</span>
-<p>Порох (в Европе), артиллерия.</p></div>
-<div class="p"><span class="nm">🔧 ≈1450</span>
-<p><b>Книгопечатание</b> — Иоганн Гутенберг изобрёл печатный станок с наборным шрифтом. Книги стали доступны всем.</p></div>
-<div class="fact"><b>💡 Интересно.</b> До Гутенберга книги переписывали монахи — это занимало месяцы. После печатного станка за то же время можно было напечатать 100 книг. Это полностью изменило Европу.</div>
+<h2>13. Изобретения</h2>
+<div class="p"><span class="nm">🔧 XIII век</span><p>Компас, механические часы, очки.</p></div>
+<div class="p"><span class="nm">🔧 XIV век</span><p>Порох, артиллерия.</p></div>
+<div class="p"><span class="nm">🔧 ≈1450</span><p><b>Книгопечатание</b> — Иоганн Гутенберг изобрёл печатный станок.</p></div>
+<div class="fact"><b>💡 Интересно.</b> До Гутенберга книги переписывали монахи — месяцы. После станка — 100 книг за то же время.</div>
 
 <h2>📌 Все даты</h2>
 <div class="d">
@@ -1129,7 +1162,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>1096–1099</b> — Первый крестовый поход</li>
 <li><b>1215</b> — Великая хартия вольностей</li>
 <li><b>1337–1453</b> — Столетняя война</li>
-<li><b>1347–1351</b> — Чёрная смерть (чума)</li>
+<li><b>1347–1351</b> — Чёрная смерть</li>
 <li><b>1453</b> — падение Византии</li>
 <li><b>1492</b> — конец Реконкисты</li>
 </ul>
@@ -1167,27 +1200,27 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 
 <h2>Введение</h2>
 <p><b>Франкское королевство</b> — одно из самых могущественных государств раннего Средневековья. Оно возникло в <b>V веке</b> на территории бывшей римской Галлии и просуществовало более <b>300 лет</b>.</p>
-<p>Именно франки заложили основу для будущих государств: <b>Франции, Германии, Италии</b>. Их история — это путь от союза воинственных племён до великой империи Карла Великого.</p>
+<p>Именно франки заложили основу для будущих государств: <b>Франции, Германии, Италии</b>.</p>
 <div class="quote">«Франки — свободные» — так переводится само название племени. Отсюда и название страны — Франция.</div>
 
 <h2>1. Кто такие франки?</h2>
-<p><b>Франки</b> — это группа германских племён, которые жили в низовьях Рейна. В <b>V веке</b>, когда Западная Римская империя пала, франки начали заселять римскую провинцию <b>Галлию</b> (современная Франция).</p>
+<p><b>Франки</b> — это группа германских племён, которые жили в низовьях Рейна. В <b>V веке</b>, когда Западная Римская империя пала, франки начали заселять римскую провинцию <b>Галлию</b>.</p>
 <h3>Франки делились на две группы</h3>
 <ul>
 <li><b>Салические франки</b> — жили у моря, их возглавлял Хлодвиг</li>
 <li><b>Рипуарские франки</b> — жили у Рейна</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Римляне называли франков «варварами», но сами франки быстро перенимали римскую культуру, латинский язык, обычаи. Уже через 100 лет они говорили на смеси германского и латинского — так родился старофранцузский язык.</div>
+<div class="fact"><b>💡 Интересно.</b> Римляне называли франков «варварами», но сами франки быстро перенимали римскую культуру и латинский язык.</div>
 
 <h2>2. Династия Меровингов</h2>
-<p><b>Меровинги</b> — первая династия франкских королей. Основатель — легендарный вождь <b>Меровей</b> (от него и название). Правили более <b>250 лет</b> — с V до VIII века.</p>
+<p><b>Меровинги</b> — первая династия франкских королей. Основатель — легендарный вождь <b>Меровей</b>. Правили более <b>250 лет</b> — с V до VIII века.</p>
 <h3>Особенность Меровингов</h3>
 <ul>
 <li>Носили <b>длинные волосы</b> — знак королевской власти</li>
 <li>Считались потомками морского чудовища (по легенде)</li>
 <li>Делили королевство между сыновьями</li>
 </ul>
-<div class="quote">Постричь Меровинга — значит лишить его права на престол. Поэтому свергнутых королей часто отправляли в монастырь и стригли.</div>
+<div class="quote">Постричь Меровинга — значит лишить его права на престол.</div>
 
 <h2>3. Хлодвиг I (481–511) — первый великий король</h2>
 <p><b>Хлодвиг I</b> — самый знаменитый король Меровингов. Именно он создал единое Франкское государство.</p>
@@ -1199,37 +1232,35 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>507</b> — разбил вестготов при Вуйе</li>
 <li>Сделал <b>Париж</b> столицей</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Хлодвиг был хитрым политиком: он не просто воевал, но и заключал союзы, подкупал врагов, устранял конкурентов. К концу жизни он объединил под своей властью почти всю Галлию.</div>
+<div class="fact"><b>💡 Интересно.</b> Хлодвиг был хитрым политиком: воевал, заключал союзы, подкупал врагов.</div>
 
 <h2>4. «Ленивые короли»</h2>
-<p>После смерти Хлодвига (511) его сыновья разделили королевство. Начались междоусобицы. Постепенно реальная власть перешла к <b>мажордомам</b> — управляющим королевским двором.</p>
-<p>Сами Меровинги стали «ленивыми королями» — они сидели на троне, но ничего не решали. Их возили на повозке, запряжённой волами.</p>
-<div class="quote">«Король ничего не делает — только ест, спит и правит по указке мажордома» — так описывали «ленивых королей».</div>
-<div class="fact"><b>💡 Интересно.</b> Мажордомы — это фактически премьер-министры того времени. Самыми известными были <b>Пипин Геристальский</b> и его сын <b>Карл Мартелл</b>.</div>
+<p>После смерти Хлодвига (511) его сыновья разделили королевство. Начались междоусобицы. Постепенно реальная власть перешла к <b>мажордомам</b>.</p>
+<p>Сами Меровинги стали «ленивыми королями» — сидели на троне, но ничего не решали. Их возили на повозке, запряжённой волами.</p>
+<div class="quote">«Король ничего не делает — только ест, спит и правит по указке мажордома».</div>
+<div class="fact"><b>💡 Интересно.</b> Мажордомы — это фактически премьер-министры. Самые известные: <b>Пипин Геристальский</b> и <b>Карл Мартелл</b>.</div>
 
 <h2>5. Карл Мартелл (717–741)</h2>
 <p><b>Карл Мартелл</b> — «Молот». Мажордом франков, который спас Европу от арабов.</p>
-<h3>Главные дела</h3>
 <ul>
 <li><b>732</b> — <b>битва при Пуатье</b>: разбил арабское войско</li>
 <li>Создал <b>тяжёлую конницу</b> — основу рыцарства</li>
 <li>Ввёл <b>бенефиции</b> — землю за службу</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Битва при Пуатье — одно из самых важных сражений в истории. Если бы арабы победили, Европа могла бы стать мусульманской. Историк Гиббон писал: «Если бы арабы победили при Пуатье, Коран уже преподавали бы в Оксфорде».</div>
+<div class="fact"><b>💡 Интересно.</b> Историк Гиббон: «Если бы арабы победили при Пуатье, Коран уже преподавали бы в Оксфорде».</div>
 
 <h2>6. Пипин Короткий (751–768)</h2>
-<p>Сын Карла Мартелла. Он сделал то, что не решались сделать его предки — <b>сверг последнего Меровинга</b> и сам стал королём.</p>
-<h3>Что сделал Пипин</h3>
+<p>Сын Карла Мартелла. <b>Сверг последнего Меровинга</b> и сам стал королём.</p>
 <ul>
 <li><b>751</b> — сверг Хильдерика III и стал королём</li>
 <li>Основал династию <b>Каролингов</b></li>
 <li>Заключил союз с папой римским</li>
 <li>«Пипинов дар» — передал папе земли в Италии</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Пипин спросил папу: «Кто должен быть королём — тот, кто сидит на троне, или тот, кто управляет?» Папа ответил: «Тот, кто управляет». Так Пипин получил «божье благословение» на свержение Меровингов.</div>
+<div class="fact"><b>💡 Интересно.</b> Пипин спросил папу: «Кто должен быть королём — тот, кто сидит на троне, или тот, кто управляет?» Папа ответил: «Тот, кто управляет».</div>
 
 <h2>7. Карл Великий (768–814)</h2>
-<p><b>Карл Великий</b> — самый знаменитый правитель Средневековья. При нём Франкское королевство достигло наивысшего расцвета.</p>
+<p><b>Карл Великий</b> — самый знаменитый правитель Средневековья.</p>
 <h3>Завоевания Карла</h3>
 <ul>
 <li><b>Италия</b> — разбил лангобардов</li>
@@ -1238,7 +1269,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>Испанская марка</b> — отвоевал у арабов</li>
 </ul>
 <h3>Карл — император</h3>
-<p>В <b>800 году</b> папа Лев III короновал Карла <b>императором Запада</b>. Это был первый император в Европе после падения Рима.</p>
+<p>В <b>800 году</b> папа Лев III короновал Карла <b>императором Запада</b>.</p>
 <h3>Каролингское возрождение</h3>
 <ul>
 <li>Открытие школ при монастырях</li>
@@ -1246,16 +1277,16 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li>Приглашение учёных со всей Европы</li>
 <li>Развитие письменности (каролингский минускул)</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Карл Великий сам не умел писать (только читать). Но он всю жизнь пытался научиться — держал под подушкой дощечки для письма и тренировался ночами.</div>
-<div class="quote">«Карл Великий — отец Европы» — так называют его историки. При нём впервые возникла идея единой Европы.</div>
+<div class="fact"><b>💡 Интересно.</b> Карл Великий сам не умел писать (только читать). Но всю жизнь пытался научиться.</div>
+<div class="quote">«Карл Великий — отец Европы».</div>
 
 <h2>8. Распад империи (843)</h2>
-<p>После смерти Карла Великого его сын <b>Людовик Благочестивый</b> не смог удержать империю. Начались войны между наследниками.</p>
+<p>После смерти Карла Великого его сын <b>Людовик Благочестивый</b> не смог удержать империю.</p>
 <p>В <b>843 году</b> был заключён <b>Верденский договор</b>: империя разделена на три части.</p>
 <div class="p"><span class="nm">🇫🇷 Западное королевство</span><p>Будущая Франция. Досталось Карлу Лысому.</p></div>
 <div class="p"><span class="nm">🇩🇪 Восточное королевство</span><p>Будущая Германия. Досталось Людовику Немецкому.</p></div>
 <div class="p"><span class="nm">🇮🇹 Срединное королевство</span><p>Будущая Италия. Досталось Лотарю.</p></div>
-<div class="fact"><b>💡 Интересно.</b> Верденский договор 843 года считается точкой рождения Франции и Германии как отдельных государств.</div>
+<div class="fact"><b>💡 Интересно.</b> Верденский договор 843 года считается точкой рождения Франции и Германии.</div>
 
 <h2>📌 Все даты</h2>
 <div class="d">
@@ -1285,10 +1316,10 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <h2>1. Кто такой Хлодвиг?</h2>
 <p><b>Хлодвиг I</b> (466–511) — король салических франков, основатель династии <b>Меровингов</b>. Он стал первым великим королём франков и создал единое Франкское государство.</p>
 <p>Хлодвиг был сыном короля <b>Хильдерика I</b> и королевы <b>Базины</b>. В <b>481 году</b>, после смерти отца, он стал королём в возрасте всего <b>15 лет</b>.</p>
-<div class="fact"><b>💡 Интересно.</b> Хлодвиг был язычником, но его жена <b>Клотильда</b> (бургундская принцесса) была христианкой. Она долго уговаривала мужа принять христианство — и в конце концов добилась своего.</div>
+<div class="fact"><b>💡 Интересно.</b> Хлодвиг был язычником, но его жена <b>Клотильда</b> (бургундская принцесса) была христианкой. Она долго уговаривала мужа принять христианство.</div>
 
 <h2>2. Завоевания Хлодвига</h2>
-<p>Хлодвиг был не только воином, но и хитрым политиком. Он расширял свои владения не только силой, но и интригами.</p>
+<p>Хлодвиг был не только воином, но и хитрым политиком.</p>
 <h3>Главные победы</h3>
 <div class="p"><span class="nm">⚔️ 486 — Суассон</span>
 <p>Разбил римского наместника <b>Сиагрия</b> и захватил Северную Галлию.</p></div>
@@ -1311,17 +1342,17 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <li><b>Сблизило с Византией</b> — христианской империей</li>
 <li><b>Повысило авторитет</b> среди других германских королей</li>
 </ul>
-<div class="fact"><b>💡 Интересно.</b> Хлодвиг принял <b>католичество</b> (западное христианство), а не арианство, как другие германские короли. Это дало ему поддержку римской церкви и галло-римского населения.</div>
+<div class="fact"><b>💡 Интересно.</b> Хлодвиг принял <b>католичество</b> (западное христианство), а не арианство, как другие германские короли. Это дало ему поддержку римской церкви.</div>
 
 <h2>4. Управление государством</h2>
-<p>Хлодвиг сделал <b>Париж</b> столицей своего королевства. Он создал систему управления:</p>
+<p>Хлодвиг сделал <b>Париж</b> столицей своего королевства.</p>
 <ul>
 <li><b>Графы</b> — управляли областями от имени короля</li>
 <li><b>Дружина</b> — личная охрана короля</li>
 <li><b>Салическая правда</b> — свод законов франков</li>
 </ul>
 <h3>Салическая правда</h3>
-<p>Это первый письменный свод законов франков. В нём были прописаны наказания за разные преступления.</p>
+<p>Это первый письменный свод законов франков.</p>
 <div class="fact"><b>💡 Интересно.</b> По Салической правде за убийство свободного франка платили штраф — <b>200 солидов</b>. За убийство римлянина — меньше. За убийство королевского дружинника — <b>600 солидов</b>. Так закон защищал знать.</div>
 
 <h2>5. Раздел королевства (511)</h2>
@@ -1365,9 +1396,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <button class="btn" onclick="pk('hl')">⚜️ Викторина</button>
 <button class="btn btn2" onclick="goCross('hl')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
-</div>
-
-<div id="km" class="scr">
+</div><div id="km" class="scr">
 <button class="back" onclick="go('frTopic')">← К разделу «Франки»</button>
 <h1>🔨 Карл Мартелл</h1>
 <p class="sub">717–741 годы</p>
@@ -1454,7 +1483,7 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <p>✔ Расширил границы</p>
 <p>✔ Подготовил приход Каролингов</p>
 </div>
-<div class="fact"><b>💡 Интересно.</b> Карл Мартелл считается одним из самых великих полководцев Средневековья. Его победа при Пуатье спасла Европу от арабского завоевания. Именно с него началось возвышение династии Каролингов.</div>
+<div class="fact"><b>💡 Интересно.</b> Карл Мартелл считается одним из самых великих полководцев Средневековья. Его победа при Пуатье спасла Европу от арабского завоевания.</div>
 
 <h2>📌 Все даты</h2>
 <div class="d">
@@ -1473,6 +1502,167 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <button class="btn" onclick="pk('km')">🔨 Викторина</button>
 <button class="btn btn2" onclick="goCross('km')">🧩 Кроссворд</button>
 <button class="btn btn2" onclick="go('frTopic')">🏠 К разделу</button>
+</div><div id="mathHome" class="scr">
+<button class="back" onclick="go('subjects')">← Назад</button>
+<div class="hero">➗</div>
+<h1>Математика — 6-7 класс</h1>
+<p class="sub">✦ Выбери тему ✦</p>
+<h2>🧮 Устный счёт</h2>
+<button class="card" onclick="pk('mathOral')"><div class="ic">🎯</div><div><b>Викторина: Устный счёт</b><small>15 примеров на скорость</small></div></button>
+<h2>💰 Проценты</h2>
+<button class="card" onclick="go('mathPercent')"><div class="ic">📜</div><div><b>Читать статью: Проценты</b><small>Как считать проценты</small></div></button>
+<button class="card" onclick="pk('mathPercent')"><div class="ic">🎯</div><div><b>Викторина: Проценты</b><small>15 задач</small></div></button>
+<h2>🔢 Умножение и деление дробей</h2>
+<button class="card" onclick="go('mathFrac')"><div class="ic">📜</div><div><b>Читать статью: Дроби</b><small>Умножение и деление</small></div></button>
+<button class="card" onclick="pk('mathFrac')"><div class="ic">🎯</div><div><b>Викторина: Дроби</b><small>15 примеров</small></div></button>
+<button class="card" onclick="goCross('mathFrac')"><div class="ic">🧩</div><div><b>Кроссворд: Дроби</b><small>8 слов</small></div></button>
+<h2>📊 Задачи</h2>
+<button class="card" onclick="pk('mathTask')"><div class="ic">🎯</div><div><b>Викторина: Задачи</b><small>15 задач</small></div></button>
+<h2>🧮 Уравнения</h2>
+<button class="card" onclick="pk('mathEq')"><div class="ic">🎯</div><div><b>Викторина: Уравнения</b><small>15 уравнений</small></div></button>
+<button class="card" onclick="goCross('mathEq')"><div class="ic">🧩</div><div><b>Кроссворд: Уравнения</b><small>8 слов</small></div></button>
+<button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
+</div>
+
+<div id="mathPercent" class="scr">
+<button class="back" onclick="go('mathHome')">← К математике</button>
+<div class="hero">💰</div>
+<h1>Проценты</h1>
+<p class="sub">Как считать проценты</p>
+<div class="art">
+
+<h2>Что такое процент?</h2>
+<p><b>Процент</b> — это одна сотая часть числа. Обозначается знаком <b>%</b>.</p>
+<p><b>1% = 1/100 = 0,01</b></p>
+<p>Например: <b>1% от 200</b> = 200 ÷ 100 = <b>2</b>.</p>
+<div class="fact"><b>💡 Интересно.</b> Слово «процент» происходит от латинского «pro centum» — «за сто». В Древнем Риме проценты использовали для расчёта налогов и долгов.</div>
+
+<h2>Как найти процент от числа</h2>
+<p><b>Правило:</b> чтобы найти <b>x%</b> от числа, нужно число умножить на <b>x</b> и разделить на <b>100</b>.</p>
+<p><b>Формула:</b> x% от A = A × x ÷ 100</p>
+<h3>Примеры</h3>
+<ul>
+<li><b>10% от 50</b> = 50 × 10 ÷ 100 = <b>5</b></li>
+<li><b>25% от 80</b> = 80 × 25 ÷ 100 = <b>20</b></li>
+<li><b>50% от 120</b> = 120 × 50 ÷ 100 = <b>60</b></li>
+</ul>
+<div class="fact"><b>💡 Лайфхак.</b> Чтобы быстро найти 10% — просто раздели число на 10. Чтобы найти 50% — раздели на 2. Чтобы найти 25% — раздели на 4.</div>
+
+<h2>Как найти число по его проценту</h2>
+<p><b>Правило:</b> если известно, что <b>x%</b> числа равны <b>B</b>, то само число = <b>B × 100 ÷ x</b>.</p>
+<h3>Примеры</h3>
+<ul>
+<li><b>20% числа = 8.</b> Число = 8 × 100 ÷ 20 = <b>40</b></li>
+<li><b>5% числа = 15.</b> Число = 15 × 100 ÷ 5 = <b>300</b></li>
+</ul>
+
+<h2>Как найти, сколько процентов одно число от другого</h2>
+<p><b>Правило:</b> чтобы узнать, сколько процентов <b>A</b> от <b>B</b>, нужно <b>A ÷ B × 100</b>.</p>
+<h3>Примеры</h3>
+<ul>
+<li><b>5 от 20</b> = 5 ÷ 20 × 100 = <b>25%</b></li>
+<li><b>30 от 60</b> = 30 ÷ 60 × 100 = <b>50%</b></li>
+</ul>
+
+<h2>Проценты в жизни</h2>
+<ul>
+<li><b>Скидки в магазине</b> — 20% скидка на товар</li>
+<li><b>Банковские вклады</b> — 10% годовых</li>
+<li><b>Налоги</b> — 13% НДФЛ</li>
+<li><b>Успеваемость</b> — 80% правильных ответов</li>
+</ul>
+
+<h2>Основные правила — шпаргалка</h2>
+<div class="d">
+<ul>
+<li><b>1%</b> = число ÷ 100</li>
+<li><b>10%</b> = число ÷ 10</li>
+<li><b>50%</b> = число ÷ 2</li>
+<li><b>x% от A</b> = A × x ÷ 100</li>
+<li><b>Число по x%</b> = B × 100 ÷ x</li>
+<li><b>Сколько % A от B</b> = A ÷ B × 100</li>
+</ul>
+</div>
+
+</div>
+<button class="btn" onclick="pk('mathPercent')">🎯 Викторина</button>
+<button class="btn btn2" onclick="go('mathHome')">🏠 К математике</button>
+</div>
+
+<div id="mathFrac" class="scr">
+<button class="back" onclick="go('mathHome')">← К математике</button>
+<div class="hero">🔢</div>
+<h1>Умножение и деление дробей</h1>
+<p class="sub">Как работать с дробями</p>
+<div class="art">
+
+<h2>Что такое дробь?</h2>
+<p><b>Дробь</b> — это число, которое показывает часть целого.</p>
+<p>Дробь записывается как <b>a/b</b>, где:</p>
+<ul>
+<li><b>a</b> — числитель (сколько частей взяли)</li>
+<li><b>b</b> — знаменатель (на сколько частей разделили)</li>
+</ul>
+<p>Например: <b>3/4</b> — три четвёртых. Целое разделили на 4 части и взяли 3.</p>
+
+<h2>Виды дробей</h2>
+<div class="p"><span class="nm">📗 Правильная</span><p>Числитель меньше знаменателя. Например: <b>3/5</b></p></div>
+<div class="p"><span class="nm">📕 Неправильная</span><p>Числитель больше или равен знаменателю. Например: <b>7/5</b></p></div>
+<div class="p"><span class="nm">📘 Смешанная</span><p>Целое число + дробь. Например: <b>2 1/3</b></p></div>
+
+<h2>Умножение дробей</h2>
+<p><b>Правило:</b> чтобы умножить дроби, нужно перемножить числители и знаменатели.</p>
+<p><b>a/b × c/d = (a × c) / (b × d)</b></p>
+<h3>Примеры</h3>
+<ul>
+<li><b>2/3 × 4/5</b> = (2 × 4) / (3 × 5) = <b>8/15</b></li>
+<li><b>3/7 × 2/3</b> = (3 × 2) / (7 × 3) = 6/21 = <b>2/7</b> (сократили)</li>
+</ul>
+<div class="fact"><b>💡 Совет.</b> Перед умножением можно <b>сократить</b> дроби — перемножить крест-накрест и убрать общие множители. Это упрощает вычисления.</div>
+
+<h2>Деление дробей</h2>
+<p><b>Правило:</b> чтобы разделить на дробь, нужно <b>умножить на обратную</b> дробь.</p>
+<p><b>a/b ÷ c/d = a/b × d/c</b></p>
+<p>Обратная дробь — это перевёрнутая дробь: <b>c/d → d/c</b>.</p>
+<h3>Примеры</h3>
+<ul>
+<li><b>2/3 ÷ 4/5</b> = 2/3 × 5/4 = 10/12 = <b>5/6</b></li>
+<li><b>3/4 ÷ 1/2</b> = 3/4 × 2/1 = 6/4 = <b>3/2</b> = 1 1/2</li>
+</ul>
+<div class="quote">«Деление — это умножение на обратную дробь. Запомни это — и никогда не ошибёшься!»</div>
+
+<h2>Умножение на целое число</h2>
+<p><b>Правило:</b> целое число — это дробь со знаменателем 1.</p>
+<p><b>a/b × n = (a × n) / b</b></p>
+<h3>Примеры</h3>
+<ul>
+<li><b>2/5 × 3</b> = (2 × 3) / 5 = <b>6/5</b> = 1 1/5</li>
+<li><b>3/7 × 2</b> = <b>6/7</b></li>
+</ul>
+
+<h2>Сокращение дробей</h2>
+<p><b>Сократить дробь</b> — значит разделить числитель и знаменатель на общий делитель.</p>
+<h3>Примеры</h3>
+<ul>
+<li><b>6/8</b> → делим на 2 → <b>3/4</b></li>
+<li><b>10/15</b> → делим на 5 → <b>2/3</b></li>
+<li><b>12/18</b> → делим на 6 → <b>2/3</b></li>
+</ul>
+
+<h2>Шпаргалка</h2>
+<div class="d">
+<ul>
+<li><b>Умножение:</b> a/b × c/d = ac/bd</li>
+<li><b>Деление:</b> a/b ÷ c/d = a/b × d/c</li>
+<li><b>На целое:</b> a/b × n = an/b</li>
+<li><b>Сокращение:</b> раздели на общий делитель</li>
+</ul>
+</div>
+
+</div>
+<button class="btn" onclick="pk('mathFrac')">🎯 Викторина</button>
+<button class="btn btn2" onclick="goCross('mathFrac')">🧩 Кроссворд</button>
+<button class="btn btn2" onclick="go('mathHome')">🏠 К математике</button>
 </div><div id="setup" class="scr">
 <button class="back" onclick="go('histHome')">← Назад</button>
 <h1 id="stT">Сложность</h1>
@@ -1600,23 +1790,6 @@ input:focus,select:focus{outline:none;border-color:#f4d03f}
 <button class="btn btn2" onclick="go('subjects')">🏠 В меню</button>
 </div>
 
-<div id="themeModal" class="themeModal">
-  <div class="themeModalBox">
-    <h2>🎨 Выбери тему оформления</h2>
-    <div class="themeGrid">
-      <button class="themeTile" data-theme="dark" onclick="setTheme('dark')"><span class="tic">🌙</span><b>Тёмная</b></button>
-      <button class="themeTile" data-theme="light" onclick="setTheme('light')"><span class="tic">☀️</span><b>Светлая</b></button>
-      <button class="themeTile" data-theme="parchment" onclick="setTheme('parchment')"><span class="tic">📜</span><b>Пергамент</b></button>
-      <button class="themeTile" data-theme="space" onclick="setTheme('space')"><span class="tic">🌌</span><b>Космос</b></button>
-      <button class="themeTile" data-theme="nature" onclick="setTheme('nature')"><span class="tic">🌿</span><b>Природа</b></button>
-      <button class="themeTile" data-theme="neon" onclick="setTheme('neon')"><span class="tic">🎮</span><b>Неон</b></button>
-      <button class="themeTile" data-theme="blood" onclick="setTheme('blood')"><span class="tic">🩸</span><b>Красная</b></button>
-      <button class="themeTile" data-theme="gold" onclick="setTheme('gold')"><span class="tic">👑</span><b>Золотая</b></button>
-    </div>
-    <button class="themeCloseBtn" onclick="closeThemeModal()">Закрыть</button>
-  </div>
-</div>
-
 </div><script>
 var AC=null;
 var SOUND_ON=true;
@@ -1646,7 +1819,7 @@ function sndStartGame(){ beep(440,0.08,'sawtooth',0.12); setTimeout(function(){b
 function toggleSound(){ SOUND_ON=!SOUND_ON; localStorage.setItem('soundOn',SOUND_ON?'1':'0'); updateSoundBtn(); if(SOUND_ON) beep(880,0.1,'sine',0.15); }
 function updateSoundBtn(){ var b=document.getElementById('soundBtn'); if(SOUND_ON) b.textContent='🔊 Звук'; else b.textContent='🔇 Звук'; }
 
-var THEMES=['dark','light','parchment','space','nature','neon','blood','gold'];
+var THEMES=['dark','light','parchment','space','nature','neon','blood','gold','ocean','sakura','volcano','autumn','sunset','choco','crystal'];
 function applyTheme(name){
   if(THEMES.indexOf(name)===-1) name='dark';
   document.body.className='';
@@ -1685,7 +1858,12 @@ med:[[1,"Феод?",["Земля за службу","Замок","Оружие",
 fr:[[1,"Племя?",["Готы","Франки","Вандалы","Саксы"],1,"Франки."],[1,"Первый король?",["Карл Великий","Хлодвиг","Пипин","Мартелл"],1,"Хлодвиг I."],[1,"Религия Хлодвига?",["Язычество","Христианство","Ислам","Иудаизм"],1,"496."],[1,"Столица Хлодвига?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Расцвет?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],2,"Карл Великий."],[2,"Крещение Хлодвига?",["476","496","500","511"],1,"496."],[2,"Пуатье?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],1,"Мартелл."],[2,"Каролинги?",["Хлодвиг","Пипин","Мартелл","Карл Великий"],1,"Пипин 751."],[2,"Карл — император?",["768","800","814","843"],1,"800."],[2,"Столица Карла?",["Париж","Ахен","Рим","Лондон"],1,"Ахен."],[3,"843 год?",["Крещение","Коронация","Верденский раздел","Пуатье"],2,"Раздел."],[3,"Распад на что?",["Франция, Германия, Италия","Англия, Испания","Рим, Греция","Русь, Польша"],0,"Верденский договор."]],
 hl:[[1,"Кто такой Хлодвиг?",["Король франков","Император","Король Англии","Хан"],0,"Король."],[1,"Династия?",["Каролинги","Меровинги","Рюриковичи","Романовы"],1,"Меровинги."],[1,"Начало?",["476","481","496","511"],1,"481."],[1,"Столица?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Религия?",["Язычество","Христианство","Ислам","Иудаизм"],1,"Христианство."],[1,"Жена?",["Клотильда","Ольга","Анна","Елена"],0,"Клотильда."],[2,"Крещение?",["476","496","500","511"],1,"496."],[2,"486 год?",["Сиагрий","Мамай","Батый","Цезарь"],0,"Сиагрий."],[2,"Вуйе — кто?",["Готы","Вестготы","Вандалы","Гунны"],1,"Вестготы."],[2,"Когда умер?",["476","496","507","511"],3,"511."],[2,"Обряд?",["Арианский","Католический","Православный","Языческий"],1,"Католический."],[2,"Салическая?",["Свод законов","Хроника","Поэма","Устав"],0,"Правда."],[3,"Сколько сыновей?",["2","3","4","5"],2,"4."],[3,"Что НЕ сделал?",["Галлия","Христианство","Каролинги","Париж"],2,"Каролинги — Пипин."],[3,"Племя в 496?",["Готы","Алеманны","Саксы","Викинги"],1,"Алеманны."],[3,"Разбил вестготов?",["Суассон","Вуйе","Пуатье","Калка"],1,"Вуйе."]],
 km:[[1,"Кто такой?",["Мажордом","Император","Король Англии","Папа"],0,"Мажордом."],[1,"Мартелл?",["Молот","Щит","Меч","Копьё"],0,"Молот."],[1,"Отец?",["Пипин Геристальский","Хлодвиг","Карл Великий","Меровей"],0,"Пипин."],[1,"Сын?",["Пипин Короткий","Карл Великий","Хлодвиг","Меровей"],0,"Пипин."],[1,"Против кого?",["Арабов","Римлян","Викингов","Монголов"],0,"Арабов."],[2,"Пуатье?",["717","732","741","751"],1,"732."],[2,"Что создал?",["Конницу","Флот","Артиллерию","Стрельцов"],0,"Конницу."],[2,"Бенефиций?",["Земля за службу","Налог","Титул","Оружие"],0,"Земля."],[2,"Мажордом с?",["714","717","732","741"],1,"717."],[3,"Умер?",["717","732","741","751"],2,"741."],[3,"Между кем разделил?",["Карломан и Пипин","Теодорих","Хильдеберт","Меровей"],0,"Сыновья."]],
-year:[[1,"Крещение Руси",["862","988","1147","1240"],1,"988."],[1,"Москва впервые",["988","1054","1147","1237"],2,"1147."],[1,"Невская битва",["1223","1240","1242","1380"],1,"1240."],[1,"Ледовое побоище",["1240","1242","1252","1263"],1,"1242."],[1,"Куликовская битва",["1378","1380","1382","1395"],1,"1380."],[2,"Призвание Рюрика",["862","882","907","911"],0,"862."],[2,"Стояние на Угре",["1471","1478","1480","1497"],2,"1480."],[2,"Иван IV — царь",["1533","1547","1552","1565"],1,"1547."],[2,"Взятие Казани",["1547","1552","1556","1558"],1,"1552."],[2,"Начало Смуты",["1598","1605","1610","1613"],0,"1598."],[2,"Минин и Пожарский",["1610","1611","1612","1613"],2,"1612."],[3,"Михаил Романов",["1612","1613","1618","1625"],1,"1613."],[3,"Падение Западного Рима",["395","410","476","500"],2,"476."],[3,"Хлодвиг — король",["476","481","496","511"],1,"481."],[3,"Крещение Хлодвига",["476","481","496","511"],2,"496."],[3,"Битва при Вуйе",["486","496","507","511"],2,"507."],[3,"Битва при Пуатье",["717","732","741","751"],1,"732."],[3,"Пипин — король",["732","741","751","800"],2,"751."],[3,"Карл — император",["768","800","814","843"],1,"800."],[3,"Верденский раздел",["800","814","830","843"],3,"843."],[3,"Первый крестовый поход",["1066","1095","1096","1099"],2,"1096."],[3,"Хартия вольностей",["1212","1215","1258","1265"],1,"1215."],[3,"Столетняя война",["1337","1340","1347","1356"],0,"1337."],[3,"Чёрная смерть",["1340","1347","1350","1361"],1,"1347."],[3,"Падение Константинополя",["1204","1356","1453","1492"],2,"1453."],[3,"Конец Реконкисты",["1453","1479","1492","1500"],2,"1492."]]
+year:[[1,"Крещение Руси",["862","988","1147","1240"],1,"988."],[1,"Москва впервые",["988","1054","1147","1237"],2,"1147."],[1,"Невская битва",["1223","1240","1242","1380"],1,"1240."],[1,"Ледовое побоище",["1240","1242","1252","1263"],1,"1242."],[1,"Куликовская битва",["1378","1380","1382","1395"],1,"1380."],[2,"Призвание Рюрика",["862","882","907","911"],0,"862."],[2,"Стояние на Угре",["1471","1478","1480","1497"],2,"1480."],[2,"Иван IV — царь",["1533","1547","1552","1565"],1,"1547."],[2,"Взятие Казани",["1547","1552","1556","1558"],1,"1552."],[2,"Начало Смуты",["1598","1605","1610","1613"],0,"1598."],[2,"Минин и Пожарский",["1610","1611","1612","1613"],2,"1612."],[3,"Михаил Романов",["1612","1613","1618","1625"],1,"1613."],[3,"Падение Западного Рима",["395","410","476","500"],2,"476."],[3,"Хлодвиг — король",["476","481","496","511"],1,"481."],[3,"Крещение Хлодвига",["476","481","496","511"],2,"496."],[3,"Битва при Вуйе",["486","496","507","511"],2,"507."],[3,"Битва при Пуатье",["717","732","741","751"],1,"732."],[3,"Пипин — король",["732","741","751","800"],2,"751."],[3,"Карл — император",["768","800","814","843"],1,"800."],[3,"Верденский раздел",["800","814","830","843"],3,"843."],[3,"Первый крестовый поход",["1066","1095","1096","1099"],2,"1096."],[3,"Хартия вольностей",["1212","1215","1258","1265"],1,"1215."],[3,"Столетняя война",["1337","1340","1347","1356"],0,"1337."],[3,"Чёрная смерть",["1340","1347","1350","1361"],1,"1347."],[3,"Падение Константинополя",["1204","1356","1453","1492"],2,"1453."],[3,"Конец Реконкисты",["1453","1479","1492","1500"],2,"1492."]],
+mathOral:[[1,"7 + 8 = ?",["13","14","15","16"],2,"15."],[1,"12 − 5 = ?",["5","6","7","8"],2,"7."],[1,"6 × 7 = ?",["36","40","42","48"],2,"42."],[1,"45 ÷ 9 = ?",["4","5","6","7"],1,"5."],[1,"15 + 27 = ?",["32","40","42","45"],2,"42."],[2,"25 × 4 = ?",["80","90","100","110"],2,"100."],[2,"144 ÷ 12 = ?",["10","11","12","13"],2,"12."],[2,"13 × 13 = ?",["156","169","179","189"],1,"169."],[2,"100 − 37 = ?",["53","63","67","73"],1,"63."],[2,"8 × 12 = ?",["86","92","96","104"],2,"96."],[3,"17 × 6 = ?",["92","102","112","122"],1,"102."],[3,"225 ÷ 15 = ?",["12","13","15","17"],2,"15."],[3,"19 × 19 = ?",["341","351","361","371"],2,"361."],[3,"1000 ÷ 8 = ?",["115","120","125","130"],2,"125."],[3,"16 × 25 = ?",["350","375","400","425"],2,"400."]],
+mathPercent:[[1,"1% от 200 = ?",["1","2","20","200"],1,"2."],[1,"10% от 50 = ?",["0,5","5","10","50"],1,"5."],[1,"50% от 80 = ?",["4","8","40","80"],2,"40."],[1,"25% от 100 = ?",["25","50","75","100"],0,"25."],[1,"20% от 50 = ?",["5","10","15","20"],1,"10."],[2,"15% от 60 = ?",["6","9","12","15"],1,"9."],[2,"40% от 250 = ?",["50","100","150","200"],1,"100."],[2,"75% от 80 = ?",["40","50","60","70"],2,"60."],[2,"10% от 350 = ?",["30","35","40","45"],1,"35."],[2,"30% от 200 = ?",["30","50","60","90"],2,"60."],[3,"Найти число, если 20% = 8",["16","30","40","50"],2,"40."],[3,"Найти число, если 5% = 15",["75","150","300","750"],2,"300."],[3,"Сколько % 5 от 20?",["10","20","25","50"],2,"25%."],[3,"Сколько % 30 от 60?",["30","40","50","60"],2,"50%."],[3,"Товар 1000 руб, скидка 25%. Цена?",["700","725","750","775"],2,"750 руб."]],
+mathFrac:[[1,"2/3 × 1/2 = ?",["1/3","2/3","1/6","3/4"],0,"1/3."],[1,"1/2 × 4/5 = ?",["2/5","1/5","4/5","3/5"],0,"2/5."],[1,"3/4 × 2/3 = ?",["1/2","2/3","3/4","1/4"],0,"1/2."],[1,"1/3 × 3/5 = ?",["1/5","2/5","3/5","4/5"],0,"1/5."],[1,"2/5 × 5/6 = ?",["1/3","2/3","1/6","5/6"],0,"1/3."],[2,"2/3 ÷ 1/2 = ?",["4/3","2/3","1/3","3/4"],0,"4/3."],[2,"3/5 ÷ 3/10 = ?",["1","2","3","5"],1,"2."],[2,"1/2 ÷ 1/4 = ?",["1","2","3","4"],1,"2."],[2,"4/5 ÷ 2/5 = ?",["1","2","3","4"],1,"2."],[2,"3/7 × 7/9 = ?",["1/3","2/3","1/9","3/9"],0,"1/3."],[3,"2/3 × 3/4 × 4/5 = ?",["1/5","2/5","3/5","4/5"],1,"2/5."],[3,"5/6 ÷ 5/12 = ?",["1","2","3","4"],1,"2."],[3,"1/2 + 1/3 = ?",["2/5","3/5","5/6","1/6"],2,"5/6."],[3,"3/4 − 1/4 = ?",["1/4","1/2","3/4","1"],1,"1/2."],[3,"2/3 от 15 = ?",["5","10","12","15"],1,"10."]],
+mathTask:[[1,"У Маши 12 яблок, у Пети 8. Сколько всего?",["18","20","22","24"],1,"20."],[1,"Поезд шёл 2 часа со скоростью 60 км/ч. Сколько км?",["100","110","120","130"],2,"120."],[1,"Книга 200 стр., прочитал 50. Сколько осталось?",["100","120","150","180"],2,"150."],[1,"5 ручек по 15 руб. Сколько стоят?",["55","65","75","85"],2,"75."],[1,"Периметр квадрата со стороной 7 см?",["14","21","28","35"],2,"28."],[2,"Поезд 240 км за 4 часа. Скорость?",["40","50","60","70"],2,"60 км/ч."],[2,"Товар 800 руб, скидка 20%. Цена?",["600","620","640","660"],2,"640."],[2,"Велосипедист 15 км/ч, 3 часа. Сколько км?",["30","40","45","50"],2,"45."],[2,"Работа 8 часов, сделал 5. Сколько осталось?",["2","3","4","5"],1,"3."],[2,"Площадь прямоугольника 8×5 см?",["13","26","40","48"],2,"40 см²."],[3,"Поезд 180 км за 2,5 часа. Скорость?",["60","70","72","80"],2,"72 км/ч."],[3,"Вклад 10000 руб под 10% годовых. Через год?",["1000","11000","12000","20000"],1,"11000."],[3,"Бассейн 500 л, налили 3/5. Сколько литров?",["200","250","300","350"],2,"300."],[3,"Автомобиль 90 км/ч, 1,5 часа. Сколько км?",["120","130","135","145"],2,"135."],[3,"Из 40 учеников 25% отличники. Сколько?",["8","10","12","15"],1,"10."]],
+mathEq:[[1,"x + 5 = 12. x = ?",["5","6","7","8"],2,"7."],[1,"x − 3 = 10. x = ?",["7","10","13","17"],2,"13."],[1,"2x = 8. x = ?",["2","3","4","5"],2,"4."],[1,"x ÷ 2 = 6. x = ?",["3","8","10","12"],3,"12."],[1,"x + 7 = 20. x = ?",["11","12","13","14"],2,"13."],[2,"2x + 3 = 11. x = ?",["3","4","5","6"],1,"4."],[2,"3x − 6 = 9. x = ?",["3","4","5","6"],2,"5."],[2,"5x = 45. x = ?",["7","8","9","10"],2,"9."],[2,"x/3 = 4. x = ?",["7","10","12","15"],2,"12."],[2,"4x + 2 = 18. x = ?",["3","4","5","6"],1,"4."],[3,"2x + 5 = 3x − 1. x = ?",["3","4","5","6"],3,"6."],[3,"3(x + 2) = 15. x = ?",["2","3","4","5"],1,"3."],[3,"x/2 + 3 = 7. x = ?",["4","6","8","10"],2,"8."],[3,"5x − 10 = 2x + 5. x = ?",["3","4","5","6"],2,"5."],[3,"2(x − 1) = 3(x + 2) − 11. x = ?",["5","6","7","8"],2,"7."]]
 };
 
 var CROSS={
@@ -1693,7 +1871,9 @@ rus:{title:"🛡️ Кроссворд: Древняя Русь",rows:7,cols:9,w
 med:{title:"⚔️ Кроссворд: Средние века",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ФЕОД",q:"Земля за службу"},{r:0,c:0,d:'D',w:"ФЕОДАЛ",q:"Владелец земли"},{r:0,c:5,d:'A',w:"РЫЦАРЬ",q:"Конный воин"},{r:0,c:5,d:'D',w:"РАЗДРОБЛЕННОСТЬ",q:"Распад"},{r:2,c:0,d:'A',w:"ЧУМА",q:"Чёрная смерть"},{r:2,c:0,d:'D',w:"ЦЕРКОВЬ",q:"Религиозная организация"},{r:4,c:2,d:'A',w:"ИНКВИЗИЦИЯ",q:"Суд против ереси"},{r:4,c:4,d:'D',w:"ГОРОД",q:"Место торговли"}]},
 fr:{title:"👑 Кроссворд: Франки",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Первый король"},{r:0,c:0,d:'D',w:"ХЛОТАРЬ",q:"Сын Хлодвига"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПИПИН",q:"Основал Каролингов"},{r:2,c:0,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:2,c:0,d:'D',w:"МАРТЕЛЛ",q:"«Молот»"},{r:4,c:2,d:'A',w:"КАРОЛИНГИ",q:"Династия Карла"},{r:4,c:2,d:'D',w:"КАРЛ",q:"Император 800"}]},
 hl:{title:"⚜️ Кроссворд: Хлодвиг",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Король"},{r:0,c:0,d:'D',w:"ХИЛЬДЕРИК",q:"Отец"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПРАВДА",q:"«Салическая ...»"},{r:2,c:0,d:'A',w:"СУАССОН",q:"Битва 486"},{r:2,c:0,d:'D',w:"СИАГРИЙ",q:"Римский наместник"},{r:4,c:2,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:4,c:2,d:'D',w:"МЕРОВЕЙ",q:"Основатель"}]},
-km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"МАРТЕЛЛ",q:"Прозвище"},{r:0,c:0,d:'D',w:"МАЖОРДОМ",q:"Управляющий"},{r:0,c:4,d:'A',w:"ПУАТЬЕ",q:"Битва 732"},{r:0,c:4,d:'D',w:"ПИПИН",q:"Сын Карла"},{r:2,c:0,d:'A',w:"АРАБЫ",q:"Противники"},{r:2,c:0,d:'D',w:"БЕНЕФИЦИЙ",q:"Земля за службу"},{r:4,c:2,d:'A',w:"КОННИЦА",q:"Тяжёлая ..."},{r:4,c:2,d:'D',w:"КАРОЛИНГИ",q:"Династия"}]}
+km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"МАРТЕЛЛ",q:"Прозвище"},{r:0,c:0,d:'D',w:"МАЖОРДОМ",q:"Управляющий"},{r:0,c:4,d:'A',w:"ПУАТЬЕ",q:"Битва 732"},{r:0,c:4,d:'D',w:"ПИПИН",q:"Сын Карла"},{r:2,c:0,d:'A',w:"АРАБЫ",q:"Противники"},{r:2,c:0,d:'D',w:"БЕНЕФИЦИЙ",q:"Земля за службу"},{r:4,c:2,d:'A',w:"КОННИЦА",q:"Тяжёлая ..."},{r:4,c:2,d:'D',w:"КАРОЛИНГИ",q:"Династия"}]},
+mathFrac:{title:"🔢 Кроссворд: Дроби",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ДРОБЬ",q:"Часть целого"},{r:0,c:0,d:'D',w:"ДЕЛИТЕЛЬ",q:"На что делят"},{r:0,c:5,d:'A',w:"ЗНАМЕНАТЕЛЬ",q:"Под чертой"},{r:0,c:5,d:'D',w:"ЧИСЛИТЕЛЬ",q:"Над чертой"},{r:2,c:0,d:'A',w:"СОКРАЩЕНИЕ",q:"Упрощение дроби"},{r:2,c:0,d:'D',w:"УМНОЖЕНИЕ",q:"a/b × c/d"},{r:4,c:2,d:'A',w:"ДЕЛЕНИЕ",q:"Умножение на обратную"},{r:4,c:2,d:'D',w:"ОБРАТНАЯ",q:"Перевёрнутая дробь"}]},
+mathEq:{title:"🧮 Кроссворд: Уравнения",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"УРАВНЕНИЕ",q:"Равенство с неизвестным"},{r:0,c:0,d:'D',w:"КОРЕНЬ",q:"Решение уравнения"},{r:0,c:5,d:'A',w:"ИКС",q:"Неизвестное"},{r:0,c:5,d:'D',w:"РАВНО",q:"Знак ="},{r:2,c:0,d:'A',w:"ПЕРЕМЕННАЯ",q:"Буквенное значение"},{r:2,c:0,d:'D',w:"ВЫРАЖЕНИЕ",q:"Без знака ="},{r:4,c:2,d:'A',w:"СЛАГАЕМОЕ",q:"Часть суммы"},{r:4,c:2,d:'D',w:"МНОЖИТЕЛЬ",q:"Часть произведения"}]}
 };
 
 var D_PUSH_BIO=[[1,"Когда родился Пушкин?",["1799","1801","1811","1825"],0,"6 июня 1799."],[1,"Где родился?",["В Москве","В Петербурге","В Михайловском","В Болдино"],0,"В Москве."],[1,"Как звали няню?",["Арина Родионовна","Наталья","Ольга","Мария"],0,"Арина Родионовна."],[1,"Куда поступил в 1811?",["Царскосельский лицей","Московский университет","Кадетский корпус","Академия"],0,"Лицей."],[1,"Как звали жену?",["Наталья Гончарова","Анна Керн","Мария Волконская","Екатерина Бакунина"],0,"Гончарова."],[2,"Когда женился?",["1831","1828","1830","1833"],0,"В феврале 1831."],[2,"Сколько лет в лицее?",["6 лет","4 года","8 лет","5 лет"],0,"1811–1817."],[2,"Где ссылка 1824–1826?",["Михайловское","Болдино","Царское Село","Кишинёв"],0,"Михайловское."],[2,"Осень 1830?",["Болдинская осень","Золотая осень","Творческая","Пушкинская"],0,"Болдинская осень."],[2,"Сколько детей?",["4","2","3","5"],0,"Мария, Александр, Григорий, Наталья."],[3,"Предок-арап?",["Абрам Ганнибал","Пётр I","Екатерина II","Николай I"],0,"Абрам Ганнибал."],[3,"Кто написал оперу «Евгений Онегин»?",["Чайковский","Мусоргский","Римский-Корсаков","Глинка"],0,"Чайковский."],[3,"Сколько лет при смерти?",["37","35","40","42"],0,"37 лет."],[3,"Где похоронен?",["Святогорский монастырь","Петербург","Москва","Михайловское"],0,"Святогорский монастырь."],[3,"Какой журнал основал?",["«Современник»","«Отечественные записки»","«Северная пчела»","«Москвитянин»"],0,"«Современник»."]];
@@ -1730,185 +1910,7 @@ function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(
 function roleEmoji(r){ if(r==='Создатель')return'👑'; if(r==='Староста')return'⭐'; if(r==='Учитель')return'📖'; return'🎓'; }
 function logout(){ if(!confirm('Выйти?'))return; localStorage.removeItem('currentUser'); localStorage.removeItem('currentRole'); currentUser=""; document.getElementById('nameInput').value=""; document.getElementById('passInput').value=""; document.getElementById('passBox').classList.remove('on'); var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); show('loginScreen'); }
 
-function pk(g){ sndStartGame(); cur=g; var t='Сложность'; if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века'; else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг'; else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!'; document.getElementById('stT').textContent=t; show('setup'); }
-function pd(btn){ var b=document.querySelectorAll('#setup .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); df=parseInt(btn.getAttribute('data-d')); }
-function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]); for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; } qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
-function us(){ document.getElementById('sc').textContent=pts; document.getElementById('lv').textContent=hp>0?'❤️'.repeat(hp):'💀'; }
-function lq(){ ok=false; var q=qs[i]; document.getElementById('qn').textContent=(i+1)+'/'+qs.length; document.getElementById('qt').textContent=((cur==='year')?'📅 Когда: ':'📖 ')+q[1]; var box=document.getElementById('ans'); box.innerHTML=''; document.getElementById('ex').style.display='none'; document.getElementById('nx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('onclick','ck('+k+',this)'); box.appendChild(b); } }
-function ck(sel,btn){ if(ok)return; ok=true; var q=qs[i]; var all=document.querySelectorAll('#ans .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('ex'); if(sel===q[3]){ btn.classList.add('ok'); pts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); hp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; us(); var nb=document.getElementById('nx'); if(hp<=0)nb.textContent='🏁 Завершить'; else if(i===qs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
-function nq(){ if(hp<=0||i===qs.length-1){fin();return;} i++; lq(); }
-function fin(){ var total=qs.length,correct=pts/10,pct=Math.round(correct/total*100); document.getElementById('fs').textContent=pts; document.getElementById('fc').textContent=correct; document.getElementById('ft').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('fm').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pts,gr); show('fin'); if(pct>=70) sndWin(); else sndWrong(); }
-
-function updateCrossLives(){ var el=document.getElementById('crossLives'); if(el) el.textContent=crossLives>0?'❤️'.repeat(crossLives):'💀'; }
-function goCross(g){ currentCross=g; crossLives=5; var cfg=CROSS[g]; document.getElementById('crossTitle').textContent=cfg.title; document.getElementById('crossSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesA'),dL=document.getElementById('cluesD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updateCrossLives(); show('crossScreen'); }
-function checkCross(){ if(crossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong>0){ crossLives-=wrong; if(crossLives<0)crossLives=0; updateCrossLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(crossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибок: '+wrong+'. Жизни: '+crossLives); }
-function clearCross(){ var inputs=document.querySelectorAll('#crossGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} crossLives=5; updateCrossLives(); }
-
-function pickPush(g){ sndStartGame(); pCur=g; var t='Сложность'; if(g==='bio')t='🎯 Биография Пушкина'; else if(g==='works')t='🎯 Произведения Пушкина'; else if(g==='quotes')t='💬 Цитаты и герои'; document.getElementById('stPushT').textContent=t; show('setupPush'); }
-function pdPush(btn){ var b=document.querySelectorAll('#setupPush .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); pDf=parseInt(btn.getAttribute('data-d')); }
-function stPush(){ var all=(pCur==='bio')?D_PUSH_BIO:(pCur==='works')?D_PUSH_WORKS:D_PUSH_QUOTES; var pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=pDf)pool.push(all[k]); for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; } pQs=pool;pI=0;pPts=0;pHp=3; usPush(); show('gamePush'); lqPush(); }
-function usPush(){ document.getElementById('pSc').textContent=pPts; document.getElementById('pLv').textContent=pHp>0?'❤️'.repeat(pHp):'💀'; }
-function lqPush(){ pOk=false; var q=pQs[pI]; document.getElementById('pQn').textContent=(pI+1)+'/'+pQs.length; document.getElementById('pQt').textContent='✍️ '+q[1]; var box=document.getElementById('pAns'); box.innerHTML=''; document.getElementById('pEx').style.display='none'; document.getElementById('pNx').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q[2].length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q[2][k]; b.setAttribute('onclick','ckPush('+k+',this)'); box.appendChild(b); } }
-function ckPush(sel,btn){ if(pOk)return; pOk=true; var q=pQs[pI]; var all=document.querySelectorAll('#pAns .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('pEx'); if(sel===q[3]){ btn.classList.add('ok'); pPts+=10; sndCorrect(); ex.innerHTML='✅ <b>Правильно!</b><br>'+q[4]; } else { btn.classList.add('no'); all[q[3]].classList.add('ok'); pHp--; sndWrong(); ex.innerHTML='❌ <b>Неверно.</b> Правильно: <b>'+q[2][q[3]]+'</b><br>'+q[4]; } ex.style.display='block'; usPush(); var nb=document.getElementById('pNx'); if(pHp<=0)nb.textContent='🏁 Завершить'; else if(pI===pQs.length-1)nb.textContent='🏆 Результат'; else nb.textContent='➡️ Дальше'; nb.style.display='block'; }
-function nqPush(){ if(pHp<=0||pI===pQs.length-1){finPush();return;} pI++; lqPush(); }
-function finPush(){ var total=pQs.length,correct=pPts/10,pct=Math.round(correct/total*100); document.getElementById('pfS').textContent=pPts; document.getElementById('pfC').textContent=correct; document.getElementById('pfT').textContent=total; var msg,gr; if(pct>=90){msg='🌟 Превосходно!';gr=5;} else if(pct>=70){msg='👍 Отлично!';gr=4;} else if(pct>=50){msg='📖 Неплохо.';gr=3;} else {msg='📚 Попробуй ещё!';gr=2;} document.getElementById('pfM').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">Оценка: '+gr+'</div>'; saveResult(currentUser,currentRole,pPts,gr); show('finPush'); if(pct>=70) sndWin(); else sndWrong(); }
-
-function updatePushLives(){ var el=document.getElementById('crossPushLives'); if(el) el.textContent=pushCrossLives>0?'❤️'.repeat(pushCrossLives):'💀'; }
-function goCrossPush(g){ currentCrossPush=g; pushCrossLives=5; var cfg=(g==='bio')?CROSS_PUSH_BIO:CROSS_PUSH_WORKS; document.getElementById('crossPushTitle').textContent=cfg.title; document.getElementById('crossPushSub').textContent='Впиши слова. Жизней: 5'; var grid=document.getElementById('crossPushGrid'); grid.style.gridTemplateColumns='repeat('+cfg.cols+',1fr)'; grid.innerHTML=''; var map={}; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; for(var k=0;k<word.w.length;k++){ var r=word.r+(word.d==='D'?k:0); var c=word.c+(word.d==='A'?k:0); var key=r+'-'+c; if(!map[key]) map[key]={letter:word.w[k],cells:[]}; map[key].cells.push({r:word.r,c:word.c,w:word}); } } var numbers={},num=0; for(var r=0;r<cfg.rows;r++)for(var c=0;c<cfg.cols;c++){ var key=r+'-'+c; var cell=document.createElement('div'); cell.className='cell'; if(map[key]){ for(var w=0;w<map[key].cells.length;w++){ var wr=map[key].cells[w].r,wc=map[key].cells[w].c; if(wr===r&&wc===c){ var nk=r+'-'+c+'-'+w; if(!numbers[nk]){ num++; numbers[nk]=num; if(!cell.querySelector('.num')){ var sp=document.createElement('span'); sp.className='num'; sp.textContent=num; cell.appendChild(sp); } } } } var inp=document.createElement('input'); inp.type='text'; inp.maxLength=1; inp.setAttribute('data-ans',map[key].letter); inp.oninput=function(){ this.value=this.value.toUpperCase().replace(/[^А-ЯЁ]/g,''); this.classList.remove('ok','no'); }; cell.appendChild(inp); } else cell.classList.add('black'); grid.appendChild(cell); } var aL=document.getElementById('cluesPushA'),dL=document.getElementById('cluesPushD'); aL.innerHTML='';dL.innerHTML=''; for(var w=0;w<cfg.words.length;w++){ var word=cfg.words[w]; var li=document.createElement('li'); li.textContent=word.q+' ('+word.w.length+' букв)'; if(word.d==='A')aL.appendChild(li); else dL.appendChild(li); } updatePushLives(); show('crossPushScreen'); }
-function checkCrossPush(){ if(pushCrossLives<=0){ alert('Жизни закончились.'); return; } var inputs=document.querySelectorAll('#crossPushGrid input'); var all=0,right=0,wrong=0; for(var k=0;k<inputs.length;k++){ var v=inputs[k].value.trim().toUpperCase(); var ans=inputs[k].getAttribute('data-ans'); inputs[k].classList.remove('ok','no'); if(v){ all++; if(v===ans){inputs[k].classList.add('ok');right++;} else {inputs[k].classList.add('no');wrong++;} } } if(all===0){ alert('Впиши хотя бы одно слово'); return; } if(wrong>0){ pushCrossLives-=wrong; if(pushCrossLives<0)pushCrossLives=0; updatePushLives(); } if(right===inputs.length){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWin(); alert('🎉 Все слова верны!'); return; } if(pushCrossLives<=0){ for(var k=0;k<inputs.length;k++){inputs[k].value=inputs[k].getAttribute('data-ans');inputs[k].classList.remove('no');inputs[k].classList.add('ok');} sndWrong(); alert('💀 Жизни закончились!'); return; } alert('Правильно: '+right+' из '+inputs.length+'. Ошибки: '+wrong+'. Жизни: '+pushCrossLives); }
-function clearCrossPush(){ var inputs=document.querySelectorAll('#crossPushGrid input'); for(var k=0;k<inputs.length;k++){inputs[k].value='';inputs[k].classList.remove('ok','no');} pushCrossLives=5; updatePushLives(); }
-
-function startFun(){ funQs=[]; for(var k=0;k<FUN.length;k++)funQs.push(FUN[k]); for(var k=funQs.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=funQs[k];funQs[k]=funQs[j];funQs[j]=t; } funI=0;funScore=0; show('funScreen'); loadFun(); }
-function loadFun(){ funAnswered=false; var q=funQs[funI]; document.getElementById('funScore').textContent=funScore; document.getElementById('funNum').textContent=(funI+1)+'/'+funQs.length; document.getElementById('funQuestion').textContent='😂 '+q.q; var box=document.getElementById('funAnswers'); box.innerHTML=''; document.getElementById('funEx').style.display='none'; document.getElementById('funNext').style.display='none'; var L=['А','Б','В','Г']; for(var k=0;k<q.a.length;k++){ var b=document.createElement('button'); b.className='a'; b.innerHTML='<b>'+L[k]+')</b> '+q.a[k]; b.setAttribute('onclick','checkFun('+k+',this)'); box.appendChild(b); } }
-function checkFun(sel,btn){ if(funAnswered)return; funAnswered=true; var q=funQs[funI]; var all=document.querySelectorAll('#funAnswers .a'); for(var k=0;k<all.length;k++)all[k].disabled=true; var ex=document.getElementById('funEx'); if(sel===q.c){ btn.classList.add('ok'); funScore+=10; sndFunWin(); ex.innerHTML='😂 <b>Красавчик!</b> +10 очков<br>'+q.e; } else { btn.classList.add('no'); all[q.c].classList.add('ok'); sndFunLose(); ex.innerHTML='😅 <b>Не самый удачный вариант.</b><br>Лучше было: <b>'+q.a[q.c]+'</b><br>'+q.e; } ex.style.display='block'; document.getElementById('funScore').textContent=funScore; var nb=document.getElementById('funNext'); if(funI===funQs.length-1)nb.textContent='🏆 Показать результат'; else nb.textContent='➡️ Следующая ситуация'; nb.style.display='block'; }
-function nextFun(){ if(funI===funQs.length-1){finFun();return;} funI++; loadFun(); }
-function finFun(){ var total=funQs.length,correct=funScore/10,pct=Math.round(correct/total*100); var msg,gr; if(pct>=90){msg='😂 <b>Ты король юмора!</b>';gr='Оценка юмора: 5 🤣';} else if(pct>=70){msg='😄 <b>Отличное чувство юмора!</b>';gr='Оценка юмора: 4 😆';} else if(pct>=50){msg='🙂 <b>Юмор понимаешь частично.</b>';gr='Оценка юмора: 3 😅';} else{msg='🤔 <b>Юмор — дело тонкое.</b>';gr='Оценка юмора: 2 😬';} document.getElementById('funMsg').innerHTML='Правильных: <b>'+correct+' из '+total+'</b><br>'+msg+'<div class="g">'+gr+'</div>'; show('funFin'); if(pct>=70) sndFunWin(); else sndFunLose(); }
-
-function saveResult(name,role,score,grade){
-  if(!name) return;
-  var all=JSON.parse(localStorage.getItem('results')||'[]');
-  var found=false;
-  for(var k=0;k<all.length;k++){
-    if(all[k].name.toLowerCase()===name.toLowerCase()){
-      if(score>all[k].score){ all[k].score=score; all[k].grade=grade; }
-      all[k].role=role;
-      found=true; break;
-    }
-  }
-  if(!found) all.push({name:name,role:role,score:score,grade:grade});
-  all.sort(function(a,b){return b.score-a.score;});
-  localStorage.setItem('results',JSON.stringify(all));
-}
-
-loadTheme();
-var saved=localStorage.getItem('currentUser');
-var savedRole=localStorage.getItem('currentRole')||'Ученик';
-if(saved){
-  currentUser=saved;
-  currentRole=savedRole;
-  document.getElementById('userName').textContent=saved;
-  document.getElementById('userRole').textContent=savedRole;
-  document.getElementById('userAvatar').textContent=roleEmoji(savedRole);
-  show('subjects');
-} else {
-  show('loginScreen');
-}
-</script>
-</body>
-</html><script>
-var AC=null;
-var SOUND_ON=true;
-function initAudio(){
-  if(!SOUND_ON) return;
-  if(!AC){ try{ AC=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ AC=null; } }
-  if(AC && AC.state==='suspended') AC.resume();
-}
-function beep(freq,dur,type,vol){
-  if(!SOUND_ON) return;
-  initAudio();
-  if(!AC) return;
-  type=type||'sine'; vol=vol||0.15;
-  var o=AC.createOscillator(); var g=AC.createGain();
-  o.type=type; o.frequency.value=freq; g.gain.value=vol;
-  o.connect(g); g.connect(AC.destination); o.start();
-  g.gain.exponentialRampToValueAtTime(0.001,AC.currentTime+dur);
-  o.stop(AC.currentTime+dur);
-}
-function sndCorrect(){ beep(660,0.12,'sine',0.18); setTimeout(function(){ beep(880,0.18,'sine',0.18); },120); }
-function sndWrong(){ beep(220,0.18,'square',0.12); setTimeout(function(){ beep(160,0.25,'square',0.12); },130); }
-function sndWin(){ beep(523,0.15,'sine',0.2); setTimeout(function(){ beep(659,0.15,'sine',0.2); },150); setTimeout(function(){ beep(784,0.15,'sine',0.2); },300); setTimeout(function(){ beep(1047,0.4,'sine',0.25); },450); }
-function sndFunWin(){ beep(880,0.1,'square',0.16); setTimeout(function(){beep(1100,0.1,'square',0.16);},100); setTimeout(function(){beep(1320,0.1,'square',0.16);},200); setTimeout(function(){beep(1760,0.25,'sine',0.2);},300); }
-function sndFunLose(){ beep(400,0.15,'triangle',0.12); setTimeout(function(){beep(300,0.15,'triangle',0.12);},150); setTimeout(function(){beep(200,0.25,'triangle',0.14);},300); }
-function sndStartGame(){ beep(440,0.08,'sawtooth',0.12); setTimeout(function(){beep(660,0.08,'sawtooth',0.12);},80); setTimeout(function(){beep(880,0.15,'sine',0.15);},160); }
-
-function toggleSound(){ SOUND_ON=!SOUND_ON; localStorage.setItem('soundOn',SOUND_ON?'1':'0'); updateSoundBtn(); if(SOUND_ON) beep(880,0.1,'sine',0.15); }
-function updateSoundBtn(){ var b=document.getElementById('soundBtn'); if(SOUND_ON) b.textContent='🔊 Звук'; else b.textContent='🔇 Звук'; }
-
-var THEMES=['dark','light','parchment','space','nature','neon','blood','gold'];
-function applyTheme(name){
-  if(THEMES.indexOf(name)===-1) name='dark';
-  document.body.className='';
-  if(name!=='dark') document.body.classList.add(name);
-}
-function setTheme(name){
-  applyTheme(name);
-  localStorage.setItem('theme',name);
-  var tiles=document.querySelectorAll('.themeTile');
-  for(var k=0;k<tiles.length;k++){
-    if(tiles[k].getAttribute('data-theme')===name) tiles[k].classList.add('active');
-    else tiles[k].classList.remove('active');
-  }
-  if(SOUND_ON) beep(660,0.08,'sine',0.12);
-}
-function openThemeModal(){
-  var m=document.getElementById('themeModal');
-  var cur=localStorage.getItem('theme')||'dark';
-  var tiles=document.querySelectorAll('.themeTile');
-  for(var k=0;k<tiles.length;k++){
-    if(tiles[k].getAttribute('data-theme')===cur) tiles[k].classList.add('active');
-    else tiles[k].classList.remove('active');
-  }
-  m.classList.add('on');
-}
-function closeThemeModal(){ document.getElementById('themeModal').classList.remove('on'); }
-function loadTheme(){
-  var t=localStorage.getItem('theme')||'dark';
-  applyTheme(t);
-  var s=localStorage.getItem('soundOn'); if(s==='0'){ SOUND_ON=false; updateSoundBtn(); }
-}
-
-var D={
-rus:[[1,"Крещение Руси?",["862","988","1147","1240"],1,"Владимир в 988."],[1,"Первый князь?",["Игорь","Олег","Рюрик","Святослав"],2,"Рюрик 862."],[1,"Невская битва?",["1240","1242","1380","1147"],0,"1240."],[1,"Кто разбил Мамая?",["Иван III","Дмитрий Донской","Калита","Невский"],1,"Донской."],[1,"Первый царь?",["Иван III","Иван IV","Пётр I","Годунов"],1,"Грозный 1547."],[2,"Ледовое побоище?",["1240","1242","1380","1480"],1,"1242."],[2,"Куликовская битва?",["1380","1240","1480","1147"],0,"1380."],[2,"Конец ига?",["Калита","Донской","Иван III","Грозный"],2,"Иван III 1480."],[2,"Москва впервые?",["862","988","1147","1240"],2,"1147."],[2,"Второе ополчение?",["Минин и Пожарский","Лжедмитрий","Годунов","Шуйский"],0,"1612."],[3,"Раздробленность?",["Объединение","Распад","Война","Крещение"],1,"XII–XV вв."],[3,"Повесть временных лет?",["Нестор","Иларион","Даниил","Кирилл"],0,"Нестор."],[3,"Взятие Казани?",["1547","1552","1565","1584"],1,"1552."],[3,"Опричнина?",["Совет","Террор","Налог","Город"],1,"1565–1572."],[3,"Начало Смуты?",["1584","1598","1605","1613"],1,"1598."]],
-med:[[1,"Феод?",["Земля за службу","Замок","Оружие","Праздник"],0,"Земля."],[1,"Рыцарь?",["Ремесленник","Конный воин","Крестьянин","Монах"],1,"Воин."],[1,"Замок?",["Рынок","Жилище феодала","Церковь","Хижина"],1,"Жилище."],[1,"Средневековье?",["Каменный век","V–XV вв.","Ренессанс","Новейшее"],1,"V–XV."],[1,"Кто жил в замке?",["Крестьяне","Феодал","Ремесленники","Горожане"],1,"Феодал."],[2,"Крестовые походы?",["Восстания","Походы на Восток","Торговля","Открытия"],1,"XI–XIII."],[2,"Эпидемия XIV века?",["Холера","Чума","Оспа","Грипп"],1,"Чума."],[2,"Гутенберг?",["Порох","Книгопечатание","Компас","Телескоп"],1,"Печать."],[2,"Вассалитет?",["Сеньор и вассал","Торговля","Обряды","Оружие"],0,"Вассал."],[2,"Иоанн Безземельный?",["Король Англии","Император","Папа","Хан"],0,"Король."],[3,"Инквизиция?",["Церковный суд","Орден","Совет","Налог"],0,"Суд."],[3,"Хартия вольностей?",["Договор","Документ 1215","Устав","Союз"],1,"1215."],[3,"Пала Византия?",["1204","1356","1453","1492"],2,"1453."],[3,"Жанна д’Арк?",["Королева","Героиня","Монахиня","Принцесса"],1,"1429."],[3,"Реконкиста?",["Захват Америки","Отвоевание Пиренеев","Восстание","Реформа"],1,"VIII–XV."]],
-fr:[[1,"Племя?",["Готы","Франки","Вандалы","Саксы"],1,"Франки."],[1,"Первый король?",["Карл Великий","Хлодвиг","Пипин","Мартелл"],1,"Хлодвиг I."],[1,"Религия Хлодвига?",["Язычество","Христианство","Ислам","Иудаизм"],1,"496."],[1,"Столица Хлодвига?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Расцвет?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],2,"Карл Великий."],[2,"Крещение Хлодвига?",["476","496","500","511"],1,"496."],[2,"Пуатье?",["Хлодвиг","Мартелл","Карл Великий","Пипин"],1,"Мартелл."],[2,"Каролинги?",["Хлодвиг","Пипин","Мартелл","Карл Великий"],1,"Пипин 751."],[2,"Карл — император?",["768","800","814","843"],1,"800."],[2,"Столица Карла?",["Париж","Ахен","Рим","Лондон"],1,"Ахен."],[3,"843 год?",["Крещение","Коронация","Верденский раздел","Пуатье"],2,"Раздел."],[3,"Распад на что?",["Франция, Германия, Италия","Англия, Испания","Рим, Греция","Русь, Польша"],0,"Верденский договор."]],
-hl:[[1,"Кто такой Хлодвиг?",["Король франков","Император","Король Англии","Хан"],0,"Король."],[1,"Династия?",["Каролинги","Меровинги","Рюриковичи","Романовы"],1,"Меровинги."],[1,"Начало?",["476","481","496","511"],1,"481."],[1,"Столица?",["Рим","Париж","Ахен","Лондон"],1,"Париж."],[1,"Религия?",["Язычество","Христианство","Ислам","Иудаизм"],1,"Христианство."],[1,"Жена?",["Клотильда","Ольга","Анна","Елена"],0,"Клотильда."],[2,"Крещение?",["476","496","500","511"],1,"496."],[2,"486 год?",["Сиагрий","Мамай","Батый","Цезарь"],0,"Сиагрий."],[2,"Вуйе — кто?",["Готы","Вестготы","Вандалы","Гунны"],1,"Вестготы."],[2,"Когда умер?",["476","496","507","511"],3,"511."],[2,"Обряд?",["Арианский","Католический","Православный","Языческий"],1,"Католический."],[2,"Салическая?",["Свод законов","Хроника","Поэма","Устав"],0,"Правда."],[3,"Сколько сыновей?",["2","3","4","5"],2,"4."],[3,"Что НЕ сделал?",["Галлия","Христианство","Каролинги","Париж"],2,"Каролинги — Пипин."],[3,"Племя в 496?",["Готы","Алеманны","Саксы","Викинги"],1,"Алеманны."],[3,"Разбил вестготов?",["Суассон","Вуйе","Пуатье","Калка"],1,"Вуйе."]],
-km:[[1,"Кто такой?",["Мажордом","Император","Король Англии","Папа"],0,"Мажордом."],[1,"Мартелл?",["Молот","Щит","Меч","Копьё"],0,"Молот."],[1,"Отец?",["Пипин Геристальский","Хлодвиг","Карл Великий","Меровей"],0,"Пипин."],[1,"Сын?",["Пипин Короткий","Карл Великий","Хлодвиг","Меровей"],0,"Пипин."],[1,"Против кого?",["Арабов","Римлян","Викингов","Монголов"],0,"Арабов."],[2,"Пуатье?",["717","732","741","751"],1,"732."],[2,"Что создал?",["Конницу","Флот","Артиллерию","Стрельцов"],0,"Конницу."],[2,"Бенефиций?",["Земля за службу","Налог","Титул","Оружие"],0,"Земля."],[2,"Мажордом с?",["714","717","732","741"],1,"717."],[3,"Умер?",["717","732","741","751"],2,"741."],[3,"Между кем разделил?",["Карломан и Пипин","Теодорих","Хильдеберт","Меровей"],0,"Сыновья."]],
-year:[[1,"Крещение Руси",["862","988","1147","1240"],1,"988."],[1,"Москва впервые",["988","1054","1147","1237"],2,"1147."],[1,"Невская битва",["1223","1240","1242","1380"],1,"1240."],[1,"Ледовое побоище",["1240","1242","1252","1263"],1,"1242."],[1,"Куликовская битва",["1378","1380","1382","1395"],1,"1380."],[2,"Призвание Рюрика",["862","882","907","911"],0,"862."],[2,"Стояние на Угре",["1471","1478","1480","1497"],2,"1480."],[2,"Иван IV — царь",["1533","1547","1552","1565"],1,"1547."],[2,"Взятие Казани",["1547","1552","1556","1558"],1,"1552."],[2,"Начало Смуты",["1598","1605","1610","1613"],0,"1598."],[2,"Минин и Пожарский",["1610","1611","1612","1613"],2,"1612."],[3,"Михаил Романов",["1612","1613","1618","1625"],1,"1613."],[3,"Падение Западного Рима",["395","410","476","500"],2,"476."],[3,"Хлодвиг — король",["476","481","496","511"],1,"481."],[3,"Крещение Хлодвига",["476","481","496","511"],2,"496."],[3,"Битва при Вуйе",["486","496","507","511"],2,"507."],[3,"Битва при Пуатье",["717","732","741","751"],1,"732."],[3,"Пипин — король",["732","741","751","800"],2,"751."],[3,"Карл — император",["768","800","814","843"],1,"800."],[3,"Верденский раздел",["800","814","830","843"],3,"843."],[3,"Первый крестовый поход",["1066","1095","1096","1099"],2,"1096."],[3,"Хартия вольностей",["1212","1215","1258","1265"],1,"1215."],[3,"Столетняя война",["1337","1340","1347","1356"],0,"1337."],[3,"Чёрная смерть",["1340","1347","1350","1361"],1,"1347."],[3,"Падение Константинополя",["1204","1356","1453","1492"],2,"1453."],[3,"Конец Реконкисты",["1453","1479","1492","1500"],2,"1492."]]
-};
-
-var CROSS={
-rus:{title:"🛡️ Кроссворд: Древняя Русь",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"РЮРИК",q:"Первый князь (862)"},{r:0,c:0,d:'D',w:"РУСЬ",q:"Государство в Киеве"},{r:0,c:5,d:'A',w:"КИЕВ",q:"Столица"},{r:2,c:2,d:'A',w:"ВЛАДИМИР",q:"Крестил Русь"},{r:2,c:2,d:'D',w:"ВАРЯГИ",q:"Скандинавские воины"},{r:2,c:5,d:'D',w:"ЛЕТОПИСЬ",q:"Запись событий"},{r:4,c:0,d:'A',w:"МАМАЙ",q:"Хан"},{r:4,c:3,d:'D',w:"НОВГОРОД",q:"Город"}]},
-med:{title:"⚔️ Кроссворд: Средние века",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ФЕОД",q:"Земля за службу"},{r:0,c:0,d:'D',w:"ФЕОДАЛ",q:"Владелец земли"},{r:0,c:5,d:'A',w:"РЫЦАРЬ",q:"Конный воин"},{r:0,c:5,d:'D',w:"РАЗДРОБЛЕННОСТЬ",q:"Распад"},{r:2,c:0,d:'A',w:"ЧУМА",q:"Чёрная смерть"},{r:2,c:0,d:'D',w:"ЦЕРКОВЬ",q:"Религиозная организация"},{r:4,c:2,d:'A',w:"ИНКВИЗИЦИЯ",q:"Суд против ереси"},{r:4,c:4,d:'D',w:"ГОРОД",q:"Место торговли"}]},
-fr:{title:"👑 Кроссворд: Франки",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Первый король"},{r:0,c:0,d:'D',w:"ХЛОТАРЬ",q:"Сын Хлодвига"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПИПИН",q:"Основал Каролингов"},{r:2,c:0,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:2,c:0,d:'D',w:"МАРТЕЛЛ",q:"«Молот»"},{r:4,c:2,d:'A',w:"КАРОЛИНГИ",q:"Династия Карла"},{r:4,c:2,d:'D',w:"КАРЛ",q:"Император 800"}]},
-hl:{title:"⚜️ Кроссворд: Хлодвиг",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"ХЛОДВИГ",q:"Король"},{r:0,c:0,d:'D',w:"ХИЛЬДЕРИК",q:"Отец"},{r:0,c:5,d:'A',w:"ПАРИЖ",q:"Столица"},{r:0,c:5,d:'D',w:"ПРАВДА",q:"«Салическая ...»"},{r:2,c:0,d:'A',w:"СУАССОН",q:"Битва 486"},{r:2,c:0,d:'D',w:"СИАГРИЙ",q:"Римский наместник"},{r:4,c:2,d:'A',w:"МЕРОВИНГИ",q:"Династия"},{r:4,c:2,d:'D',w:"МЕРОВЕЙ",q:"Основатель"}]},
-km:{title:"🔨 Кроссворд: Карл Мартелл",rows:7,cols:8,words:[{r:0,c:0,d:'A',w:"МАРТЕЛЛ",q:"Прозвище"},{r:0,c:0,d:'D',w:"МАЖОРДОМ",q:"Управляющий"},{r:0,c:4,d:'A',w:"ПУАТЬЕ",q:"Битва 732"},{r:0,c:4,d:'D',w:"ПИПИН",q:"Сын Карла"},{r:2,c:0,d:'A',w:"АРАБЫ",q:"Противники"},{r:2,c:0,d:'D',w:"БЕНЕФИЦИЙ",q:"Земля за службу"},{r:4,c:2,d:'A',w:"КОННИЦА",q:"Тяжёлая ..."},{r:4,c:2,d:'D',w:"КАРОЛИНГИ",q:"Династия"}]}
-};
-
-var D_PUSH_BIO=[[1,"Когда родился Пушкин?",["1799","1801","1811","1825"],0,"6 июня 1799."],[1,"Где родился?",["В Москве","В Петербурге","В Михайловском","В Болдино"],0,"В Москве."],[1,"Как звали няню?",["Арина Родионовна","Наталья","Ольга","Мария"],0,"Арина Родионовна."],[1,"Куда поступил в 1811?",["Царскосельский лицей","Московский университет","Кадетский корпус","Академия"],0,"Лицей."],[1,"Как звали жену?",["Наталья Гончарова","Анна Керн","Мария Волконская","Екатерина Бакунина"],0,"Гончарова."],[2,"Когда женился?",["1831","1828","1830","1833"],0,"В феврале 1831."],[2,"Сколько лет в лицее?",["6 лет","4 года","8 лет","5 лет"],0,"1811–1817."],[2,"Где ссылка 1824–1826?",["Михайловское","Болдино","Царское Село","Кишинёв"],0,"Михайловское."],[2,"Осень 1830?",["Болдинская осень","Золотая осень","Творческая","Пушкинская"],0,"Болдинская осень."],[2,"Сколько детей?",["4","2","3","5"],0,"Мария, Александр, Григорий, Наталья."],[3,"Предок-арап?",["Абрам Ганнибал","Пётр I","Екатерина II","Николай I"],0,"Абрам Ганнибал."],[3,"Кто написал оперу «Евгений Онегин»?",["Чайковский","Мусоргский","Римский-Корсаков","Глинка"],0,"Чайковский."],[3,"Сколько лет при смерти?",["37","35","40","42"],0,"37 лет."],[3,"Где похоронен?",["Святогорский монастырь","Петербург","Москва","Михайловское"],0,"Святогорский монастырь."],[3,"Какой журнал основал?",["«Современник»","«Отечественные записки»","«Северная пчела»","«Москвитянин»"],0,"«Современник»."]];
-var D_PUSH_WORKS=[[1,"Кто написал «Сказку о рыбаке и рыбке»?",["Пушкин","Гоголь","Толстой","Тургенев"],0,"Пушкин."],[1,"Главный герой романа в стихах?",["Евгений Онегин","Печорин","Чацкий","Базаров"],0,"Онегин."],[1,"Кто выходит из моря в «Салтане»?",["33 богатыря","Русалка","Золотая рыбка","Кот"],0,"33 богатыря."],[1,"Где золотая рыбка?",["Сказка о рыбаке","Салтан","Поп","Петушок"],0,"В сказке о рыбаке."],[1,"Герой «Руслан и Людмила»?",["Руслан","Онегин","Езерский","Мазепа"],0,"Руслан."],[2,"Автор «Бориса Годунова»?",["Пушкин","Лермонтов","Некрасов","Островский"],0,"Пушкин."],[2,"1836 год — что?",["«Капитанская дочка»","«Дубровский»","«Пиковая дама»","«Медный всадник»"],0,"«Капитанская дочка»."],[2,"Где Германн?",["«Пиковая дама»","«Евгений Онегин»","«Дубровский»","«Капитанская дочка»"],0,"«Пиковая дама»."],[2,"Герой «Капитанской дочки»?",["Пётр Гринёв","Дубровский","Онегин","Германн"],0,"Гринёв."],[2,"Сколько «Маленьких трагедий»?",["4","3","5","6"],0,"4."],[3,"Поэма о наводнении?",["«Медный всадник»","«Полтава»","«Фонтан»","«Цыганы»"],0,"«Медный всадник»."],[3,"Кто убил друга на дуэли?",["Онегин","Гринёв","Дубровский","Германн"],0,"Онегин убил Ленского."],[3,"Пугачёвское восстание?",["«Капитанская дочка»","«Дубровский»","«История Петра»","«Полтава»"],0,"«Капитанская дочка»."],[3,"Сборник 1830?",["«Повести Белкина»","«Повести Пушкина»","«Русские повести»","«Повести о России»"],0,"«Повести Белкина»."],[3,"«Я вас любил» — это?",["Стихотворение","Поэма","Роман","Сказка"],0,"Стихотворение 1829."]];
-var D_PUSH_QUOTES=[[1,"«Я вас любил: любовь ещё, быть может...»",["Пушкин","Лермонтов","Тютчев","Фет"],0,"Пушкин."],[1,"«Мороз и солнце; день чудесный!»",["Пушкин","Некрасов","Есенин","Блок"],0,"«Зимнее утро»."],[1,"«У лукоморья дуб зелёный...»",["Пушкин","Гоголь","Жуковский","Крылов"],0,"«Руслан и Людмила»."],[1,"«Сказка ложь, да в ней намёк!»",["Пушкин","Толстой","Ушинский","Даль"],0,"«Сказка о золотом петушке»."],[1,"«Жил старик со своею старухой...»",["Пушкин","Некрасов","Ершов","Аксаков"],0,"«Сказка о рыбаке и рыбке»."],[2,"«Чем меньше женщину мы любим, тем легче нравимся мы ей»",["Пушкин","Лермонтов","Тургенев","Достоевский"],0,"«Евгений Онегин»."],[2,"«Все счастливые семьи похожи друг на друга»",["Толстой","Пушкин","Гоголь","Чехов"],0,"Толстой, «Анна Каренина»."],[2,"«Я помню чудное мгновенье...»",["Пушкин","Тютчев","Лермонтов","Жуковский"],0,"Пушкин."],[2,"«Привычка свыше нам дана: замена счастию она»",["Пушкин","Гоголь","Тургенев","Чехов"],0,"«Евгений Онегин»."],[3,"«Нет, весь я не умру — душа в заветной лире...»",["Пушкин","Державин","Ломоносов","Жуковский"],0,"«Я памятник себе воздвиг...»."],[3,"«Любви все возрасты покорны»",["Пушкин","Лермонтов","Некрасов","Тютчев"],0,"«Евгений Онегин»."],[3,"«Онегин, добрый мой приятель...»",["Пушкин","Гоголь","Лермонтов","Толстой"],0,"«Евгений Онегин»."]];
-
-var CROSS_PUSH_BIO={title:"✍️ Кроссворд: Пушкин (биография)",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ПУШКИН",q:"Фамилия поэта"},{r:0,c:0,d:'D',w:"ПЕТЕРБУРГ",q:"Город, где погиб"},{r:0,c:5,d:'A',w:"МОСКВА",q:"Город рождения"},{r:2,c:2,d:'A',w:"ЛИЦЕЙ",q:"Учебное заведение"},{r:2,c:2,d:'D',w:"ЛЕРМОНТОВ",q:"Поэт, погибший на дуэли"},{r:2,c:5,d:'D',w:"ГОНЧАРОВА",q:"Фамилия жены"},{r:4,c:0,d:'A',w:"ДАНТЕС",q:"Убийца Пушкина"},{r:4,c:3,d:'D',w:"ДУЭЛЬ",q:"Поединок 1837"}]};
-var CROSS_PUSH_WORKS={title:"✍️ Кроссворд: Произведения Пушкина",rows:7,cols:9,words:[{r:0,c:0,d:'A',w:"ОНЕГИН",q:"Главный герой романа в стихах"},{r:0,c:0,d:'D',w:"ОЛЬГА",q:"Сестра Татьяны"},{r:0,c:5,d:'A',w:"СКАЗКА",q:"Жанр «О рыбаке»"},{r:0,c:5,d:'D',w:"САЛТАН",q:"Царь в сказке"},{r:2,c:2,d:'A',w:"БЕЛКИН",q:"Фамилия из повестей"},{r:2,c:2,d:'D',w:"БОРИС",q:"Имя царя"},{r:2,c:5,d:'D',w:"ГРИНЁВ",q:"Герой «Капитанской»"},{r:4,c:0,d:'A',w:"РУСЛАН",q:"Рыцарь из поэмы"},{r:4,c:3,d:'D',w:"ТАТЬЯНА",q:"Героиня «Онегина»"}]};
-
-var FUN=[
-{q:"Учитель: «Почему ты опоздал?»",a:["Автобус уехал без меня 🚌","Я спал и видел во сне, что уже в школе 😴","Часы думали, что ещё рано ⌚","Кот перешёл дорогу 🐈"],c:0,e:"Автобус — классика!"},
-{q:"Ты забыл домашку.",a:["Собака съела тетрадь 🐶","Улетела в параллельную вселенную 🌌","Спрятал и сам не нашёл 🕵️","Утонула в портфеле 🎒"],c:2,e:"«Спрятал и не нашёл» — почти правда!"},
-{q:"Не принёс форму на физру.",a:["Форма дома, я мысленно с вами 🧘","Тренируюсь на переменах 💪","Форма испугалась и убежала 🏃","Я болельщик 📣"],c:3,e:"Болельщик — профессия!"},
-{q:"Получил 2. Как сообщить родителям?",a:["Мама, я стал ближе к природе 🌿","В школе новая система: 2 = круто! 🎉","Это не оценка, это смайлик 😢","Погода сегодня отличная! ☀️"],c:3,e:"Перевод темы — искусство!"},
-{q:"На контрольной не знаешь ответ.",a:["Вспомнить, что учил в прошлой жизни 🔮","Посмотреть в потолок 👀","Написать «42» 🚀","Подсмотреть у соседа 😂"],c:3,e:"Ищи того, кто знает!"},
-{q:"Друг зовёт гулять, а у тебя уроки.",a:["Уроки подождут! 🎈","Учусь на будущее 💪","Сейчас закончу и приду ⏰","Давай в 20:00 🌙"],c:2,e:"«Закончу и приду» — по-взрослому."},
-{q:"Съел пирожок в столовой.",a:["Пойду за вторым 🥧","Скажу, что не я 🐈","Отработаю в спортзале 🏋️","Пирожок сам упал 🤷"],c:0,e:"Второй пирожок — святое!"},
-{q:"Учитель: «К доске!»",a:["Звёздный час! 🌟","Я — избранный 🎯","Забыл, что в этом классе 😶","Готов, если с подсказкой 📖"],c:0,e:"Позитив!"},
-{q:"Мама: «Сделал уроки?»",a:["Уже 3 часа назад! ⏰","Почти — осталось начать 😅","В уме сделал ✍️","Уроки — философия 🧘"],c:2,e:"«В уме сделал» — гениально!"},
-{q:"Заснул на уроке. Как объяснить?",a:["Обдумывал домашку 💭","Медитировал 🧘","Проверял учителя 👁️","Слышал каждое слово во сне 😴"],c:0,e:"«Обдумывал» — почти правда!"}
-];
-
-var PASSWORDS={"Староста":"1312","Учитель":"1313","Создатель":"100001"};
-var cur=null,qs=[],i=0,pts=0,hp=3,ok=false,df=1,currentUser="",currentRole="Ученик",currentCross=null;
-var crossLives=5;
-var funQs=[],funI=0,funScore=0,funAnswered=false;
-var pCur=null,pQs=[],pI=0,pPts=0,pHp=3,pOk=false,pDf=1;
-var currentCrossPush=null,pushCrossLives=5;
-
-function show(id){ var a=document.querySelectorAll('.scr'); for(var k=0;k<a.length;k++)a[k].classList.remove('on'); document.getElementById(id).classList.add('on'); window.scrollTo(0,0); }
-function go(id){ show(id); }
-function pickRole(btn){ var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); currentRole=btn.getAttribute('data-role'); var pb=document.getElementById('passBox'); if(PASSWORDS[currentRole]){ pb.classList.add('on'); document.getElementById('passInput').value=""; } else pb.classList.remove('on'); }
-function doLogin(){ var n=document.getElementById('nameInput').value.trim(); if(n.length<2){alert('Введи имя');return;} if(PASSWORDS[currentRole]){ var p=document.getElementById('passInput').value.trim(); if(p !== PASSWORDS[currentRole]){ alert('❌ Неверный пароль'); return; } } currentUser=n; localStorage.setItem('currentUser',n); localStorage.setItem('currentRole',currentRole); document.getElementById('userName').textContent=n; document.getElementById('userRole').textContent=currentRole; document.getElementById('userAvatar').textContent=roleEmoji(currentRole); show('subjects'); }
-function roleEmoji(r){ if(r==='Создатель')return'👑'; if(r==='Староста')return'⭐'; if(r==='Учитель')return'📖'; return'🎓'; }
-function logout(){ if(!confirm('Выйти?'))return; localStorage.removeItem('currentUser'); localStorage.removeItem('currentRole'); currentUser=""; document.getElementById('nameInput').value=""; document.getElementById('passInput').value=""; document.getElementById('passBox').classList.remove('on'); var b=document.querySelectorAll('.role'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); show('loginScreen'); }
-
-function pk(g){ sndStartGame(); cur=g; var t='Сложность'; if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века'; else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг'; else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!'; document.getElementById('stT').textContent=t; show('setup'); }
+function pk(g){ sndStartGame(); cur=g; var t='Сложность'; if(g==='rus')t='🎯 Русь'; else if(g==='med')t='🎯 Средние века'; else if(g==='fr')t='👑 Франки'; else if(g==='hl')t='⚜️ Хлодвиг'; else if(g==='km')t='🔨 Карл Мартелл'; else if(g==='year')t='📅 Угадай год!'; else if(g==='mathOral')t='🧮 Устный счёт'; else if(g==='mathPercent')t='💰 Проценты'; else if(g==='mathFrac')t='🔢 Дроби'; else if(g==='mathTask')t='📊 Задачи'; else if(g==='mathEq')t='🧮 Уравнения'; document.getElementById('stT').textContent=t; show('setup'); }
 function pd(btn){ var b=document.querySelectorAll('#setup .df button'); for(var k=0;k<b.length;k++)b[k].classList.remove('on'); btn.classList.add('on'); df=parseInt(btn.getAttribute('data-d')); }
 function st(){ var all=D[cur],pool=[]; for(var k=0;k<all.length;k++)if(all[k][0]<=df)pool.push(all[k]); for(var k=pool.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=pool[k];pool[k]=pool[j];pool[j]=t; } qs=pool;i=0;pts=0;hp=3; us(); show('game'); lq(); }
 function us(){ document.getElementById('sc').textContent=pts; document.getElementById('lv').textContent=hp>0?'❤️'.repeat(hp):'💀'; }
